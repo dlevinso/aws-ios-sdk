@@ -39,7 +39,7 @@
 (ex: 5xx error responses from a service).</Abstract>
 			<DeclaredIn>AmazonAbstractWebServiceClient.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, assign) int maxRetries</Declaration>
+			<Declaration>@property (nonatomic, assign) NSInteger maxRetries</Declaration>
 			
 			
 			<Anchor>//api/name/maxRetries</Anchor>
@@ -51,7 +51,7 @@
 (ex: 5xx error responses from a service).</Abstract>
 			<DeclaredIn>AmazonAbstractWebServiceClient.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, assign) int maxRetries</Declaration>
+			<Declaration>@property (nonatomic, assign) NSInteger maxRetries</Declaration>
 			
 			
 			<Anchor>//api/name/maxRetries</Anchor>
@@ -157,13 +157,24 @@ Default is 0.05 seconds.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/AmazonAbstractWebServiceClient/initWithCredentials:</TokenIdentifier>
-			<Abstract type="html">Inits the client the given credentials.</Abstract>
+			<Abstract type="html">Inits the client with the given credentials.</Abstract>
 			<DeclaredIn>AmazonAbstractWebServiceClient.h</DeclaredIn>			
 			
-			<Declaration>- (id)initWithCredentials:(AmazonCredentials *)theCredentials</Declaration>
+			<Declaration>- (id)initWithCredentials:(AmazonCredentials *)credentials</Declaration>
 			
 			
 			<Anchor>//api/name/initWithCredentials:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonAbstractWebServiceClient/initWithCredentialsProvider:</TokenIdentifier>
+			<Abstract type="html">Inits the client with a credentials provider which will provide refreshable credentials</Abstract>
+			<DeclaredIn>AmazonAbstractWebServiceClient.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithCredentialsProvider:(id&lt;AmazonCredentialsProvider&gt;)provider</Declaration>
+			
+			
+			<Anchor>//api/name/initWithCredentialsProvider:</Anchor>
 		</Token>
 		
 		<Token>

@@ -1,540 +1,266 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/AmazonSESClient.html">
+	<File path="Classes/AmazonSDKUtil.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/AmazonSESClient</TokenIdentifier>
-			<Abstract type="html">&lt;summary&gt;
-Interface for accessing AmazonSES.</Abstract>
-			<DeclaredIn>AmazonSESClient.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/AmazonSDKUtil</TokenIdentifier>
+			<Abstract type="html">Utility class for the AWS SDK for iOS.  Contains many common operations used
+by all supported services.</Abstract>
+			<DeclaredIn>AmazonSDKUtil.h</DeclaredIn>
 			
 			<NodeRef refid="13"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/deleteIdentity:</TokenIdentifier>
-			<Abstract type="html">&lt;p&gt;
-Deletes the specified identity (email address or domain) from the list of verified identities.
-&lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/AmazonSDKUtil/userAgentString</TokenIdentifier>
+			<Abstract type="html">The user agent string for the SDK.</Abstract>
+			<DeclaredIn>AmazonSDKUtil.h</DeclaredIn>			
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SESDeleteIdentityRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SESDeleteIdentityResponse</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>- (SESDeleteIdentityResponse *)deleteIdentity:(SESDeleteIdentityRequest *)deleteIdentityRequest</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>deleteIdentityRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the DeleteIdentity service method on
-AmazonSES.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the DeleteIdentity service method, as returned by AmazonSES.</Abstract></ReturnValue>
-			<Anchor>//api/name/deleteIdentity:</Anchor>
+			<Declaration>+ (NSString *)userAgentString</Declaration>
+			
+			<ReturnValue><Abstract type="html">the user agent string that will be used for service clients</Abstract></ReturnValue>
+			<Anchor>//api/name/userAgentString</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/listVerifiedEmailAddresses:</TokenIdentifier>
-			<Abstract type="html">&lt;p&gt;
-Returns a list containing all of the email addresses that have been verified.
-&lt;/p&gt;
-&lt;p&gt;
-&lt;b&gt;IMPORTANT:&lt;/b&gt;The ListVerifiedEmailAddresses action is deprecated as of the May 15, 2012 release of Domain
-Verification. The ListIdentities action is now preferred.
-&lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/AmazonSDKUtil/MIMETypeForExtension:</TokenIdentifier>
+			<Abstract type="html">Return a MIME type for the file based on extension.</Abstract>
+			<DeclaredIn>AmazonSDKUtil.h</DeclaredIn>			
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SESListVerifiedEmailAddressesRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SESListVerifiedEmailAddressesResponse</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>- (SESListVerifiedEmailAddressesResponse *)listVerifiedEmailAddresses:(SESListVerifiedEmailAddressesRequest *)listVerifiedEmailAddressesRequest</Declaration>
+			<Declaration>+ (NSString *)MIMETypeForExtension:(NSString *)extension</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>listVerifiedEmailAddressesRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the
-ListVerifiedEmailAddresses service method on AmazonSES.</Abstract>
+					<Name>extension</Name>
+					<Abstract type="html">the extension for the file (gif, jpg, etc)</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the ListVerifiedEmailAddresses service method, as returned by AmazonSES.</Abstract></ReturnValue>
-			<Anchor>//api/name/listVerifiedEmailAddresses:</Anchor>
+			<ReturnValue><Abstract type="html">the expected MIME type to use for this type of file</Abstract></ReturnValue>
+			<Anchor>//api/name/MIMETypeForExtension:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/getSendStatistics:</TokenIdentifier>
-			<Abstract type="html">&lt;p&gt;
-Returns the user&apos;s sending statistics. The result is a list of data points, representing the last two weeks of sending
-activity.
-&lt;/p&gt;
-&lt;p&gt;
-Each data point in the list contains statistics for a 15-minute interval.
-&lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/AmazonSDKUtil/urlEncode:</TokenIdentifier>
+			<Abstract type="html">Encode a string to embed in a URL.</Abstract>
+			<DeclaredIn>AmazonSDKUtil.h</DeclaredIn>			
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SESGetSendStatisticsRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SESGetSendStatisticsResponse</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>- (SESGetSendStatisticsResponse *)getSendStatistics:(SESGetSendStatisticsRequest *)getSendStatisticsRequest</Declaration>
+			<Declaration>+ (NSString *)urlEncode:(NSString *)input</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>getSendStatisticsRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the GetSendStatistics service method
-on AmazonSES.</Abstract>
+					<Name>input</Name>
+					<Abstract type="html">string to encode</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the GetSendStatistics service method, as returned by AmazonSES.</Abstract></ReturnValue>
-			<Anchor>//api/name/getSendStatistics:</Anchor>
+			<ReturnValue><Abstract type="html">encoded string</Abstract></ReturnValue>
+			<Anchor>//api/name/urlEncode:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/verifyEmailIdentity:</TokenIdentifier>
-			<Abstract type="html">&lt;p&gt;
-Verifies an email address. This action causes a confirmation email message to be sent to the specified address.
-&lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/AmazonSDKUtil/hexDecode:</TokenIdentifier>
+			<Abstract type="html">Hex decode a string value.</Abstract>
+			<DeclaredIn>AmazonSDKUtil.h</DeclaredIn>			
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SESVerifyEmailIdentityRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SESVerifyEmailIdentityResponse</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>- (SESVerifyEmailIdentityResponse *)verifyEmailIdentity:(SESVerifyEmailIdentityRequest *)verifyEmailIdentityRequest</Declaration>
+			<Declaration>+ (NSData *)hexDecode:(NSString *)hexString</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>verifyEmailIdentityRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the VerifyEmailIdentity service
-method on AmazonSES.</Abstract>
+					<Name>hexString</Name>
+					<Abstract type="html">the string to attempt to decode</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the VerifyEmailIdentity service method, as returned by AmazonSES.</Abstract></ReturnValue>
-			<Anchor>//api/name/verifyEmailIdentity:</Anchor>
+			<ReturnValue><Abstract type="html">The decoded data.</Abstract></ReturnValue>
+			<Anchor>//api/name/hexDecode:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/getIdentityNotificationAttributes:</TokenIdentifier>
-			<Abstract type="html">&lt;p&gt;
-Given a list of verified identities (email addresses and/or domains), returns a structure describing identity
-notification attributes. For more information about feedback notification, see the  Amazon SES Developer Guide  .
-&lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/AmazonSDKUtil/hexEncode:</TokenIdentifier>
+			<Abstract type="html">Hex encode a string value.</Abstract>
+			<DeclaredIn>AmazonSDKUtil.h</DeclaredIn>			
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SESGetIdentityNotificationAttributesRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SESGetIdentityNotificationAttributesResponse</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>- (SESGetIdentityNotificationAttributesResponse *)getIdentityNotificationAttributes:(SESGetIdentityNotificationAttributesRequest *)getIdentityNotificationAttributesRequest</Declaration>
+			<Declaration>+ (NSString *)hexEncode:(NSString *)string</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>getIdentityNotificationAttributesRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the
-GetIdentityNotificationAttributes service method on AmazonSES.</Abstract>
+					<Name>string</Name>
+					<Abstract type="html">the string to encode</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the GetIdentityNotificationAttributes service method, as returned by AmazonSES.</Abstract></ReturnValue>
-			<Anchor>//api/name/getIdentityNotificationAttributes:</Anchor>
+			<ReturnValue><Abstract type="html">the hex encoded value as an NSString</Abstract></ReturnValue>
+			<Anchor>//api/name/hexEncode:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/verifyDomainDkim:</TokenIdentifier>
-			<Abstract type="html">&lt;p&gt;
-Returns a set of DNS records, or &lt;i&gt;tokens&lt;/i&gt; , that must be published in the domain name&apos;s DNS to complete the DKIM
-verification process. These tokens are DNS CNAME records that point to DKIM public keys hosted by Amazon SES. To
-complete the DKIM verification process, these tokens must be published in the domain&apos;s DNS. The tokens must remain
-published in order for Easy DKIM signing to function correctly.
-&lt;/p&gt;
-&lt;p&gt;
-After the tokens are added to the domain&apos;s DNS, Amazon SES will be able to DKIM-sign email originating from that domain.
-To enable or disable Easy DKIM signing for a domain, use the SetIdentityDkimEnabled action.
-&lt;/p&gt;
-&lt;p&gt;
-For more information about Easy DKIM, go to the 
-Amazon SES Developer Guide  .
-&lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/AmazonSDKUtil/hexEncodeData:</TokenIdentifier>
+			<Abstract type="html">Hex encode a data value</Abstract>
+			<DeclaredIn>AmazonSDKUtil.h</DeclaredIn>			
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SESVerifyDomainDkimRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SESVerifyDomainDkimResponse</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>- (SESVerifyDomainDkimResponse *)verifyDomainDkim:(SESVerifyDomainDkimRequest *)verifyDomainDkimRequest</Declaration>
+			<Declaration>+ (NSString *)hexEncodeData:(NSData *)data</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>verifyDomainDkimRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the VerifyDomainDkim service method on
-AmazonSES.</Abstract>
+					<Name>data</Name>
+					<Abstract type="html">value to encode</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the VerifyDomainDkim service method, as returned by AmazonSES.</Abstract></ReturnValue>
-			<Anchor>//api/name/verifyDomainDkim:</Anchor>
+			<ReturnValue><Abstract type="html">the hex encoded value as an NSString</Abstract></ReturnValue>
+			<Anchor>//api/name/hexEncodeData:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/getIdentityDkimAttributes:</TokenIdentifier>
-			<Abstract type="html">&lt;p&gt;
-Returns the DNS records, or &lt;i&gt;tokens&lt;/i&gt; , that must be present in order for Easy DKIM to sign outgoing email messages.
-&lt;/p&gt;
-&lt;p&gt;
-This action takes a list of verified identities as input. It then returns the following information for each identity:
-&lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/AmazonSDKUtil/convertStringToNumber:</TokenIdentifier>
+			<Abstract type="html">Parse a number from an NSString value</Abstract>
+			<DeclaredIn>AmazonSDKUtil.h</DeclaredIn>			
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SESGetIdentityDkimAttributesRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SESGetIdentityDkimAttributesResponse</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>- (SESGetIdentityDkimAttributesResponse *)getIdentityDkimAttributes:(SESGetIdentityDkimAttributesRequest *)getIdentityDkimAttributesRequest</Declaration>
+			<Declaration>+ (NSNumber *)convertStringToNumber:(NSString *)string</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>getIdentityDkimAttributesRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the GetIdentityDkimAttributes
-service method on AmazonSES.</Abstract>
+					<Name>string</Name>
+					<Abstract type="html">NSString containing a number</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the GetIdentityDkimAttributes service method, as returned by AmazonSES.</Abstract></ReturnValue>
-			<Anchor>//api/name/getIdentityDkimAttributes:</Anchor>
+			<ReturnValue><Abstract type="html">NSNumber parsed from the string</Abstract></ReturnValue>
+			<Anchor>//api/name/convertStringToNumber:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/verifyEmailAddress:</TokenIdentifier>
-			<Abstract type="html">&lt;p&gt;
-Verifies an email address. This action causes a confirmation email message to be sent to the specified address.
-&lt;/p&gt;
-&lt;p&gt;
-&lt;b&gt;IMPORTANT:&lt;/b&gt;The VerifyEmailAddress action is deprecated as of the May 15, 2012 release of Domain Verification. The
-VerifyEmailIdentity action is now preferred.
-&lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/AmazonSDKUtil/convertStringToDate:</TokenIdentifier>
+			<Abstract type="html">Parse a date from an NSString value</Abstract>
+			<DeclaredIn>AmazonSDKUtil.h</DeclaredIn>			
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SESVerifyEmailAddressRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SESVerifyEmailAddressResponse</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>- (SESVerifyEmailAddressResponse *)verifyEmailAddress:(SESVerifyEmailAddressRequest *)verifyEmailAddressRequest</Declaration>
+			<Declaration>+ (NSDate *)convertStringToDate:(NSString *)string</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>verifyEmailAddressRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the VerifyEmailAddress service method
-on AmazonSES.</Abstract>
+					<Name>string</Name>
+					<Abstract type="html">NSString containing a date in ISO-8061 format</Abstract>
 				</Parameter>
 			</Parameters>
-			
-			<Anchor>//api/name/verifyEmailAddress:</Anchor>
+			<ReturnValue><Abstract type="html">The NSDate parsed from the string</Abstract></ReturnValue>
+			<Anchor>//api/name/convertStringToDate:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/sendRawEmail:</TokenIdentifier>
-			<Abstract type="html">&lt;p&gt;
-Sends an email message, with header and content specified by the client. The SendRawEmail action is useful for sending
-multipart MIME emails. The raw text of the message must comply with Internet email standards; otherwise, the message
-cannot be sent.
-&lt;/p&gt;
-&lt;p&gt;
-&lt;b&gt;IMPORTANT:&lt;/b&gt;If you have not yet requested production access to Amazon SES, then you will only be able to send email
-to and from verified email addresses and domains. For more information, go to the Amazon SES Developer Guide.
-&lt;/p&gt;
-&lt;p&gt;
-The total size of the message cannot exceed 10 MB. This includes any attachments that are part of the message.
-&lt;/p&gt;
-&lt;p&gt;
-Amazon SES has a limit on the total number of recipients per message: The combined number of To:, CC: and BCC: email
-addresses cannot exceed 50. If you need to send an email message to a larger audience, you can divide your recipient
-list into groups of 50 or fewer, and then call Amazon SES repeatedly to send the message to each group.
-&lt;/p&gt;
-&lt;p&gt;
-For every message that you send, the total number of recipients (To:, CC: and BCC:) is counted against your &lt;i&gt;sending
-quota&lt;/i&gt; - the maximum number of emails you can send in a 24-hour period. For information about your sending quota, go
-to the &quot;Managing Your Sending Activity&quot; section of the Amazon SES Developer Guide  .
-&lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/AmazonSDKUtil/convertStringToDate:usingFormat:</TokenIdentifier>
+			<Abstract type="html">Parse a date from an NSString value using a given format</Abstract>
+			<DeclaredIn>AmazonSDKUtil.h</DeclaredIn>			
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SESSendRawEmailRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SESSendRawEmailResponse</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>- (SESSendRawEmailResponse *)sendRawEmail:(SESSendRawEmailRequest *)sendRawEmailRequest</Declaration>
+			<Declaration>+ (NSDate *)convertStringToDate:(NSString *)string usingFormat:(NSString *)dateFormat</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>sendRawEmailRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the SendRawEmail service method on
-AmazonSES.</Abstract>
+					<Name>string</Name>
+					<Abstract type="html">NSString containing a date</Abstract>
+				</Parameter><Parameter>
+					<Name>dateFormat</Name>
+					<Abstract type="html">The format of the date</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the SendRawEmail service method, as returned by AmazonSES.</Abstract></ReturnValue>
-			<Anchor>//api/name/sendRawEmail:</Anchor>
+			
+			<Anchor>//api/name/convertStringToDate:usingFormat:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/listIdentities:</TokenIdentifier>
-			<Abstract type="html">&lt;p&gt;
-Returns a list containing all of the identities (email addresses and domains) for a specific AWS Account, regardless of
-verification status.
-&lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/AmazonSDKUtil/convertDateToString:usingFormat:</TokenIdentifier>
+			<Abstract type="html">Convert a NSDate to a NSString using a given format</Abstract>
+			<DeclaredIn>AmazonSDKUtil.h</DeclaredIn>			
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SESListIdentitiesRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SESListIdentitiesResponse</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>- (SESListIdentitiesResponse *)listIdentities:(SESListIdentitiesRequest *)listIdentitiesRequest</Declaration>
+			<Declaration>+ (NSString *)convertDateToString:(NSDate *)date usingFormat:(NSString *)dateFormat</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>listIdentitiesRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the ListIdentities service method on
-AmazonSES.</Abstract>
+					<Name>date</Name>
+					<Abstract type="html">the NSDate to convert</Abstract>
+				</Parameter><Parameter>
+					<Name>dateFormat</Name>
+					<Abstract type="html">the format to use</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the ListIdentities service method, as returned by AmazonSES.</Abstract></ReturnValue>
-			<Anchor>//api/name/listIdentities:</Anchor>
+			<ReturnValue><Abstract type="html">The string representation of the date using the given format</Abstract></ReturnValue>
+			<Anchor>//api/name/convertDateToString:usingFormat:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/getIdentityVerificationAttributes:</TokenIdentifier>
-			<Abstract type="html">&lt;p&gt;
-Given a list of identities (email addresses and/or domains), returns the verification status and (for domain identities)
-the verification token for each identity.
-&lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/AmazonSDKUtil/millisSinceEpochToDate:</TokenIdentifier>
+			<Abstract type="html">Construct a date using the number of milliseconds from the epoch (00:00:00 1/1/1970 GMT)</Abstract>
+			<DeclaredIn>AmazonSDKUtil.h</DeclaredIn>			
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SESGetIdentityVerificationAttributesRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SESGetIdentityVerificationAttributesResponse</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>- (SESGetIdentityVerificationAttributesResponse *)getIdentityVerificationAttributes:(SESGetIdentityVerificationAttributesRequest *)getIdentityVerificationAttributesRequest</Declaration>
+			<Declaration>+ (NSDate *)millisSinceEpochToDate:(NSNumber *)millisSinceEpoch</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>getIdentityVerificationAttributesRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the
-GetIdentityVerificationAttributes service method on AmazonSES.</Abstract>
+					<Name>millisSinceEpoch</Name>
+					<Abstract type="html">number of milliseconds since the epoch</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the GetIdentityVerificationAttributes service method, as returned by AmazonSES.</Abstract></ReturnValue>
-			<Anchor>//api/name/getIdentityVerificationAttributes:</Anchor>
+			<ReturnValue><Abstract type="html">NSDate for that exact time.</Abstract></ReturnValue>
+			<Anchor>//api/name/millisSinceEpochToDate:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/setIdentityDkimEnabled:</TokenIdentifier>
-			<Abstract type="html">&lt;p&gt;
-Enables or disables Easy DKIM signing of email sent from an identity:
-&lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/AmazonSDKUtil/secondsSinceEpochToDate:</TokenIdentifier>
+			<Abstract type="html">Construct a date using the number of seconds from the epoch (00:00:00 1/1/1970 GMT)</Abstract>
+			<DeclaredIn>AmazonSDKUtil.h</DeclaredIn>			
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SESSetIdentityDkimEnabledRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SESSetIdentityDkimEnabledResponse</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>- (SESSetIdentityDkimEnabledResponse *)setIdentityDkimEnabled:(SESSetIdentityDkimEnabledRequest *)setIdentityDkimEnabledRequest</Declaration>
+			<Declaration>+ (NSDate *)secondsSinceEpochToDate:(NSNumber *)secondsSinceEpoch</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>setIdentityDkimEnabledRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the SetIdentityDkimEnabled
-service method on AmazonSES.</Abstract>
+					<Name>secondsSinceEpoch</Name>
+					<Abstract type="html">number of seconds since the epoch</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the SetIdentityDkimEnabled service method, as returned by AmazonSES.</Abstract></ReturnValue>
-			<Anchor>//api/name/setIdentityDkimEnabled:</Anchor>
+			<ReturnValue><Abstract type="html">NSDate for that exact time.</Abstract></ReturnValue>
+			<Anchor>//api/name/secondsSinceEpochToDate:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/getSendQuota:</TokenIdentifier>
-			<Abstract type="html">&lt;p&gt;
-Returns the user&apos;s current sending limits.
-&lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/AmazonSDKUtil/URLWithURL:andProtocol:</TokenIdentifier>
+			<Abstract type="html">Construct an NSURL object with a URI and protocol/scheme</Abstract>
+			<DeclaredIn>AmazonSDKUtil.h</DeclaredIn>			
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SESGetSendQuotaRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SESGetSendQuotaResponse</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>- (SESGetSendQuotaResponse *)getSendQuota:(SESGetSendQuotaRequest *)getSendQuotaRequest</Declaration>
+			<Declaration>+ (NSURL *)URLWithURL:(NSURL *)theURL andProtocol:(NSString *)theProtocol</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>getSendQuotaRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the GetSendQuota service method on
-AmazonSES.</Abstract>
+					<Name>theURL</Name>
+					<Abstract type="html">the URL fragment (hostname + path)</Abstract>
+				</Parameter><Parameter>
+					<Name>theProtocol</Name>
+					<Abstract type="html">scheme to use. Valid schemes are @&quot;http://&quot; and @&quot;https://&quot;</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the GetSendQuota service method, as returned by AmazonSES.</Abstract></ReturnValue>
-			<Anchor>//api/name/getSendQuota:</Anchor>
+			<ReturnValue><Abstract type="html">NSURL object for this path</Abstract></ReturnValue>
+			<Anchor>//api/name/URLWithURL:andProtocol:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/setIdentityFeedbackForwardingEnabled:</TokenIdentifier>
-			<Abstract type="html">&lt;p&gt;
-Given an identity (email address or domain), enables or disables whether Amazon SES forwards feedback notifications as
-email. Feedback forwarding may only be disabled when both complaint and bounce topics are set. For more information
-about feedback notification, see the  Amazon SES
-Developer Guide  .
-&lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/AmazonSDKUtil/timestampLocale</TokenIdentifier>
+			<Abstract type="html">Return the locale for the current device</Abstract>
+			<DeclaredIn>AmazonSDKUtil.h</DeclaredIn>			
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SESSetIdentityFeedbackForwardingEnabledRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SESSetIdentityFeedbackForwardingEnabledResponse</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>- (SESSetIdentityFeedbackForwardingEnabledResponse *)setIdentityFeedbackForwardingEnabled:(SESSetIdentityFeedbackForwardingEnabledRequest *)setIdentityFeedbackForwardingEnabledRequest</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>setIdentityFeedbackForwardingEnabledRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the
-SetIdentityFeedbackForwardingEnabled service method on AmazonSES.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the SetIdentityFeedbackForwardingEnabled service method, as returned by AmazonSES.</Abstract></ReturnValue>
-			<Anchor>//api/name/setIdentityFeedbackForwardingEnabled:</Anchor>
+			<Declaration>+ (NSLocale *)timestampLocale</Declaration>
+			
+			<ReturnValue><Abstract type="html">the NSLocale</Abstract></ReturnValue>
+			<Anchor>//api/name/timestampLocale</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/verifyDomainIdentity:</TokenIdentifier>
-			<Abstract type="html">&lt;p&gt;
-Verifies a domain.
-&lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/AmazonSDKUtil/setRuntimeClockSkew:</TokenIdentifier>
+			<Abstract type="html">Set the clock skew for the current device.  This clock skew will be used for calculating
+signatures to AWS signatures and for parsing/converting date values from responses.</Abstract>
+			<DeclaredIn>AmazonSDKUtil.h</DeclaredIn>			
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SESVerifyDomainIdentityRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SESVerifyDomainIdentityResponse</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>- (SESVerifyDomainIdentityResponse *)verifyDomainIdentity:(SESVerifyDomainIdentityRequest *)verifyDomainIdentityRequest</Declaration>
+			<Declaration>+ (void)setRuntimeClockSkew:(NSTimeInterval)clockskew</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>verifyDomainIdentityRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the VerifyDomainIdentity service
-method on AmazonSES.</Abstract>
+					<Name>clockskew</Name>
+					<Abstract type="html">the skew (in seconds) for this device.  If the clock on the device is fast, pass positive skew to correct.  If the clock on the device is slow, pass negative skew to correct.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the VerifyDomainIdentity service method, as returned by AmazonSES.</Abstract></ReturnValue>
-			<Anchor>//api/name/verifyDomainIdentity:</Anchor>
+			
+			<Anchor>//api/name/setRuntimeClockSkew:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/sendEmail:</TokenIdentifier>
-			<Abstract type="html">&lt;p&gt;
-Composes an email message based on input data, and then immediately queues the message for sending.
-&lt;/p&gt;
-&lt;p&gt;
-&lt;b&gt;IMPORTANT:&lt;/b&gt;If you have not yet requested production access to Amazon SES, then you will only be able to send email
-to and from verified email addresses and domains. For more information, go to the Amazon SES Developer Guide.
-&lt;/p&gt;
-&lt;p&gt;
-The total size of the message cannot exceed 10 MB.
-&lt;/p&gt;
-&lt;p&gt;
-Amazon SES has a limit on the total number of recipients per message: The combined number of To:, CC: and BCC: email
-addresses cannot exceed 50. If you need to send an email message to a larger audience, you can divide your recipient
-list into groups of 50 or fewer, and then call Amazon SES repeatedly to send the message to each group.
-&lt;/p&gt;
-&lt;p&gt;
-For every message that you send, the total number of recipients (To:, CC: and BCC:) is counted against your &lt;i&gt;sending
-quota&lt;/i&gt; - the maximum number of emails you can send in a 24-hour period. For information about your sending quota, go
-to the &quot;Managing Your Sending Activity&quot; section of the Amazon SES Developer Guide  .
-&lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/AmazonSDKUtil/getRuntimeClockSkew</TokenIdentifier>
+			<Abstract type="html">Get the clock skew for the current device.</Abstract>
+			<DeclaredIn>AmazonSDKUtil.h</DeclaredIn>			
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SESSendEmailRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SESSendEmailResponse</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>- (SESSendEmailResponse *)sendEmail:(SESSendEmailRequest *)sendEmailRequest</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>sendEmailRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the SendEmail service method on AmazonSES.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the SendEmail service method, as returned by AmazonSES.</Abstract></ReturnValue>
-			<Anchor>//api/name/sendEmail:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/deleteVerifiedEmailAddress:</TokenIdentifier>
-			<Abstract type="html">&lt;p&gt;
-Deletes the specified email address from the list of verified addresses.
-&lt;/p&gt;
-&lt;p&gt;
-&lt;b&gt;IMPORTANT:&lt;/b&gt;The DeleteVerifiedEmailAddress action is deprecated as of the May 15, 2012 release of Domain
-Verification. The DeleteIdentity action is now preferred.
-&lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
+			<Declaration>+ (NSTimeInterval)getRuntimeClockSkew</Declaration>
 			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SESDeleteVerifiedEmailAddressRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SESDeleteVerifiedEmailAddressResponse</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>- (SESDeleteVerifiedEmailAddressResponse *)deleteVerifiedEmailAddress:(SESDeleteVerifiedEmailAddressRequest *)deleteVerifiedEmailAddressRequest</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>deleteVerifiedEmailAddressRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the
-DeleteVerifiedEmailAddress service method on AmazonSES.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/deleteVerifiedEmailAddress:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/setIdentityNotificationTopic:</TokenIdentifier>
-			<Abstract type="html">&lt;p&gt;
-Given an identity (email address or domain), sets the Amazon SNS topic to which Amazon SES will publish bounce and
-complaint notifications for emails sent with that identity as the Source .
-Publishing to topics may only be disabled when feedback forwarding is enabled. For more information about
-feedback notification, see the  Amazon SES
-Developer Guide  .
-&lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
-			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SESSetIdentityNotificationTopicRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SESSetIdentityNotificationTopicResponse</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>- (SESSetIdentityNotificationTopicResponse *)setIdentityNotificationTopic:(SESSetIdentityNotificationTopicRequest *)setIdentityNotificationTopicRequest</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>setIdentityNotificationTopicRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the
-SetIdentityNotificationTopic service method on AmazonSES.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the SetIdentityNotificationTopic service method, as returned by AmazonSES.</Abstract></ReturnValue>
-			<Anchor>//api/name/setIdentityNotificationTopic:</Anchor>
+			<ReturnValue><Abstract type="html">the skew (in seconds) currently set for this device.  Positive clock skew implies the device is fast, negative implies the device is slow.</Abstract></ReturnValue>
+			<Anchor>//api/name/getRuntimeClockSkew</Anchor>
 		</Token>
 		
 	</File>

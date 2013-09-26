@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -24,12 +24,21 @@
 -(id)init
 {
     if (self = [super init]) {
-        key = nil;
+        key = [[NSMutableDictionary alloc] initWithCapacity:1];
     }
 
     return self;
 }
 
+
+-(void)setKeyValue:(DynamoDBAttributeValue *)theValue forKey:(NSString *)theKey
+{
+    if (key == nil) {
+        key = [[NSMutableDictionary alloc] initWithCapacity:1];
+    }
+
+    [key setValue:theValue forKey:theKey];
+}
 
 
 -(NSString *)description

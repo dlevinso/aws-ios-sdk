@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -15,8 +15,8 @@
 
 #import "DynamoDBKeysAndAttributesUnmarshaller.h"
 #import "DynamoDBExceptionUnmarshaller.h"
-#import "../AmazonSDKUtil.h"
-#import "DynamoDBKeyUnmarshaller.h"
+
+#import "AmazonSDKUtil.h"
 #import "DynamoDBAttributeValueUnmarshaller.h"
 #import "DynamoDBAttributeValueUnmarshaller.h"
 
@@ -31,8 +31,15 @@
 
 
     NSArray *keysArray = [jsonObject valueForKey:@"Keys"];
-    for (NSDictionary *memberObject in keysArray) {
-        [keysAndAttributes.keys addObject:[DynamoDBKeyUnmarshaller unmarshall:memberObject]];
+    for (NSDictionary *mapObject in keysArray) {
+        NSMutableDictionary *member = [[[NSMutableDictionary alloc] init] autorelease];
+        for (NSString *key in [mapObject allKeys]) {
+            NSDictionary *value = [mapObject valueForKey:key];
+            [member setValue:[DynamoDBAttributeValueUnmarshaller unmarshall:value] forKey:key];
+        }
+
+
+        [keysAndAttributes.keys addObject:member];
     }
 
 

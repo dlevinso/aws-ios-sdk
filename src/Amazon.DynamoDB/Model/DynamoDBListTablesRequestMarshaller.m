@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -15,8 +15,9 @@
 
 
 #import "DynamoDBListTablesRequestMarshaller.h"
+#import "DynamoDBAttributeValue.h"
 #import "AmazonJSON.h"
-#import "../AmazonSDKUtil.h"
+#import "AmazonSDKUtil.h"
 
 @implementation DynamoDBListTablesRequestMarshaller
 
@@ -30,7 +31,7 @@
     [request setRequestTag:[listTablesRequest requestTag]];
 
 
-    [request addValue:@"DynamoDB_20111205.ListTables" forHeader:@"X-Amz-Target"];
+    [request addValue:@"DynamoDB_20120810.ListTables" forHeader:@"X-Amz-Target"];
     [request addValue:@"application/x-amz-json-1.0"     forHeader:@"Content-Type"];
 
 

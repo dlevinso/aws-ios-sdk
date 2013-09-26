@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2ProductCode.html">
+	<File path="Classes/SESListIdentitiesResponse.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2ProductCode</TokenIdentifier>
-			<Abstract type="html">Product Code</Abstract>
-			<DeclaredIn>EC2ProductCode.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/SESListIdentitiesResponse</TokenIdentifier>
+			<Abstract type="html">List Identities Result</Abstract>
+			<DeclaredIn>SESListIdentitiesResponse.h</DeclaredIn>
 			
 			<NodeRef refid="722"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ProductCode/init</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SESListIdentitiesResponse/setException:</TokenIdentifier>
+			<Abstract type="html">If an exception was thrown, this will return the exception.</Abstract>
+			<DeclaredIn>SESListIdentitiesResponse.h</DeclaredIn>			
+			
+			<Declaration>- (void)setException:(AmazonServiceException *)theException</Declaration>
+			
+			
+			<Anchor>//api/name/setException:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SESListIdentitiesResponse/init</TokenIdentifier>
 			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2ProductCode.h</DeclaredIn>			
+			<DeclaredIn>SESListIdentitiesResponse.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -24,54 +35,65 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ProductCode/setProductCodeId:</TokenIdentifier>
-			<Abstract type="html">The unique ID of an AWS DevPay product code.</Abstract>
-			<DeclaredIn>EC2ProductCode.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SESListIdentitiesResponse/setIdentities:</TokenIdentifier>
+			<Abstract type="html">A list of identities.</Abstract>
+			<DeclaredIn>SESListIdentitiesResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *productCodeId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSMutableArray *identities</Declaration>
 			
 			
-			<Anchor>//api/name/productCodeId</Anchor>
+			<Anchor>//api/name/identities</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2ProductCode/productCodeId</TokenIdentifier>
-			<Abstract type="html">The unique ID of an AWS DevPay product code.</Abstract>
-			<DeclaredIn>EC2ProductCode.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/SESListIdentitiesResponse/identities</TokenIdentifier>
+			<Abstract type="html">A list of identities.</Abstract>
+			<DeclaredIn>SESListIdentitiesResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *productCodeId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSMutableArray *identities</Declaration>
 			
 			
-			<Anchor>//api/name/productCodeId</Anchor>
+			<Anchor>//api/name/identities</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ProductCode/setProductCodeType:</TokenIdentifier>
-			<Abstract type="html">The value of the ProductCodeType property for this object.</Abstract>
-			<DeclaredIn>EC2ProductCode.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SESListIdentitiesResponse/setNextToken:</TokenIdentifier>
+			<Abstract type="html">The token used for pagination.</Abstract>
+			<DeclaredIn>SESListIdentitiesResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *productCodeType</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *nextToken</Declaration>
 			
 			
-			<Anchor>//api/name/productCodeType</Anchor>
+			<Anchor>//api/name/nextToken</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2ProductCode/productCodeType</TokenIdentifier>
-			<Abstract type="html">The value of the ProductCodeType property for this object.</Abstract>
-			<DeclaredIn>EC2ProductCode.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/SESListIdentitiesResponse/nextToken</TokenIdentifier>
+			<Abstract type="html">The token used for pagination.</Abstract>
+			<DeclaredIn>SESListIdentitiesResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *productCodeType</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *nextToken</Declaration>
 			
 			
-			<Anchor>//api/name/productCodeType</Anchor>
+			<Anchor>//api/name/nextToken</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ProductCode/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SESListIdentitiesResponse/identitiesObjectAtIndex:</TokenIdentifier>
+			<Abstract type="html">Returns a value from the identities array for the specified index</Abstract>
+			<DeclaredIn>SESListIdentitiesResponse.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)identitiesObjectAtIndex:(int)index</Declaration>
+			
+			
+			<Anchor>//api/name/identitiesObjectAtIndex:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SESListIdentitiesResponse/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>EC2ProductCode.h</DeclaredIn>			
+			<DeclaredIn>SESListIdentitiesResponse.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

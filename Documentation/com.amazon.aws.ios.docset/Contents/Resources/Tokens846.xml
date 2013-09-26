@@ -1,95 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/ElasticLoadBalancingBackendServerDescription.html">
+	<File path="Classes/SQSMessageNotInflightException.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/ElasticLoadBalancingBackendServerDescription</TokenIdentifier>
-			<Abstract type="html">Backend Server Description</Abstract>
-			<DeclaredIn>ElasticLoadBalancingBackendServerDescription.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/SQSMessageNotInflightException</TokenIdentifier>
+			<Abstract type="html">&lt;p&gt;
+The message referred to is not in flight.
+&lt;/p&gt;</Abstract>
+			<DeclaredIn>SQSMessageNotInflightException.h</DeclaredIn>
 			
 			<NodeRef refid="846"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingBackendServerDescription/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new  object.  Callers should use the
-property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingBackendServerDescription.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SQSMessageNotInflightException/initWithMessage:</TokenIdentifier>
+			<Abstract type="html">Initialize the exception with a message.</Abstract>
+			<DeclaredIn>SQSMessageNotInflightException.h</DeclaredIn>			
 			
-			<Declaration>- (id)init</Declaration>
+			<Declaration>- (id)initWithMessage:(NSString *)message</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>message</Name>
+					<Abstract type="html">The message.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/init</Anchor>
+			<Anchor>//api/name/initWithMessage:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingBackendServerDescription/setInstancePort:</TokenIdentifier>
-			<Abstract type="html">Provides the port on which the back-end server is listening.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Range: &lt;/b&gt;1 - 65535&lt;br/&gt;</Abstract>
-			<DeclaredIn>ElasticLoadBalancingBackendServerDescription.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSNumber *instancePort</Declaration>
-			
-			
-			<Anchor>//api/name/instancePort</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingBackendServerDescription/instancePort</TokenIdentifier>
-			<Abstract type="html">Provides the port on which the back-end server is listening.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Range: &lt;/b&gt;1 - 65535&lt;br/&gt;</Abstract>
-			<DeclaredIn>ElasticLoadBalancingBackendServerDescription.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSNumber *instancePort</Declaration>
-			
-			
-			<Anchor>//api/name/instancePort</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingBackendServerDescription/setPolicyNames:</TokenIdentifier>
-			<Abstract type="html">Provides a list of policy names enabled for the back-end server.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingBackendServerDescription.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *policyNames</Declaration>
-			
-			
-			<Anchor>//api/name/policyNames</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingBackendServerDescription/policyNames</TokenIdentifier>
-			<Abstract type="html">Provides a list of policy names enabled for the back-end server.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingBackendServerDescription.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *policyNames</Declaration>
-			
-			
-			<Anchor>//api/name/policyNames</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingBackendServerDescription/addPolicyName:</TokenIdentifier>
-			<Abstract type="html">Adds a single object to policyNames.
-This function will alloc and init policyNames if not already done.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingBackendServerDescription.h</DeclaredIn>			
-			
-			<Declaration>- (void)addPolicyName:(NSString *)policyNameObject</Declaration>
-			
-			
-			<Anchor>//api/name/addPolicyName:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingBackendServerDescription/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SQSMessageNotInflightException/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingBackendServerDescription.h</DeclaredIn>			
+			<DeclaredIn>SQSMessageNotInflightException.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

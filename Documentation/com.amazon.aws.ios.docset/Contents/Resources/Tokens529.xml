@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2DescribeReservedInstancesListingsResponseUnmarshaller.html">
+	<File path="Classes/ElasticLoadBalancingDeleteLoadBalancerResponse.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2DescribeReservedInstancesListingsResponseUnmarshaller</TokenIdentifier>
-			<Abstract type="html">Describe Reserved Instances Listings Response Unmarshaller</Abstract>
-			<DeclaredIn>EC2DescribeReservedInstancesListingsResponseUnmarshaller.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/ElasticLoadBalancingDeleteLoadBalancerResponse</TokenIdentifier>
+			<Abstract type="html">Delete Load Balancer</Abstract>
+			<DeclaredIn>ElasticLoadBalancingDeleteLoadBalancerResponse.h</DeclaredIn>
 			
 			<NodeRef refid="529"/>
 		</Token>

@@ -1,21 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2DescribeSpotDatafeedSubscriptionRequest.html">
+	<File path="Classes/ElasticLoadBalancingInstance.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2DescribeSpotDatafeedSubscriptionRequest</TokenIdentifier>
-			<Abstract type="html">Describe Spot Datafeed Subscription Request</Abstract>
-			<DeclaredIn>EC2DescribeSpotDatafeedSubscriptionRequest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/ElasticLoadBalancingInstance</TokenIdentifier>
+			<Abstract type="html">Instance</Abstract>
+			<DeclaredIn>ElasticLoadBalancingInstance.h</DeclaredIn>
 			
 			<NodeRef refid="550"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeSpotDatafeedSubscriptionRequest/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new  object.  Callers should use the
+			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingInstance/setInstanceId:</TokenIdentifier>
+			<Abstract type="html">Provides an EC2 instance ID.</Abstract>
+			<DeclaredIn>ElasticLoadBalancingInstance.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
+			
+			
+			<Anchor>//api/name/instanceId</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingInstance/instanceId</TokenIdentifier>
+			<Abstract type="html">Provides an EC2 instance ID.</Abstract>
+			<DeclaredIn>ElasticLoadBalancingInstance.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
+			
+			
+			<Anchor>//api/name/instanceId</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingInstance/init</TokenIdentifier>
+			<Abstract type="html">Default constructor for a new Instance object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2DescribeSpotDatafeedSubscriptionRequest.h</DeclaredIn>			
+			<DeclaredIn>ElasticLoadBalancingInstance.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -24,10 +46,27 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeSpotDatafeedSubscriptionRequest/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingInstance/initWithInstanceId:</TokenIdentifier>
+			<Abstract type="html">Constructs a new Instance object.
+Callers should use properties to initialize any additional object members.</Abstract>
+			<DeclaredIn>ElasticLoadBalancingInstance.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithInstanceId:(NSString *)theInstanceId</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>theInstanceId</Name>
+					<Abstract type="html">Provides an EC2 instance ID.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithInstanceId:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingInstance/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>EC2DescribeSpotDatafeedSubscriptionRequest.h</DeclaredIn>			
+			<DeclaredIn>ElasticLoadBalancingInstance.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

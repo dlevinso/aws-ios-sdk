@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/DynamoDBBatchWriteItemRequest.html">
+	<File path="Classes/EC2CreateInstanceExportTaskResponse.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/DynamoDBBatchWriteItemRequest</TokenIdentifier>
-			<Abstract type="html">Batch Write Item Request</Abstract>
-			<DeclaredIn>DynamoDBBatchWriteItemRequest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/EC2CreateInstanceExportTaskResponse</TokenIdentifier>
+			<Abstract type="html">Create Instance Export Task Response</Abstract>
+			<DeclaredIn>EC2CreateInstanceExportTaskResponse.h</DeclaredIn>
 			
 			<NodeRef refid="262"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBBatchWriteItemRequest/init</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2CreateInstanceExportTaskResponse/setException:</TokenIdentifier>
+			<Abstract type="html">If an exception was thrown, this will return the exception.</Abstract>
+			<DeclaredIn>EC2CreateInstanceExportTaskResponse.h</DeclaredIn>			
+			
+			<Declaration>- (void)setException:(AmazonServiceException *)theException</Declaration>
+			
+			
+			<Anchor>//api/name/setException:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2CreateInstanceExportTaskResponse/init</TokenIdentifier>
 			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>DynamoDBBatchWriteItemRequest.h</DeclaredIn>			
+			<DeclaredIn>EC2CreateInstanceExportTaskResponse.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -24,52 +35,32 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBBatchWriteItemRequest/setRequestItems:</TokenIdentifier>
-			<Abstract type="html">A map of table name to list-of-write-requests. Used as input to the
-&lt;code&gt;BatchWriteItem&lt;/code&gt; API call
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 25&lt;br/&gt;</Abstract>
-			<DeclaredIn>DynamoDBBatchWriteItemRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2CreateInstanceExportTaskResponse/setExportTask:</TokenIdentifier>
+			<Abstract type="html">The value of the ExportTask property for this object.</Abstract>
+			<DeclaredIn>EC2CreateInstanceExportTaskResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSMutableDictionary *requestItems</Declaration>
+			<Declaration>@property (nonatomic, retain) EC2ExportTask *exportTask</Declaration>
 			
 			
-			<Anchor>//api/name/requestItems</Anchor>
+			<Anchor>//api/name/exportTask</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/DynamoDBBatchWriteItemRequest/requestItems</TokenIdentifier>
-			<Abstract type="html">A map of table name to list-of-write-requests. Used as input to the
-&lt;code&gt;BatchWriteItem&lt;/code&gt; API call
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 25&lt;br/&gt;</Abstract>
-			<DeclaredIn>DynamoDBBatchWriteItemRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/EC2CreateInstanceExportTaskResponse/exportTask</TokenIdentifier>
+			<Abstract type="html">The value of the ExportTask property for this object.</Abstract>
+			<DeclaredIn>EC2CreateInstanceExportTaskResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSMutableDictionary *requestItems</Declaration>
+			<Declaration>@property (nonatomic, retain) EC2ExportTask *exportTask</Declaration>
 			
 			
-			<Anchor>//api/name/requestItems</Anchor>
+			<Anchor>//api/name/exportTask</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBBatchWriteItemRequest/setRequestItemsValue:forKey:</TokenIdentifier>
-			<Abstract type="html">Set a value in the dictionary requestItems for the specified key.
-This function will alloc and init requestItems if not already done.</Abstract>
-			<DeclaredIn>DynamoDBBatchWriteItemRequest.h</DeclaredIn>			
-			
-			<Declaration>- (void)setRequestItemsValue:(NSArray *)theValue forKey:(NSString *)theKey</Declaration>
-			
-			
-			<Anchor>//api/name/setRequestItemsValue:forKey:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBBatchWriteItemRequest/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2CreateInstanceExportTaskResponse/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>DynamoDBBatchWriteItemRequest.h</DeclaredIn>			
+			<DeclaredIn>EC2CreateInstanceExportTaskResponse.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

@@ -1,128 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2InstanceStatusEvent.html">
+	<File path="Classes/S3Part.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2InstanceStatusEvent</TokenIdentifier>
-			<Abstract type="html">Instance Status Event</Abstract>
-			<DeclaredIn>EC2InstanceStatusEvent.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/S3Part</TokenIdentifier>
+			<Abstract type="html">a container for elements related to a particular part of a multipart upload.</Abstract>
+			<DeclaredIn>S3Part.h</DeclaredIn>
 			
 			<NodeRef refid="672"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceStatusEvent/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new  object.  Callers should use the
-property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2InstanceStatusEvent.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/S3Part/setEtag:</TokenIdentifier>
+			<Abstract type="html">The entity tag returned when the part was uploaded.</Abstract>
+			<DeclaredIn>S3Part.h</DeclaredIn>			
 			
-			<Declaration>- (id)init</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *etag</Declaration>
 			
 			
-			<Anchor>//api/name/init</Anchor>
+			<Anchor>//api/name/etag</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceStatusEvent/setCode:</TokenIdentifier>
-			<Abstract type="html">The associated code of the event. Valid values: instance-reboot,
-system-reboot, instance-retirement</Abstract>
-			<DeclaredIn>EC2InstanceStatusEvent.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/S3Part/etag</TokenIdentifier>
+			<Abstract type="html">The entity tag returned when the part was uploaded.</Abstract>
+			<DeclaredIn>S3Part.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *code</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *etag</Declaration>
 			
 			
-			<Anchor>//api/name/code</Anchor>
+			<Anchor>//api/name/etag</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2InstanceStatusEvent/code</TokenIdentifier>
-			<Abstract type="html">The associated code of the event. Valid values: instance-reboot,
-system-reboot, instance-retirement</Abstract>
-			<DeclaredIn>EC2InstanceStatusEvent.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/S3Part/setLastModified:</TokenIdentifier>
+			<Abstract type="html">The date and time at which the part was uploaded.</Abstract>
+			<DeclaredIn>S3Part.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *code</Declaration>
+			<Declaration>@property (nonatomic, retain) NSDate *lastModified</Declaration>
 			
 			
-			<Anchor>//api/name/code</Anchor>
+			<Anchor>//api/name/lastModified</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceStatusEvent/setDescriptionValue:</TokenIdentifier>
-			<Abstract type="html">A description of the event.</Abstract>
-			<DeclaredIn>EC2InstanceStatusEvent.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/S3Part/lastModified</TokenIdentifier>
+			<Abstract type="html">The date and time at which the part was uploaded.</Abstract>
+			<DeclaredIn>S3Part.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *descriptionValue</Declaration>
+			<Declaration>@property (nonatomic, retain) NSDate *lastModified</Declaration>
 			
 			
-			<Anchor>//api/name/descriptionValue</Anchor>
+			<Anchor>//api/name/lastModified</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2InstanceStatusEvent/descriptionValue</TokenIdentifier>
-			<Abstract type="html">A description of the event.</Abstract>
-			<DeclaredIn>EC2InstanceStatusEvent.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/S3Part/setPartNumber:</TokenIdentifier>
+			<Abstract type="html">The unique part number identifying the part.</Abstract>
+			<DeclaredIn>S3Part.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *descriptionValue</Declaration>
+			<Declaration>@property (nonatomic) NSInteger partNumber</Declaration>
 			
 			
-			<Anchor>//api/name/descriptionValue</Anchor>
+			<Anchor>//api/name/partNumber</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceStatusEvent/setNotBefore:</TokenIdentifier>
-			<Abstract type="html">The earliest scheduled start time for the event.</Abstract>
-			<DeclaredIn>EC2InstanceStatusEvent.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/S3Part/partNumber</TokenIdentifier>
+			<Abstract type="html">The unique part number identifying the part.</Abstract>
+			<DeclaredIn>S3Part.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSDate *notBefore</Declaration>
+			<Declaration>@property (nonatomic) NSInteger partNumber</Declaration>
 			
 			
-			<Anchor>//api/name/notBefore</Anchor>
+			<Anchor>//api/name/partNumber</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2InstanceStatusEvent/notBefore</TokenIdentifier>
-			<Abstract type="html">The earliest scheduled start time for the event.</Abstract>
-			<DeclaredIn>EC2InstanceStatusEvent.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/S3Part/setSize:</TokenIdentifier>
+			<Abstract type="html">The size of the uploaded part data.</Abstract>
+			<DeclaredIn>S3Part.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSDate *notBefore</Declaration>
+			<Declaration>@property (nonatomic) long long size</Declaration>
 			
 			
-			<Anchor>//api/name/notBefore</Anchor>
+			<Anchor>//api/name/size</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceStatusEvent/setNotAfter:</TokenIdentifier>
-			<Abstract type="html">The latest scheduled end time for the event.</Abstract>
-			<DeclaredIn>EC2InstanceStatusEvent.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/S3Part/size</TokenIdentifier>
+			<Abstract type="html">The size of the uploaded part data.</Abstract>
+			<DeclaredIn>S3Part.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSDate *notAfter</Declaration>
-			
-			
-			<Anchor>//api/name/notAfter</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2InstanceStatusEvent/notAfter</TokenIdentifier>
-			<Abstract type="html">The latest scheduled end time for the event.</Abstract>
-			<DeclaredIn>EC2InstanceStatusEvent.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSDate *notAfter</Declaration>
+			<Declaration>@property (nonatomic) long long size</Declaration>
 			
 			
-			<Anchor>//api/name/notAfter</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceStatusEvent/description</TokenIdentifier>
-			<Abstract type="html">Returns a string representation of this object; useful for testing and
-debugging.</Abstract>
-			<DeclaredIn>EC2InstanceStatusEvent.h</DeclaredIn>			
-			
-			<Declaration>- (NSString *)description</Declaration>
-			
-			<ReturnValue><Abstract type="html">A string representation of this object.</Abstract></ReturnValue>
-			<Anchor>//api/name/description</Anchor>
+			<Anchor>//api/name/size</Anchor>
 		</Token>
 		
 	</File>

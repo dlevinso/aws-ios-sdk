@@ -12,7 +12,7 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">AWS SDK for iOS v1.4.4 </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">AWS SDK for iOS v1.6.1 </a></h1>
 				<a id="developerHome" href="../index.html">Amazon Web Services, Inc.</a>
 			</div>
 			
@@ -159,7 +159,7 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/topicArn">&nbsp;&nbsp;topicArn</a></code>
-		<span class="tooltip"><p>The ARN of topic you want to subscribe to.</p></span>
+		<span class="tooltip"><p>The ARN of the topic you want to subscribe to.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -167,11 +167,15 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/protocol">&nbsp;&nbsp;protocol</a></code>
 		<span class="tooltip"><p>The protocol you want to use. Supported protocols include: <ul>
-<li>http &mdash; delivery of JSON-encoded message via HTTP POST</li>
-<li>https &mdash; delivery of JSON-encoded message via HTTPS POST</li>
-<li>email &mdash; delivery of message via SMTP</li> <li>email-json &mdash;
-delivery of JSON-encoded message via SMTP</li> <li>sqs &mdash; delivery of
-JSON-encoded message to an Amazon SQS queue</li> </ul></p></span>
+<li><code>http</code> &mdash; delivery of JSON-encoded message via HTTP
+POST</li> <li><code>https</code> &mdash; delivery of JSON-encoded message
+via HTTPS POST</li> <li><code>email</code> &mdash; delivery of message via
+SMTP</li> <li><code>email-json</code> &mdash; delivery of JSON-encoded
+message via SMTP</li> <li><code>sms</code> &mdash; delivery of message via
+SMS</li> <li><code>sqs</code> &mdash; delivery of JSON-encoded message to
+an Amazon SQS queue</li> <li><code>application</code> &mdash; delivery of
+JSON-encoded message to an EndpointArn for a mobile app and
+device.</li> </ul></p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -179,12 +183,16 @@ JSON-encoded message to an Amazon SQS queue</li> </ul></p></span>
 	<span class="tooltip">
 		<code><a href="#//api/name/endpoint">&nbsp;&nbsp;endpoint</a></code>
 		<span class="tooltip"><p>The endpoint that you want to receive notifications. Endpoints vary by
-protocol: <ul> <li>For the http protocol, the endpoint is an URL
-beginning with &ldquo;http://&rdquo;</li> <li>For the https protocol, the endpoint
-is a URL beginning with &ldquo;https://&rdquo;</li> <li>For the email protocol,
-the endpoint is an e-mail address</li> <li>For the email-json
-protocol, the endpoint is an e-mail address</li> <li>For the sqs
-protocol, the endpoint is the ARN of an Amazon SQS queue</li> </ul></p></span>
+protocol: <ul> <li>For the <code>http</code> protocol, the endpoint is
+an URL beginning with &ldquo;http://&rdquo;</li> <li>For the <code>https</code>
+protocol, the endpoint is a URL beginning with &ldquo;https://&rdquo;</li> <li>For
+the <code>email</code> protocol, the endpoint is an email address</li>
+<li>For the <code>email-json</code> protocol, the endpoint is an email
+address</li> <li>For the <code>sms</code> protocol, the endpoint is a
+phone number of an SMS-enabled device</li> <li>For the
+<code>sqs</code> protocol, the endpoint is the ARN of an Amazon SQS
+queue</li> <li>For the <code>application</code> protocol, the endpoint
+is the EndpointArn of a mobile app and device.</li> </ul></p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -233,12 +241,16 @@ debugging.</p></span>
 	
 	<div class="method-subsection brief-description">
 		<p>The endpoint that you want to receive notifications. Endpoints vary by
-protocol: <ul> <li>For the http protocol, the endpoint is an URL
-beginning with &ldquo;http://&rdquo;</li> <li>For the https protocol, the endpoint
-is a URL beginning with &ldquo;https://&rdquo;</li> <li>For the email protocol,
-the endpoint is an e-mail address</li> <li>For the email-json
-protocol, the endpoint is an e-mail address</li> <li>For the sqs
-protocol, the endpoint is the ARN of an Amazon SQS queue</li> </ul></p>
+protocol: <ul> <li>For the <code>http</code> protocol, the endpoint is
+an URL beginning with &ldquo;http://&rdquo;</li> <li>For the <code>https</code>
+protocol, the endpoint is a URL beginning with &ldquo;https://&rdquo;</li> <li>For
+the <code>email</code> protocol, the endpoint is an email address</li>
+<li>For the <code>email-json</code> protocol, the endpoint is an email
+address</li> <li>For the <code>sms</code> protocol, the endpoint is a
+phone number of an SMS-enabled device</li> <li>For the
+<code>sqs</code> protocol, the endpoint is the ARN of an Amazon SQS
+queue</li> <li>For the <code>application</code> protocol, the endpoint
+is the EndpointArn of a mobile app and device.</li> </ul></p>
 	</div>		
 	
     
@@ -256,12 +268,16 @@ protocol, the endpoint is the ARN of an Amazon SQS queue</li> </ul></p>
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>The endpoint that you want to receive notifications. Endpoints vary by
-protocol: <ul> <li>For the http protocol, the endpoint is an URL
-beginning with &ldquo;http://&rdquo;</li> <li>For the https protocol, the endpoint
-is a URL beginning with &ldquo;https://&rdquo;</li> <li>For the email protocol,
-the endpoint is an e-mail address</li> <li>For the email-json
-protocol, the endpoint is an e-mail address</li> <li>For the sqs
-protocol, the endpoint is the ARN of an Amazon SQS queue</li> </ul></p>
+protocol: <ul> <li>For the <code>http</code> protocol, the endpoint is
+an URL beginning with &ldquo;http://&rdquo;</li> <li>For the <code>https</code>
+protocol, the endpoint is a URL beginning with &ldquo;https://&rdquo;</li> <li>For
+the <code>email</code> protocol, the endpoint is an email address</li>
+<li>For the <code>email-json</code> protocol, the endpoint is an email
+address</li> <li>For the <code>sms</code> protocol, the endpoint is a
+phone number of an SMS-enabled device</li> <li>For the
+<code>sqs</code> protocol, the endpoint is the ARN of an Amazon SQS
+queue</li> <li>For the <code>application</code> protocol, the endpoint
+is the EndpointArn of a mobile app and device.</li> </ul></p>
 	</div>
 	
 	
@@ -286,11 +302,15 @@ protocol, the endpoint is the ARN of an Amazon SQS queue</li> </ul></p>
 	
 	<div class="method-subsection brief-description">
 		<p>The protocol you want to use. Supported protocols include: <ul>
-<li>http &mdash; delivery of JSON-encoded message via HTTP POST</li>
-<li>https &mdash; delivery of JSON-encoded message via HTTPS POST</li>
-<li>email &mdash; delivery of message via SMTP</li> <li>email-json &mdash;
-delivery of JSON-encoded message via SMTP</li> <li>sqs &mdash; delivery of
-JSON-encoded message to an Amazon SQS queue</li> </ul></p>
+<li><code>http</code> &mdash; delivery of JSON-encoded message via HTTP
+POST</li> <li><code>https</code> &mdash; delivery of JSON-encoded message
+via HTTPS POST</li> <li><code>email</code> &mdash; delivery of message via
+SMTP</li> <li><code>email-json</code> &mdash; delivery of JSON-encoded
+message via SMTP</li> <li><code>sms</code> &mdash; delivery of message via
+SMS</li> <li><code>sqs</code> &mdash; delivery of JSON-encoded message to
+an Amazon SQS queue</li> <li><code>application</code> &mdash; delivery of
+JSON-encoded message to an EndpointArn for a mobile app and
+device.</li> </ul></p>
 	</div>		
 	
     
@@ -308,11 +328,15 @@ JSON-encoded message to an Amazon SQS queue</li> </ul></p>
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>The protocol you want to use. Supported protocols include: <ul>
-<li>http &mdash; delivery of JSON-encoded message via HTTP POST</li>
-<li>https &mdash; delivery of JSON-encoded message via HTTPS POST</li>
-<li>email &mdash; delivery of message via SMTP</li> <li>email-json &mdash;
-delivery of JSON-encoded message via SMTP</li> <li>sqs &mdash; delivery of
-JSON-encoded message to an Amazon SQS queue</li> </ul></p>
+<li><code>http</code> &mdash; delivery of JSON-encoded message via HTTP
+POST</li> <li><code>https</code> &mdash; delivery of JSON-encoded message
+via HTTPS POST</li> <li><code>email</code> &mdash; delivery of message via
+SMTP</li> <li><code>email-json</code> &mdash; delivery of JSON-encoded
+message via SMTP</li> <li><code>sms</code> &mdash; delivery of message via
+SMS</li> <li><code>sqs</code> &mdash; delivery of JSON-encoded message to
+an Amazon SQS queue</li> <li><code>application</code> &mdash; delivery of
+JSON-encoded message to an EndpointArn for a mobile app and
+device.</li> </ul></p>
 	</div>
 	
 	
@@ -336,7 +360,7 @@ JSON-encoded message to an Amazon SQS queue</li> </ul></p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The ARN of topic you want to subscribe to.</p>
+		<p>The ARN of the topic you want to subscribe to.</p>
 	</div>		
 	
     
@@ -353,7 +377,7 @@ JSON-encoded message to an Amazon SQS queue</li> </ul></p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The ARN of topic you want to subscribe to.</p>
+		<p>The ARN of the topic you want to subscribe to.</p>
 	</div>
 	
 	
@@ -493,30 +517,37 @@ Callers should use properties to initialize any additional object members.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>theTopicArn</em></dt>
-			<dd><p>The ARN of topic you want to subscribe to.</p></dd>
+			<dd><p>The ARN of the topic you want to subscribe to.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>theProtocol</em></dt>
 			<dd><p>The protocol you want to use. Supported protocols
-include: <ul> <li>http &mdash; delivery of JSON-encoded message via HTTP
-POST</li> <li>https &mdash; delivery of JSON-encoded message via HTTPS
-POST</li> <li>email &mdash; delivery of message via SMTP</li>
-<li>email-json &mdash; delivery of JSON-encoded message via SMTP</li>
-<li>sqs &mdash; delivery of JSON-encoded message to an Amazon SQS
-queue</li> </ul></p></dd>
+include: <ul> <li><code>http</code> &mdash; delivery of JSON-encoded
+message via HTTP POST</li> <li><code>https</code> &mdash; delivery of
+JSON-encoded message via HTTPS POST</li> <li><code>email</code> &mdash;
+delivery of message via SMTP</li> <li><code>email-json</code> &mdash;
+delivery of JSON-encoded message via SMTP</li> <li><code>sms</code> &mdash;
+delivery of message via SMS</li> <li><code>sqs</code> &mdash; delivery of
+JSON-encoded message to an Amazon SQS queue</li>
+<li><code>application</code> &mdash; delivery of JSON-encoded message to an
+EndpointArn for a mobile app and device.</li> </ul></p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>theEndpoint</em></dt>
 			<dd><p>The endpoint that you want to receive
-notifications. Endpoints vary by protocol: <ul> <li>For the http
-protocol, the endpoint is an URL beginning with &ldquo;http://&rdquo;</li> <li>For
-the https protocol, the endpoint is a URL beginning with
-&ldquo;https://&rdquo;</li> <li>For the email protocol, the endpoint is an e-mail
-address</li> <li>For the email-json protocol, the endpoint is an
-e-mail address</li> <li>For the sqs protocol, the endpoint is the ARN
-of an Amazon SQS queue</li> </ul></p></dd>
+notifications. Endpoints vary by protocol: <ul> <li>For the
+<code>http</code> protocol, the endpoint is an URL beginning with
+&ldquo;http://&rdquo;</li> <li>For the <code>https</code> protocol, the endpoint
+is a URL beginning with &ldquo;https://&rdquo;</li> <li>For the <code>email</code>
+protocol, the endpoint is an email address</li> <li>For the
+<code>email-json</code> protocol, the endpoint is an email
+address</li> <li>For the <code>sms</code> protocol, the endpoint is a
+phone number of an SMS-enabled device</li> <li>For the
+<code>sqs</code> protocol, the endpoint is the ARN of an Amazon SQS
+queue</li> <li>For the <code>application</code> protocol, the endpoint
+is the EndpointArn of a mobile app and device.</li> </ul></p></dd>
 		</dl>
 		
 	</div>
@@ -560,7 +591,7 @@ Callers should use properties to initialize any additional object members.</p>
 				<div id="footer"><script src="/urchin.js" type="text/javascript"></script><script type="text/javascript">urchinTracker();</script>
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Amazon Web Services, Inc.. All rights reserved. (Last updated: 2012-11-13)</span><br />
+						<p><span class="copyright">&copy; 2013 Amazon Web Services, Inc.. All rights reserved. (Last updated: 2013-08-12)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

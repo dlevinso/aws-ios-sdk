@@ -12,7 +12,7 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">AWS SDK for iOS v1.4.4 </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">AWS SDK for iOS v1.6.1 </a></h1>
 				<a id="developerHome" href="../index.html">Amazon Web Services, Inc.</a>
 			</div>
 			
@@ -159,11 +159,10 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
-		<span class="tooltip"><p>The name of the federated user associated with the credentials. For
-information about limitations on user names, go to <a
-vices.com/IAM/latest/UserGuide/LimitationsOnEntities.html">Limitations
-on IAM Entities</a> in <i>Using AWS Identity and Access
-Management</i>.</p>
+		<span class="tooltip"><p>The name of the federated user. The name is used as an identifier for
+the temporary security credentials (such as <code>Bob</code>). For
+example, you can reference the federated user name in a resource-based
+policy, such as in an Amazon S3 bucket policy.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -175,14 +174,14 @@ Management</i>.</p>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/policy">&nbsp;&nbsp;policy</a></code>
-		<span class="tooltip"><p>A policy specifying the permissions to associate with the credentials.
-The caller can delegate their own permissions by specifying a policy,
-and both policies will be checked when a service call is made. For
-more information about how permissions work in the context of
-temporary credentials, see <a
-docs.amazonwebservices.com/IAM/latest/UserGuide/TokenPermissions.html"
-target="_blank">Controlling Permissions in Temporary Credentials</a>
-in <i>Using AWS Identity and Access Management</i>.</p>
+		<span class="tooltip"><p>A policy that specifies the permissions that are granted to the
+federated user. By default, federated users have no permissions; they
+do not inherit any from the IAM user. When you specify a policy, the
+federated user&rsquo;s permissions are intersection of the specified policy
+and the IAM user&rsquo;s policy. If you don&rsquo;t specify a policy, federated
+users can only access AWS resources that explicitly allow those
+federated users in a resource policy, such as in an Amazon S3 bucket
+policy.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -195,12 +194,15 @@ in <i>Using AWS Identity and Access Management</i>.</p>
 	<span class="tooltip">
 		<code><a href="#//api/name/durationSeconds">&nbsp;&nbsp;durationSeconds</a></code>
 		<span class="tooltip"><p>The duration, in seconds, that the session should last. Acceptable
-durations for federation sessions range from 3600s (one hour) to
-129600s (36 hours), with 43200s (12 hours) as the default.</p>
+durations for federation sessions range from 900 seconds (15 minutes)
+to 129600 seconds (36 hours), with 43200 seconds (12 hours) as the
+default. Sessions for AWS account owners are restricted to a maximum
+of 3600 seconds (one hour). If the duration is longer than one hour,
+the session for AWS account owners defaults to one hour.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
-<b>Range: </b>3600 &ndash; 129600<br/></p></span>
+<b>Range: </b>900 &ndash; 129600<br/></p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -249,12 +251,15 @@ debugging.</p></span>
 	
 	<div class="method-subsection brief-description">
 		<p>The duration, in seconds, that the session should last. Acceptable
-durations for federation sessions range from 3600s (one hour) to
-129600s (36 hours), with 43200s (12 hours) as the default.</p>
+durations for federation sessions range from 900 seconds (15 minutes)
+to 129600 seconds (36 hours), with 43200 seconds (12 hours) as the
+default. Sessions for AWS account owners are restricted to a maximum
+of 3600 seconds (one hour). If the duration is longer than one hour,
+the session for AWS account owners defaults to one hour.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
-<b>Range: </b>3600 &ndash; 129600<br/></p>
+<b>Range: </b>900 &ndash; 129600<br/></p>
 	</div>		
 	
     
@@ -272,12 +277,15 @@ durations for federation sessions range from 3600s (one hour) to
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>The duration, in seconds, that the session should last. Acceptable
-durations for federation sessions range from 3600s (one hour) to
-129600s (36 hours), with 43200s (12 hours) as the default.</p>
+durations for federation sessions range from 900 seconds (15 minutes)
+to 129600 seconds (36 hours), with 43200 seconds (12 hours) as the
+default. Sessions for AWS account owners are restricted to a maximum
+of 3600 seconds (one hour). If the duration is longer than one hour,
+the session for AWS account owners defaults to one hour.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
-<b>Range: </b>3600 &ndash; 129600<br/></p>
+<b>Range: </b>900 &ndash; 129600<br/></p>
 	</div>
 	
 	
@@ -301,11 +309,10 @@ durations for federation sessions range from 3600s (one hour) to
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The name of the federated user associated with the credentials. For
-information about limitations on user names, go to <a
-vices.com/IAM/latest/UserGuide/LimitationsOnEntities.html">Limitations
-on IAM Entities</a> in <i>Using AWS Identity and Access
-Management</i>.</p>
+		<p>The name of the federated user. The name is used as an identifier for
+the temporary security credentials (such as <code>Bob</code>). For
+example, you can reference the federated user name in a resource-based
+policy, such as in an Amazon S3 bucket policy.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -327,11 +334,10 @@ Management</i>.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The name of the federated user associated with the credentials. For
-information about limitations on user names, go to <a
-vices.com/IAM/latest/UserGuide/LimitationsOnEntities.html">Limitations
-on IAM Entities</a> in <i>Using AWS Identity and Access
-Management</i>.</p>
+		<p>The name of the federated user. The name is used as an identifier for
+the temporary security credentials (such as <code>Bob</code>). For
+example, you can reference the federated user name in a resource-based
+policy, such as in an Amazon S3 bucket policy.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -360,14 +366,14 @@ Management</i>.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>A policy specifying the permissions to associate with the credentials.
-The caller can delegate their own permissions by specifying a policy,
-and both policies will be checked when a service call is made. For
-more information about how permissions work in the context of
-temporary credentials, see <a
-docs.amazonwebservices.com/IAM/latest/UserGuide/TokenPermissions.html"
-target="_blank">Controlling Permissions in Temporary Credentials</a>
-in <i>Using AWS Identity and Access Management</i>.</p>
+		<p>A policy that specifies the permissions that are granted to the
+federated user. By default, federated users have no permissions; they
+do not inherit any from the IAM user. When you specify a policy, the
+federated user&rsquo;s permissions are intersection of the specified policy
+and the IAM user&rsquo;s policy. If you don&rsquo;t specify a policy, federated
+users can only access AWS resources that explicitly allow those
+federated users in a resource policy, such as in an Amazon S3 bucket
+policy.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -389,14 +395,14 @@ in <i>Using AWS Identity and Access Management</i>.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>A policy specifying the permissions to associate with the credentials.
-The caller can delegate their own permissions by specifying a policy,
-and both policies will be checked when a service call is made. For
-more information about how permissions work in the context of
-temporary credentials, see <a
-docs.amazonwebservices.com/IAM/latest/UserGuide/TokenPermissions.html"
-target="_blank">Controlling Permissions in Temporary Credentials</a>
-in <i>Using AWS Identity and Access Management</i>.</p>
+		<p>A policy that specifies the permissions that are granted to the
+federated user. By default, federated users have no permissions; they
+do not inherit any from the IAM user. When you specify a policy, the
+federated user&rsquo;s permissions are intersection of the specified policy
+and the IAM user&rsquo;s policy. If you don&rsquo;t specify a policy, federated
+users can only access AWS resources that explicitly allow those
+federated users in a resource policy, such as in an Amazon S3 bucket
+policy.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -541,11 +547,11 @@ Callers should use properties to initialize any additional object members.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>theName</em></dt>
-			<dd><p>The name of the federated user associated with the
-credentials. For information about limitations on user names, go to <a
-vices.com/IAM/latest/UserGuide/LimitationsOnEntities.html">Limitations
-on IAM Entities</a> in <i>Using AWS Identity and Access
-Management</i>.</p></dd>
+			<dd><p>The name of the federated user. The name is used as an
+identifier for the temporary security credentials (such as
+<code>Bob</code>). For example, you can reference the federated user
+name in a resource-based policy, such as in an Amazon S3 bucket
+policy.</p></dd>
 		</dl>
 		
 	</div>
@@ -589,7 +595,7 @@ Callers should use properties to initialize any additional object members.</p>
 				<div id="footer"><script src="/urchin.js" type="text/javascript"></script><script type="text/javascript">urchinTracker();</script>
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Amazon Web Services, Inc.. All rights reserved. (Last updated: 2012-11-13)</span><br />
+						<p><span class="copyright">&copy; 2013 Amazon Web Services, Inc.. All rights reserved. (Last updated: 2013-08-12)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

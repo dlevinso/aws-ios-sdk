@@ -1,21 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2VolumeAttachment.html">
+	<File path="Classes/SQSChangeMessageVisibilityRequest.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2VolumeAttachment</TokenIdentifier>
-			<Abstract type="html">Volume Attachment</Abstract>
-			<DeclaredIn>EC2VolumeAttachment.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/SQSChangeMessageVisibilityRequest</TokenIdentifier>
+			<Abstract type="html">Change Message Visibility Request</Abstract>
+			<DeclaredIn>SQSChangeMessageVisibilityRequest.h</DeclaredIn>
 			
 			<NodeRef refid="822"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2VolumeAttachment/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new  object.  Callers should use the
+			<TokenIdentifier>//apple_ref/occ/instm/SQSChangeMessageVisibilityRequest/setQueueUrl:</TokenIdentifier>
+			<Abstract type="html">The URL of the SQS queue to take action on.</Abstract>
+			<DeclaredIn>SQSChangeMessageVisibilityRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *queueUrl</Declaration>
+			
+			
+			<Anchor>//api/name/queueUrl</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SQSChangeMessageVisibilityRequest/queueUrl</TokenIdentifier>
+			<Abstract type="html">The URL of the SQS queue to take action on.</Abstract>
+			<DeclaredIn>SQSChangeMessageVisibilityRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *queueUrl</Declaration>
+			
+			
+			<Anchor>//api/name/queueUrl</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SQSChangeMessageVisibilityRequest/setReceiptHandle:</TokenIdentifier>
+			<Abstract type="html">The receipt handle associated with the message whose visibility
+timeout should be changed.</Abstract>
+			<DeclaredIn>SQSChangeMessageVisibilityRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *receiptHandle</Declaration>
+			
+			
+			<Anchor>//api/name/receiptHandle</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SQSChangeMessageVisibilityRequest/receiptHandle</TokenIdentifier>
+			<Abstract type="html">The receipt handle associated with the message whose visibility
+timeout should be changed.</Abstract>
+			<DeclaredIn>SQSChangeMessageVisibilityRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *receiptHandle</Declaration>
+			
+			
+			<Anchor>//api/name/receiptHandle</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SQSChangeMessageVisibilityRequest/setVisibilityTimeout:</TokenIdentifier>
+			<Abstract type="html">The new value (in seconds) for the message&apos;s visibility timeout.</Abstract>
+			<DeclaredIn>SQSChangeMessageVisibilityRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSNumber *visibilityTimeout</Declaration>
+			
+			
+			<Anchor>//api/name/visibilityTimeout</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SQSChangeMessageVisibilityRequest/visibilityTimeout</TokenIdentifier>
+			<Abstract type="html">The new value (in seconds) for the message&apos;s visibility timeout.</Abstract>
+			<DeclaredIn>SQSChangeMessageVisibilityRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSNumber *visibilityTimeout</Declaration>
+			
+			
+			<Anchor>//api/name/visibilityTimeout</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SQSChangeMessageVisibilityRequest/init</TokenIdentifier>
+			<Abstract type="html">Default constructor for a new ChangeMessageVisibilityRequest object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2VolumeAttachment.h</DeclaredIn>			
+			<DeclaredIn>SQSChangeMessageVisibilityRequest.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -24,150 +92,35 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2VolumeAttachment/setVolumeId:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>EC2VolumeAttachment.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SQSChangeMessageVisibilityRequest/initWithQueueUrl:andReceiptHandle:andVisibilityTimeout:</TokenIdentifier>
+			<Abstract type="html">Constructs a new ChangeMessageVisibilityRequest object.
+Callers should use properties to initialize any additional object members.</Abstract>
+			<DeclaredIn>SQSChangeMessageVisibilityRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *volumeId</Declaration>
+			<Declaration>- (id)initWithQueueUrl:(NSString *)theQueueUrl andReceiptHandle:(NSString *)theReceiptHandle andVisibilityTimeout:(NSNumber *)theVisibilityTimeout</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>theQueueUrl</Name>
+					<Abstract type="html">The URL of the SQS queue to take action on.</Abstract>
+				</Parameter><Parameter>
+					<Name>theReceiptHandle</Name>
+					<Abstract type="html">The receipt handle associated with the message
+whose visibility timeout should be changed.</Abstract>
+				</Parameter><Parameter>
+					<Name>theVisibilityTimeout</Name>
+					<Abstract type="html">The new value (in seconds) for the
+message&apos;s visibility timeout.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/volumeId</Anchor>
+			<Anchor>//api/name/initWithQueueUrl:andReceiptHandle:andVisibilityTimeout:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2VolumeAttachment/volumeId</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>EC2VolumeAttachment.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *volumeId</Declaration>
-			
-			
-			<Anchor>//api/name/volumeId</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2VolumeAttachment/setInstanceId:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>EC2VolumeAttachment.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
-			
-			
-			<Anchor>//api/name/instanceId</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2VolumeAttachment/instanceId</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>EC2VolumeAttachment.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
-			
-			
-			<Anchor>//api/name/instanceId</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2VolumeAttachment/setDevice:</TokenIdentifier>
-			<Abstract type="html">How the device is exposed to the instance (e.g.,
-&lt;code&gt;/dev/sdh&lt;/code&gt;).</Abstract>
-			<DeclaredIn>EC2VolumeAttachment.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *device</Declaration>
-			
-			
-			<Anchor>//api/name/device</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2VolumeAttachment/device</TokenIdentifier>
-			<Abstract type="html">How the device is exposed to the instance (e.g.,
-&lt;code&gt;/dev/sdh&lt;/code&gt;).</Abstract>
-			<DeclaredIn>EC2VolumeAttachment.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *device</Declaration>
-			
-			
-			<Anchor>//api/name/device</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2VolumeAttachment/setState:</TokenIdentifier>
-			<Abstract type="html">&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Allowed Values: &lt;/b&gt;attaching, attached, detaching, detached</Abstract>
-			<DeclaredIn>EC2VolumeAttachment.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *state</Declaration>
-			
-			
-			<Anchor>//api/name/state</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2VolumeAttachment/state</TokenIdentifier>
-			<Abstract type="html">&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Allowed Values: &lt;/b&gt;attaching, attached, detaching, detached</Abstract>
-			<DeclaredIn>EC2VolumeAttachment.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *state</Declaration>
-			
-			
-			<Anchor>//api/name/state</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2VolumeAttachment/setAttachTime:</TokenIdentifier>
-			<Abstract type="html">Timestamp when this attachment initiated.</Abstract>
-			<DeclaredIn>EC2VolumeAttachment.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSDate *attachTime</Declaration>
-			
-			
-			<Anchor>//api/name/attachTime</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2VolumeAttachment/attachTime</TokenIdentifier>
-			<Abstract type="html">Timestamp when this attachment initiated.</Abstract>
-			<DeclaredIn>EC2VolumeAttachment.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSDate *attachTime</Declaration>
-			
-			
-			<Anchor>//api/name/attachTime</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2VolumeAttachment/setDeleteOnTermination:</TokenIdentifier>
-			<Abstract type="html">` &lt;p&gt; Whether this volume will be deleted or not when the associated
-instance is terminated.</Abstract>
-			<DeclaredIn>EC2VolumeAttachment.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic) bool deleteOnTermination</Declaration>
-			
-			
-			<Anchor>//api/name/deleteOnTermination</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2VolumeAttachment/deleteOnTermination</TokenIdentifier>
-			<Abstract type="html">` &lt;p&gt; Whether this volume will be deleted or not when the associated
-instance is terminated.</Abstract>
-			<DeclaredIn>EC2VolumeAttachment.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic) bool deleteOnTermination</Declaration>
-			
-			
-			<Anchor>//api/name/deleteOnTermination</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2VolumeAttachment/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SQSChangeMessageVisibilityRequest/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>EC2VolumeAttachment.h</DeclaredIn>			
+			<DeclaredIn>SQSChangeMessageVisibilityRequest.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

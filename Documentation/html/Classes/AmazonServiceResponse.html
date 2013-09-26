@@ -12,7 +12,7 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">AWS SDK for iOS v1.4.4 </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">AWS SDK for iOS v1.6.1 </a></h1>
 				<a id="developerHome" href="../index.html">Amazon Web Services, Inc.</a>
 			</div>
 			
@@ -26,6 +26,8 @@
 				<li id="jumpto_button" role="navigation">
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
 	
 	
 	
@@ -46,13 +48,19 @@
 	
 	<option value="//api/name/exception">&nbsp;&nbsp;&nbsp;&nbsp;exception</option>
 	
+	<option value="//api/name/hasClockSkewError">&nbsp;&nbsp;&nbsp;&nbsp;hasClockSkewError</option>
+	
 	<option value="//api/name/httpStatusCode">&nbsp;&nbsp;&nbsp;&nbsp;httpStatusCode</option>
+	
+	<option value="//api/name/isAsyncCall">&nbsp;&nbsp;&nbsp;&nbsp;isAsyncCall</option>
 	
 	<option value="//api/name/isFinishedLoading">&nbsp;&nbsp;&nbsp;&nbsp;isFinishedLoading</option>
 	
 	<option value="//api/name/request">&nbsp;&nbsp;&nbsp;&nbsp;request</option>
 	
 	<option value="//api/name/requestId">&nbsp;&nbsp;&nbsp;&nbsp;requestId</option>
+	
+	<option value="//api/name/responseHeader">&nbsp;&nbsp;&nbsp;&nbsp;responseHeader</option>
 	
 	
 	
@@ -67,6 +75,12 @@
 	
 	<option value="//api/name/connectionDidFinishLoading:">&nbsp;&nbsp;&nbsp;&nbsp;- connectionDidFinishLoading:</option>
 	
+	<option value="//api/name/getDateFromResponse">&nbsp;&nbsp;&nbsp;&nbsp;- getDateFromResponse</option>
+	
+	<option value="//api/name/getSkewTimeUsingResponse">&nbsp;&nbsp;&nbsp;&nbsp;- getSkewTimeUsingResponse</option>
+	
+	<option value="//api/name/isClockSkewError:">&nbsp;&nbsp;&nbsp;&nbsp;- isClockSkewError:</option>
+	
 	<option value="//api/name/processBody">&nbsp;&nbsp;&nbsp;&nbsp;- processBody</option>
 	
 	
@@ -78,6 +92,8 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
@@ -99,13 +115,19 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/exception">exception</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasClockSkewError">hasClockSkewError</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/httpStatusCode">httpStatusCode</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isAsyncCall">isAsyncCall</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isFinishedLoading">isFinishedLoading</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/request">request</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestId">requestId</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/responseHeader">responseHeader</a></span></li>
 	
 </ul></li>
 
@@ -120,6 +142,12 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connection:didReceiveResponse:">connection:didReceiveResponse:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connectionDidFinishLoading:">connectionDidFinishLoading:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getDateFromResponse">getDateFromResponse</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getSkewTimeUsingResponse">getSkewTimeUsingResponse</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isClockSkewError:">isClockSkewError:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/processBody">processBody</a></span></li>
 	
@@ -157,6 +185,21 @@
 					
 					
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>This variable is used as a key to add to userInfo, which is a NSDictionary
+property of NSException/NSError. When an async call fails due to Clock skew
+exception, the user can implement the delegate methods such as didFailWithError
+and didFailWithException. In those methods they can check userInfo to see if
+contains a key called &ldquo;AWSClockSkewError&rdquo;. If it is there then it should have
+a boolean value representing if it is clock skew error and the device clock skew
+has been adjusted. The client can now retry and the subsequent request should not
+fail due to clock skew.</p>
+					</div>
+					
+					
+					
 					
 					
 					<div class="section section-tasks">
@@ -172,6 +215,13 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/body">&nbsp;&nbsp;body</a></code>
 		<span class="tooltip"><p>The body of the html response.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/responseHeader">&nbsp;&nbsp;responseHeader</a></code>
+		<span class="tooltip"><p>The header of the html response.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -193,6 +243,20 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/didTimeout">&nbsp;&nbsp;didTimeout</a></code>
 		<span class="tooltip"><p>Whether the original request was timed out.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isAsyncCall">&nbsp;&nbsp;isAsyncCall</a></code>
+		<span class="tooltip"><p>Check if it is async call, this is necessary for checking if we need to set clock skew</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hasClockSkewError">&nbsp;&nbsp;hasClockSkewError</a></code>
+		<span class="tooltip"><p>Check if the response has the clock skew error</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -250,6 +314,27 @@ this will return the error object generated from the exception object.</p></span
 	<span class="tooltip">
 		<code><a href="#//api/name/connectionDidFinishLoading:">&ndash;&nbsp;connectionDidFinishLoading:</a></code>
 		<span class="tooltip"><p>delegate method for NSURLConnection</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isClockSkewError:">&ndash;&nbsp;isClockSkewError:</a></code>
+		<span class="tooltip"><p>Check if the AmazonServiceException is a clock skew exception.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getSkewTimeUsingResponse">&ndash;&nbsp;getSkewTimeUsingResponse</a></code>
+		<span class="tooltip"><p>Get the difference between the request time and the response time</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getDateFromResponse">&ndash;&nbsp;getDateFromResponse</a></code>
+		<span class="tooltip"><p>return date from the response header</p></span>
 	</span>
 	
 	
@@ -433,6 +518,47 @@ this will return the error object generated from the exception object.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/hasClockSkewError" title="hasClockSkewError"></a>
+	<h3 class="subsubtitle method-title">hasClockSkewError</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Check if the response has the clock skew error</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL hasClockSkewError</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Check if the response has the clock skew error</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">AmazonServiceResponse.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/httpStatusCode" title="httpStatusCode"></a>
 	<h3 class="subsubtitle method-title">httpStatusCode</h3>
 	
@@ -457,6 +583,47 @@ this will return the error object generated from the exception object.</p>
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>The HTTP status code of the response from the service.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">AmazonServiceResponse.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isAsyncCall" title="isAsyncCall"></a>
+	<h3 class="subsubtitle method-title">isAsyncCall</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Check if it is async call, this is necessary for checking if we need to set clock skew</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL isAsyncCall</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Check if it is async call, this is necessary for checking if we need to set clock skew</p>
 	</div>
 	
 	
@@ -580,6 +747,47 @@ this will return the error object generated from the exception object.</p>
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>The requestId assigned by the service</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">AmazonServiceResponse.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/responseHeader" title="responseHeader"></a>
+	<h3 class="subsubtitle method-title">responseHeader</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The header of the html response.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSDictionary *responseHeader</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The header of the html response.</p>
 	</div>
 	
 	
@@ -730,6 +938,149 @@ this will return the error object generated from the exception object.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/getDateFromResponse" title="getDateFromResponse"></a>
+	<h3 class="subsubtitle method-title">getDateFromResponse</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>return date from the response header</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSDate *)getDateFromResponse</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>return date from the response header</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">AmazonServiceResponse.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getSkewTimeUsingResponse" title="getSkewTimeUsingResponse"></a>
+	<h3 class="subsubtitle method-title">getSkewTimeUsingResponse</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Get the difference between the request time and the response time</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSTimeInterval)getSkewTimeUsingResponse</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>time interval which can be used to set the time skew</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Get the difference between the request time and the response time</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">AmazonServiceResponse.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isClockSkewError:" title="isClockSkewError:"></a>
+	<h3 class="subsubtitle method-title">isClockSkewError:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Check if the AmazonServiceException is a clock skew exception.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)isClockSkewError:(AmazonServiceException *)<em>serviceException</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>exception</em></dt>
+			<dd><p>An AmazonServiceException</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a bool that says whether the exception is a clock skew exception.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Check if the AmazonServiceException is a clock skew exception.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">AmazonServiceResponse.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/processBody" title="processBody"></a>
 	<h3 class="subsubtitle method-title">processBody</h3>
 	
@@ -783,7 +1134,7 @@ this will return the error object generated from the exception object.</p>
 				<div id="footer"><script src="/urchin.js" type="text/javascript"></script><script type="text/javascript">urchinTracker();</script>
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Amazon Web Services, Inc.. All rights reserved. (Last updated: 2012-11-13)</span><br />
+						<p><span class="copyright">&copy; 2013 Amazon Web Services, Inc.. All rights reserved. (Last updated: 2013-08-12)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

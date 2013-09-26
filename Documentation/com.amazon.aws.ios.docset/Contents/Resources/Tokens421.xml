@@ -1,87 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2CreateSecurityGroupRequest.html">
+	<File path="Classes/EC2License.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2CreateSecurityGroupRequest</TokenIdentifier>
-			<Abstract type="html">Create Security Group Request</Abstract>
-			<DeclaredIn>EC2CreateSecurityGroupRequest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/EC2License</TokenIdentifier>
+			<Abstract type="html">License</Abstract>
+			<DeclaredIn>EC2License.h</DeclaredIn>
 			
 			<NodeRef refid="421"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2CreateSecurityGroupRequest/setGroupName:</TokenIdentifier>
-			<Abstract type="html">Name of the security group.</Abstract>
-			<DeclaredIn>EC2CreateSecurityGroupRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *groupName</Declaration>
-			
-			
-			<Anchor>//api/name/groupName</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2CreateSecurityGroupRequest/groupName</TokenIdentifier>
-			<Abstract type="html">Name of the security group.</Abstract>
-			<DeclaredIn>EC2CreateSecurityGroupRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *groupName</Declaration>
-			
-			
-			<Anchor>//api/name/groupName</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2CreateSecurityGroupRequest/setDescriptionValue:</TokenIdentifier>
-			<Abstract type="html">Description of the group. This is informational only.</Abstract>
-			<DeclaredIn>EC2CreateSecurityGroupRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *descriptionValue</Declaration>
-			
-			
-			<Anchor>//api/name/descriptionValue</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2CreateSecurityGroupRequest/descriptionValue</TokenIdentifier>
-			<Abstract type="html">Description of the group. This is informational only.</Abstract>
-			<DeclaredIn>EC2CreateSecurityGroupRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *descriptionValue</Declaration>
-			
-			
-			<Anchor>//api/name/descriptionValue</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2CreateSecurityGroupRequest/setVpcId:</TokenIdentifier>
-			<Abstract type="html">ID of the VPC.</Abstract>
-			<DeclaredIn>EC2CreateSecurityGroupRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *vpcId</Declaration>
-			
-			
-			<Anchor>//api/name/vpcId</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2CreateSecurityGroupRequest/vpcId</TokenIdentifier>
-			<Abstract type="html">ID of the VPC.</Abstract>
-			<DeclaredIn>EC2CreateSecurityGroupRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *vpcId</Declaration>
-			
-			
-			<Anchor>//api/name/vpcId</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2CreateSecurityGroupRequest/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new CreateSecurityGroupRequest object.  Callers should use the
+			<TokenIdentifier>//apple_ref/occ/instm/EC2License/init</TokenIdentifier>
+			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2CreateSecurityGroupRequest.h</DeclaredIn>			
+			<DeclaredIn>EC2License.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -90,31 +24,148 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2CreateSecurityGroupRequest/initWithGroupName:andDescriptionValue:</TokenIdentifier>
-			<Abstract type="html">Constructs a new CreateSecurityGroupRequest object.
-Callers should use properties to initialize any additional object members.</Abstract>
-			<DeclaredIn>EC2CreateSecurityGroupRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2License/setLicenseId:</TokenIdentifier>
+			<Abstract type="html">The unique ID identifying the license.</Abstract>
+			<DeclaredIn>EC2License.h</DeclaredIn>			
 			
-			<Declaration>- (id)initWithGroupName:(NSString *)theGroupName andDescriptionValue:(NSString *)theDescriptionValue</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>theGroupName</Name>
-					<Abstract type="html">Name of the security group.</Abstract>
-				</Parameter><Parameter>
-					<Name>theDescriptionValue</Name>
-					<Abstract type="html">Description of the group. This is
-informational only.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, retain) NSString *licenseId</Declaration>
 			
-			<Anchor>//api/name/initWithGroupName:andDescriptionValue:</Anchor>
+			
+			<Anchor>//api/name/licenseId</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2CreateSecurityGroupRequest/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2License/licenseId</TokenIdentifier>
+			<Abstract type="html">The unique ID identifying the license.</Abstract>
+			<DeclaredIn>EC2License.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *licenseId</Declaration>
+			
+			
+			<Anchor>//api/name/licenseId</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2License/setType:</TokenIdentifier>
+			<Abstract type="html">The license type (ex. &quot;Microsoft/Windows/Standard&quot;).</Abstract>
+			<DeclaredIn>EC2License.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2License/type</TokenIdentifier>
+			<Abstract type="html">The license type (ex. &quot;Microsoft/Windows/Standard&quot;).</Abstract>
+			<DeclaredIn>EC2License.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2License/setPool:</TokenIdentifier>
+			<Abstract type="html">The name of the pool in which the license is kept.</Abstract>
+			<DeclaredIn>EC2License.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *pool</Declaration>
+			
+			
+			<Anchor>//api/name/pool</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2License/pool</TokenIdentifier>
+			<Abstract type="html">The name of the pool in which the license is kept.</Abstract>
+			<DeclaredIn>EC2License.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *pool</Declaration>
+			
+			
+			<Anchor>//api/name/pool</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2License/setCapacities:</TokenIdentifier>
+			<Abstract type="html">The capacities available for this license, indicating how many
+licenses are in use, how many are available, how many Amazon EC2
+instances can be supported, etc.</Abstract>
+			<DeclaredIn>EC2License.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSMutableArray *capacities</Declaration>
+			
+			
+			<Anchor>//api/name/capacities</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2License/capacities</TokenIdentifier>
+			<Abstract type="html">The capacities available for this license, indicating how many
+licenses are in use, how many are available, how many Amazon EC2
+instances can be supported, etc.</Abstract>
+			<DeclaredIn>EC2License.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSMutableArray *capacities</Declaration>
+			
+			
+			<Anchor>//api/name/capacities</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2License/setTags:</TokenIdentifier>
+			<Abstract type="html">A list of tags for the License.</Abstract>
+			<DeclaredIn>EC2License.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSMutableArray *tags</Declaration>
+			
+			
+			<Anchor>//api/name/tags</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2License/tags</TokenIdentifier>
+			<Abstract type="html">A list of tags for the License.</Abstract>
+			<DeclaredIn>EC2License.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSMutableArray *tags</Declaration>
+			
+			
+			<Anchor>//api/name/tags</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2License/addCapacity:</TokenIdentifier>
+			<Abstract type="html">Adds a single object to capacities.
+This function will alloc and init capacities if not already done.</Abstract>
+			<DeclaredIn>EC2License.h</DeclaredIn>			
+			
+			<Declaration>- (void)addCapacity:(EC2LicenseCapacity *)capacityObject</Declaration>
+			
+			
+			<Anchor>//api/name/addCapacity:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2License/addTag:</TokenIdentifier>
+			<Abstract type="html">Adds a single object to tags.
+This function will alloc and init tags if not already done.</Abstract>
+			<DeclaredIn>EC2License.h</DeclaredIn>			
+			
+			<Declaration>- (void)addTag:(EC2Tag *)tagObject</Declaration>
+			
+			
+			<Anchor>//api/name/addTag:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2License/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>EC2CreateSecurityGroupRequest.h</DeclaredIn>			
+			<DeclaredIn>EC2License.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

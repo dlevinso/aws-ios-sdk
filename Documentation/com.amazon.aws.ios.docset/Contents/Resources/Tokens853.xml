@@ -1,91 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/ElasticLoadBalancingCreateAppCookieStickinessPolicyRequest.html">
+	<File path="Classes/SQSReceiveMessageResponse.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/ElasticLoadBalancingCreateAppCookieStickinessPolicyRequest</TokenIdentifier>
-			<Abstract type="html">Create App Cookie Stickiness Policy Request</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateAppCookieStickinessPolicyRequest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/SQSReceiveMessageResponse</TokenIdentifier>
+			<Abstract type="html">Receive Message Result</Abstract>
+			<DeclaredIn>SQSReceiveMessageResponse.h</DeclaredIn>
 			
 			<NodeRef refid="853"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingCreateAppCookieStickinessPolicyRequest/setLoadBalancerName:</TokenIdentifier>
-			<Abstract type="html">The name associated with the LoadBalancer. The name must be unique
-within the client AWS account.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateAppCookieStickinessPolicyRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SQSReceiveMessageResponse/setException:</TokenIdentifier>
+			<Abstract type="html">If an exception was thrown, this will return the exception.</Abstract>
+			<DeclaredIn>SQSReceiveMessageResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *loadBalancerName</Declaration>
+			<Declaration>- (void)setException:(AmazonServiceException *)theException</Declaration>
 			
 			
-			<Anchor>//api/name/loadBalancerName</Anchor>
+			<Anchor>//api/name/setException:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingCreateAppCookieStickinessPolicyRequest/loadBalancerName</TokenIdentifier>
-			<Abstract type="html">The name associated with the LoadBalancer. The name must be unique
-within the client AWS account.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateAppCookieStickinessPolicyRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *loadBalancerName</Declaration>
-			
-			
-			<Anchor>//api/name/loadBalancerName</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingCreateAppCookieStickinessPolicyRequest/setPolicyName:</TokenIdentifier>
-			<Abstract type="html">The name of the policy being created. The name must be unique within
-the set of policies for this LoadBalancer.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateAppCookieStickinessPolicyRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *policyName</Declaration>
-			
-			
-			<Anchor>//api/name/policyName</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingCreateAppCookieStickinessPolicyRequest/policyName</TokenIdentifier>
-			<Abstract type="html">The name of the policy being created. The name must be unique within
-the set of policies for this LoadBalancer.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateAppCookieStickinessPolicyRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *policyName</Declaration>
-			
-			
-			<Anchor>//api/name/policyName</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingCreateAppCookieStickinessPolicyRequest/setCookieName:</TokenIdentifier>
-			<Abstract type="html">Name of the application cookie used for stickiness.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateAppCookieStickinessPolicyRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *cookieName</Declaration>
-			
-			
-			<Anchor>//api/name/cookieName</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingCreateAppCookieStickinessPolicyRequest/cookieName</TokenIdentifier>
-			<Abstract type="html">Name of the application cookie used for stickiness.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateAppCookieStickinessPolicyRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *cookieName</Declaration>
-			
-			
-			<Anchor>//api/name/cookieName</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingCreateAppCookieStickinessPolicyRequest/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new CreateAppCookieStickinessPolicyRequest object.  Callers should use the
+			<TokenIdentifier>//apple_ref/occ/instm/SQSReceiveMessageResponse/init</TokenIdentifier>
+			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateAppCookieStickinessPolicyRequest.h</DeclaredIn>			
+			<DeclaredIn>SQSReceiveMessageResponse.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -94,36 +35,43 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingCreateAppCookieStickinessPolicyRequest/initWithLoadBalancerName:andPolicyName:andCookieName:</TokenIdentifier>
-			<Abstract type="html">Constructs a new CreateAppCookieStickinessPolicyRequest object.
-Callers should use properties to initialize any additional object members.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateAppCookieStickinessPolicyRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SQSReceiveMessageResponse/setMessages:</TokenIdentifier>
+			<Abstract type="html">A list of messages.</Abstract>
+			<DeclaredIn>SQSReceiveMessageResponse.h</DeclaredIn>			
 			
-			<Declaration>- (id)initWithLoadBalancerName:(NSString *)theLoadBalancerName andPolicyName:(NSString *)thePolicyName andCookieName:(NSString *)theCookieName</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>theLoadBalancerName</Name>
-					<Abstract type="html">The name associated with the LoadBalancer.
-The name must be unique within the client AWS account.</Abstract>
-				</Parameter><Parameter>
-					<Name>thePolicyName</Name>
-					<Abstract type="html">The name of the policy being created. The name
-must be unique within the set of policies for this LoadBalancer.</Abstract>
-				</Parameter><Parameter>
-					<Name>theCookieName</Name>
-					<Abstract type="html">Name of the application cookie used for
-stickiness.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, retain) NSMutableArray *messages</Declaration>
 			
-			<Anchor>//api/name/initWithLoadBalancerName:andPolicyName:andCookieName:</Anchor>
+			
+			<Anchor>//api/name/messages</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingCreateAppCookieStickinessPolicyRequest/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/SQSReceiveMessageResponse/messages</TokenIdentifier>
+			<Abstract type="html">A list of messages.</Abstract>
+			<DeclaredIn>SQSReceiveMessageResponse.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSMutableArray *messages</Declaration>
+			
+			
+			<Anchor>//api/name/messages</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SQSReceiveMessageResponse/messagesObjectAtIndex:</TokenIdentifier>
+			<Abstract type="html">Returns a value from the messages array for the specified index</Abstract>
+			<DeclaredIn>SQSReceiveMessageResponse.h</DeclaredIn>			
+			
+			<Declaration>- (SQSMessage *)messagesObjectAtIndex:(int)index</Declaration>
+			
+			
+			<Anchor>//api/name/messagesObjectAtIndex:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SQSReceiveMessageResponse/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateAppCookieStickinessPolicyRequest.h</DeclaredIn>			
+			<DeclaredIn>SQSReceiveMessageResponse.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

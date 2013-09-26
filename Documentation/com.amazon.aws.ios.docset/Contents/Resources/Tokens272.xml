@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/DynamoDBCreateTableResponse.html">
+	<File path="Classes/EC2CreateSnapshotResponse.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/DynamoDBCreateTableResponse</TokenIdentifier>
-			<Abstract type="html">Create Table Result</Abstract>
-			<DeclaredIn>DynamoDBCreateTableResponse.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/EC2CreateSnapshotResponse</TokenIdentifier>
+			<Abstract type="html">Create Snapshot Response</Abstract>
+			<DeclaredIn>EC2CreateSnapshotResponse.h</DeclaredIn>
 			
 			<NodeRef refid="272"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBCreateTableResponse/setException:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2CreateSnapshotResponse/setException:</TokenIdentifier>
 			<Abstract type="html">If an exception was thrown, this will return the exception.</Abstract>
-			<DeclaredIn>DynamoDBCreateTableResponse.h</DeclaredIn>			
+			<DeclaredIn>EC2CreateSnapshotResponse.h</DeclaredIn>			
 			
 			<Declaration>- (void)setException:(AmazonServiceException *)theException</Declaration>
 			
@@ -23,10 +23,10 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBCreateTableResponse/init</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2CreateSnapshotResponse/init</TokenIdentifier>
 			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>DynamoDBCreateTableResponse.h</DeclaredIn>			
+			<DeclaredIn>EC2CreateSnapshotResponse.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -35,32 +35,32 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBCreateTableResponse/setTableDescription:</TokenIdentifier>
-			<Abstract type="html">The value of the TableDescription property for this object.</Abstract>
-			<DeclaredIn>DynamoDBCreateTableResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2CreateSnapshotResponse/setSnapshot:</TokenIdentifier>
+			<Abstract type="html">The new snapshot.</Abstract>
+			<DeclaredIn>EC2CreateSnapshotResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) DynamoDBTableDescription *tableDescription</Declaration>
+			<Declaration>@property (nonatomic, retain) EC2Snapshot *snapshot</Declaration>
 			
 			
-			<Anchor>//api/name/tableDescription</Anchor>
+			<Anchor>//api/name/snapshot</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/DynamoDBCreateTableResponse/tableDescription</TokenIdentifier>
-			<Abstract type="html">The value of the TableDescription property for this object.</Abstract>
-			<DeclaredIn>DynamoDBCreateTableResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/EC2CreateSnapshotResponse/snapshot</TokenIdentifier>
+			<Abstract type="html">The new snapshot.</Abstract>
+			<DeclaredIn>EC2CreateSnapshotResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) DynamoDBTableDescription *tableDescription</Declaration>
+			<Declaration>@property (nonatomic, retain) EC2Snapshot *snapshot</Declaration>
 			
 			
-			<Anchor>//api/name/tableDescription</Anchor>
+			<Anchor>//api/name/snapshot</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBCreateTableResponse/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2CreateSnapshotResponse/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>DynamoDBCreateTableResponse.h</DeclaredIn>			
+			<DeclaredIn>EC2CreateSnapshotResponse.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

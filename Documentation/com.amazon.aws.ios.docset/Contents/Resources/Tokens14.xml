@@ -1,407 +1,540 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/AmazonSNSClient.html">
+	<File path="Classes/AmazonSESClient.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/AmazonSNSClient</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/cl/AmazonSESClient</TokenIdentifier>
 			<Abstract type="html">&lt;summary&gt;
-Interface for accessing AmazonSNS.</Abstract>
-			<DeclaredIn>AmazonSNSClient.h</DeclaredIn>
+Interface for accessing AmazonSES.</Abstract>
+			<DeclaredIn>AmazonSESClient.h</DeclaredIn>
 			
 			<NodeRef refid="14"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSNSClient/confirmSubscription:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/deleteIdentity:</TokenIdentifier>
 			<Abstract type="html">&lt;p&gt;
-The ConfirmSubscription action verifies an endpoint owner&apos;s intent to receive messages by validating the token sent to
-the endpoint by an earlier Subscribe action. If the token is valid, the action creates a new subscription and returns
-its Amazon Resource Name (ARN). This call requires an AWS signature only when the AuthenticateOnUnsubscribe flag is set
-to &quot;true&quot;.
+Deletes the specified identity (email address or domain) from the list of verified identities.
 &lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSNSClient.h</DeclaredIn>			
+			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSConfirmSubscriptionRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSConfirmSubscriptionResponse</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESDeleteIdentityRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESDeleteIdentityResponse</TokenIdentifier>
 		
 	</RelatedTokens>
 	
-			<Declaration>- (SNSConfirmSubscriptionResponse *)confirmSubscription:(SNSConfirmSubscriptionRequest *)confirmSubscriptionRequest</Declaration>
+			<Declaration>- (SESDeleteIdentityResponse *)deleteIdentity:(SESDeleteIdentityRequest *)deleteIdentityRequest</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>confirmSubscriptionRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the ConfirmSubscription service
-method on AmazonSNS.</Abstract>
+					<Name>deleteIdentityRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the DeleteIdentity service method on
+AmazonSES.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the ConfirmSubscription service method, as returned by AmazonSNS.</Abstract></ReturnValue>
-			<Anchor>//api/name/confirmSubscription:</Anchor>
+			<ReturnValue><Abstract type="html">The response from the DeleteIdentity service method, as returned by AmazonSES.</Abstract></ReturnValue>
+			<Anchor>//api/name/deleteIdentity:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSNSClient/getTopicAttributes:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/listVerifiedEmailAddresses:</TokenIdentifier>
 			<Abstract type="html">&lt;p&gt;
-The GetTopicAttribtues action returns all of the properties of a topic customers have created. Topic properties returned
-might differ based on the authorization of the user.
+Returns a list containing all of the email addresses that have been verified.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;b&gt;IMPORTANT:&lt;/b&gt;The ListVerifiedEmailAddresses action is deprecated as of the May 15, 2012 release of Domain
+Verification. The ListIdentities action is now preferred.
 &lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSNSClient.h</DeclaredIn>			
+			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSGetTopicAttributesRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSGetTopicAttributesResponse</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESListVerifiedEmailAddressesRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESListVerifiedEmailAddressesResponse</TokenIdentifier>
 		
 	</RelatedTokens>
 	
-			<Declaration>- (SNSGetTopicAttributesResponse *)getTopicAttributes:(SNSGetTopicAttributesRequest *)getTopicAttributesRequest</Declaration>
+			<Declaration>- (SESListVerifiedEmailAddressesResponse *)listVerifiedEmailAddresses:(SESListVerifiedEmailAddressesRequest *)listVerifiedEmailAddressesRequest</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>getTopicAttributesRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the GetTopicAttributes service method
-on AmazonSNS.</Abstract>
+					<Name>listVerifiedEmailAddressesRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the
+ListVerifiedEmailAddresses service method on AmazonSES.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the GetTopicAttributes service method, as returned by AmazonSNS.</Abstract></ReturnValue>
-			<Anchor>//api/name/getTopicAttributes:</Anchor>
+			<ReturnValue><Abstract type="html">The response from the ListVerifiedEmailAddresses service method, as returned by AmazonSES.</Abstract></ReturnValue>
+			<Anchor>//api/name/listVerifiedEmailAddresses:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSNSClient/subscribe:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/getSendStatistics:</TokenIdentifier>
 			<Abstract type="html">&lt;p&gt;
-The Subscribe action prepares to subscribe an endpoint by sending the endpoint a confirmation message. To actually
-create a subscription, the endpoint owner must call the ConfirmSubscription action with the token from the confirmation
-message. Confirmation tokens are valid for three days.
+Returns the user&apos;s sending statistics. The result is a list of data points, representing the last two weeks of sending
+activity.
+&lt;/p&gt;
+&lt;p&gt;
+Each data point in the list contains statistics for a 15-minute interval.
 &lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSNSClient.h</DeclaredIn>			
+			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSSubscribeRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSSubscribeResponse</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESGetSendStatisticsRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESGetSendStatisticsResponse</TokenIdentifier>
 		
 	</RelatedTokens>
 	
-			<Declaration>- (SNSSubscribeResponse *)subscribe:(SNSSubscribeRequest *)subscribeRequest</Declaration>
+			<Declaration>- (SESGetSendStatisticsResponse *)getSendStatistics:(SESGetSendStatisticsRequest *)getSendStatisticsRequest</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>subscribeRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the Subscribe service method on AmazonSNS.</Abstract>
+					<Name>getSendStatisticsRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the GetSendStatistics service method
+on AmazonSES.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the Subscribe service method, as returned by AmazonSNS.</Abstract></ReturnValue>
-			<Anchor>//api/name/subscribe:</Anchor>
+			<ReturnValue><Abstract type="html">The response from the GetSendStatistics service method, as returned by AmazonSES.</Abstract></ReturnValue>
+			<Anchor>//api/name/getSendStatistics:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSNSClient/setTopicAttributes:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/verifyEmailIdentity:</TokenIdentifier>
 			<Abstract type="html">&lt;p&gt;
-The SetTopicAttributes action allows a topic owner to set an attribute of the topic to a new value.
+Verifies an email address. This action causes a confirmation email message to be sent to the specified address.
 &lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSNSClient.h</DeclaredIn>			
+			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSSetTopicAttributesRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSSetTopicAttributesResponse</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESVerifyEmailIdentityRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESVerifyEmailIdentityResponse</TokenIdentifier>
 		
 	</RelatedTokens>
 	
-			<Declaration>- (SNSSetTopicAttributesResponse *)setTopicAttributes:(SNSSetTopicAttributesRequest *)setTopicAttributesRequest</Declaration>
+			<Declaration>- (SESVerifyEmailIdentityResponse *)verifyEmailIdentity:(SESVerifyEmailIdentityRequest *)verifyEmailIdentityRequest</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>setTopicAttributesRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the SetTopicAttributes service method
-on AmazonSNS.</Abstract>
+					<Name>verifyEmailIdentityRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the VerifyEmailIdentity service
+method on AmazonSES.</Abstract>
 				</Parameter>
 			</Parameters>
-			
-			<Anchor>//api/name/setTopicAttributes:</Anchor>
+			<ReturnValue><Abstract type="html">The response from the VerifyEmailIdentity service method, as returned by AmazonSES.</Abstract></ReturnValue>
+			<Anchor>//api/name/verifyEmailIdentity:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSNSClient/deleteTopic:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/getIdentityNotificationAttributes:</TokenIdentifier>
 			<Abstract type="html">&lt;p&gt;
-The DeleteTopic action deletes a topic and all its subscriptions. Deleting a topic might prevent some messages
-previously sent to the topic from being delivered to subscribers. This action is idempotent, so deleting a topic that
-does not exist will not result in an error.
+Given a list of verified identities (email addresses and/or domains), returns a structure describing identity
+notification attributes. For more information about feedback notification, see the  Amazon SES Developer Guide  .
 &lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSNSClient.h</DeclaredIn>			
+			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSDeleteTopicRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSDeleteTopicResponse</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESGetIdentityNotificationAttributesRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESGetIdentityNotificationAttributesResponse</TokenIdentifier>
 		
 	</RelatedTokens>
 	
-			<Declaration>- (SNSDeleteTopicResponse *)deleteTopic:(SNSDeleteTopicRequest *)deleteTopicRequest</Declaration>
+			<Declaration>- (SESGetIdentityNotificationAttributesResponse *)getIdentityNotificationAttributes:(SESGetIdentityNotificationAttributesRequest *)getIdentityNotificationAttributesRequest</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>deleteTopicRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the DeleteTopic service method on AmazonSNS.</Abstract>
+					<Name>getIdentityNotificationAttributesRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the
+GetIdentityNotificationAttributes service method on AmazonSES.</Abstract>
 				</Parameter>
 			</Parameters>
-			
-			<Anchor>//api/name/deleteTopic:</Anchor>
+			<ReturnValue><Abstract type="html">The response from the GetIdentityNotificationAttributes service method, as returned by AmazonSES.</Abstract></ReturnValue>
+			<Anchor>//api/name/getIdentityNotificationAttributes:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSNSClient/removePermission:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/verifyDomainDkim:</TokenIdentifier>
 			<Abstract type="html">&lt;p&gt;
-The RemovePermission action removes a statement from a topic&apos;s access control policy.
+Returns a set of DNS records, or &lt;i&gt;tokens&lt;/i&gt; , that must be published in the domain name&apos;s DNS to complete the DKIM
+verification process. These tokens are DNS CNAME records that point to DKIM public keys hosted by Amazon SES. To
+complete the DKIM verification process, these tokens must be published in the domain&apos;s DNS. The tokens must remain
+published in order for Easy DKIM signing to function correctly.
+&lt;/p&gt;
+&lt;p&gt;
+After the tokens are added to the domain&apos;s DNS, Amazon SES will be able to DKIM-sign email originating from that domain.
+To enable or disable Easy DKIM signing for a domain, use the SetIdentityDkimEnabled action.
+&lt;/p&gt;
+&lt;p&gt;
+For more information about Easy DKIM, go to the 
+Amazon SES Developer Guide  .
 &lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSNSClient.h</DeclaredIn>			
+			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSRemovePermissionRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSRemovePermissionResponse</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESVerifyDomainDkimRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESVerifyDomainDkimResponse</TokenIdentifier>
 		
 	</RelatedTokens>
 	
-			<Declaration>- (SNSRemovePermissionResponse *)removePermission:(SNSRemovePermissionRequest *)removePermissionRequest</Declaration>
+			<Declaration>- (SESVerifyDomainDkimResponse *)verifyDomainDkim:(SESVerifyDomainDkimRequest *)verifyDomainDkimRequest</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>removePermissionRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the RemovePermission service method on
-AmazonSNS.</Abstract>
+					<Name>verifyDomainDkimRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the VerifyDomainDkim service method on
+AmazonSES.</Abstract>
 				</Parameter>
 			</Parameters>
-			
-			<Anchor>//api/name/removePermission:</Anchor>
+			<ReturnValue><Abstract type="html">The response from the VerifyDomainDkim service method, as returned by AmazonSES.</Abstract></ReturnValue>
+			<Anchor>//api/name/verifyDomainDkim:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSNSClient/listSubscriptions:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/getIdentityDkimAttributes:</TokenIdentifier>
 			<Abstract type="html">&lt;p&gt;
-The ListSubscriptions action returns a list of the requester&apos;s subscriptions. Each call returns a limited list of
-subscriptions, up to 100. If there are more subscriptions, a NextToken is also returned. Use the NextToken parameter in
-a new ListSubscriptions call to get further results.
+Returns the DNS records, or &lt;i&gt;tokens&lt;/i&gt; , that must be present in order for Easy DKIM to sign outgoing email messages.
+&lt;/p&gt;
+&lt;p&gt;
+This action takes a list of verified identities as input. It then returns the following information for each identity:
 &lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSNSClient.h</DeclaredIn>			
+			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSListSubscriptionsRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSListSubscriptionsResponse</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESGetIdentityDkimAttributesRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESGetIdentityDkimAttributesResponse</TokenIdentifier>
 		
 	</RelatedTokens>
 	
-			<Declaration>- (SNSListSubscriptionsResponse *)listSubscriptions:(SNSListSubscriptionsRequest *)listSubscriptionsRequest</Declaration>
+			<Declaration>- (SESGetIdentityDkimAttributesResponse *)getIdentityDkimAttributes:(SESGetIdentityDkimAttributesRequest *)getIdentityDkimAttributesRequest</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>listSubscriptionsRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the ListSubscriptions service method
-on AmazonSNS.</Abstract>
+					<Name>getIdentityDkimAttributesRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the GetIdentityDkimAttributes
+service method on AmazonSES.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the ListSubscriptions service method, as returned by AmazonSNS.</Abstract></ReturnValue>
-			<Anchor>//api/name/listSubscriptions:</Anchor>
+			<ReturnValue><Abstract type="html">The response from the GetIdentityDkimAttributes service method, as returned by AmazonSES.</Abstract></ReturnValue>
+			<Anchor>//api/name/getIdentityDkimAttributes:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSNSClient/setSubscriptionAttributes:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/verifyEmailAddress:</TokenIdentifier>
 			<Abstract type="html">&lt;p&gt;
-The SetSubscriptionAttributes action allows a subscription owner to set an attribute of the topic to a new value.
+Verifies an email address. This action causes a confirmation email message to be sent to the specified address.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;b&gt;IMPORTANT:&lt;/b&gt;The VerifyEmailAddress action is deprecated as of the May 15, 2012 release of Domain Verification. The
+VerifyEmailIdentity action is now preferred.
 &lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSNSClient.h</DeclaredIn>			
+			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSSetSubscriptionAttributesRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSSetSubscriptionAttributesResponse</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESVerifyEmailAddressRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESVerifyEmailAddressResponse</TokenIdentifier>
 		
 	</RelatedTokens>
 	
-			<Declaration>- (SNSSetSubscriptionAttributesResponse *)setSubscriptionAttributes:(SNSSetSubscriptionAttributesRequest *)setSubscriptionAttributesRequest</Declaration>
+			<Declaration>- (SESVerifyEmailAddressResponse *)verifyEmailAddress:(SESVerifyEmailAddressRequest *)verifyEmailAddressRequest</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>setSubscriptionAttributesRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the SetSubscriptionAttributes
-service method on AmazonSNS.</Abstract>
+					<Name>verifyEmailAddressRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the VerifyEmailAddress service method
+on AmazonSES.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/setSubscriptionAttributes:</Anchor>
+			<Anchor>//api/name/verifyEmailAddress:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSNSClient/addPermission:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/sendRawEmail:</TokenIdentifier>
 			<Abstract type="html">&lt;p&gt;
-The AddPermission action adds a statement to a topic&apos;s access control policy, granting access for the specified AWS
-accounts to the specified actions.
+Sends an email message, with header and content specified by the client. The SendRawEmail action is useful for sending
+multipart MIME emails. The raw text of the message must comply with Internet email standards; otherwise, the message
+cannot be sent.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;b&gt;IMPORTANT:&lt;/b&gt;If you have not yet requested production access to Amazon SES, then you will only be able to send email
+to and from verified email addresses and domains. For more information, go to the Amazon SES Developer Guide.
+&lt;/p&gt;
+&lt;p&gt;
+The total size of the message cannot exceed 10 MB. This includes any attachments that are part of the message.
+&lt;/p&gt;
+&lt;p&gt;
+Amazon SES has a limit on the total number of recipients per message: The combined number of To:, CC: and BCC: email
+addresses cannot exceed 50. If you need to send an email message to a larger audience, you can divide your recipient
+list into groups of 50 or fewer, and then call Amazon SES repeatedly to send the message to each group.
+&lt;/p&gt;
+&lt;p&gt;
+For every message that you send, the total number of recipients (To:, CC: and BCC:) is counted against your &lt;i&gt;sending
+quota&lt;/i&gt; - the maximum number of emails you can send in a 24-hour period. For information about your sending quota, go
+to the &quot;Managing Your Sending Activity&quot; section of the Amazon SES Developer Guide  .
 &lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSNSClient.h</DeclaredIn>			
+			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSAddPermissionRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSAddPermissionResponse</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESSendRawEmailRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESSendRawEmailResponse</TokenIdentifier>
 		
 	</RelatedTokens>
 	
-			<Declaration>- (SNSAddPermissionResponse *)addPermission:(SNSAddPermissionRequest *)addPermissionRequest</Declaration>
+			<Declaration>- (SESSendRawEmailResponse *)sendRawEmail:(SESSendRawEmailRequest *)sendRawEmailRequest</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>addPermissionRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the AddPermission service method on
-AmazonSNS.</Abstract>
+					<Name>sendRawEmailRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the SendRawEmail service method on
+AmazonSES.</Abstract>
 				</Parameter>
 			</Parameters>
-			
-			<Anchor>//api/name/addPermission:</Anchor>
+			<ReturnValue><Abstract type="html">The response from the SendRawEmail service method, as returned by AmazonSES.</Abstract></ReturnValue>
+			<Anchor>//api/name/sendRawEmail:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSNSClient/createTopic:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/listIdentities:</TokenIdentifier>
 			<Abstract type="html">&lt;p&gt;
-The CreateTopic action creates a topic to which notifications can be published. Users can create at most 25 topics. This
-action is idempotent, so if the requester already owns a topic with the specified name, that topic&apos;s ARN will be
-returned without creating a new topic.
+Returns a list containing all of the identities (email addresses and domains) for a specific AWS Account, regardless of
+verification status.
 &lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSNSClient.h</DeclaredIn>			
+			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSCreateTopicRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSCreateTopicResponse</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESListIdentitiesRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESListIdentitiesResponse</TokenIdentifier>
 		
 	</RelatedTokens>
 	
-			<Declaration>- (SNSCreateTopicResponse *)createTopic:(SNSCreateTopicRequest *)createTopicRequest</Declaration>
+			<Declaration>- (SESListIdentitiesResponse *)listIdentities:(SESListIdentitiesRequest *)listIdentitiesRequest</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>createTopicRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the CreateTopic service method on AmazonSNS.</Abstract>
+					<Name>listIdentitiesRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the ListIdentities service method on
+AmazonSES.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the CreateTopic service method, as returned by AmazonSNS.</Abstract></ReturnValue>
-			<Anchor>//api/name/createTopic:</Anchor>
+			<ReturnValue><Abstract type="html">The response from the ListIdentities service method, as returned by AmazonSES.</Abstract></ReturnValue>
+			<Anchor>//api/name/listIdentities:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSNSClient/getSubscriptionAttributes:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/getIdentityVerificationAttributes:</TokenIdentifier>
 			<Abstract type="html">&lt;p&gt;
-The GetSubscriptionAttribtues action returns all of the properties of a subscription.
+Given a list of identities (email addresses and/or domains), returns the verification status and (for domain identities)
+the verification token for each identity.
 &lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSNSClient.h</DeclaredIn>			
+			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSGetSubscriptionAttributesRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSGetSubscriptionAttributesResponse</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESGetIdentityVerificationAttributesRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESGetIdentityVerificationAttributesResponse</TokenIdentifier>
 		
 	</RelatedTokens>
 	
-			<Declaration>- (SNSGetSubscriptionAttributesResponse *)getSubscriptionAttributes:(SNSGetSubscriptionAttributesRequest *)getSubscriptionAttributesRequest</Declaration>
+			<Declaration>- (SESGetIdentityVerificationAttributesResponse *)getIdentityVerificationAttributes:(SESGetIdentityVerificationAttributesRequest *)getIdentityVerificationAttributesRequest</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>getSubscriptionAttributesRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the GetSubscriptionAttributes
-service method on AmazonSNS.</Abstract>
+					<Name>getIdentityVerificationAttributesRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the
+GetIdentityVerificationAttributes service method on AmazonSES.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the GetSubscriptionAttributes service method, as returned by AmazonSNS.</Abstract></ReturnValue>
-			<Anchor>//api/name/getSubscriptionAttributes:</Anchor>
+			<ReturnValue><Abstract type="html">The response from the GetIdentityVerificationAttributes service method, as returned by AmazonSES.</Abstract></ReturnValue>
+			<Anchor>//api/name/getIdentityVerificationAttributes:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSNSClient/listTopics:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/setIdentityDkimEnabled:</TokenIdentifier>
 			<Abstract type="html">&lt;p&gt;
-The ListTopics action returns a list of the requester&apos;s topics. Each call returns a limited list of topics, up to 100.
-If there are more topics, a NextToken is also returned. Use the NextToken parameter in a new ListTopics call to get
-further results.
+Enables or disables Easy DKIM signing of email sent from an identity:
 &lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSNSClient.h</DeclaredIn>			
+			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSListTopicsRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSListTopicsResponse</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESSetIdentityDkimEnabledRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESSetIdentityDkimEnabledResponse</TokenIdentifier>
 		
 	</RelatedTokens>
 	
-			<Declaration>- (SNSListTopicsResponse *)listTopics:(SNSListTopicsRequest *)listTopicsRequest</Declaration>
+			<Declaration>- (SESSetIdentityDkimEnabledResponse *)setIdentityDkimEnabled:(SESSetIdentityDkimEnabledRequest *)setIdentityDkimEnabledRequest</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>listTopicsRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the ListTopics service method on AmazonSNS.</Abstract>
+					<Name>setIdentityDkimEnabledRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the SetIdentityDkimEnabled
+service method on AmazonSES.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the ListTopics service method, as returned by AmazonSNS.</Abstract></ReturnValue>
-			<Anchor>//api/name/listTopics:</Anchor>
+			<ReturnValue><Abstract type="html">The response from the SetIdentityDkimEnabled service method, as returned by AmazonSES.</Abstract></ReturnValue>
+			<Anchor>//api/name/setIdentityDkimEnabled:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSNSClient/unsubscribe:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/getSendQuota:</TokenIdentifier>
 			<Abstract type="html">&lt;p&gt;
-The Unsubscribe action deletes a subscription. If the subscription requires authentication for deletion, only the owner
-of the subscription or the its topic&apos;s owner can unsubscribe, and an AWS signature is required. If the Unsubscribe call
-does not require authentication and the requester is not the subscription owner, a final cancellation message is
-delivered to the endpoint, so that the endpoint owner can easily resubscribe to the topic if the Unsubscribe request was
-unintended.
+Returns the user&apos;s current sending limits.
 &lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSNSClient.h</DeclaredIn>			
+			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSUnsubscribeRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSUnsubscribeResponse</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESGetSendQuotaRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESGetSendQuotaResponse</TokenIdentifier>
 		
 	</RelatedTokens>
 	
-			<Declaration>- (SNSUnsubscribeResponse *)unsubscribe:(SNSUnsubscribeRequest *)unsubscribeRequest</Declaration>
+			<Declaration>- (SESGetSendQuotaResponse *)getSendQuota:(SESGetSendQuotaRequest *)getSendQuotaRequest</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>unsubscribeRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the Unsubscribe service method on AmazonSNS.</Abstract>
+					<Name>getSendQuotaRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the GetSendQuota service method on
+AmazonSES.</Abstract>
 				</Parameter>
 			</Parameters>
-			
-			<Anchor>//api/name/unsubscribe:</Anchor>
+			<ReturnValue><Abstract type="html">The response from the GetSendQuota service method, as returned by AmazonSES.</Abstract></ReturnValue>
+			<Anchor>//api/name/getSendQuota:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSNSClient/listSubscriptionsByTopic:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/setIdentityFeedbackForwardingEnabled:</TokenIdentifier>
 			<Abstract type="html">&lt;p&gt;
-The ListSubscriptionsByTopic action returns a list of the subscriptions to a specific topic. Each call returns a limited
-list of subscriptions, up to 100. If there are more subscriptions, a NextToken is also returned. Use the NextToken
-parameter in a new ListSubscriptionsByTopic call to get further results.
+Given an identity (email address or domain), enables or disables whether Amazon SES forwards feedback notifications as
+email. Feedback forwarding may only be disabled when both complaint and bounce topics are set. For more information
+about feedback notification, see the  Amazon SES
+Developer Guide  .
 &lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSNSClient.h</DeclaredIn>			
+			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSListSubscriptionsByTopicRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSListSubscriptionsByTopicResponse</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESSetIdentityFeedbackForwardingEnabledRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESSetIdentityFeedbackForwardingEnabledResponse</TokenIdentifier>
 		
 	</RelatedTokens>
 	
-			<Declaration>- (SNSListSubscriptionsByTopicResponse *)listSubscriptionsByTopic:(SNSListSubscriptionsByTopicRequest *)listSubscriptionsByTopicRequest</Declaration>
+			<Declaration>- (SESSetIdentityFeedbackForwardingEnabledResponse *)setIdentityFeedbackForwardingEnabled:(SESSetIdentityFeedbackForwardingEnabledRequest *)setIdentityFeedbackForwardingEnabledRequest</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>listSubscriptionsByTopicRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the ListSubscriptionsByTopic
-service method on AmazonSNS.</Abstract>
+					<Name>setIdentityFeedbackForwardingEnabledRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the
+SetIdentityFeedbackForwardingEnabled service method on AmazonSES.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the ListSubscriptionsByTopic service method, as returned by AmazonSNS.</Abstract></ReturnValue>
-			<Anchor>//api/name/listSubscriptionsByTopic:</Anchor>
+			<ReturnValue><Abstract type="html">The response from the SetIdentityFeedbackForwardingEnabled service method, as returned by AmazonSES.</Abstract></ReturnValue>
+			<Anchor>//api/name/setIdentityFeedbackForwardingEnabled:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonSNSClient/publish:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/verifyDomainIdentity:</TokenIdentifier>
 			<Abstract type="html">&lt;p&gt;
-The Publish action sends a message to all of a topic&apos;s subscribed endpoints. When a messageId is returned, the message
-has been saved and Amazon SNS will attempt to deliver it to the topic&apos;s subscribers shortly. The format of the outgoing
-message to each subscribed endpoint depends on the notification protocol selected.
+Verifies a domain.
 &lt;/p&gt;</Abstract>
-			<DeclaredIn>AmazonSNSClient.h</DeclaredIn>			
+			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSPublishRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/SNSPublishResponse</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESVerifyDomainIdentityRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESVerifyDomainIdentityResponse</TokenIdentifier>
 		
 	</RelatedTokens>
 	
-			<Declaration>- (SNSPublishResponse *)publish:(SNSPublishRequest *)publishRequest</Declaration>
+			<Declaration>- (SESVerifyDomainIdentityResponse *)verifyDomainIdentity:(SESVerifyDomainIdentityRequest *)verifyDomainIdentityRequest</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>publishRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the Publish service method on AmazonSNS.</Abstract>
+					<Name>verifyDomainIdentityRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the VerifyDomainIdentity service
+method on AmazonSES.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">The response from the Publish service method, as returned by AmazonSNS.</Abstract></ReturnValue>
-			<Anchor>//api/name/publish:</Anchor>
+			<ReturnValue><Abstract type="html">The response from the VerifyDomainIdentity service method, as returned by AmazonSES.</Abstract></ReturnValue>
+			<Anchor>//api/name/verifyDomainIdentity:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/sendEmail:</TokenIdentifier>
+			<Abstract type="html">&lt;p&gt;
+Composes an email message based on input data, and then immediately queues the message for sending.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;b&gt;IMPORTANT:&lt;/b&gt;If you have not yet requested production access to Amazon SES, then you will only be able to send email
+to and from verified email addresses and domains. For more information, go to the Amazon SES Developer Guide.
+&lt;/p&gt;
+&lt;p&gt;
+The total size of the message cannot exceed 10 MB.
+&lt;/p&gt;
+&lt;p&gt;
+Amazon SES has a limit on the total number of recipients per message: The combined number of To:, CC: and BCC: email
+addresses cannot exceed 50. If you need to send an email message to a larger audience, you can divide your recipient
+list into groups of 50 or fewer, and then call Amazon SES repeatedly to send the message to each group.
+&lt;/p&gt;
+&lt;p&gt;
+For every message that you send, the total number of recipients (To:, CC: and BCC:) is counted against your &lt;i&gt;sending
+quota&lt;/i&gt; - the maximum number of emails you can send in a 24-hour period. For information about your sending quota, go
+to the &quot;Managing Your Sending Activity&quot; section of the Amazon SES Developer Guide  .
+&lt;/p&gt;</Abstract>
+			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/SESSendEmailRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESSendEmailResponse</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (SESSendEmailResponse *)sendEmail:(SESSendEmailRequest *)sendEmailRequest</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>sendEmailRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the SendEmail service method on AmazonSES.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The response from the SendEmail service method, as returned by AmazonSES.</Abstract></ReturnValue>
+			<Anchor>//api/name/sendEmail:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/deleteVerifiedEmailAddress:</TokenIdentifier>
+			<Abstract type="html">&lt;p&gt;
+Deletes the specified email address from the list of verified addresses.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;b&gt;IMPORTANT:&lt;/b&gt;The DeleteVerifiedEmailAddress action is deprecated as of the May 15, 2012 release of Domain
+Verification. The DeleteIdentity action is now preferred.
+&lt;/p&gt;</Abstract>
+			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/SESDeleteVerifiedEmailAddressRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESDeleteVerifiedEmailAddressResponse</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (SESDeleteVerifiedEmailAddressResponse *)deleteVerifiedEmailAddress:(SESDeleteVerifiedEmailAddressRequest *)deleteVerifiedEmailAddressRequest</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>deleteVerifiedEmailAddressRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the
+DeleteVerifiedEmailAddress service method on AmazonSES.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/deleteVerifiedEmailAddress:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonSESClient/setIdentityNotificationTopic:</TokenIdentifier>
+			<Abstract type="html">&lt;p&gt;
+Given an identity (email address or domain), sets the Amazon SNS topic to which Amazon SES will publish bounce and
+complaint notifications for emails sent with that identity as the Source .
+Publishing to topics may only be disabled when feedback forwarding is enabled. For more information about
+feedback notification, see the  Amazon SES
+Developer Guide  .
+&lt;/p&gt;</Abstract>
+			<DeclaredIn>AmazonSESClient.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/SESSetIdentityNotificationTopicRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SESSetIdentityNotificationTopicResponse</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (SESSetIdentityNotificationTopicResponse *)setIdentityNotificationTopic:(SESSetIdentityNotificationTopicRequest *)setIdentityNotificationTopicRequest</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>setIdentityNotificationTopicRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the
+SetIdentityNotificationTopic service method on AmazonSES.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The response from the SetIdentityNotificationTopic service method, as returned by AmazonSES.</Abstract></ReturnValue>
+			<Anchor>//api/name/setIdentityNotificationTopic:</Anchor>
 		</Token>
 		
 	</File>

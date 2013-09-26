@@ -1,73 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2DescribeSnapshotAttributeRequest.html">
+	<File path="Classes/ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerRequest.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2DescribeSnapshotAttributeRequest</TokenIdentifier>
-			<Abstract type="html">Describe Snapshot Attribute Request</Abstract>
-			<DeclaredIn>EC2DescribeSnapshotAttributeRequest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerRequest</TokenIdentifier>
+			<Abstract type="html">Disable Availability Zones For Load Balancer Request</Abstract>
+			<DeclaredIn>ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerRequest.h</DeclaredIn>
 			
 			<NodeRef refid="542"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeSnapshotAttributeRequest/setSnapshotId:</TokenIdentifier>
-			<Abstract type="html">The ID of the EBS snapshot whose attribute is being described.</Abstract>
-			<DeclaredIn>EC2DescribeSnapshotAttributeRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerRequest/setLoadBalancerName:</TokenIdentifier>
+			<Abstract type="html">The name associated with the LoadBalancer. The name must be unique
+within the client AWS account.</Abstract>
+			<DeclaredIn>ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *snapshotId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *loadBalancerName</Declaration>
 			
 			
-			<Anchor>//api/name/snapshotId</Anchor>
+			<Anchor>//api/name/loadBalancerName</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2DescribeSnapshotAttributeRequest/snapshotId</TokenIdentifier>
-			<Abstract type="html">The ID of the EBS snapshot whose attribute is being described.</Abstract>
-			<DeclaredIn>EC2DescribeSnapshotAttributeRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerRequest/loadBalancerName</TokenIdentifier>
+			<Abstract type="html">The name associated with the LoadBalancer. The name must be unique
+within the client AWS account.</Abstract>
+			<DeclaredIn>ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *snapshotId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *loadBalancerName</Declaration>
 			
 			
-			<Anchor>//api/name/snapshotId</Anchor>
+			<Anchor>//api/name/loadBalancerName</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeSnapshotAttributeRequest/setAttribute:</TokenIdentifier>
-			<Abstract type="html">The name of the EBS attribute to describe. &lt;p&gt; Available attribute
-names: createVolumePermission
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Allowed Values: &lt;/b&gt;productCodes, createVolumePermission</Abstract>
-			<DeclaredIn>EC2DescribeSnapshotAttributeRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerRequest/setAvailabilityZones:</TokenIdentifier>
+			<Abstract type="html">A list of Availability Zones to be removed from the LoadBalancer.
+&lt;note&gt; There must be at least one Availability Zone registered with a
+LoadBalancer at all times. The client cannot remove all the
+Availability Zones from a LoadBalancer. Specified Availability Zones
+must be in the same Region. &lt;/note&gt;</Abstract>
+			<DeclaredIn>ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *attribute</Declaration>
+			<Declaration>@property (nonatomic, retain) NSMutableArray *availabilityZones</Declaration>
 			
 			
-			<Anchor>//api/name/attribute</Anchor>
+			<Anchor>//api/name/availabilityZones</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2DescribeSnapshotAttributeRequest/attribute</TokenIdentifier>
-			<Abstract type="html">The name of the EBS attribute to describe. &lt;p&gt; Available attribute
-names: createVolumePermission
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Allowed Values: &lt;/b&gt;productCodes, createVolumePermission</Abstract>
-			<DeclaredIn>EC2DescribeSnapshotAttributeRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerRequest/availabilityZones</TokenIdentifier>
+			<Abstract type="html">A list of Availability Zones to be removed from the LoadBalancer.
+&lt;note&gt; There must be at least one Availability Zone registered with a
+LoadBalancer at all times. The client cannot remove all the
+Availability Zones from a LoadBalancer. Specified Availability Zones
+must be in the same Region. &lt;/note&gt;</Abstract>
+			<DeclaredIn>ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *attribute</Declaration>
+			<Declaration>@property (nonatomic, retain) NSMutableArray *availabilityZones</Declaration>
 			
 			
-			<Anchor>//api/name/attribute</Anchor>
+			<Anchor>//api/name/availabilityZones</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeSnapshotAttributeRequest/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new DescribeSnapshotAttributeRequest object.  Callers should use the
+			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerRequest/init</TokenIdentifier>
+			<Abstract type="html">Default constructor for a new DisableAvailabilityZonesForLoadBalancerRequest object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2DescribeSnapshotAttributeRequest.h</DeclaredIn>			
+			<DeclaredIn>ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerRequest.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -76,32 +78,47 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeSnapshotAttributeRequest/initWithSnapshotId:andAttribute:</TokenIdentifier>
-			<Abstract type="html">Constructs a new DescribeSnapshotAttributeRequest object.
+			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerRequest/initWithLoadBalancerName:andAvailabilityZones:</TokenIdentifier>
+			<Abstract type="html">Constructs a new DisableAvailabilityZonesForLoadBalancerRequest object.
 Callers should use properties to initialize any additional object members.</Abstract>
-			<DeclaredIn>EC2DescribeSnapshotAttributeRequest.h</DeclaredIn>			
+			<DeclaredIn>ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerRequest.h</DeclaredIn>			
 			
-			<Declaration>- (id)initWithSnapshotId:(NSString *)theSnapshotId andAttribute:(NSString *)theAttribute</Declaration>
+			<Declaration>- (id)initWithLoadBalancerName:(NSString *)theLoadBalancerName andAvailabilityZones:(NSMutableArray *)theAvailabilityZones</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>theSnapshotId</Name>
-					<Abstract type="html">The ID of the EBS snapshot whose attribute is
-being described.</Abstract>
+					<Name>theLoadBalancerName</Name>
+					<Abstract type="html">The name associated with the LoadBalancer.
+The name must be unique within the client AWS account.</Abstract>
 				</Parameter><Parameter>
-					<Name>theAttribute</Name>
-					<Abstract type="html">The name of the EBS attribute to describe. &lt;p&gt;
-Available attribute names: createVolumePermission</Abstract>
+					<Name>theAvailabilityZones</Name>
+					<Abstract type="html">A list of Availability Zones to be removed
+from the LoadBalancer. &lt;note&gt; There must be at least one Availability
+Zone registered with a LoadBalancer at all times. The client cannot
+remove all the Availability Zones from a LoadBalancer. Specified
+Availability Zones must be in the same Region. &lt;/note&gt;</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/initWithSnapshotId:andAttribute:</Anchor>
+			<Anchor>//api/name/initWithLoadBalancerName:andAvailabilityZones:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeSnapshotAttributeRequest/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerRequest/addAvailabilityZone:</TokenIdentifier>
+			<Abstract type="html">Adds a single object to availabilityZones.
+This function will alloc and init availabilityZones if not already done.</Abstract>
+			<DeclaredIn>ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerRequest.h</DeclaredIn>			
+			
+			<Declaration>- (void)addAvailabilityZone:(NSString *)availabilityZoneObject</Declaration>
+			
+			
+			<Anchor>//api/name/addAvailabilityZone:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerRequest/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>EC2DescribeSnapshotAttributeRequest.h</DeclaredIn>			
+			<DeclaredIn>ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerRequest.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

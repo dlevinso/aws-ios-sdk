@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -15,6 +15,8 @@
 
 #import "S3UploaderViewController.h"
 #import "Constants.h"
+
+#import <AWSRuntime/AWSRuntime.h>
 
 
 @implementation S3UploaderViewController
@@ -34,9 +36,10 @@
     {
         // Initial the S3 Client.
         self.s3 = [[[AmazonS3Client alloc] initWithAccessKey:ACCESS_KEY_ID withSecretKey:SECRET_KEY] autorelease];
+        self.s3.endpoint = [AmazonEndpoints s3Endpoint:US_WEST_2];
 
         // Create the picture bucket.
-        S3CreateBucketRequest *createBucketRequest = [[[S3CreateBucketRequest alloc] initWithName:[Constants pictureBucket]] autorelease];
+        S3CreateBucketRequest *createBucketRequest = [[[S3CreateBucketRequest alloc] initWithName:[Constants pictureBucket] andRegion:[S3Region USWest2]] autorelease];
         S3CreateBucketResponse *createBucketResponse = [self.s3 createBucket:createBucketRequest];
         if(createBucketResponse.error != nil)
         {

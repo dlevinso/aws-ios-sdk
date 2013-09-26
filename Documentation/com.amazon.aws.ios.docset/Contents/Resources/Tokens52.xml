@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/AutoScalingDeleteLaunchConfigurationResponse.html">
+	<File path="Classes/AutoScalingDeleteTagsResponse.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/AutoScalingDeleteLaunchConfigurationResponse</TokenIdentifier>
-			<Abstract type="html">Delete Launch Configuration</Abstract>
-			<DeclaredIn>AutoScalingDeleteLaunchConfigurationResponse.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/AutoScalingDeleteTagsResponse</TokenIdentifier>
+			<Abstract type="html">Delete Tags</Abstract>
+			<DeclaredIn>AutoScalingDeleteTagsResponse.h</DeclaredIn>
 			
 			<NodeRef refid="52"/>
 		</Token>

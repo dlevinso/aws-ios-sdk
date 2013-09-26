@@ -1,32 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2CancelReservedInstancesListingResponse.html">
+	<File path="Classes/EC2ImportInstanceTaskDetails.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2CancelReservedInstancesListingResponse</TokenIdentifier>
-			<Abstract type="html">Cancel Reserved Instances Listing Response</Abstract>
-			<DeclaredIn>EC2CancelReservedInstancesListingResponse.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/EC2ImportInstanceTaskDetails</TokenIdentifier>
+			<Abstract type="html">Import Instance Task Details</Abstract>
+			<DeclaredIn>EC2ImportInstanceTaskDetails.h</DeclaredIn>
 			
 			<NodeRef refid="388"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2CancelReservedInstancesListingResponse/setException:</TokenIdentifier>
-			<Abstract type="html">If an exception was thrown, this will return the exception.</Abstract>
-			<DeclaredIn>EC2CancelReservedInstancesListingResponse.h</DeclaredIn>			
-			
-			<Declaration>- (void)setException:(AmazonServiceException *)theException</Declaration>
-			
-			
-			<Anchor>//api/name/setException:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2CancelReservedInstancesListingResponse/init</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2ImportInstanceTaskDetails/init</TokenIdentifier>
 			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2CancelReservedInstancesListingResponse.h</DeclaredIn>			
+			<DeclaredIn>EC2ImportInstanceTaskDetails.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -35,43 +24,110 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2CancelReservedInstancesListingResponse/setReservedInstancesListings:</TokenIdentifier>
-			<Abstract type="html">The value of the ReservedInstancesListings property for this object.</Abstract>
-			<DeclaredIn>EC2CancelReservedInstancesListingResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2ImportInstanceTaskDetails/setVolumes:</TokenIdentifier>
+			<Abstract type="html">The value of the Volumes property for this object.</Abstract>
+			<DeclaredIn>EC2ImportInstanceTaskDetails.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *reservedInstancesListings</Declaration>
+			<Declaration>@property (nonatomic, retain) NSMutableArray *volumes</Declaration>
 			
 			
-			<Anchor>//api/name/reservedInstancesListings</Anchor>
+			<Anchor>//api/name/volumes</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2CancelReservedInstancesListingResponse/reservedInstancesListings</TokenIdentifier>
-			<Abstract type="html">The value of the ReservedInstancesListings property for this object.</Abstract>
-			<DeclaredIn>EC2CancelReservedInstancesListingResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/EC2ImportInstanceTaskDetails/volumes</TokenIdentifier>
+			<Abstract type="html">The value of the Volumes property for this object.</Abstract>
+			<DeclaredIn>EC2ImportInstanceTaskDetails.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *reservedInstancesListings</Declaration>
+			<Declaration>@property (nonatomic, retain) NSMutableArray *volumes</Declaration>
 			
 			
-			<Anchor>//api/name/reservedInstancesListings</Anchor>
+			<Anchor>//api/name/volumes</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2CancelReservedInstancesListingResponse/reservedInstancesListingsObjectAtIndex:</TokenIdentifier>
-			<Abstract type="html">Returns a value from the reservedInstancesListings array for the specified index</Abstract>
-			<DeclaredIn>EC2CancelReservedInstancesListingResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2ImportInstanceTaskDetails/setInstanceId:</TokenIdentifier>
+			<Abstract type="html">The value of the InstanceId property for this object.</Abstract>
+			<DeclaredIn>EC2ImportInstanceTaskDetails.h</DeclaredIn>			
 			
-			<Declaration>- (EC2ReservedInstancesListing *)reservedInstancesListingsObjectAtIndex:(int)index</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
 			
 			
-			<Anchor>//api/name/reservedInstancesListingsObjectAtIndex:</Anchor>
+			<Anchor>//api/name/instanceId</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2CancelReservedInstancesListingResponse/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2ImportInstanceTaskDetails/instanceId</TokenIdentifier>
+			<Abstract type="html">The value of the InstanceId property for this object.</Abstract>
+			<DeclaredIn>EC2ImportInstanceTaskDetails.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
+			
+			
+			<Anchor>//api/name/instanceId</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2ImportInstanceTaskDetails/setPlatform:</TokenIdentifier>
+			<Abstract type="html">The value of the Platform property for this object.</Abstract>
+			<DeclaredIn>EC2ImportInstanceTaskDetails.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *platform</Declaration>
+			
+			
+			<Anchor>//api/name/platform</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2ImportInstanceTaskDetails/platform</TokenIdentifier>
+			<Abstract type="html">The value of the Platform property for this object.</Abstract>
+			<DeclaredIn>EC2ImportInstanceTaskDetails.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *platform</Declaration>
+			
+			
+			<Anchor>//api/name/platform</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2ImportInstanceTaskDetails/setDescriptionValue:</TokenIdentifier>
+			<Abstract type="html">The value of the Description property for this object.</Abstract>
+			<DeclaredIn>EC2ImportInstanceTaskDetails.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *descriptionValue</Declaration>
+			
+			
+			<Anchor>//api/name/descriptionValue</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2ImportInstanceTaskDetails/descriptionValue</TokenIdentifier>
+			<Abstract type="html">The value of the Description property for this object.</Abstract>
+			<DeclaredIn>EC2ImportInstanceTaskDetails.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *descriptionValue</Declaration>
+			
+			
+			<Anchor>//api/name/descriptionValue</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2ImportInstanceTaskDetails/addVolume:</TokenIdentifier>
+			<Abstract type="html">Adds a single object to volumes.
+This function will alloc and init volumes if not already done.</Abstract>
+			<DeclaredIn>EC2ImportInstanceTaskDetails.h</DeclaredIn>			
+			
+			<Declaration>- (void)addVolume:(EC2ImportInstanceVolumeDetailItem *)volumeObject</Declaration>
+			
+			
+			<Anchor>//api/name/addVolume:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2ImportInstanceTaskDetails/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>EC2CancelReservedInstancesListingResponse.h</DeclaredIn>			
+			<DeclaredIn>EC2ImportInstanceTaskDetails.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

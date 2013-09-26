@@ -1,80 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2GetPasswordDataRequest.html">
+	<File path="Classes/S3CreateBucketRequest.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2GetPasswordDataRequest</TokenIdentifier>
-			<Abstract type="html">Get Password Data Request</Abstract>
-			<DeclaredIn>EC2GetPasswordDataRequest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/S3CreateBucketRequest</TokenIdentifier>
+			<Abstract type="html">Contains the parameters used for the createBucket operation.</Abstract>
+			<DeclaredIn>S3CreateBucketRequest.h</DeclaredIn>
 			
 			<NodeRef refid="609"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2GetPasswordDataRequest/setInstanceId:</TokenIdentifier>
-			<Abstract type="html">The ID of the instance for which you want the Windows administrator
-password.</Abstract>
-			<DeclaredIn>EC2GetPasswordDataRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/S3CreateBucketRequest/setRegion:</TokenIdentifier>
+			<Abstract type="html">Region where the bucket should be created.</Abstract>
+			<DeclaredIn>S3CreateBucketRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
+			<Declaration>@property (nonatomic, retain) S3Region *region</Declaration>
 			
 			
-			<Anchor>//api/name/instanceId</Anchor>
+			<Anchor>//api/name/region</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2GetPasswordDataRequest/instanceId</TokenIdentifier>
-			<Abstract type="html">The ID of the instance for which you want the Windows administrator
-password.</Abstract>
-			<DeclaredIn>EC2GetPasswordDataRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/S3CreateBucketRequest/region</TokenIdentifier>
+			<Abstract type="html">Region where the bucket should be created.</Abstract>
+			<DeclaredIn>S3CreateBucketRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
+			<Declaration>@property (nonatomic, retain) S3Region *region</Declaration>
 			
 			
-			<Anchor>//api/name/instanceId</Anchor>
+			<Anchor>//api/name/region</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2GetPasswordDataRequest/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new GetPasswordDataRequest object.  Callers should use the
-property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2GetPasswordDataRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/S3CreateBucketRequest/setCreateBucketConfiguration:</TokenIdentifier>
+			<Abstract type="html">The body of the request if there is a region specified</Abstract>
+			<DeclaredIn>S3CreateBucketRequest.h</DeclaredIn>			
 			
-			<Declaration>- (id)init</Declaration>
+			<Declaration>@property (nonatomic, readonly) NSData *createBucketConfiguration</Declaration>
 			
 			
-			<Anchor>//api/name/init</Anchor>
+			<Anchor>//api/name/createBucketConfiguration</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2GetPasswordDataRequest/initWithInstanceId:</TokenIdentifier>
-			<Abstract type="html">Constructs a new GetPasswordDataRequest object.
-Callers should use properties to initialize any additional object members.</Abstract>
-			<DeclaredIn>EC2GetPasswordDataRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/S3CreateBucketRequest/createBucketConfiguration</TokenIdentifier>
+			<Abstract type="html">The body of the request if there is a region specified</Abstract>
+			<DeclaredIn>S3CreateBucketRequest.h</DeclaredIn>			
 			
-			<Declaration>- (id)initWithInstanceId:(NSString *)theInstanceId</Declaration>
+			<Declaration>@property (nonatomic, readonly) NSData *createBucketConfiguration</Declaration>
+			
+			
+			<Anchor>//api/name/createBucketConfiguration</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/S3CreateBucketRequest/setCannedACL:</TokenIdentifier>
+			<Abstract type="html">The canned access control list to apply to the bucket</Abstract>
+			<DeclaredIn>S3CreateBucketRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) S3CannedACL *cannedACL</Declaration>
+			
+			
+			<Anchor>//api/name/cannedACL</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/S3CreateBucketRequest/cannedACL</TokenIdentifier>
+			<Abstract type="html">The canned access control list to apply to the bucket</Abstract>
+			<DeclaredIn>S3CreateBucketRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) S3CannedACL *cannedACL</Declaration>
+			
+			
+			<Anchor>//api/name/cannedACL</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/S3CreateBucketRequest/setFullACL:</TokenIdentifier>
+			<Abstract type="html">A full access control list to apply to the bucket</Abstract>
+			<DeclaredIn>S3CreateBucketRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) S3AccessControlList *fullACL</Declaration>
+			
+			
+			<Anchor>//api/name/fullACL</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/S3CreateBucketRequest/fullACL</TokenIdentifier>
+			<Abstract type="html">A full access control list to apply to the bucket</Abstract>
+			<DeclaredIn>S3CreateBucketRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) S3AccessControlList *fullACL</Declaration>
+			
+			
+			<Anchor>//api/name/fullACL</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/S3CreateBucketRequest/initWithName:</TokenIdentifier>
+			<Abstract type="html">Initializes the request with a bucket name.</Abstract>
+			<DeclaredIn>S3CreateBucketRequest.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithName:(NSString *)theBucketName</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>theInstanceId</Name>
-					<Abstract type="html">The ID of the instance for which you want the
-Windows administrator password.</Abstract>
+					<Name>theBucketName</Name>
+					<Abstract type="html">The name of the bucket</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/initWithInstanceId:</Anchor>
+			<Anchor>//api/name/initWithName:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2GetPasswordDataRequest/description</TokenIdentifier>
-			<Abstract type="html">Returns a string representation of this object; useful for testing and
-debugging.</Abstract>
-			<DeclaredIn>EC2GetPasswordDataRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/S3CreateBucketRequest/initWithName:andRegion:</TokenIdentifier>
+			<Abstract type="html">Initializes the request with a bucket name and region.</Abstract>
+			<DeclaredIn>S3CreateBucketRequest.h</DeclaredIn>			
 			
-			<Declaration>- (NSString *)description</Declaration>
+			<Declaration>- (id)initWithName:(NSString *)theBucketName andRegion:(S3Region *)theRegion</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>theBucketName</Name>
+					<Abstract type="html">The name of the bucket</Abstract>
+				</Parameter><Parameter>
+					<Name>theRegion</Name>
+					<Abstract type="html">The region where the bucket should be created.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			<ReturnValue><Abstract type="html">A string representation of this object.</Abstract></ReturnValue>
-			<Anchor>//api/name/description</Anchor>
+			<Anchor>//api/name/initWithName:andRegion:</Anchor>
 		</Token>
 		
 	</File>

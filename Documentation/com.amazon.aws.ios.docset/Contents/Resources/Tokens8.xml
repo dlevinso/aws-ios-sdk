@@ -616,6 +616,30 @@ Deletes tags from the specified Amazon EC2 resources.
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonEC2Client/describeAccountAttributes:</TokenIdentifier>
+			<Abstract type="html">Container for the necessary parameters to execute the DescribeAccountAttributes
+service method on AmazonEC2.</Abstract>
+			<DeclaredIn>AmazonEC2Client.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/EC2DescribeAccountAttributesRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/EC2DescribeAccountAttributesResponse</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (EC2DescribeAccountAttributesResponse *)describeAccountAttributes:(EC2DescribeAccountAttributesRequest *)describeAccountAttributesRequest</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>describeAccountAttributesRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the DescribeAccountAttributes
+service method on AmazonEC2.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The response from the DescribeAccountAttributes service method, as returned by AmazonEC2.</Abstract></ReturnValue>
+			<Anchor>//api/name/describeAccountAttributes:</Anchor>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/AmazonEC2Client/enableVolumeIO:</TokenIdentifier>
 			<Abstract type="html">&lt;p&gt;
 Enable IO on the volume after an event has occured.
@@ -827,6 +851,65 @@ AmazonEC2.</Abstract>
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonEC2Client/describeVpcs:</TokenIdentifier>
+			<Abstract type="html">&lt;p&gt;
+Gives you information about your VPCs. You can filter the results to return information only about VPCs that match
+criteria you specify.
+&lt;/p&gt;
+&lt;p&gt;
+For example, you could ask to get information about a particular VPC or VPCs (or all your VPCs) only if the VPC&apos;s state
+is available. You can specify multiple filters (e.g., the VPC uses one of several sets of DHCP options, and the VPC&apos;s
+state is available). The result includes information for a particular VPC only if the VPC matches all your filters.
+&lt;/p&gt;
+&lt;p&gt;
+If there&apos;s no match, no special message is returned; the response is simply empty. The following table shows the
+available filters.
+&lt;/p&gt;</Abstract>
+			<DeclaredIn>AmazonEC2Client.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/EC2DescribeVpcsRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/EC2DescribeVpcsResponse</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (EC2DescribeVpcsResponse *)describeVpcs:(EC2DescribeVpcsRequest *)describeVpcsRequest</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>describeVpcsRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the DescribeVpcs service method on
+AmazonEC2.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The response from the DescribeVpcs service method, as returned by AmazonEC2.</Abstract></ReturnValue>
+			<Anchor>//api/name/describeVpcs:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonEC2Client/cancelConversionTask:</TokenIdentifier>
+			<Abstract type="html">Container for the necessary parameters to execute the CancelConversionTask service
+method on AmazonEC2.</Abstract>
+			<DeclaredIn>AmazonEC2Client.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/EC2CancelConversionTaskRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/EC2CancelConversionTaskResponse</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (EC2CancelConversionTaskResponse *)cancelConversionTask:(EC2CancelConversionTaskRequest *)cancelConversionTaskRequest</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cancelConversionTaskRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the CancelConversionTask service
+method on AmazonEC2.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/cancelConversionTask:</Anchor>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/AmazonEC2Client/associateAddress:</TokenIdentifier>
 			<Abstract type="html">&lt;p&gt;
 The AssociateAddress operation associates an elastic IP address with an instance.
@@ -853,30 +936,6 @@ AmazonEC2.</Abstract>
 			</Parameters>
 			<ReturnValue><Abstract type="html">The response from the AssociateAddress service method, as returned by AmazonEC2.</Abstract></ReturnValue>
 			<Anchor>//api/name/associateAddress:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonEC2Client/cancelConversionTask:</TokenIdentifier>
-			<Abstract type="html">Container for the necessary parameters to execute the CancelConversionTask service
-method on AmazonEC2.</Abstract>
-			<DeclaredIn>AmazonEC2Client.h</DeclaredIn>			
-			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/cl/EC2CancelConversionTaskRequest</TokenIdentifier>
-		<TokenIdentifier>//apple_ref/occ/cl/EC2CancelConversionTaskResponse</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>- (EC2CancelConversionTaskResponse *)cancelConversionTask:(EC2CancelConversionTaskRequest *)cancelConversionTaskRequest</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>cancelConversionTaskRequest</Name>
-					<Abstract type="html">Container for the necessary parameters to execute the CancelConversionTask service
-method on AmazonEC2.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/cancelConversionTask:</Anchor>
 		</Token>
 		
 		<Token>
@@ -1245,6 +1304,41 @@ service method on AmazonEC2.</Abstract>
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonEC2Client/describeSubnets:</TokenIdentifier>
+			<Abstract type="html">&lt;p&gt;
+Gives you information about your subnets. You can filter the results to return information only about subnets that
+match criteria you specify.
+&lt;/p&gt;
+&lt;p&gt;
+For example, you could ask to get information about a particular subnet (or all) only if the subnet&apos;s state is
+available. You can specify multiple filters (e.g., the subnet is in a particular VPC, and the subnet&apos;s state is
+available).
+&lt;/p&gt;
+&lt;p&gt;
+The result includes information for a particular subnet only if the subnet matches all your filters. If there&apos;s no
+match, no special message is returned; the response is simply empty. The following table shows the available filters.
+&lt;/p&gt;</Abstract>
+			<DeclaredIn>AmazonEC2Client.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/EC2DescribeSubnetsRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/EC2DescribeSubnetsResponse</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (EC2DescribeSubnetsResponse *)describeSubnets:(EC2DescribeSubnetsRequest *)describeSubnetsRequest</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>describeSubnetsRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the DescribeSubnets service method on
+AmazonEC2.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The response from the DescribeSubnets service method, as returned by AmazonEC2.</Abstract></ReturnValue>
+			<Anchor>//api/name/describeSubnets:</Anchor>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/AmazonEC2Client/runInstances:</TokenIdentifier>
 			<Abstract type="html">&lt;p&gt;
 The RunInstances operation launches a specified number of instances.
@@ -1598,6 +1692,28 @@ AmazonEC2.</Abstract>
 			</Parameters>
 			
 			<Anchor>//api/name/cancelExportTask:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonEC2Client/doCopyImage:</TokenIdentifier>
+			<Abstract type="html">Container for the necessary parameters to execute the CopyImage service method on AmazonEC2.</Abstract>
+			<DeclaredIn>AmazonEC2Client.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/EC2CopyImageRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/EC2CopyImageResponse</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (EC2CopyImageResponse *)doCopyImage:(EC2CopyImageRequest *)copyImageRequest</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>copyImageRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the CopyImage service method on AmazonEC2.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The response from the CopyImage service method, as returned by AmazonEC2.</Abstract></ReturnValue>
+			<Anchor>//api/name/doCopyImage:</Anchor>
 		</Token>
 		
 		<Token>
@@ -2214,6 +2330,30 @@ method on AmazonEC2.</Abstract>
 			</Parameters>
 			
 			<Anchor>//api/name/deletePlacementGroup:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonEC2Client/doCopySnapshot:</TokenIdentifier>
+			<Abstract type="html">Container for the necessary parameters to execute the CopySnapshot service method on
+AmazonEC2.</Abstract>
+			<DeclaredIn>AmazonEC2Client.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/EC2CopySnapshotRequest</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/EC2CopySnapshotResponse</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (EC2CopySnapshotResponse *)doCopySnapshot:(EC2CopySnapshotRequest *)copySnapshotRequest</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>copySnapshotRequest</Name>
+					<Abstract type="html">Container for the necessary parameters to execute the CopySnapshot service method on
+AmazonEC2.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The response from the CopySnapshot service method, as returned by AmazonEC2.</Abstract></ReturnValue>
+			<Anchor>//api/name/doCopySnapshot:</Anchor>
 		</Token>
 		
 		<Token>

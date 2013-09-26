@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/ElasticLoadBalancingApplySecurityGroupsToLoadBalancerRequest.html">
+	<File path="Classes/SQSGetQueueUrlResponse.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/ElasticLoadBalancingApplySecurityGroupsToLoadBalancerRequest</TokenIdentifier>
-			<Abstract type="html">Apply Security Groups To Load Balancer Request</Abstract>
-			<DeclaredIn>ElasticLoadBalancingApplySecurityGroupsToLoadBalancerRequest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/SQSGetQueueUrlResponse</TokenIdentifier>
+			<Abstract type="html">Get Queue Url Result</Abstract>
+			<DeclaredIn>SQSGetQueueUrlResponse.h</DeclaredIn>
 			
 			<NodeRef refid="838"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingApplySecurityGroupsToLoadBalancerRequest/init</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SQSGetQueueUrlResponse/setException:</TokenIdentifier>
+			<Abstract type="html">If an exception was thrown, this will return the exception.</Abstract>
+			<DeclaredIn>SQSGetQueueUrlResponse.h</DeclaredIn>			
+			
+			<Declaration>- (void)setException:(AmazonServiceException *)theException</Declaration>
+			
+			
+			<Anchor>//api/name/setException:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SQSGetQueueUrlResponse/init</TokenIdentifier>
 			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingApplySecurityGroupsToLoadBalancerRequest.h</DeclaredIn>			
+			<DeclaredIn>SQSGetQueueUrlResponse.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -24,72 +35,32 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingApplySecurityGroupsToLoadBalancerRequest/setLoadBalancerName:</TokenIdentifier>
-			<Abstract type="html">The name associated with the LoadBalancer. The name must be unique
-within the client AWS account.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingApplySecurityGroupsToLoadBalancerRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SQSGetQueueUrlResponse/setQueueUrl:</TokenIdentifier>
+			<Abstract type="html">The URL for the queue.</Abstract>
+			<DeclaredIn>SQSGetQueueUrlResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *loadBalancerName</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *queueUrl</Declaration>
 			
 			
-			<Anchor>//api/name/loadBalancerName</Anchor>
+			<Anchor>//api/name/queueUrl</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingApplySecurityGroupsToLoadBalancerRequest/loadBalancerName</TokenIdentifier>
-			<Abstract type="html">The name associated with the LoadBalancer. The name must be unique
-within the client AWS account.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingApplySecurityGroupsToLoadBalancerRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/SQSGetQueueUrlResponse/queueUrl</TokenIdentifier>
+			<Abstract type="html">The URL for the queue.</Abstract>
+			<DeclaredIn>SQSGetQueueUrlResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *loadBalancerName</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *queueUrl</Declaration>
 			
 			
-			<Anchor>//api/name/loadBalancerName</Anchor>
+			<Anchor>//api/name/queueUrl</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingApplySecurityGroupsToLoadBalancerRequest/setSecurityGroups:</TokenIdentifier>
-			<Abstract type="html">A list of security group IDs to associate with your LoadBalancer in
-VPC. The security group IDs must be provided as the ID and not the
-security group name (For example, sg-1234).</Abstract>
-			<DeclaredIn>ElasticLoadBalancingApplySecurityGroupsToLoadBalancerRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *securityGroups</Declaration>
-			
-			
-			<Anchor>//api/name/securityGroups</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingApplySecurityGroupsToLoadBalancerRequest/securityGroups</TokenIdentifier>
-			<Abstract type="html">A list of security group IDs to associate with your LoadBalancer in
-VPC. The security group IDs must be provided as the ID and not the
-security group name (For example, sg-1234).</Abstract>
-			<DeclaredIn>ElasticLoadBalancingApplySecurityGroupsToLoadBalancerRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *securityGroups</Declaration>
-			
-			
-			<Anchor>//api/name/securityGroups</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingApplySecurityGroupsToLoadBalancerRequest/addSecurityGroup:</TokenIdentifier>
-			<Abstract type="html">Adds a single object to securityGroups.
-This function will alloc and init securityGroups if not already done.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingApplySecurityGroupsToLoadBalancerRequest.h</DeclaredIn>			
-			
-			<Declaration>- (void)addSecurityGroup:(NSString *)securityGroupObject</Declaration>
-			
-			
-			<Anchor>//api/name/addSecurityGroup:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingApplySecurityGroupsToLoadBalancerRequest/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SQSGetQueueUrlResponse/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingApplySecurityGroupsToLoadBalancerRequest.h</DeclaredIn>			
+			<DeclaredIn>SQSGetQueueUrlResponse.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

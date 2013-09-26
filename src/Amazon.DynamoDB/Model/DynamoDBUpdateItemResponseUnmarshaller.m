@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -15,9 +15,12 @@
 
 #import "DynamoDBUpdateItemResponseUnmarshaller.h"
 #import "DynamoDBExceptionUnmarshaller.h"
-#import "../AmazonSDKUtil.h"
+
+#import "AmazonSDKUtil.h"
 #import "DynamoDBAttributeValueUnmarshaller.h"
 #import "DynamoDBAttributeValueUnmarshaller.h"
+#import "DynamoDBConsumedCapacityUnmarshaller.h"
+#import "DynamoDBItemCollectionMetricsUnmarshaller.h"
 
 
 @implementation DynamoDBUpdateItemResponseUnmarshaller
@@ -39,8 +42,13 @@
         }
 
 
-        if ([jsonObject valueForKey:@"ConsumedCapacityUnits"] != nil) {
-            updateItemResult.consumedCapacityUnits = [jsonObject valueForKey:@"ConsumedCapacityUnits"];
+        if ([jsonObject valueForKey:@"ConsumedCapacity"] != nil) {
+            updateItemResult.consumedCapacity = [DynamoDBConsumedCapacityUnmarshaller unmarshall:[jsonObject valueForKey:@"ConsumedCapacity"]];
+        }
+
+
+        if ([jsonObject valueForKey:@"ItemCollectionMetrics"] != nil) {
+            updateItemResult.itemCollectionMetrics = [DynamoDBItemCollectionMetricsUnmarshaller unmarshall:[jsonObject valueForKey:@"ItemCollectionMetrics"]];
         }
     }
 

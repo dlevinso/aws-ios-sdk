@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -15,10 +15,13 @@
 
 #import "DynamoDBQueryResponseUnmarshaller.h"
 #import "DynamoDBExceptionUnmarshaller.h"
-#import "../AmazonSDKUtil.h"
+
+#import "AmazonSDKUtil.h"
 #import "DynamoDBAttributeValueUnmarshaller.h"
 #import "DynamoDBAttributeValueUnmarshaller.h"
-#import "DynamoDBKeyUnmarshaller.h"
+#import "DynamoDBAttributeValueUnmarshaller.h"
+#import "DynamoDBAttributeValueUnmarshaller.h"
+#import "DynamoDBConsumedCapacityUnmarshaller.h"
 
 
 @implementation DynamoDBQueryResponseUnmarshaller
@@ -51,13 +54,15 @@
         }
 
 
-        if ([jsonObject valueForKey:@"LastEvaluatedKey"] != nil) {
-            queryResult.lastEvaluatedKey = [DynamoDBKeyUnmarshaller unmarshall:[jsonObject valueForKey:@"LastEvaluatedKey"]];
+        NSDictionary *lastEvaluatedKeyObject = [jsonObject valueForKey:@"LastEvaluatedKey"];
+        for (NSString *key in [lastEvaluatedKeyObject allKeys]) {
+            NSDictionary *value = [lastEvaluatedKeyObject valueForKey:key];
+            [queryResult.lastEvaluatedKey setValue:[DynamoDBAttributeValueUnmarshaller unmarshall:value] forKey:key];
         }
 
 
-        if ([jsonObject valueForKey:@"ConsumedCapacityUnits"] != nil) {
-            queryResult.consumedCapacityUnits = [jsonObject valueForKey:@"ConsumedCapacityUnits"];
+        if ([jsonObject valueForKey:@"ConsumedCapacity"] != nil) {
+            queryResult.consumedCapacity = [DynamoDBConsumedCapacityUnmarshaller unmarshall:[jsonObject valueForKey:@"ConsumedCapacity"]];
         }
     }
 

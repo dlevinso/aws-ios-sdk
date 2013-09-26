@@ -1,236 +1,208 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/AmazonServiceResponse.html">
+	<File path="Classes/AmazonServiceRequest.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/AmazonServiceResponse</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/cl/AmazonServiceRequest</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>AmazonServiceResponse.h</DeclaredIn>
+			<DeclaredIn>AmazonServiceRequest.h</DeclaredIn>
 			
 			<NodeRef refid="20"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonServiceResponse/setBody:</TokenIdentifier>
-			<Abstract type="html">The body of the html response.</Abstract>
-			<DeclaredIn>AmazonServiceResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonServiceRequest/setCredentials:</TokenIdentifier>
+			<Abstract type="html">Request specific credentials.</Abstract>
+			<DeclaredIn>AmazonServiceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, readonly) NSData *body</Declaration>
+			<Declaration>@property (nonatomic, retain) AmazonCredentials *credentials</Declaration>
 			
 			
-			<Anchor>//api/name/body</Anchor>
+			<Anchor>//api/name/credentials</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AmazonServiceResponse/body</TokenIdentifier>
-			<Abstract type="html">The body of the html response.</Abstract>
-			<DeclaredIn>AmazonServiceResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/AmazonServiceRequest/credentials</TokenIdentifier>
+			<Abstract type="html">Request specific credentials.</Abstract>
+			<DeclaredIn>AmazonServiceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, readonly) NSData *body</Declaration>
+			<Declaration>@property (nonatomic, retain) AmazonCredentials *credentials</Declaration>
 			
 			
-			<Anchor>//api/name/body</Anchor>
+			<Anchor>//api/name/credentials</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonServiceResponse/setHttpStatusCode:</TokenIdentifier>
-			<Abstract type="html">The HTTP status code of the response from the service.</Abstract>
-			<DeclaredIn>AmazonServiceResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonServiceRequest/setUrlRequest:</TokenIdentifier>
+			<Abstract type="html">The urlRequest object which represents this request.
+Use configureURLRequest to make sure all fields have</Abstract>
+			<DeclaredIn>AmazonServiceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic) NSInteger httpStatusCode</Declaration>
+			<Declaration>@property (nonatomic, retain) AmazonURLRequest *urlRequest</Declaration>
 			
 			
-			<Anchor>//api/name/httpStatusCode</Anchor>
+			<Anchor>//api/name/urlRequest</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AmazonServiceResponse/httpStatusCode</TokenIdentifier>
-			<Abstract type="html">The HTTP status code of the response from the service.</Abstract>
-			<DeclaredIn>AmazonServiceResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/AmazonServiceRequest/urlRequest</TokenIdentifier>
+			<Abstract type="html">The urlRequest object which represents this request.
+Use configureURLRequest to make sure all fields have</Abstract>
+			<DeclaredIn>AmazonServiceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic) NSInteger httpStatusCode</Declaration>
+			<Declaration>@property (nonatomic, retain) AmazonURLRequest *urlRequest</Declaration>
 			
 			
-			<Anchor>//api/name/httpStatusCode</Anchor>
+			<Anchor>//api/name/urlRequest</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonServiceResponse/setIsFinishedLoading:</TokenIdentifier>
-			<Abstract type="html">Whether the response is finished loading.</Abstract>
-			<DeclaredIn>AmazonServiceResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonServiceRequest/setUrlConnection:</TokenIdentifier>
+			<Abstract type="html">The connection object used to make the request.</Abstract>
+			<DeclaredIn>AmazonServiceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, readonly) bool isFinishedLoading</Declaration>
+			<Declaration>@property (nonatomic, retain) NSURLConnection *urlConnection</Declaration>
 			
 			
-			<Anchor>//api/name/isFinishedLoading</Anchor>
+			<Anchor>//api/name/urlConnection</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AmazonServiceResponse/isFinishedLoading</TokenIdentifier>
-			<Abstract type="html">Whether the response is finished loading.</Abstract>
-			<DeclaredIn>AmazonServiceResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/AmazonServiceRequest/urlConnection</TokenIdentifier>
+			<Abstract type="html">The connection object used to make the request.</Abstract>
+			<DeclaredIn>AmazonServiceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, readonly) bool isFinishedLoading</Declaration>
+			<Declaration>@property (nonatomic, retain) NSURLConnection *urlConnection</Declaration>
 			
 			
-			<Anchor>//api/name/isFinishedLoading</Anchor>
+			<Anchor>//api/name/urlConnection</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonServiceResponse/setDidTimeout:</TokenIdentifier>
-			<Abstract type="html">Whether the original request was timed out.</Abstract>
-			<DeclaredIn>AmazonServiceResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonServiceRequest/setHttpMethod:</TokenIdentifier>
+			<Abstract type="html">The HTTP Method (GET, PUT, POST, DELETE) used for the request.</Abstract>
+			<DeclaredIn>AmazonServiceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, readonly) bool didTimeout</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *httpMethod</Declaration>
 			
 			
-			<Anchor>//api/name/didTimeout</Anchor>
+			<Anchor>//api/name/httpMethod</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AmazonServiceResponse/didTimeout</TokenIdentifier>
-			<Abstract type="html">Whether the original request was timed out.</Abstract>
-			<DeclaredIn>AmazonServiceResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/AmazonServiceRequest/httpMethod</TokenIdentifier>
+			<Abstract type="html">The HTTP Method (GET, PUT, POST, DELETE) used for the request.</Abstract>
+			<DeclaredIn>AmazonServiceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, readonly) bool didTimeout</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *httpMethod</Declaration>
 			
 			
-			<Anchor>//api/name/didTimeout</Anchor>
+			<Anchor>//api/name/httpMethod</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonServiceResponse/setError:</TokenIdentifier>
-			<Abstract type="html">If an exception was thrown, and the SDK is configured not to throw exceptions,
-this will return the error object generated from the exception object.</Abstract>
-			<DeclaredIn>AmazonServiceResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonServiceRequest/setUrl:</TokenIdentifier>
+			<Abstract type="html">The URL for the resource.
+This property is read-only.</Abstract>
+			<DeclaredIn>AmazonServiceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSError *error</Declaration>
+			<Declaration>@property (nonatomic, readonly) NSURL *url</Declaration>
 			
 			
-			<Anchor>//api/name/error</Anchor>
+			<Anchor>//api/name/url</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AmazonServiceResponse/error</TokenIdentifier>
-			<Abstract type="html">If an exception was thrown, and the SDK is configured not to throw exceptions,
-this will return the error object generated from the exception object.</Abstract>
-			<DeclaredIn>AmazonServiceResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/AmazonServiceRequest/url</TokenIdentifier>
+			<Abstract type="html">The URL for the resource.
+This property is read-only.</Abstract>
+			<DeclaredIn>AmazonServiceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSError *error</Declaration>
+			<Declaration>@property (nonatomic, readonly) NSURL *url</Declaration>
 			
 			
-			<Anchor>//api/name/error</Anchor>
+			<Anchor>//api/name/url</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonServiceResponse/setException:</TokenIdentifier>
-			<Abstract type="html">If an exception was thrown, this will return the exception.</Abstract>
-			<DeclaredIn>AmazonServiceResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonServiceRequest/setDelegate:</TokenIdentifier>
+			<Abstract type="html">The delegate object for the request.</Abstract>
+			<DeclaredIn>AmazonServiceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, readonly) NSException *exception</Declaration>
+			<Declaration>@property (nonatomic, assign) id&lt;&gt; delegate</Declaration>
 			
 			
-			<Anchor>//api/name/exception</Anchor>
+			<Anchor>//api/name/delegate</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AmazonServiceResponse/exception</TokenIdentifier>
-			<Abstract type="html">If an exception was thrown, this will return the exception.</Abstract>
-			<DeclaredIn>AmazonServiceResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/AmazonServiceRequest/delegate</TokenIdentifier>
+			<Abstract type="html">The delegate object for the request.</Abstract>
+			<DeclaredIn>AmazonServiceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, readonly) NSException *exception</Declaration>
+			<Declaration>@property (nonatomic, assign) id&lt;&gt; delegate</Declaration>
 			
 			
-			<Anchor>//api/name/exception</Anchor>
+			<Anchor>//api/name/delegate</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonServiceResponse/setRequest:</TokenIdentifier>
-			<Abstract type="html">The request for which this is the response</Abstract>
-			<DeclaredIn>AmazonServiceResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonServiceRequest/setRequestTag:</TokenIdentifier>
+			<Abstract type="html">Open property that enables user to distinquish various requests.</Abstract>
+			<DeclaredIn>AmazonServiceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) AmazonServiceRequest *request</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *requestTag</Declaration>
 			
 			
-			<Anchor>//api/name/request</Anchor>
+			<Anchor>//api/name/requestTag</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AmazonServiceResponse/request</TokenIdentifier>
-			<Abstract type="html">The request for which this is the response</Abstract>
-			<DeclaredIn>AmazonServiceResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/AmazonServiceRequest/requestTag</TokenIdentifier>
+			<Abstract type="html">Open property that enables user to distinquish various requests.</Abstract>
+			<DeclaredIn>AmazonServiceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) AmazonServiceRequest *request</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *requestTag</Declaration>
 			
 			
-			<Anchor>//api/name/request</Anchor>
+			<Anchor>//api/name/requestTag</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonServiceResponse/setRequestId:</TokenIdentifier>
-			<Abstract type="html">The requestId assigned by the service</Abstract>
-			<DeclaredIn>AmazonServiceResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonServiceRequest/validate</TokenIdentifier>
+			<Abstract type="html">This method returns nil if the request object passed the validation.
+If not, it will return an exception.
+All methods inheriting this method must call [super validate] first to check if it returns any exceptions.</Abstract>
+			<DeclaredIn>AmazonServiceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *requestId</Declaration>
+			<Declaration>- (AmazonClientException *)validate</Declaration>
 			
 			
-			<Anchor>//api/name/requestId</Anchor>
+			<Anchor>//api/name/validate</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AmazonServiceResponse/requestId</TokenIdentifier>
-			<Abstract type="html">The requestId assigned by the service</Abstract>
-			<DeclaredIn>AmazonServiceResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonServiceRequest/cancel</TokenIdentifier>
+			<Abstract type="html">Cancel asynchronous operations. The thread invoked this request needs to call this method to cancel the operation. Once cancelled, it cannot be resumed. Create another request object and invoke it again.
+It has no effect on synchronous operations.</Abstract>
+			<DeclaredIn>AmazonServiceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *requestId</Declaration>
+			<Declaration>- (void)cancel</Declaration>
 			
 			
-			<Anchor>//api/name/requestId</Anchor>
+			<Anchor>//api/name/cancel</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonServiceResponse/processBody</TokenIdentifier>
-			<Abstract type="html">Once the body has been received, perform additional processing, such as parse as XML.</Abstract>
-			<DeclaredIn>AmazonServiceResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonServiceRequest/constructResponse</TokenIdentifier>
+			<Abstract type="html">Internal helper method to create the appropriate response object for the request.</Abstract>
+			<DeclaredIn>AmazonServiceRequest.h</DeclaredIn>			
 			
-			<Declaration>- (void)processBody</Declaration>
-			
-			
-			<Anchor>//api/name/processBody</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonServiceResponse/connection:didReceiveResponse:</TokenIdentifier>
-			<Abstract type="html">delegate method for NSURLConnection</Abstract>
-			<DeclaredIn>AmazonServiceResponse.h</DeclaredIn>			
-			
-			<Declaration>- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response</Declaration>
+			<Declaration>- (AmazonServiceResponse *)constructResponse</Declaration>
 			
 			
-			<Anchor>//api/name/connection:didReceiveResponse:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonServiceResponse/connection:didReceiveData:</TokenIdentifier>
-			<Abstract type="html">delegate method for NSURLConnection</Abstract>
-			<DeclaredIn>AmazonServiceResponse.h</DeclaredIn>			
-			
-			<Declaration>- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data</Declaration>
-			
-			
-			<Anchor>//api/name/connection:didReceiveData:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonServiceResponse/connectionDidFinishLoading:</TokenIdentifier>
-			<Abstract type="html">delegate method for NSURLConnection</Abstract>
-			<DeclaredIn>AmazonServiceResponse.h</DeclaredIn>			
-			
-			<Declaration>- (void)connectionDidFinishLoading:(NSURLConnection *)connection</Declaration>
-			
-			
-			<Anchor>//api/name/connectionDidFinishLoading:</Anchor>
+			<Anchor>//api/name/constructResponse</Anchor>
 		</Token>
 		
 	</File>

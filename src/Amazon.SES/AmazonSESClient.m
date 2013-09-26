@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -14,8 +14,44 @@
  */
 
 #import "AmazonSESClient.h"
-#import "../AmazonEndpoints.h"
-#import "../AmazonServiceRequest.h"
+#import "AmazonEndpoints.h"
+#import "AmazonServiceRequest.h"
+#import "SESDeleteIdentityResponseUnmarshaller.h"
+#import "SESDeleteIdentityRequestMarshaller.h"
+#import "SESListVerifiedEmailAddressesResponseUnmarshaller.h"
+#import "SESListVerifiedEmailAddressesRequestMarshaller.h"
+#import "SESGetSendStatisticsResponseUnmarshaller.h"
+#import "SESGetSendStatisticsRequestMarshaller.h"
+#import "SESVerifyEmailIdentityResponseUnmarshaller.h"
+#import "SESVerifyEmailIdentityRequestMarshaller.h"
+#import "SESGetIdentityNotificationAttributesResponseUnmarshaller.h"
+#import "SESGetIdentityNotificationAttributesRequestMarshaller.h"
+#import "SESVerifyDomainDkimResponseUnmarshaller.h"
+#import "SESVerifyDomainDkimRequestMarshaller.h"
+#import "SESGetIdentityDkimAttributesResponseUnmarshaller.h"
+#import "SESGetIdentityDkimAttributesRequestMarshaller.h"
+#import "SESVerifyEmailAddressResponseUnmarshaller.h"
+#import "SESVerifyEmailAddressRequestMarshaller.h"
+#import "SESSendRawEmailResponseUnmarshaller.h"
+#import "SESSendRawEmailRequestMarshaller.h"
+#import "SESListIdentitiesResponseUnmarshaller.h"
+#import "SESListIdentitiesRequestMarshaller.h"
+#import "SESGetIdentityVerificationAttributesResponseUnmarshaller.h"
+#import "SESGetIdentityVerificationAttributesRequestMarshaller.h"
+#import "SESSetIdentityDkimEnabledResponseUnmarshaller.h"
+#import "SESSetIdentityDkimEnabledRequestMarshaller.h"
+#import "SESGetSendQuotaResponseUnmarshaller.h"
+#import "SESGetSendQuotaRequestMarshaller.h"
+#import "SESSetIdentityFeedbackForwardingEnabledResponseUnmarshaller.h"
+#import "SESSetIdentityFeedbackForwardingEnabledRequestMarshaller.h"
+#import "SESVerifyDomainIdentityResponseUnmarshaller.h"
+#import "SESVerifyDomainIdentityRequestMarshaller.h"
+#import "SESSendEmailResponseUnmarshaller.h"
+#import "SESSendEmailRequestMarshaller.h"
+#import "SESDeleteVerifiedEmailAddressResponseUnmarshaller.h"
+#import "SESDeleteVerifiedEmailAddressRequestMarshaller.h"
+#import "SESSetIdentityNotificationTopicResponseUnmarshaller.h"
+#import "SESSetIdentityNotificationTopicRequestMarshaller.h"
 
 
 @implementation AmazonSESClient
@@ -31,6 +67,14 @@
 -(id)initWithCredentials:(AmazonCredentials *)theCredentials
 {
     if (self = [super initWithCredentials:theCredentials]) {
+        self.endpoint = AMAZON_SES_US_EAST_1_ENDPOINT_SECURE;
+    }
+    return self;
+}
+
+-(id)initWithCredentialsProvider:(id<AmazonCredentialsProvider> )theProvider
+{
+    if (self = [super initWithCredentialsProvider:theProvider]) {
         self.endpoint = AMAZON_SES_US_EAST_1_ENDPOINT_SECURE;
     }
     return self;

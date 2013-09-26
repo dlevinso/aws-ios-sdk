@@ -12,7 +12,7 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">AWS SDK for iOS v1.4.4 </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">AWS SDK for iOS v1.6.1 </a></h1>
 				<a id="developerHome" href="../index.html">Amazon Web Services, Inc.</a>
 			</div>
 			
@@ -159,16 +159,39 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/value">&nbsp;&nbsp;value</a></code>
-		<span class="tooltip"><p>Specify whether or not a value already exists and has a specific
-content for the attribute name-value pair.</p></span>
+		<span class="tooltip"><p>Represents the data for an attribute. You can set one, and only one,
+of the elements.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/exists">&nbsp;&nbsp;exists</a></code>
-		<span class="tooltip"><p>Specify whether or not a value already exists for the attribute
-name-value pair.</p></span>
+		<span class="tooltip"><p>Causes Amazon DynamoDB to evaluate the value before attempting a
+conditional operation: <ul> <li> <p>If <i>Exists</i> is
+<code>true</code>, Amazon DynamoDB will check to see if that attribute
+value already exists in the table. If it is found, then the operation
+succeeds. If it is not found, the operation fails with a
+<i>ConditionalCheckFailedException</i>. </li> <li> <p>If <i>Exists</i>
+is <code>false</code>, Amazon DynamoDB assumes that the attribute
+value does <i>not</i> exist in the table. If in fact the value does
+not exist, then the assumption is valid and the operation succeeds. If
+the value is found, despite the assumption that it does not exist, the
+operation fails with a <i>ConditionalCheckFailedException</i>. </li>
+</ul> <p>The default setting for <i>Exists</i> is <code>true</code>.
+If you supply a <i>Value</i> all by itself, Amazon DynamoDB assumes
+the attribute exists: You don&rsquo;t have to set <i>Exists</i> to
+<code>true</code>, because it is implied. <p>Amazon DynamoDB returns a
+<i>ValidationException</i> if: <ul> <li> <p><i>Exists</i> is
+<code>true</code> but there is no <i>Value</i> to check. (You expect a
+value to exist, but don&rsquo;t specify what that value is.) </li> <li></p>
+
+<p><p><i>Exists</i> is <code>false</code> but you also specify a
+<i>Value</i>. (You cannot expect an attribute to have a value, while
+also expecting it not to exist.) </li> </ul> <p>If you specify more
+than one condition for <i>Exists</i>, then all of the conditions must
+evaluate to true. (In other words, the conditions are ANDed together.)
+Otherwise, the conditional operation will fail.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -224,8 +247,31 @@ debugging.</p></span>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Specify whether or not a value already exists for the attribute
-name-value pair.</p>
+		<p>Causes Amazon DynamoDB to evaluate the value before attempting a
+conditional operation: <ul> <li> <p>If <i>Exists</i> is
+<code>true</code>, Amazon DynamoDB will check to see if that attribute
+value already exists in the table. If it is found, then the operation
+succeeds. If it is not found, the operation fails with a
+<i>ConditionalCheckFailedException</i>. </li> <li> <p>If <i>Exists</i>
+is <code>false</code>, Amazon DynamoDB assumes that the attribute
+value does <i>not</i> exist in the table. If in fact the value does
+not exist, then the assumption is valid and the operation succeeds. If
+the value is found, despite the assumption that it does not exist, the
+operation fails with a <i>ConditionalCheckFailedException</i>. </li>
+</ul> <p>The default setting for <i>Exists</i> is <code>true</code>.
+If you supply a <i>Value</i> all by itself, Amazon DynamoDB assumes
+the attribute exists: You don&rsquo;t have to set <i>Exists</i> to
+<code>true</code>, because it is implied. <p>Amazon DynamoDB returns a
+<i>ValidationException</i> if: <ul> <li> <p><i>Exists</i> is
+<code>true</code> but there is no <i>Value</i> to check. (You expect a
+value to exist, but don&rsquo;t specify what that value is.) </li> <li></p>
+
+<p><p><i>Exists</i> is <code>false</code> but you also specify a
+<i>Value</i>. (You cannot expect an attribute to have a value, while
+also expecting it not to exist.) </li> </ul> <p>If you specify more
+than one condition for <i>Exists</i>, then all of the conditions must
+evaluate to true. (In other words, the conditions are ANDed together.)
+Otherwise, the conditional operation will fail.</p>
 	</div>		
 	
     
@@ -242,8 +288,31 @@ name-value pair.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Specify whether or not a value already exists for the attribute
-name-value pair.</p>
+		<p>Causes Amazon DynamoDB to evaluate the value before attempting a
+conditional operation: <ul> <li> <p>If <i>Exists</i> is
+<code>true</code>, Amazon DynamoDB will check to see if that attribute
+value already exists in the table. If it is found, then the operation
+succeeds. If it is not found, the operation fails with a
+<i>ConditionalCheckFailedException</i>. </li> <li> <p>If <i>Exists</i>
+is <code>false</code>, Amazon DynamoDB assumes that the attribute
+value does <i>not</i> exist in the table. If in fact the value does
+not exist, then the assumption is valid and the operation succeeds. If
+the value is found, despite the assumption that it does not exist, the
+operation fails with a <i>ConditionalCheckFailedException</i>. </li>
+</ul> <p>The default setting for <i>Exists</i> is <code>true</code>.
+If you supply a <i>Value</i> all by itself, Amazon DynamoDB assumes
+the attribute exists: You don&rsquo;t have to set <i>Exists</i> to
+<code>true</code>, because it is implied. <p>Amazon DynamoDB returns a
+<i>ValidationException</i> if: <ul> <li> <p><i>Exists</i> is
+<code>true</code> but there is no <i>Value</i> to check. (You expect a
+value to exist, but don&rsquo;t specify what that value is.) </li> <li></p>
+
+<p><p><i>Exists</i> is <code>false</code> but you also specify a
+<i>Value</i>. (You cannot expect an attribute to have a value, while
+also expecting it not to exist.) </li> </ul> <p>If you specify more
+than one condition for <i>Exists</i>, then all of the conditions must
+evaluate to true. (In other words, the conditions are ANDed together.)
+Otherwise, the conditional operation will fail.</p>
 	</div>
 	
 	
@@ -267,8 +336,8 @@ name-value pair.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Specify whether or not a value already exists and has a specific
-content for the attribute name-value pair.</p>
+		<p>Represents the data for an attribute. You can set one, and only one,
+of the elements.</p>
 	</div>		
 	
     
@@ -285,8 +354,8 @@ content for the attribute name-value pair.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Specify whether or not a value already exists and has a specific
-content for the attribute name-value pair.</p>
+		<p>Represents the data for an attribute. You can set one, and only one,
+of the elements.</p>
 	</div>
 	
 	
@@ -426,8 +495,31 @@ Callers should use properties to initialize any additional object members.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>theExists</em></dt>
-			<dd><p>Specify whether or not a value already exists for the
-attribute name-value pair.</p></dd>
+			<dd><p>Causes Amazon DynamoDB to evaluate the value before
+attempting a conditional operation: <ul> <li> <p>If <i>Exists</i> is
+<code>true</code>, Amazon DynamoDB will check to see if that attribute
+value already exists in the table. If it is found, then the operation
+succeeds. If it is not found, the operation fails with a
+<i>ConditionalCheckFailedException</i>. </li> <li> <p>If <i>Exists</i>
+is <code>false</code>, Amazon DynamoDB assumes that the attribute
+value does <i>not</i> exist in the table. If in fact the value does
+not exist, then the assumption is valid and the operation succeeds. If
+the value is found, despite the assumption that it does not exist, the
+operation fails with a <i>ConditionalCheckFailedException</i>. </li>
+</ul> <p>The default setting for <i>Exists</i> is <code>true</code>.
+If you supply a <i>Value</i> all by itself, Amazon DynamoDB assumes
+the attribute exists: You don&rsquo;t have to set <i>Exists</i> to
+<code>true</code>, because it is implied. <p>Amazon DynamoDB returns a
+<i>ValidationException</i> if: <ul> <li> <p><i>Exists</i> is
+<code>true</code> but there is no <i>Value</i> to check. (You expect a
+value to exist, but don&rsquo;t specify what that value is.) </li> <li></p>
+
+<p><p><i>Exists</i> is <code>false</code> but you also specify a
+<i>Value</i>. (You cannot expect an attribute to have a value, while
+also expecting it not to exist.) </li> </ul> <p>If you specify more
+than one condition for <i>Exists</i>, then all of the conditions must
+evaluate to true. (In other words, the conditions are ANDed together.)
+Otherwise, the conditional operation will fail.</p></dd>
 		</dl>
 		
 	</div>
@@ -480,8 +572,8 @@ Callers should use properties to initialize any additional object members.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>theValue</em></dt>
-			<dd><p>Specify whether or not a value already exists and has
-a specific content for the attribute name-value pair.</p></dd>
+			<dd><p>Represents the data for an attribute. You can set one,
+and only one, of the elements.</p></dd>
 		</dl>
 		
 	</div>
@@ -525,7 +617,7 @@ Callers should use properties to initialize any additional object members.</p>
 				<div id="footer"><script src="/urchin.js" type="text/javascript"></script><script type="text/javascript">urchinTracker();</script>
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Amazon Web Services, Inc.. All rights reserved. (Last updated: 2012-11-13)</span><br />
+						<p><span class="copyright">&copy; 2013 Amazon Web Services, Inc.. All rights reserved. (Last updated: 2013-08-12)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

@@ -1,32 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2DescribeTagsResponse.html">
+	<File path="Classes/ElasticLoadBalancingPolicyAttributeDescription.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2DescribeTagsResponse</TokenIdentifier>
-			<Abstract type="html">Describe Tags Response</Abstract>
-			<DeclaredIn>EC2DescribeTagsResponse.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/ElasticLoadBalancingPolicyAttributeDescription</TokenIdentifier>
+			<Abstract type="html">Policy Attribute Description</Abstract>
+			<DeclaredIn>ElasticLoadBalancingPolicyAttributeDescription.h</DeclaredIn>
 			
 			<NodeRef refid="564"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeTagsResponse/setException:</TokenIdentifier>
-			<Abstract type="html">If an exception was thrown, this will return the exception.</Abstract>
-			<DeclaredIn>EC2DescribeTagsResponse.h</DeclaredIn>			
-			
-			<Declaration>- (void)setException:(AmazonServiceException *)theException</Declaration>
-			
-			
-			<Anchor>//api/name/setException:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeTagsResponse/init</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingPolicyAttributeDescription/init</TokenIdentifier>
 			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2DescribeTagsResponse.h</DeclaredIn>			
+			<DeclaredIn>ElasticLoadBalancingPolicyAttributeDescription.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -35,43 +24,54 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeTagsResponse/setTags:</TokenIdentifier>
-			<Abstract type="html">A list of the tags for the specified resources.</Abstract>
-			<DeclaredIn>EC2DescribeTagsResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingPolicyAttributeDescription/setAttributeName:</TokenIdentifier>
+			<Abstract type="html">The name of the attribute associated with the policy.</Abstract>
+			<DeclaredIn>ElasticLoadBalancingPolicyAttributeDescription.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *tags</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *attributeName</Declaration>
 			
 			
-			<Anchor>//api/name/tags</Anchor>
+			<Anchor>//api/name/attributeName</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2DescribeTagsResponse/tags</TokenIdentifier>
-			<Abstract type="html">A list of the tags for the specified resources.</Abstract>
-			<DeclaredIn>EC2DescribeTagsResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingPolicyAttributeDescription/attributeName</TokenIdentifier>
+			<Abstract type="html">The name of the attribute associated with the policy.</Abstract>
+			<DeclaredIn>ElasticLoadBalancingPolicyAttributeDescription.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *tags</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *attributeName</Declaration>
 			
 			
-			<Anchor>//api/name/tags</Anchor>
+			<Anchor>//api/name/attributeName</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeTagsResponse/tagsObjectAtIndex:</TokenIdentifier>
-			<Abstract type="html">Returns a value from the tags array for the specified index</Abstract>
-			<DeclaredIn>EC2DescribeTagsResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingPolicyAttributeDescription/setAttributeValue:</TokenIdentifier>
+			<Abstract type="html">The value of the attribute associated with the policy.</Abstract>
+			<DeclaredIn>ElasticLoadBalancingPolicyAttributeDescription.h</DeclaredIn>			
 			
-			<Declaration>- (EC2TagDescription *)tagsObjectAtIndex:(int)index</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *attributeValue</Declaration>
 			
 			
-			<Anchor>//api/name/tagsObjectAtIndex:</Anchor>
+			<Anchor>//api/name/attributeValue</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeTagsResponse/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingPolicyAttributeDescription/attributeValue</TokenIdentifier>
+			<Abstract type="html">The value of the attribute associated with the policy.</Abstract>
+			<DeclaredIn>ElasticLoadBalancingPolicyAttributeDescription.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *attributeValue</Declaration>
+			
+			
+			<Anchor>//api/name/attributeValue</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingPolicyAttributeDescription/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>EC2DescribeTagsResponse.h</DeclaredIn>			
+			<DeclaredIn>ElasticLoadBalancingPolicyAttributeDescription.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

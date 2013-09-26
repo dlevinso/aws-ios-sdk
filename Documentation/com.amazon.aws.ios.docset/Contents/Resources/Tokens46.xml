@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/AutoScalingCreateOrUpdateTagsResponse.html">
+	<File path="Classes/AutoScalingDeleteNotificationConfigurationResponse.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/AutoScalingCreateOrUpdateTagsResponse</TokenIdentifier>
-			<Abstract type="html">Create Or Update Tags</Abstract>
-			<DeclaredIn>AutoScalingCreateOrUpdateTagsResponse.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/AutoScalingDeleteNotificationConfigurationResponse</TokenIdentifier>
+			<Abstract type="html">Delete Notification Configuration</Abstract>
+			<DeclaredIn>AutoScalingDeleteNotificationConfigurationResponse.h</DeclaredIn>
 			
 			<NodeRef refid="46"/>
 		</Token>

@@ -1,21 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/ElasticLoadBalancingDetachLoadBalancerFromSubnetsRequest.html">
+	<File path="Classes/SimpleDBDomainMetadataRequest.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/ElasticLoadBalancingDetachLoadBalancerFromSubnetsRequest</TokenIdentifier>
-			<Abstract type="html">Detach Load Balancer From Subnets Request</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDetachLoadBalancerFromSubnetsRequest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/SimpleDBDomainMetadataRequest</TokenIdentifier>
+			<Abstract type="html">Domain Metadata Request</Abstract>
+			<DeclaredIn>SimpleDBDomainMetadataRequest.h</DeclaredIn>
 			
 			<NodeRef refid="902"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDetachLoadBalancerFromSubnetsRequest/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new  object.  Callers should use the
+			<TokenIdentifier>//apple_ref/occ/instm/SimpleDBDomainMetadataRequest/setDomainName:</TokenIdentifier>
+			<Abstract type="html">The name of the domain for which to display the metadata of.</Abstract>
+			<DeclaredIn>SimpleDBDomainMetadataRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *domainName</Declaration>
+			
+			
+			<Anchor>//api/name/domainName</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SimpleDBDomainMetadataRequest/domainName</TokenIdentifier>
+			<Abstract type="html">The name of the domain for which to display the metadata of.</Abstract>
+			<DeclaredIn>SimpleDBDomainMetadataRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *domainName</Declaration>
+			
+			
+			<Anchor>//api/name/domainName</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SimpleDBDomainMetadataRequest/init</TokenIdentifier>
+			<Abstract type="html">Default constructor for a new DomainMetadataRequest object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDetachLoadBalancerFromSubnetsRequest.h</DeclaredIn>			
+			<DeclaredIn>SimpleDBDomainMetadataRequest.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -24,70 +46,28 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDetachLoadBalancerFromSubnetsRequest/setLoadBalancerName:</TokenIdentifier>
-			<Abstract type="html">The name associated with the LoadBalancer to be detached. The name
-must be unique within the client AWS account.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDetachLoadBalancerFromSubnetsRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SimpleDBDomainMetadataRequest/initWithDomainName:</TokenIdentifier>
+			<Abstract type="html">Constructs a new DomainMetadataRequest object.
+Callers should use properties to initialize any additional object members.</Abstract>
+			<DeclaredIn>SimpleDBDomainMetadataRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *loadBalancerName</Declaration>
+			<Declaration>- (id)initWithDomainName:(NSString *)theDomainName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>theDomainName</Name>
+					<Abstract type="html">The name of the domain for which to display the
+metadata of.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/loadBalancerName</Anchor>
+			<Anchor>//api/name/initWithDomainName:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingDetachLoadBalancerFromSubnetsRequest/loadBalancerName</TokenIdentifier>
-			<Abstract type="html">The name associated with the LoadBalancer to be detached. The name
-must be unique within the client AWS account.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDetachLoadBalancerFromSubnetsRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *loadBalancerName</Declaration>
-			
-			
-			<Anchor>//api/name/loadBalancerName</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDetachLoadBalancerFromSubnetsRequest/setSubnets:</TokenIdentifier>
-			<Abstract type="html">A list of subnet IDs to remove from the set of configured subnets for
-the LoadBalancer.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDetachLoadBalancerFromSubnetsRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *subnets</Declaration>
-			
-			
-			<Anchor>//api/name/subnets</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingDetachLoadBalancerFromSubnetsRequest/subnets</TokenIdentifier>
-			<Abstract type="html">A list of subnet IDs to remove from the set of configured subnets for
-the LoadBalancer.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDetachLoadBalancerFromSubnetsRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *subnets</Declaration>
-			
-			
-			<Anchor>//api/name/subnets</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDetachLoadBalancerFromSubnetsRequest/addSubnet:</TokenIdentifier>
-			<Abstract type="html">Adds a single object to subnets.
-This function will alloc and init subnets if not already done.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDetachLoadBalancerFromSubnetsRequest.h</DeclaredIn>			
-			
-			<Declaration>- (void)addSubnet:(NSString *)subnetObject</Declaration>
-			
-			
-			<Anchor>//api/name/addSubnet:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDetachLoadBalancerFromSubnetsRequest/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SimpleDBDomainMetadataRequest/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDetachLoadBalancerFromSubnetsRequest.h</DeclaredIn>			
+			<DeclaredIn>SimpleDBDomainMetadataRequest.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

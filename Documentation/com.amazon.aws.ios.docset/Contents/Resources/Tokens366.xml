@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2BlockDeviceMapping.html">
+	<File path="Classes/EC2DiskImageVolumeDescription.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2BlockDeviceMapping</TokenIdentifier>
-			<Abstract type="html">Block Device Mapping</Abstract>
-			<DeclaredIn>EC2BlockDeviceMapping.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/EC2DiskImageVolumeDescription</TokenIdentifier>
+			<Abstract type="html">Disk Image Volume Description</Abstract>
+			<DeclaredIn>EC2DiskImageVolumeDescription.h</DeclaredIn>
 			
 			<NodeRef refid="366"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2BlockDeviceMapping/init</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DiskImageVolumeDescription/init</TokenIdentifier>
 			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2BlockDeviceMapping.h</DeclaredIn>			
+			<DeclaredIn>EC2DiskImageVolumeDescription.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -24,100 +24,54 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2BlockDeviceMapping/setVirtualName:</TokenIdentifier>
-			<Abstract type="html">Specifies the virtual device name.</Abstract>
-			<DeclaredIn>EC2BlockDeviceMapping.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DiskImageVolumeDescription/setSize:</TokenIdentifier>
+			<Abstract type="html">The value of the Size property for this object.</Abstract>
+			<DeclaredIn>EC2DiskImageVolumeDescription.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *virtualName</Declaration>
+			<Declaration>@property (nonatomic, retain) NSNumber *size</Declaration>
 			
 			
-			<Anchor>//api/name/virtualName</Anchor>
+			<Anchor>//api/name/size</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2BlockDeviceMapping/virtualName</TokenIdentifier>
-			<Abstract type="html">Specifies the virtual device name.</Abstract>
-			<DeclaredIn>EC2BlockDeviceMapping.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/EC2DiskImageVolumeDescription/size</TokenIdentifier>
+			<Abstract type="html">The value of the Size property for this object.</Abstract>
+			<DeclaredIn>EC2DiskImageVolumeDescription.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *virtualName</Declaration>
+			<Declaration>@property (nonatomic, retain) NSNumber *size</Declaration>
 			
 			
-			<Anchor>//api/name/virtualName</Anchor>
+			<Anchor>//api/name/size</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2BlockDeviceMapping/setDeviceName:</TokenIdentifier>
-			<Abstract type="html">Specifies the device name (e.g., &lt;code&gt;/dev/sdh&lt;/code&gt;).</Abstract>
-			<DeclaredIn>EC2BlockDeviceMapping.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DiskImageVolumeDescription/setIdValue:</TokenIdentifier>
+			<Abstract type="html">The value of the Id property for this object.</Abstract>
+			<DeclaredIn>EC2DiskImageVolumeDescription.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *deviceName</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *idValue</Declaration>
 			
 			
-			<Anchor>//api/name/deviceName</Anchor>
+			<Anchor>//api/name/idValue</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2BlockDeviceMapping/deviceName</TokenIdentifier>
-			<Abstract type="html">Specifies the device name (e.g., &lt;code&gt;/dev/sdh&lt;/code&gt;).</Abstract>
-			<DeclaredIn>EC2BlockDeviceMapping.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/EC2DiskImageVolumeDescription/idValue</TokenIdentifier>
+			<Abstract type="html">The value of the Id property for this object.</Abstract>
+			<DeclaredIn>EC2DiskImageVolumeDescription.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *deviceName</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *idValue</Declaration>
 			
 			
-			<Anchor>//api/name/deviceName</Anchor>
+			<Anchor>//api/name/idValue</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2BlockDeviceMapping/setEbs:</TokenIdentifier>
-			<Abstract type="html">Specifies parameters used to automatically setup Amazon EBS volumes
-when the instance is launched.</Abstract>
-			<DeclaredIn>EC2BlockDeviceMapping.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) EC2EbsBlockDevice *ebs</Declaration>
-			
-			
-			<Anchor>//api/name/ebs</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2BlockDeviceMapping/ebs</TokenIdentifier>
-			<Abstract type="html">Specifies parameters used to automatically setup Amazon EBS volumes
-when the instance is launched.</Abstract>
-			<DeclaredIn>EC2BlockDeviceMapping.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) EC2EbsBlockDevice *ebs</Declaration>
-			
-			
-			<Anchor>//api/name/ebs</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2BlockDeviceMapping/setNoDevice:</TokenIdentifier>
-			<Abstract type="html">Specifies the device name to suppress during instance launch.</Abstract>
-			<DeclaredIn>EC2BlockDeviceMapping.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *noDevice</Declaration>
-			
-			
-			<Anchor>//api/name/noDevice</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2BlockDeviceMapping/noDevice</TokenIdentifier>
-			<Abstract type="html">Specifies the device name to suppress during instance launch.</Abstract>
-			<DeclaredIn>EC2BlockDeviceMapping.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *noDevice</Declaration>
-			
-			
-			<Anchor>//api/name/noDevice</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2BlockDeviceMapping/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DiskImageVolumeDescription/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>EC2BlockDeviceMapping.h</DeclaredIn>			
+			<DeclaredIn>EC2DiskImageVolumeDescription.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

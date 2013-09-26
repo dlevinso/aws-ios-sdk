@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -16,27 +16,21 @@
 #import "S3Response.h"
 #import "S3GetObjectResponse.h"
 #import "AmazonLogger.h"
+#import "S3ErrorResponseHandler.h"
+#import "AmazonErrorHandler.h"
 
+@interface S3Response ()
+@property (nonatomic, readwrite, retain) NSDictionary *responseHeader;
+@end
 
 @implementation S3Response
-
-@synthesize contentLength;
-@synthesize connectionState;
-@synthesize date;
-@synthesize etag;
-@synthesize server;
-@synthesize deleteMarker;
-@synthesize id2;
-@synthesize versionId;
-@synthesize serverSideEncryption;
 
 -(id)init
 {
     self = [super init];
     if (self != nil) {
         isFinishedLoading = NO;
-        exception         = nil;
-        headers           = [[NSMutableDictionary alloc] init];
+        _headers = [NSMutableDictionary new];
     }
 
     return self;
@@ -44,7 +38,7 @@
 
 -(void)setValue:(id)value forHTTPHeaderField:(NSString *)header
 {
-    [headers setValue:value forKey:header];
+    [self.headers setValue:value forKey:header];
 
     // remove dashes from headers, and camelCase concatenate to get the corresponding
     // property name.
@@ -58,7 +52,7 @@
         keyName = [keyName stringByAppendingString:[[(NSString *)[parts objectAtIndex:i] lowercaseString] capitalizedString]];
     }
 
-    //NSLog( @"Setting response value [%@] from header [%@] with value [%@]", keyName, header, value );
+    //AMZLog( @"Setting response value [%@] from header [%@] with value [%@]", keyName, header, value );
 
     NSString *typeName = [self getTypeOfPropertyNamed:keyName];
 
@@ -66,7 +60,7 @@
         [self setValue:value forKey:keyName];
     }
     else if ([typeName isEqualToString:@"T@\"NSDate\""]) {
-        [self setValue:[self parseDateHeader:value] forKey:keyName];
+        [self setValue:[NSDate dateWithRFC822Format:value] forKey:keyName];
     }
     else if ([typeName isEqualToString:@"Ti"]) {
         NSInteger v = [(NSString *) value integerValue];
@@ -80,18 +74,7 @@
 
 -(id)valueForHTTPHeaderField:(NSString *)header
 {
-    return [headers valueForKey:header];
-}
-
--(NSDate *)parseDateHeader:(NSString *)dateString
-{
-    if (nil == dateFormatter) {
-        dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setLocale:[AmazonSDKUtil timestampLocale]];
-        [dateFormatter setDateFormat:kS3DateFormat];
-    }
-
-    return [dateFormatter dateFromString:dateString];
+    return [self.headers valueForKey:header];
 }
 
 
@@ -118,20 +101,6 @@
     return [NSData dataWithData:body];
 }
 
-// TODO: Make the body property readonly when all operations are converted to the delegate technique.
-// TODO: It seems like nothing in the SDK is calling this method. -Yosuke
-/*
--(void)setBody:(NSData *)data
-{
-    if (nil != body) {
-        [body setLength:0];
-    }
-    body = [[NSMutableData dataWithData:data] retain];
-
-    [self processBody];
-}
-*/
-
 // Override this to perform processing on the body.
 -(void)processBody
 {
@@ -146,23 +115,23 @@
 
 -(NSString *)description
 {
-    NSMutableString *buffer = [[NSMutableString alloc] initWithCapacity:256];
+    NSMutableString *buffer = [NSMutableString stringWithCapacity:256];
 
     [buffer appendString:@"{"];
-    [buffer appendString:[[[NSString alloc] initWithFormat:@"Headers: %@,", headers] autorelease]];
-    [buffer appendString:[[[NSString alloc] initWithFormat:@"Content-Length: %lld,", contentLength] autorelease]];
-    [buffer appendString:[[[NSString alloc] initWithFormat:@"Connection-State: %@,", connectionState] autorelease]];
-    [buffer appendString:[[[NSString alloc] initWithFormat:@"Date:: %@,", date] autorelease]];
-    [buffer appendString:[[[NSString alloc] initWithFormat:@"ETag: %@,", etag] autorelease]];
-    [buffer appendString:[[[NSString alloc] initWithFormat:@"Server: %@,", server] autorelease]];
-    [buffer appendString:[[[NSString alloc] initWithFormat:@"Delete-Marker: %d,", deleteMarker] autorelease]];
-    [buffer appendString:[[[NSString alloc] initWithFormat:@"Id2: %@,", id2] autorelease]];
-    [buffer appendString:[[[NSString alloc] initWithFormat:@"VersionId: %@,", versionId] autorelease]];
-    [buffer appendString:[[[NSString alloc] initWithFormat:@"Server Side Encryption: %@,", serverSideEncryption] autorelease]];
+    [buffer appendString:[NSString stringWithFormat:@"Headers: %@,", self.headers]];
+    [buffer appendString:[NSString stringWithFormat:@"Content-Length: %lld,", self.contentLength]];
+    [buffer appendString:[NSString stringWithFormat:@"Connection-State: %@,", self.connectionState]];
+    [buffer appendString:[NSString stringWithFormat:@"Date:: %@,", self.date]];
+    [buffer appendString:[NSString stringWithFormat:@"ETag: %@,", self.etag]];
+    [buffer appendString:[NSString stringWithFormat:@"Server: %@,", self.server]];
+    [buffer appendString:[NSString stringWithFormat:@"Delete-Marker: %d,", self.deleteMarker]];
+    [buffer appendString:[NSString stringWithFormat:@"Id2: %@,", self.id2]];
+    [buffer appendString:[NSString stringWithFormat:@"VersionId: %@,", self.versionId]];
+    [buffer appendString:[NSString stringWithFormat:@"Server Side Encryption: %@,", self.serverSideEncryption]];
     [buffer appendString:[super description]];
     [buffer appendString:@"}"];
 
-    return [buffer autorelease];
+    return buffer;
 }
 
 #pragma mark NSURLConnection delegate methods
@@ -174,6 +143,8 @@
     self.httpStatusCode = [httpResponse statusCode];
 
     NSDictionary *allHeaders = [httpResponse allHeaderFields];
+    
+    self.responseHeader = [httpResponse allHeaderFields];
     for (id key in allHeaders)
     {
         [self setValue:[allHeaders valueForKey:key] forHTTPHeaderField:key];
@@ -181,7 +152,7 @@
 
     [body setLength:0];
 
-    if ([(NSObject *)self.request.delegate respondsToSelector:@selector(request:didReceiveResponse:)]) {
+    if ([self.request.delegate respondsToSelector:@selector(request:didReceiveResponse:)]) {
         [self.request.delegate request:self.request didReceiveResponse:response];
     }
 }
@@ -194,7 +165,7 @@
 
     [body appendData:data];
 
-    if ([(NSObject *)self.request.delegate respondsToSelector:@selector(request:didReceiveData:)]) {
+    if ([self.request.delegate respondsToSelector:@selector(request:didReceiveData:)]) {
         [self.request.delegate request:self.request didReceiveData:data];
     }
 }
@@ -212,7 +183,8 @@
         [tmp release];
     }
 
-    if (self.httpStatusCode >= 400) {
+    // S3 treats 301's as an error and passes back an Error Response, so parse it
+    if ((self.httpStatusCode == 301) || (self.httpStatusCode >= 400)) {
         NSXMLParser            *parser       = [[NSXMLParser alloc] initWithData:self.body];
         S3ErrorResponseHandler *errorHandler = [[S3ErrorResponseHandler alloc] initWithStatusCode:self.httpStatusCode];
         [parser setDelegate:errorHandler];
@@ -222,14 +194,14 @@
         BOOL throwsExceptions = [AmazonErrorHandler throwsExceptions];
 
         if (throwsExceptions == YES
-            && [(NSObject *)self.request.delegate respondsToSelector:@selector(request:didFailWithServiceException:)]) {
+            && [self.request.delegate respondsToSelector:@selector(request:didFailWithServiceException:)]) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
             [self.request.delegate request:self.request didFailWithServiceException:(AmazonServiceException *)exception];
 #pragma clang diagnostic pop
         }
         else if (throwsExceptions == NO
-                 && [(NSObject *)self.request.delegate respondsToSelector:@selector(request:didFailWithError:)]) {
+                 && [self.request.delegate respondsToSelector:@selector(request:didFailWithError:)]) {
             [self.request.delegate request:self.request didFailWithError:[AmazonErrorHandler errorFromException:exception]];
         }
 
@@ -242,7 +214,7 @@
         isFinishedLoading = YES;
     }
 
-    if ([(NSObject *)self.request.delegate respondsToSelector:@selector(request:didCompleteWithResponse:)]) {
+    if ([self.request.delegate respondsToSelector:@selector(request:didCompleteWithResponse:)]) {
         [self.request.delegate request:self.request didCompleteWithResponse:self];
     }
 
@@ -258,21 +230,21 @@
     {
         AMZLog(@"UserInfo.%@ = %@", [key description], [[info valueForKey:key] description]);
     }
-    exception = [[AmazonClientException exceptionWithMessage:[theError description]] retain];
+    exception = [[AmazonServiceException exceptionWithMessage:[theError description] andError:theError] retain];
     AMZLog(@"An error occured in the request: %@", [theError description]);
 
-    if ([(NSObject *)self.request.delegate respondsToSelector:@selector(request:didFailWithError:)]) {
+    if ([self.request.delegate respondsToSelector:@selector(request:didFailWithError:)]) {
         [self.request.delegate request:self.request didFailWithError:theError];
     }
 }
 
 -(void)connection:(NSURLConnection *)connection didSendBodyData:(NSInteger)bytesWritten totalBytesWritten:(NSInteger)totalBytesWritten totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
 {
-    if ([(NSObject *)self.request.delegate respondsToSelector:@selector(request:didSendData:totalBytesWritten:totalBytesExpectedToWrite:)]) {
+    if ([self.request.delegate respondsToSelector:@selector(request:didSendData:totalBytesWritten:totalBytesExpectedToWrite:)]) {
         [self.request.delegate request:self.request
-         didSendData:bytesWritten
-         totalBytesWritten:totalBytesWritten
-         totalBytesExpectedToWrite:totalBytesExpectedToWrite];
+                           didSendData:(long long)bytesWritten
+                     totalBytesWritten:(long long)totalBytesWritten
+             totalBytesExpectedToWrite:(long long)totalBytesExpectedToWrite];
     }
 }
 
@@ -303,16 +275,14 @@
 
 -(void)dealloc
 {
-    [connectionState release];
-    [date release];
-    [etag release];
-    [server release];
-    [id2 release];
-    [versionId release];
-    [serverSideEncryption release];
-    [headers release];
-
-    [dateFormatter release];
+    [_connectionState release];
+    [_etag release];
+    [_server release];
+    [_id2 release];
+    [_versionId release];
+    [_serverSideEncryption release];
+    [_date release];
+    [_headers release];
 
     [super dealloc];
 }

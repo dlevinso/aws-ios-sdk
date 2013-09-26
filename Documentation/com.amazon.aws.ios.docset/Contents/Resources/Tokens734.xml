@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2Region.html">
+	<File path="Classes/SESSendRawEmailResponse.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2Region</TokenIdentifier>
-			<Abstract type="html">Region</Abstract>
-			<DeclaredIn>EC2Region.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/SESSendRawEmailResponse</TokenIdentifier>
+			<Abstract type="html">Send Raw Email Result</Abstract>
+			<DeclaredIn>SESSendRawEmailResponse.h</DeclaredIn>
 			
 			<NodeRef refid="734"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2Region/init</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SESSendRawEmailResponse/setException:</TokenIdentifier>
+			<Abstract type="html">If an exception was thrown, this will return the exception.</Abstract>
+			<DeclaredIn>SESSendRawEmailResponse.h</DeclaredIn>			
+			
+			<Declaration>- (void)setException:(AmazonServiceException *)theException</Declaration>
+			
+			
+			<Anchor>//api/name/setException:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SESSendRawEmailResponse/init</TokenIdentifier>
 			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2Region.h</DeclaredIn>			
+			<DeclaredIn>SESSendRawEmailResponse.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -24,54 +35,34 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2Region/setRegionName:</TokenIdentifier>
-			<Abstract type="html">Name of the region.</Abstract>
-			<DeclaredIn>EC2Region.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SESSendRawEmailResponse/setMessageId:</TokenIdentifier>
+			<Abstract type="html">The unique message identifier returned from the
+&lt;code&gt;SendRawEmail&lt;/code&gt; action.</Abstract>
+			<DeclaredIn>SESSendRawEmailResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *regionName</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *messageId</Declaration>
 			
 			
-			<Anchor>//api/name/regionName</Anchor>
+			<Anchor>//api/name/messageId</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2Region/regionName</TokenIdentifier>
-			<Abstract type="html">Name of the region.</Abstract>
-			<DeclaredIn>EC2Region.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/SESSendRawEmailResponse/messageId</TokenIdentifier>
+			<Abstract type="html">The unique message identifier returned from the
+&lt;code&gt;SendRawEmail&lt;/code&gt; action.</Abstract>
+			<DeclaredIn>SESSendRawEmailResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *regionName</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *messageId</Declaration>
 			
 			
-			<Anchor>//api/name/regionName</Anchor>
+			<Anchor>//api/name/messageId</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2Region/setEndpoint:</TokenIdentifier>
-			<Abstract type="html">Region service endpoint.</Abstract>
-			<DeclaredIn>EC2Region.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *endpoint</Declaration>
-			
-			
-			<Anchor>//api/name/endpoint</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2Region/endpoint</TokenIdentifier>
-			<Abstract type="html">Region service endpoint.</Abstract>
-			<DeclaredIn>EC2Region.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *endpoint</Declaration>
-			
-			
-			<Anchor>//api/name/endpoint</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2Region/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SESSendRawEmailResponse/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>EC2Region.h</DeclaredIn>			
+			<DeclaredIn>SESSendRawEmailResponse.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

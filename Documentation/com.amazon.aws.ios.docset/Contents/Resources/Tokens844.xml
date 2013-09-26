@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/ElasticLoadBalancingAttachLoadBalancerToSubnetsResponse.html">
+	<File path="Classes/SQSListQueuesResponse.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/ElasticLoadBalancingAttachLoadBalancerToSubnetsResponse</TokenIdentifier>
-			<Abstract type="html">Attach Load Balancer To Subnets Result</Abstract>
-			<DeclaredIn>ElasticLoadBalancingAttachLoadBalancerToSubnetsResponse.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/SQSListQueuesResponse</TokenIdentifier>
+			<Abstract type="html">List Queues Result</Abstract>
+			<DeclaredIn>SQSListQueuesResponse.h</DeclaredIn>
 			
 			<NodeRef refid="844"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingAttachLoadBalancerToSubnetsResponse/setException:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SQSListQueuesResponse/setException:</TokenIdentifier>
 			<Abstract type="html">If an exception was thrown, this will return the exception.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingAttachLoadBalancerToSubnetsResponse.h</DeclaredIn>			
+			<DeclaredIn>SQSListQueuesResponse.h</DeclaredIn>			
 			
 			<Declaration>- (void)setException:(AmazonServiceException *)theException</Declaration>
 			
@@ -23,10 +23,10 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingAttachLoadBalancerToSubnetsResponse/init</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SQSListQueuesResponse/init</TokenIdentifier>
 			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingAttachLoadBalancerToSubnetsResponse.h</DeclaredIn>			
+			<DeclaredIn>SQSListQueuesResponse.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -35,43 +35,43 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingAttachLoadBalancerToSubnetsResponse/setSubnets:</TokenIdentifier>
-			<Abstract type="html">A list of subnet IDs added for the LoadBalancer.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingAttachLoadBalancerToSubnetsResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SQSListQueuesResponse/setQueueUrls:</TokenIdentifier>
+			<Abstract type="html">A list of queue URLs, up to 1000 entries.</Abstract>
+			<DeclaredIn>SQSListQueuesResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *subnets</Declaration>
+			<Declaration>@property (nonatomic, retain) NSMutableArray *queueUrls</Declaration>
 			
 			
-			<Anchor>//api/name/subnets</Anchor>
+			<Anchor>//api/name/queueUrls</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingAttachLoadBalancerToSubnetsResponse/subnets</TokenIdentifier>
-			<Abstract type="html">A list of subnet IDs added for the LoadBalancer.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingAttachLoadBalancerToSubnetsResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/SQSListQueuesResponse/queueUrls</TokenIdentifier>
+			<Abstract type="html">A list of queue URLs, up to 1000 entries.</Abstract>
+			<DeclaredIn>SQSListQueuesResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *subnets</Declaration>
+			<Declaration>@property (nonatomic, retain) NSMutableArray *queueUrls</Declaration>
 			
 			
-			<Anchor>//api/name/subnets</Anchor>
+			<Anchor>//api/name/queueUrls</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingAttachLoadBalancerToSubnetsResponse/subnetsObjectAtIndex:</TokenIdentifier>
-			<Abstract type="html">Returns a value from the subnets array for the specified index</Abstract>
-			<DeclaredIn>ElasticLoadBalancingAttachLoadBalancerToSubnetsResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SQSListQueuesResponse/queueUrlsObjectAtIndex:</TokenIdentifier>
+			<Abstract type="html">Returns a value from the queueUrls array for the specified index</Abstract>
+			<DeclaredIn>SQSListQueuesResponse.h</DeclaredIn>			
 			
-			<Declaration>- (NSString *)subnetsObjectAtIndex:(int)index</Declaration>
+			<Declaration>- (NSString *)queueUrlsObjectAtIndex:(int)index</Declaration>
 			
 			
-			<Anchor>//api/name/subnetsObjectAtIndex:</Anchor>
+			<Anchor>//api/name/queueUrlsObjectAtIndex:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingAttachLoadBalancerToSubnetsResponse/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SQSListQueuesResponse/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingAttachLoadBalancerToSubnetsResponse.h</DeclaredIn>			
+			<DeclaredIn>SQSListQueuesResponse.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

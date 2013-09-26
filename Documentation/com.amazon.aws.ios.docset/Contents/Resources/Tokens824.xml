@@ -1,21 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2VolumeDetail.html">
+	<File path="Classes/SQSCreateQueueRequest.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2VolumeDetail</TokenIdentifier>
-			<Abstract type="html">Volume Detail</Abstract>
-			<DeclaredIn>EC2VolumeDetail.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/SQSCreateQueueRequest</TokenIdentifier>
+			<Abstract type="html">Create Queue Request</Abstract>
+			<DeclaredIn>SQSCreateQueueRequest.h</DeclaredIn>
 			
 			<NodeRef refid="824"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2VolumeDetail/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new  object.  Callers should use the
+			<TokenIdentifier>//apple_ref/occ/instm/SQSCreateQueueRequest/setQueueName:</TokenIdentifier>
+			<Abstract type="html">The name for the queue to be created.</Abstract>
+			<DeclaredIn>SQSCreateQueueRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *queueName</Declaration>
+			
+			
+			<Anchor>//api/name/queueName</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SQSCreateQueueRequest/queueName</TokenIdentifier>
+			<Abstract type="html">The name for the queue to be created.</Abstract>
+			<DeclaredIn>SQSCreateQueueRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *queueName</Declaration>
+			
+			
+			<Anchor>//api/name/queueName</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SQSCreateQueueRequest/setAttributes:</TokenIdentifier>
+			<Abstract type="html">A map of attributes with their corresponding values.</Abstract>
+			<DeclaredIn>SQSCreateQueueRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSMutableDictionary *attributes</Declaration>
+			
+			
+			<Anchor>//api/name/attributes</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SQSCreateQueueRequest/attributes</TokenIdentifier>
+			<Abstract type="html">A map of attributes with their corresponding values.</Abstract>
+			<DeclaredIn>SQSCreateQueueRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSMutableDictionary *attributes</Declaration>
+			
+			
+			<Anchor>//api/name/attributes</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SQSCreateQueueRequest/init</TokenIdentifier>
+			<Abstract type="html">Default constructor for a new CreateQueueRequest object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2VolumeDetail.h</DeclaredIn>			
+			<DeclaredIn>SQSCreateQueueRequest.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -24,32 +68,39 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2VolumeDetail/setSize:</TokenIdentifier>
-			<Abstract type="html">The value of the Size property for this object.</Abstract>
-			<DeclaredIn>EC2VolumeDetail.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SQSCreateQueueRequest/initWithQueueName:</TokenIdentifier>
+			<Abstract type="html">Constructs a new CreateQueueRequest object.
+Callers should use properties to initialize any additional object members.</Abstract>
+			<DeclaredIn>SQSCreateQueueRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSNumber *size</Declaration>
+			<Declaration>- (id)initWithQueueName:(NSString *)theQueueName</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>theQueueName</Name>
+					<Abstract type="html">The name for the queue to be created.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/size</Anchor>
+			<Anchor>//api/name/initWithQueueName:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2VolumeDetail/size</TokenIdentifier>
-			<Abstract type="html">The value of the Size property for this object.</Abstract>
-			<DeclaredIn>EC2VolumeDetail.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SQSCreateQueueRequest/setAttributesValue:forKey:</TokenIdentifier>
+			<Abstract type="html">Set a value in the dictionary attributes for the specified key.
+This function will alloc and init attributes if not already done.</Abstract>
+			<DeclaredIn>SQSCreateQueueRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSNumber *size</Declaration>
+			<Declaration>- (void)setAttributesValue:(NSString *)theValue forKey:(NSString *)theKey</Declaration>
 			
 			
-			<Anchor>//api/name/size</Anchor>
+			<Anchor>//api/name/setAttributesValue:forKey:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2VolumeDetail/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SQSCreateQueueRequest/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>EC2VolumeDetail.h</DeclaredIn>			
+			<DeclaredIn>SQSCreateQueueRequest.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

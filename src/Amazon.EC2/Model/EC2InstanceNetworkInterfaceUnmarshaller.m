@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -14,6 +14,11 @@
  */
 
 #import "EC2InstanceNetworkInterfaceUnmarshaller.h"
+#ifdef AWS_MULTI_FRAMEWORK
+#import <AWSRuntime/AmazonServiceExceptionUnmarshaller.h>
+#else
+#import "../AmazonServiceExceptionUnmarshaller.h"
+#endif
 
 @implementation EC2InstanceNetworkInterfaceUnmarshaller
 
@@ -42,6 +47,15 @@
         EC2InstanceNetworkInterfaceAssociationUnmarshaller *unmarshaller = [[[EC2InstanceNetworkInterfaceAssociationUnmarshaller alloc] initWithCaller:self withParentObject:self.response withSetter:@selector(setAssociation:)] autorelease];
         unmarshaller.endElementTagName = @"association";
         [parser setDelegate:unmarshaller];
+    }
+
+    if ([elementName isEqualToString:@"privateIpAddressesSet"]) {
+        AmazonListUnmarshaller *listUnmarshaller = [[[AmazonListUnmarshaller alloc] initWithCaller:self withParentObject:self.response.privateIpAddresses withSetter:@selector(addObjectsFromArray:)] autorelease];
+        listUnmarshaller.endListElementName = @"privateIpAddressesSet";
+        listUnmarshaller.entryElementName   = @"item";
+        listUnmarshaller.delegateClass      = [EC2InstancePrivateIpAddressUnmarshaller class];
+
+        [parser setDelegate:listUnmarshaller];
     }
 
 

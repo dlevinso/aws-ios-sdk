@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -19,14 +19,14 @@
 @implementation DynamoDBGetItemResponse
 
 @synthesize item;
-@synthesize consumedCapacityUnits;
+@synthesize consumedCapacity;
 
 
 -(id)init
 {
     if (self = [super init]) {
-        item                  = [[NSMutableDictionary alloc] initWithCapacity:1];
-        consumedCapacityUnits = nil;
+        item             = [[NSMutableDictionary alloc] initWithCapacity:1];
+        consumedCapacity = nil;
     }
 
     return self;
@@ -37,6 +37,11 @@
 {
     AmazonServiceException *newException = nil;
 
+    if ([[theException errorCode] isEqualToString:@"ResourceNotFoundException"]) {
+        [newException release];
+        newException = [[DynamoDBResourceNotFoundException alloc] initWithMessage:@""];
+    }
+
     if ([[theException errorCode] isEqualToString:@"ProvisionedThroughputExceededException"]) {
         [newException release];
         newException = [[DynamoDBProvisionedThroughputExceededException alloc] initWithMessage:@""];
@@ -45,11 +50,6 @@
     if ([[theException errorCode] isEqualToString:@"InternalServerError"]) {
         [newException release];
         newException = [[DynamoDBInternalServerErrorException alloc] initWithMessage:@""];
-    }
-
-    if ([[theException errorCode] isEqualToString:@"ResourceNotFoundException"]) {
-        [newException release];
-        newException = [[DynamoDBResourceNotFoundException alloc] initWithMessage:@""];
     }
 
     if (newException != nil) {
@@ -76,7 +76,7 @@
 
     [buffer appendString:@"{"];
     [buffer appendString:[[[NSString alloc] initWithFormat:@"Item: %@,", item] autorelease]];
-    [buffer appendString:[[[NSString alloc] initWithFormat:@"ConsumedCapacityUnits: %@,", consumedCapacityUnits] autorelease]];
+    [buffer appendString:[[[NSString alloc] initWithFormat:@"ConsumedCapacity: %@,", consumedCapacity] autorelease]];
     [buffer appendString:[super description]];
     [buffer appendString:@"}"];
 
@@ -88,7 +88,7 @@
 -(void)dealloc
 {
     [item release];
-    [consumedCapacityUnits release];
+    [consumedCapacity release];
 
     [super dealloc];
 }

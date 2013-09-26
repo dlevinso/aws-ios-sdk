@@ -1,95 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2AttachVolumeRequest.html">
+	<File path="Classes/EC2DescribeVolumesRequest.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2AttachVolumeRequest</TokenIdentifier>
-			<Abstract type="html">Attach Volume Request</Abstract>
-			<DeclaredIn>EC2AttachVolumeRequest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/EC2DescribeVolumesRequest</TokenIdentifier>
+			<Abstract type="html">Describe Volumes Request</Abstract>
+			<DeclaredIn>EC2DescribeVolumesRequest.h</DeclaredIn>
 			
 			<NodeRef refid="355"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2AttachVolumeRequest/setVolumeId:</TokenIdentifier>
-			<Abstract type="html">The ID of the Amazon EBS volume. The volume and instance must be
-within the same Availability Zone and the instance must be running.</Abstract>
-			<DeclaredIn>EC2AttachVolumeRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeVolumesRequest/setVolumeIds:</TokenIdentifier>
+			<Abstract type="html">The optional list of EBS volumes to describe.</Abstract>
+			<DeclaredIn>EC2DescribeVolumesRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *volumeId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSMutableArray *volumeIds</Declaration>
 			
 			
-			<Anchor>//api/name/volumeId</Anchor>
+			<Anchor>//api/name/volumeIds</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2AttachVolumeRequest/volumeId</TokenIdentifier>
-			<Abstract type="html">The ID of the Amazon EBS volume. The volume and instance must be
-within the same Availability Zone and the instance must be running.</Abstract>
-			<DeclaredIn>EC2AttachVolumeRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/EC2DescribeVolumesRequest/volumeIds</TokenIdentifier>
+			<Abstract type="html">The optional list of EBS volumes to describe.</Abstract>
+			<DeclaredIn>EC2DescribeVolumesRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *volumeId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSMutableArray *volumeIds</Declaration>
 			
 			
-			<Anchor>//api/name/volumeId</Anchor>
+			<Anchor>//api/name/volumeIds</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2AttachVolumeRequest/setInstanceId:</TokenIdentifier>
-			<Abstract type="html">The ID of the instance to which the volume attaches. The volume and
-instance must be within the same Availability Zone and the instance
-must be running.</Abstract>
-			<DeclaredIn>EC2AttachVolumeRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeVolumesRequest/setFilters:</TokenIdentifier>
+			<Abstract type="html">A list of filters used to match properties for Volumes. For a complete
+reference to the available filter keys for this operation, see the &lt;a
+&quot;http://docs.amazonwebservices.com/AWSEC2/latest/APIReference/&quot;&gt;Amazon
+EC2 API reference&lt;/a&gt;.</Abstract>
+			<DeclaredIn>EC2DescribeVolumesRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSMutableArray *filters</Declaration>
 			
 			
-			<Anchor>//api/name/instanceId</Anchor>
+			<Anchor>//api/name/filters</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2AttachVolumeRequest/instanceId</TokenIdentifier>
-			<Abstract type="html">The ID of the instance to which the volume attaches. The volume and
-instance must be within the same Availability Zone and the instance
-must be running.</Abstract>
-			<DeclaredIn>EC2AttachVolumeRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/EC2DescribeVolumesRequest/filters</TokenIdentifier>
+			<Abstract type="html">A list of filters used to match properties for Volumes. For a complete
+reference to the available filter keys for this operation, see the &lt;a
+&quot;http://docs.amazonwebservices.com/AWSEC2/latest/APIReference/&quot;&gt;Amazon
+EC2 API reference&lt;/a&gt;.</Abstract>
+			<DeclaredIn>EC2DescribeVolumesRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSMutableArray *filters</Declaration>
 			
 			
-			<Anchor>//api/name/instanceId</Anchor>
+			<Anchor>//api/name/filters</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2AttachVolumeRequest/setDevice:</TokenIdentifier>
-			<Abstract type="html">Specifies how the device is exposed to the instance (e.g.,
-&lt;code&gt;/dev/sdh&lt;/code&gt;).</Abstract>
-			<DeclaredIn>EC2AttachVolumeRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *device</Declaration>
-			
-			
-			<Anchor>//api/name/device</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2AttachVolumeRequest/device</TokenIdentifier>
-			<Abstract type="html">Specifies how the device is exposed to the instance (e.g.,
-&lt;code&gt;/dev/sdh&lt;/code&gt;).</Abstract>
-			<DeclaredIn>EC2AttachVolumeRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *device</Declaration>
-			
-			
-			<Anchor>//api/name/device</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2AttachVolumeRequest/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new AttachVolumeRequest object.  Callers should use the
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeVolumesRequest/init</TokenIdentifier>
+			<Abstract type="html">Default constructor for a new DescribeVolumesRequest object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2AttachVolumeRequest.h</DeclaredIn>			
+			<DeclaredIn>EC2DescribeVolumesRequest.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -98,38 +74,51 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2AttachVolumeRequest/initWithVolumeId:andInstanceId:andDevice:</TokenIdentifier>
-			<Abstract type="html">Constructs a new AttachVolumeRequest object.
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeVolumesRequest/initWithVolumeIds:</TokenIdentifier>
+			<Abstract type="html">Constructs a new DescribeVolumesRequest object.
 Callers should use properties to initialize any additional object members.</Abstract>
-			<DeclaredIn>EC2AttachVolumeRequest.h</DeclaredIn>			
+			<DeclaredIn>EC2DescribeVolumesRequest.h</DeclaredIn>			
 			
-			<Declaration>- (id)initWithVolumeId:(NSString *)theVolumeId andInstanceId:(NSString *)theInstanceId andDevice:(NSString *)theDevice</Declaration>
+			<Declaration>- (id)initWithVolumeIds:(NSMutableArray *)theVolumeIds</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>theVolumeId</Name>
-					<Abstract type="html">The ID of the Amazon EBS volume. The volume and
-instance must be within the same Availability Zone and the instance
-must be running.</Abstract>
-				</Parameter><Parameter>
-					<Name>theInstanceId</Name>
-					<Abstract type="html">The ID of the instance to which the volume
-attaches. The volume and instance must be within the same Availability
-Zone and the instance must be running.</Abstract>
-				</Parameter><Parameter>
-					<Name>theDevice</Name>
-					<Abstract type="html">Specifies how the device is exposed to the instance
-(e.g., &lt;code&gt;/dev/sdh&lt;/code&gt;).</Abstract>
+					<Name>theVolumeIds</Name>
+					<Abstract type="html">The optional list of EBS volumes to describe.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/initWithVolumeId:andInstanceId:andDevice:</Anchor>
+			<Anchor>//api/name/initWithVolumeIds:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2AttachVolumeRequest/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeVolumesRequest/addVolumeId:</TokenIdentifier>
+			<Abstract type="html">Adds a single object to volumeIds.
+This function will alloc and init volumeIds if not already done.</Abstract>
+			<DeclaredIn>EC2DescribeVolumesRequest.h</DeclaredIn>			
+			
+			<Declaration>- (void)addVolumeId:(NSString *)volumeIdObject</Declaration>
+			
+			
+			<Anchor>//api/name/addVolumeId:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeVolumesRequest/addFilter:</TokenIdentifier>
+			<Abstract type="html">Adds a single object to filters.
+This function will alloc and init filters if not already done.</Abstract>
+			<DeclaredIn>EC2DescribeVolumesRequest.h</DeclaredIn>			
+			
+			<Declaration>- (void)addFilter:(EC2Filter *)filterObject</Declaration>
+			
+			
+			<Anchor>//api/name/addFilter:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeVolumesRequest/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>EC2AttachVolumeRequest.h</DeclaredIn>			
+			<DeclaredIn>EC2DescribeVolumesRequest.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

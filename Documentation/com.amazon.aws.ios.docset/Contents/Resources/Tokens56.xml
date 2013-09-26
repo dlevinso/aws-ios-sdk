@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/AutoScalingDeletePolicyRequest.html">
+	<File path="Classes/AutoScalingDescribeAutoScalingGroupsResponse.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/AutoScalingDeletePolicyRequest</TokenIdentifier>
-			<Abstract type="html">Delete Policy Request</Abstract>
-			<DeclaredIn>AutoScalingDeletePolicyRequest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/AutoScalingDescribeAutoScalingGroupsResponse</TokenIdentifier>
+			<Abstract type="html">Describe Auto Scaling Groups Result</Abstract>
+			<DeclaredIn>AutoScalingDescribeAutoScalingGroupsResponse.h</DeclaredIn>
 			
 			<NodeRef refid="56"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingDeletePolicyRequest/init</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingDescribeAutoScalingGroupsResponse/setException:</TokenIdentifier>
+			<Abstract type="html">If an exception was thrown, this will return the exception.</Abstract>
+			<DeclaredIn>AutoScalingDescribeAutoScalingGroupsResponse.h</DeclaredIn>			
+			
+			<Declaration>- (void)setException:(AmazonServiceException *)theException</Declaration>
+			
+			
+			<Anchor>//api/name/setException:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingDescribeAutoScalingGroupsResponse/init</TokenIdentifier>
 			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>AutoScalingDeletePolicyRequest.h</DeclaredIn>			
+			<DeclaredIn>AutoScalingDescribeAutoScalingGroupsResponse.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -24,70 +35,71 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingDeletePolicyRequest/setAutoScalingGroupName:</TokenIdentifier>
-			<Abstract type="html">The name of the Auto Scaling group.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 1600&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingDeletePolicyRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingDescribeAutoScalingGroupsResponse/setAutoScalingGroups:</TokenIdentifier>
+			<Abstract type="html">A list of Auto Scaling groups.</Abstract>
+			<DeclaredIn>AutoScalingDescribeAutoScalingGroupsResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *autoScalingGroupName</Declaration>
+			<Declaration>@property (nonatomic, retain) NSMutableArray *autoScalingGroups</Declaration>
 			
 			
-			<Anchor>//api/name/autoScalingGroupName</Anchor>
+			<Anchor>//api/name/autoScalingGroups</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingDeletePolicyRequest/autoScalingGroupName</TokenIdentifier>
-			<Abstract type="html">The name of the Auto Scaling group.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 1600&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingDeletePolicyRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingDescribeAutoScalingGroupsResponse/autoScalingGroups</TokenIdentifier>
+			<Abstract type="html">A list of Auto Scaling groups.</Abstract>
+			<DeclaredIn>AutoScalingDescribeAutoScalingGroupsResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *autoScalingGroupName</Declaration>
+			<Declaration>@property (nonatomic, retain) NSMutableArray *autoScalingGroups</Declaration>
 			
 			
-			<Anchor>//api/name/autoScalingGroupName</Anchor>
+			<Anchor>//api/name/autoScalingGroups</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingDeletePolicyRequest/setPolicyName:</TokenIdentifier>
-			<Abstract type="html">The name or PolicyARN of the policy you want to delete.
+			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingDescribeAutoScalingGroupsResponse/setNextToken:</TokenIdentifier>
+			<Abstract type="html">A string that marks the start of the next batch of returned results.
 &lt;p&gt;
 &lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 1600&lt;br/&gt;
 &lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingDeletePolicyRequest.h</DeclaredIn>			
+			<DeclaredIn>AutoScalingDescribeAutoScalingGroupsResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *policyName</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *nextToken</Declaration>
 			
 			
-			<Anchor>//api/name/policyName</Anchor>
+			<Anchor>//api/name/nextToken</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingDeletePolicyRequest/policyName</TokenIdentifier>
-			<Abstract type="html">The name or PolicyARN of the policy you want to delete.
+			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingDescribeAutoScalingGroupsResponse/nextToken</TokenIdentifier>
+			<Abstract type="html">A string that marks the start of the next batch of returned results.
 &lt;p&gt;
 &lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 1600&lt;br/&gt;
 &lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingDeletePolicyRequest.h</DeclaredIn>			
+			<DeclaredIn>AutoScalingDescribeAutoScalingGroupsResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *policyName</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *nextToken</Declaration>
 			
 			
-			<Anchor>//api/name/policyName</Anchor>
+			<Anchor>//api/name/nextToken</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingDeletePolicyRequest/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingDescribeAutoScalingGroupsResponse/autoScalingGroupsObjectAtIndex:</TokenIdentifier>
+			<Abstract type="html">Returns a value from the autoScalingGroups array for the specified index</Abstract>
+			<DeclaredIn>AutoScalingDescribeAutoScalingGroupsResponse.h</DeclaredIn>			
+			
+			<Declaration>- (AutoScalingAutoScalingGroup *)autoScalingGroupsObjectAtIndex:(int)index</Declaration>
+			
+			
+			<Anchor>//api/name/autoScalingGroupsObjectAtIndex:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingDescribeAutoScalingGroupsResponse/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>AutoScalingDeletePolicyRequest.h</DeclaredIn>			
+			<DeclaredIn>AutoScalingDescribeAutoScalingGroupsResponse.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

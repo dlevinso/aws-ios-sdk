@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -14,8 +14,38 @@
  */
 
 #import "AmazonSQSClient.h"
-#import "../AmazonEndpoints.h"
-#import "../AmazonServiceRequest.h"
+#import "AmazonEndpoints.h"
+#import "AmazonServiceRequest.h"
+#import "SQSSetQueueAttributesResponseUnmarshaller.h"
+#import "SQSSetQueueAttributesRequestMarshaller.h"
+#import "SQSChangeMessageVisibilityBatchResponseUnmarshaller.h"
+#import "SQSChangeMessageVisibilityBatchRequestMarshaller.h"
+#import "SQSChangeMessageVisibilityResponseUnmarshaller.h"
+#import "SQSChangeMessageVisibilityRequestMarshaller.h"
+#import "SQSGetQueueUrlResponseUnmarshaller.h"
+#import "SQSGetQueueUrlRequestMarshaller.h"
+#import "SQSRemovePermissionResponseUnmarshaller.h"
+#import "SQSRemovePermissionRequestMarshaller.h"
+#import "SQSGetQueueAttributesResponseUnmarshaller.h"
+#import "SQSGetQueueAttributesRequestMarshaller.h"
+#import "SQSSendMessageBatchResponseUnmarshaller.h"
+#import "SQSSendMessageBatchRequestMarshaller.h"
+#import "SQSDeleteQueueResponseUnmarshaller.h"
+#import "SQSDeleteQueueRequestMarshaller.h"
+#import "SQSSendMessageResponseUnmarshaller.h"
+#import "SQSSendMessageRequestMarshaller.h"
+#import "SQSReceiveMessageResponseUnmarshaller.h"
+#import "SQSReceiveMessageRequestMarshaller.h"
+#import "SQSListQueuesResponseUnmarshaller.h"
+#import "SQSListQueuesRequestMarshaller.h"
+#import "SQSDeleteMessageBatchResponseUnmarshaller.h"
+#import "SQSDeleteMessageBatchRequestMarshaller.h"
+#import "SQSCreateQueueResponseUnmarshaller.h"
+#import "SQSCreateQueueRequestMarshaller.h"
+#import "SQSAddPermissionResponseUnmarshaller.h"
+#import "SQSAddPermissionRequestMarshaller.h"
+#import "SQSDeleteMessageResponseUnmarshaller.h"
+#import "SQSDeleteMessageRequestMarshaller.h"
 
 
 @implementation AmazonSQSClient
@@ -31,6 +61,14 @@
 -(id)initWithCredentials:(AmazonCredentials *)theCredentials
 {
     if (self = [super initWithCredentials:theCredentials]) {
+        self.endpoint = AMAZON_SQS_US_EAST_1_ENDPOINT_SECURE;
+    }
+    return self;
+}
+
+-(id)initWithCredentialsProvider:(id<AmazonCredentialsProvider> )theProvider
+{
+    if (self = [super initWithCredentialsProvider:theProvider]) {
         self.endpoint = AMAZON_SQS_US_EAST_1_ENDPOINT_SECURE;
     }
     return self;

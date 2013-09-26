@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/AutoScalingFilter.html">
+	<File path="Classes/CloudWatchDescribeAlarmHistoryResponse.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/AutoScalingFilter</TokenIdentifier>
-			<Abstract type="html">Filter</Abstract>
-			<DeclaredIn>AutoScalingFilter.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/CloudWatchDescribeAlarmHistoryResponse</TokenIdentifier>
+			<Abstract type="html">Describe Alarm History Result</Abstract>
+			<DeclaredIn>CloudWatchDescribeAlarmHistoryResponse.h</DeclaredIn>
 			
 			<NodeRef refid="130"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingFilter/init</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/CloudWatchDescribeAlarmHistoryResponse/setException:</TokenIdentifier>
+			<Abstract type="html">If an exception was thrown, this will return the exception.</Abstract>
+			<DeclaredIn>CloudWatchDescribeAlarmHistoryResponse.h</DeclaredIn>			
+			
+			<Declaration>- (void)setException:(AmazonServiceException *)theException</Declaration>
+			
+			
+			<Anchor>//api/name/setException:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CloudWatchDescribeAlarmHistoryResponse/init</TokenIdentifier>
 			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>AutoScalingFilter.h</DeclaredIn>			
+			<DeclaredIn>CloudWatchDescribeAlarmHistoryResponse.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -24,76 +35,65 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingFilter/setName:</TokenIdentifier>
-			<Abstract type="html">The name of the filter. Valid Name values are:
-&lt;code&gt;&quot;auto-scaling-group&quot;&lt;/code&gt;, &lt;code&gt;&quot;key&quot;&lt;/code&gt;,
-&lt;code&gt;&quot;value&quot;&lt;/code&gt;, and &lt;code&gt;&quot;propagate-at-launch&quot;&lt;/code&gt;.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingFilter.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/CloudWatchDescribeAlarmHistoryResponse/setAlarmHistoryItems:</TokenIdentifier>
+			<Abstract type="html">A list of alarm histories in JSON format.</Abstract>
+			<DeclaredIn>CloudWatchDescribeAlarmHistoryResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *name</Declaration>
+			<Declaration>@property (nonatomic, retain) NSMutableArray *alarmHistoryItems</Declaration>
 			
 			
-			<Anchor>//api/name/name</Anchor>
+			<Anchor>//api/name/alarmHistoryItems</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingFilter/name</TokenIdentifier>
-			<Abstract type="html">The name of the filter. Valid Name values are:
-&lt;code&gt;&quot;auto-scaling-group&quot;&lt;/code&gt;, &lt;code&gt;&quot;key&quot;&lt;/code&gt;,
-&lt;code&gt;&quot;value&quot;&lt;/code&gt;, and &lt;code&gt;&quot;propagate-at-launch&quot;&lt;/code&gt;.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingFilter.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/CloudWatchDescribeAlarmHistoryResponse/alarmHistoryItems</TokenIdentifier>
+			<Abstract type="html">A list of alarm histories in JSON format.</Abstract>
+			<DeclaredIn>CloudWatchDescribeAlarmHistoryResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *name</Declaration>
+			<Declaration>@property (nonatomic, retain) NSMutableArray *alarmHistoryItems</Declaration>
 			
 			
-			<Anchor>//api/name/name</Anchor>
+			<Anchor>//api/name/alarmHistoryItems</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingFilter/setValues:</TokenIdentifier>
-			<Abstract type="html">The value of the filter.</Abstract>
-			<DeclaredIn>AutoScalingFilter.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/CloudWatchDescribeAlarmHistoryResponse/setNextToken:</TokenIdentifier>
+			<Abstract type="html">A string that marks the start of the next batch of returned results.</Abstract>
+			<DeclaredIn>CloudWatchDescribeAlarmHistoryResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *values</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *nextToken</Declaration>
 			
 			
-			<Anchor>//api/name/values</Anchor>
+			<Anchor>//api/name/nextToken</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingFilter/values</TokenIdentifier>
-			<Abstract type="html">The value of the filter.</Abstract>
-			<DeclaredIn>AutoScalingFilter.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/CloudWatchDescribeAlarmHistoryResponse/nextToken</TokenIdentifier>
+			<Abstract type="html">A string that marks the start of the next batch of returned results.</Abstract>
+			<DeclaredIn>CloudWatchDescribeAlarmHistoryResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *values</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *nextToken</Declaration>
 			
 			
-			<Anchor>//api/name/values</Anchor>
+			<Anchor>//api/name/nextToken</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingFilter/addValue:</TokenIdentifier>
-			<Abstract type="html">Adds a single object to values.
-This function will alloc and init values if not already done.</Abstract>
-			<DeclaredIn>AutoScalingFilter.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/CloudWatchDescribeAlarmHistoryResponse/alarmHistoryItemsObjectAtIndex:</TokenIdentifier>
+			<Abstract type="html">Returns a value from the alarmHistoryItems array for the specified index</Abstract>
+			<DeclaredIn>CloudWatchDescribeAlarmHistoryResponse.h</DeclaredIn>			
 			
-			<Declaration>- (void)addValue:(NSString *)valueObject</Declaration>
+			<Declaration>- (CloudWatchAlarmHistoryItem *)alarmHistoryItemsObjectAtIndex:(int)index</Declaration>
 			
 			
-			<Anchor>//api/name/addValue:</Anchor>
+			<Anchor>//api/name/alarmHistoryItemsObjectAtIndex:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingFilter/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/CloudWatchDescribeAlarmHistoryResponse/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>AutoScalingFilter.h</DeclaredIn>			
+			<DeclaredIn>CloudWatchDescribeAlarmHistoryResponse.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

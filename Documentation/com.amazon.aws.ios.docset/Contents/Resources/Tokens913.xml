@@ -1,69 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerRequest.html">
+	<File path="Classes/SimpleDBListDomainsRequest.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerRequest</TokenIdentifier>
-			<Abstract type="html">Enable Availability Zones For Load Balancer Request</Abstract>
-			<DeclaredIn>ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerRequest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/SimpleDBListDomainsRequest</TokenIdentifier>
+			<Abstract type="html">List Domains Request</Abstract>
+			<DeclaredIn>SimpleDBListDomainsRequest.h</DeclaredIn>
 			
 			<NodeRef refid="913"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerRequest/setLoadBalancerName:</TokenIdentifier>
-			<Abstract type="html">The name associated with the LoadBalancer. The name must be unique
-within the client AWS account.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SimpleDBListDomainsRequest/setMaxNumberOfDomains:</TokenIdentifier>
+			<Abstract type="html">The maximum number of domain names you want returned. The range is 1
+to 100. The default setting is 100.</Abstract>
+			<DeclaredIn>SimpleDBListDomainsRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *loadBalancerName</Declaration>
+			<Declaration>@property (nonatomic, retain) NSNumber *maxNumberOfDomains</Declaration>
 			
 			
-			<Anchor>//api/name/loadBalancerName</Anchor>
+			<Anchor>//api/name/maxNumberOfDomains</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerRequest/loadBalancerName</TokenIdentifier>
-			<Abstract type="html">The name associated with the LoadBalancer. The name must be unique
-within the client AWS account.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/SimpleDBListDomainsRequest/maxNumberOfDomains</TokenIdentifier>
+			<Abstract type="html">The maximum number of domain names you want returned. The range is 1
+to 100. The default setting is 100.</Abstract>
+			<DeclaredIn>SimpleDBListDomainsRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *loadBalancerName</Declaration>
+			<Declaration>@property (nonatomic, retain) NSNumber *maxNumberOfDomains</Declaration>
 			
 			
-			<Anchor>//api/name/loadBalancerName</Anchor>
+			<Anchor>//api/name/maxNumberOfDomains</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerRequest/setAvailabilityZones:</TokenIdentifier>
-			<Abstract type="html">A list of new Availability Zones for the LoadBalancer. Each
-Availability Zone must be in the same Region as the LoadBalancer.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SimpleDBListDomainsRequest/setNextToken:</TokenIdentifier>
+			<Abstract type="html">A string informing Amazon SimpleDB where to start the next list of
+domain names.</Abstract>
+			<DeclaredIn>SimpleDBListDomainsRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *availabilityZones</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *nextToken</Declaration>
 			
 			
-			<Anchor>//api/name/availabilityZones</Anchor>
+			<Anchor>//api/name/nextToken</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerRequest/availabilityZones</TokenIdentifier>
-			<Abstract type="html">A list of new Availability Zones for the LoadBalancer. Each
-Availability Zone must be in the same Region as the LoadBalancer.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/SimpleDBListDomainsRequest/nextToken</TokenIdentifier>
+			<Abstract type="html">A string informing Amazon SimpleDB where to start the next list of
+domain names.</Abstract>
+			<DeclaredIn>SimpleDBListDomainsRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *availabilityZones</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *nextToken</Declaration>
 			
 			
-			<Anchor>//api/name/availabilityZones</Anchor>
+			<Anchor>//api/name/nextToken</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerRequest/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new EnableAvailabilityZonesForLoadBalancerRequest object.  Callers should use the
+			<TokenIdentifier>//apple_ref/occ/instm/SimpleDBListDomainsRequest/init</TokenIdentifier>
+			<Abstract type="html">Default constructor for a new ListDomainsRequest object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerRequest.h</DeclaredIn>			
+			<DeclaredIn>SimpleDBListDomainsRequest.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -72,45 +72,10 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerRequest/initWithLoadBalancerName:andAvailabilityZones:</TokenIdentifier>
-			<Abstract type="html">Constructs a new EnableAvailabilityZonesForLoadBalancerRequest object.
-Callers should use properties to initialize any additional object members.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerRequest.h</DeclaredIn>			
-			
-			<Declaration>- (id)initWithLoadBalancerName:(NSString *)theLoadBalancerName andAvailabilityZones:(NSMutableArray *)theAvailabilityZones</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>theLoadBalancerName</Name>
-					<Abstract type="html">The name associated with the LoadBalancer.
-The name must be unique within the client AWS account.</Abstract>
-				</Parameter><Parameter>
-					<Name>theAvailabilityZones</Name>
-					<Abstract type="html">A list of new Availability Zones for the
-LoadBalancer. Each Availability Zone must be in the same Region as the
-LoadBalancer.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/initWithLoadBalancerName:andAvailabilityZones:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerRequest/addAvailabilityZone:</TokenIdentifier>
-			<Abstract type="html">Adds a single object to availabilityZones.
-This function will alloc and init availabilityZones if not already done.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerRequest.h</DeclaredIn>			
-			
-			<Declaration>- (void)addAvailabilityZone:(NSString *)availabilityZoneObject</Declaration>
-			
-			
-			<Anchor>//api/name/addAvailabilityZone:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerRequest/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SimpleDBListDomainsRequest/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerRequest.h</DeclaredIn>			
+			<DeclaredIn>SimpleDBListDomainsRequest.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

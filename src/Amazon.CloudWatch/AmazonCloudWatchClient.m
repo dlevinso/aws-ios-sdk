@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -14,8 +14,30 @@
  */
 
 #import "AmazonCloudWatchClient.h"
-#import "../AmazonEndpoints.h"
-#import "../AmazonServiceRequest.h"
+#import "AmazonEndpoints.h"
+#import "AmazonServiceRequest.h"
+#import "CloudWatchPutMetricAlarmResponseUnmarshaller.h"
+#import "CloudWatchPutMetricAlarmRequestMarshaller.h"
+#import "CloudWatchPutMetricDataResponseUnmarshaller.h"
+#import "CloudWatchPutMetricDataRequestMarshaller.h"
+#import "CloudWatchListMetricsResponseUnmarshaller.h"
+#import "CloudWatchListMetricsRequestMarshaller.h"
+#import "CloudWatchGetMetricStatisticsResponseUnmarshaller.h"
+#import "CloudWatchGetMetricStatisticsRequestMarshaller.h"
+#import "CloudWatchDisableAlarmActionsResponseUnmarshaller.h"
+#import "CloudWatchDisableAlarmActionsRequestMarshaller.h"
+#import "CloudWatchDescribeAlarmsResponseUnmarshaller.h"
+#import "CloudWatchDescribeAlarmsRequestMarshaller.h"
+#import "CloudWatchDescribeAlarmsForMetricResponseUnmarshaller.h"
+#import "CloudWatchDescribeAlarmsForMetricRequestMarshaller.h"
+#import "CloudWatchDescribeAlarmHistoryResponseUnmarshaller.h"
+#import "CloudWatchDescribeAlarmHistoryRequestMarshaller.h"
+#import "CloudWatchEnableAlarmActionsResponseUnmarshaller.h"
+#import "CloudWatchEnableAlarmActionsRequestMarshaller.h"
+#import "CloudWatchDeleteAlarmsResponseUnmarshaller.h"
+#import "CloudWatchDeleteAlarmsRequestMarshaller.h"
+#import "CloudWatchSetAlarmStateResponseUnmarshaller.h"
+#import "CloudWatchSetAlarmStateRequestMarshaller.h"
 
 
 @implementation AmazonCloudWatchClient
@@ -31,6 +53,14 @@
 -(id)initWithCredentials:(AmazonCredentials *)theCredentials
 {
     if (self = [super initWithCredentials:theCredentials]) {
+        self.endpoint = AMAZON_CW_US_EAST_1_ENDPOINT_SECURE;
+    }
+    return self;
+}
+
+-(id)initWithCredentialsProvider:(id<AmazonCredentialsProvider> )theProvider
+{
+    if (self = [super initWithCredentialsProvider:theProvider]) {
         self.endpoint = AMAZON_CW_US_EAST_1_ENDPOINT_SECURE;
     }
     return self;

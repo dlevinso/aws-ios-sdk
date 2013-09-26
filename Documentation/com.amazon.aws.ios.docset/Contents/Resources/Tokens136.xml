@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/AutoScalingLaunchConfiguration.html">
+	<File path="Classes/CloudWatchDimensionFilter.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/AutoScalingLaunchConfiguration</TokenIdentifier>
-			<Abstract type="html">Launch Configuration</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/CloudWatchDimensionFilter</TokenIdentifier>
+			<Abstract type="html">Dimension Filter</Abstract>
+			<DeclaredIn>CloudWatchDimensionFilter.h</DeclaredIn>
 			
 			<NodeRef refid="136"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingLaunchConfiguration/init</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/CloudWatchDimensionFilter/init</TokenIdentifier>
 			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
+			<DeclaredIn>CloudWatchDimensionFilter.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -24,432 +24,70 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingLaunchConfiguration/setLaunchConfigurationName:</TokenIdentifier>
-			<Abstract type="html">Specifies the name of the launch configuration.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 255&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *launchConfigurationName</Declaration>
-			
-			
-			<Anchor>//api/name/launchConfigurationName</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingLaunchConfiguration/launchConfigurationName</TokenIdentifier>
-			<Abstract type="html">Specifies the name of the launch configuration.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 255&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *launchConfigurationName</Declaration>
-			
-			
-			<Anchor>//api/name/launchConfigurationName</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingLaunchConfiguration/setLaunchConfigurationARN:</TokenIdentifier>
-			<Abstract type="html">The launch configuration&apos;s Amazon Resource Name (ARN).
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 1600&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *launchConfigurationARN</Declaration>
-			
-			
-			<Anchor>//api/name/launchConfigurationARN</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingLaunchConfiguration/launchConfigurationARN</TokenIdentifier>
-			<Abstract type="html">The launch configuration&apos;s Amazon Resource Name (ARN).
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 1600&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *launchConfigurationARN</Declaration>
-			
-			
-			<Anchor>//api/name/launchConfigurationARN</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingLaunchConfiguration/setImageId:</TokenIdentifier>
-			<Abstract type="html">Provides the unique ID of the &lt;i&gt;Amazon Machine Image&lt;/i&gt; (AMI) that
-was assigned during registration.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 255&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *imageId</Declaration>
-			
-			
-			<Anchor>//api/name/imageId</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingLaunchConfiguration/imageId</TokenIdentifier>
-			<Abstract type="html">Provides the unique ID of the &lt;i&gt;Amazon Machine Image&lt;/i&gt; (AMI) that
-was assigned during registration.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 255&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *imageId</Declaration>
-			
-			
-			<Anchor>//api/name/imageId</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingLaunchConfiguration/setKeyName:</TokenIdentifier>
-			<Abstract type="html">Provides the name of the Amazon EC2 key pair.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 255&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *keyName</Declaration>
-			
-			
-			<Anchor>//api/name/keyName</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingLaunchConfiguration/keyName</TokenIdentifier>
-			<Abstract type="html">Provides the name of the Amazon EC2 key pair.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 255&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *keyName</Declaration>
-			
-			
-			<Anchor>//api/name/keyName</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingLaunchConfiguration/setSecurityGroups:</TokenIdentifier>
-			<Abstract type="html">A description of the security groups to associate with the Amazon EC2
-instances.</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *securityGroups</Declaration>
-			
-			
-			<Anchor>//api/name/securityGroups</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingLaunchConfiguration/securityGroups</TokenIdentifier>
-			<Abstract type="html">A description of the security groups to associate with the Amazon EC2
-instances.</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *securityGroups</Declaration>
-			
-			
-			<Anchor>//api/name/securityGroups</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingLaunchConfiguration/setUserData:</TokenIdentifier>
-			<Abstract type="html">The user data available to the launched Amazon EC2 instances.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;0 - 21847&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *userData</Declaration>
-			
-			
-			<Anchor>//api/name/userData</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingLaunchConfiguration/userData</TokenIdentifier>
-			<Abstract type="html">The user data available to the launched Amazon EC2 instances.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;0 - 21847&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *userData</Declaration>
-			
-			
-			<Anchor>//api/name/userData</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingLaunchConfiguration/setInstanceType:</TokenIdentifier>
-			<Abstract type="html">Specifies the instance type of the Amazon EC2 instance.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 255&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *instanceType</Declaration>
-			
-			
-			<Anchor>//api/name/instanceType</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingLaunchConfiguration/instanceType</TokenIdentifier>
-			<Abstract type="html">Specifies the instance type of the Amazon EC2 instance.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 255&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *instanceType</Declaration>
-			
-			
-			<Anchor>//api/name/instanceType</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingLaunchConfiguration/setKernelId:</TokenIdentifier>
-			<Abstract type="html">Provides the ID of the kernel associated with the Amazon EC2 AMI.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 255&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *kernelId</Declaration>
-			
-			
-			<Anchor>//api/name/kernelId</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingLaunchConfiguration/kernelId</TokenIdentifier>
-			<Abstract type="html">Provides the ID of the kernel associated with the Amazon EC2 AMI.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 255&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *kernelId</Declaration>
-			
-			
-			<Anchor>//api/name/kernelId</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingLaunchConfiguration/setRamdiskId:</TokenIdentifier>
-			<Abstract type="html">Provides ID of the RAM disk associated with the Amazon EC2 AMI.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 255&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *ramdiskId</Declaration>
-			
-			
-			<Anchor>//api/name/ramdiskId</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingLaunchConfiguration/ramdiskId</TokenIdentifier>
-			<Abstract type="html">Provides ID of the RAM disk associated with the Amazon EC2 AMI.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 255&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *ramdiskId</Declaration>
-			
-			
-			<Anchor>//api/name/ramdiskId</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingLaunchConfiguration/setBlockDeviceMappings:</TokenIdentifier>
-			<Abstract type="html">Specifies how block devices are exposed to the instance. Each mapping
-is made up of a &lt;i&gt;virtualName&lt;/i&gt; and a &lt;i&gt;deviceName&lt;/i&gt;.</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *blockDeviceMappings</Declaration>
-			
-			
-			<Anchor>//api/name/blockDeviceMappings</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingLaunchConfiguration/blockDeviceMappings</TokenIdentifier>
-			<Abstract type="html">Specifies how block devices are exposed to the instance. Each mapping
-is made up of a &lt;i&gt;virtualName&lt;/i&gt; and a &lt;i&gt;deviceName&lt;/i&gt;.</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *blockDeviceMappings</Declaration>
-			
-			
-			<Anchor>//api/name/blockDeviceMappings</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingLaunchConfiguration/setInstanceMonitoring:</TokenIdentifier>
-			<Abstract type="html">Controls whether instances in this group are launched with detailed
-monitoring or not.</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) AutoScalingInstanceMonitoring *instanceMonitoring</Declaration>
-			
-			
-			<Anchor>//api/name/instanceMonitoring</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingLaunchConfiguration/instanceMonitoring</TokenIdentifier>
-			<Abstract type="html">Controls whether instances in this group are launched with detailed
-monitoring or not.</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) AutoScalingInstanceMonitoring *instanceMonitoring</Declaration>
-			
-			
-			<Anchor>//api/name/instanceMonitoring</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingLaunchConfiguration/setSpotPrice:</TokenIdentifier>
-			<Abstract type="html">Specifies the price to bid when launching Spot Instances.
+			<TokenIdentifier>//apple_ref/occ/instm/CloudWatchDimensionFilter/setName:</TokenIdentifier>
+			<Abstract type="html">The dimension name to be matched.
 &lt;p&gt;
 &lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
 &lt;b&gt;Length: &lt;/b&gt;1 - 255&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
+			<DeclaredIn>CloudWatchDimensionFilter.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *spotPrice</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *name</Declaration>
 			
 			
-			<Anchor>//api/name/spotPrice</Anchor>
+			<Anchor>//api/name/name</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingLaunchConfiguration/spotPrice</TokenIdentifier>
-			<Abstract type="html">Specifies the price to bid when launching Spot Instances.
+			<TokenIdentifier>//apple_ref/occ/instp/CloudWatchDimensionFilter/name</TokenIdentifier>
+			<Abstract type="html">The dimension name to be matched.
 &lt;p&gt;
 &lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
 &lt;b&gt;Length: &lt;/b&gt;1 - 255&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
+			<DeclaredIn>CloudWatchDimensionFilter.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *spotPrice</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *name</Declaration>
 			
 			
-			<Anchor>//api/name/spotPrice</Anchor>
+			<Anchor>//api/name/name</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingLaunchConfiguration/setIamInstanceProfile:</TokenIdentifier>
-			<Abstract type="html">Provides the name or the Amazon Resource Name (ARN) of the instance
-profile associated with the IAM role for the instance. The instance
-profile contains the IAM role.
+			<TokenIdentifier>//apple_ref/occ/instm/CloudWatchDimensionFilter/setValue:</TokenIdentifier>
+			<Abstract type="html">The value of the dimension to be matched. &lt;note&gt; Specifying a
+&lt;code&gt;Name&lt;/code&gt; without specifying a &lt;code&gt;Value&lt;/code&gt; returns all
+values associated with that &lt;code&gt;Name&lt;/code&gt;. &lt;/note&gt;
 &lt;p&gt;
 &lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 1600&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
+&lt;b&gt;Length: &lt;/b&gt;1 - 255&lt;br/&gt;</Abstract>
+			<DeclaredIn>CloudWatchDimensionFilter.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *iamInstanceProfile</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *value</Declaration>
 			
 			
-			<Anchor>//api/name/iamInstanceProfile</Anchor>
+			<Anchor>//api/name/value</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingLaunchConfiguration/iamInstanceProfile</TokenIdentifier>
-			<Abstract type="html">Provides the name or the Amazon Resource Name (ARN) of the instance
-profile associated with the IAM role for the instance. The instance
-profile contains the IAM role.
+			<TokenIdentifier>//apple_ref/occ/instp/CloudWatchDimensionFilter/value</TokenIdentifier>
+			<Abstract type="html">The value of the dimension to be matched. &lt;note&gt; Specifying a
+&lt;code&gt;Name&lt;/code&gt; without specifying a &lt;code&gt;Value&lt;/code&gt; returns all
+values associated with that &lt;code&gt;Name&lt;/code&gt;. &lt;/note&gt;
 &lt;p&gt;
 &lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 1600&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
+&lt;b&gt;Length: &lt;/b&gt;1 - 255&lt;br/&gt;</Abstract>
+			<DeclaredIn>CloudWatchDimensionFilter.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *iamInstanceProfile</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *value</Declaration>
 			
 			
-			<Anchor>//api/name/iamInstanceProfile</Anchor>
+			<Anchor>//api/name/value</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingLaunchConfiguration/setCreatedTime:</TokenIdentifier>
-			<Abstract type="html">Provides the creation date and time for this launch configuration.</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSDate *createdTime</Declaration>
-			
-			
-			<Anchor>//api/name/createdTime</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingLaunchConfiguration/createdTime</TokenIdentifier>
-			<Abstract type="html">Provides the creation date and time for this launch configuration.</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSDate *createdTime</Declaration>
-			
-			
-			<Anchor>//api/name/createdTime</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingLaunchConfiguration/addSecurityGroup:</TokenIdentifier>
-			<Abstract type="html">Adds a single object to securityGroups.
-This function will alloc and init securityGroups if not already done.</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>- (void)addSecurityGroup:(NSString *)securityGroupObject</Declaration>
-			
-			
-			<Anchor>//api/name/addSecurityGroup:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingLaunchConfiguration/addBlockDeviceMapping:</TokenIdentifier>
-			<Abstract type="html">Adds a single object to blockDeviceMappings.
-This function will alloc and init blockDeviceMappings if not already done.</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
-			
-			<Declaration>- (void)addBlockDeviceMapping:(AutoScalingBlockDeviceMapping *)blockDeviceMappingObject</Declaration>
-			
-			
-			<Anchor>//api/name/addBlockDeviceMapping:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingLaunchConfiguration/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/CloudWatchDimensionFilter/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>AutoScalingLaunchConfiguration.h</DeclaredIn>			
+			<DeclaredIn>CloudWatchDimensionFilter.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

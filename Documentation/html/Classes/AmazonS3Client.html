@@ -12,7 +12,7 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">AWS SDK for iOS v1.4.4 </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">AWS SDK for iOS v1.6.1 </a></h1>
 				<a id="developerHome" href="../index.html">Amazon Web Services, Inc.</a>
 			</div>
 			
@@ -56,10 +56,6 @@
 	<option value="//api/name/abortMultipartUpload:">&nbsp;&nbsp;&nbsp;&nbsp;- abortMultipartUpload:</option>
 	
 	<option value="//api/name/completeMultipartUpload:">&nbsp;&nbsp;&nbsp;&nbsp;- completeMultipartUpload:</option>
-	
-	<option value="//api/name/copyObject:">&nbsp;&nbsp;&nbsp;&nbsp;- copyObject:</option>
-	
-	<option value="//api/name/copyPart:">&nbsp;&nbsp;&nbsp;&nbsp;- copyPart:</option>
 	
 	<option value="//api/name/createBucket:">&nbsp;&nbsp;&nbsp;&nbsp;- createBucket:</option>
 	
@@ -131,6 +127,10 @@
 	
 	<option value="//api/name/listVersions:">&nbsp;&nbsp;&nbsp;&nbsp;- listVersions:</option>
 	
+	<option value="//api/name/objectCopy:">&nbsp;&nbsp;&nbsp;&nbsp;- objectCopy:</option>
+	
+	<option value="//api/name/partCopy:">&nbsp;&nbsp;&nbsp;&nbsp;- partCopy:</option>
+	
 	<option value="//api/name/putObject:">&nbsp;&nbsp;&nbsp;&nbsp;- putObject:</option>
 	
 	<option value="//api/name/restoreObject:">&nbsp;&nbsp;&nbsp;&nbsp;- restoreObject:</option>
@@ -192,10 +192,6 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/abortMultipartUpload:">abortMultipartUpload:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/completeMultipartUpload:">completeMultipartUpload:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/copyObject:">copyObject:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/copyPart:">copyPart:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createBucket:">createBucket:</a></span></li>
 	
@@ -267,6 +263,10 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/listVersions:">listVersions:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectCopy:">objectCopy:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/partCopy:">partCopy:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/putObject:">putObject:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restoreObject:">restoreObject:</a></span></li>
@@ -333,6 +333,8 @@ Amazon S3 provides a simple web services interface that can be used to store and
 at any time, from anywhere on the web. It gives any developer access to the same highly scalable, reliable,
 fast, inexpensive data storage infrastructure that Amazon uses to run its own global network of web sites.
 The service aims to maximize benefits of scale and to pass those benefits on to developers.</p>
+
+<p>See our blog to learn more about Managing Credentials in Mobile Applications.</p>
 					</div>
 					
 					
@@ -469,7 +471,7 @@ Once deleted, there is no method to restore or undelete an object.</p></span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/copyObject:">&ndash;&nbsp;copyObject:</a></code>
+		<code><a href="#//api/name/objectCopy:">&ndash;&nbsp;objectCopy:</a></code>
 		<span class="tooltip"><p>Create a copy of an object that is already stored in Amazon S3.
 When copying an object, you can preserve all metadata (default) or specify new metadata.
 However, the ACL is not preserved and is set to private for the user making the request.
@@ -796,7 +798,7 @@ You must initiate a multipart upload before you can upload any part.</p></span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/copyPart:">&ndash;&nbsp;copyPart:</a></code>
+		<code><a href="#//api/name/partCopy:">&ndash;&nbsp;partCopy:</a></code>
 		<span class="tooltip"><p>S3CopyPartResponse</p></span>
 	</span>
 	
@@ -1203,111 +1205,6 @@ several minutes to complete.</p>
 			<li><code><p><a href="../Classes/S3CompleteMultipartUploadResponse.html">S3CompleteMultipartUploadResponse</a></p></code></li>
 			
 			<li><code><p><a href="../Classes/S3CompleteMultipartUploadRequest.html">S3CompleteMultipartUploadRequest</a></p></code></li>
-			
-		</ul>
-	</div>
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">AmazonS3Client.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/copyObject:" title="copyObject:"></a>
-	<h3 class="subsubtitle method-title">copyObject:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Create a copy of an object that is already stored in Amazon S3.
-When copying an object, you can preserve all metadata (default) or specify new metadata.
-However, the ACL is not preserved and is set to private for the user making the request.
-To override the default ACL setting, specify a new ACL when generating a copy request.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (S3CopyObjectResponse *)copyObject:(S3CopyObjectRequest *)<em>copyObjectRequest</em></code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Create a copy of an object that is already stored in Amazon S3.
-When copying an object, you can preserve all metadata (default) or specify new metadata.
-However, the ACL is not preserved and is set to private for the user making the request.
-To override the default ACL setting, specify a new ACL when generating a copy request.</p>
-	</div>
-	
-	
-	
-	
-	
-	<div class="method-subsection see-also-section">
-		<h4 class="method-subtitle">See Also</h4>
-		<ul>
-			
-			<li><code><p><a href="../Classes/S3CopyObjectResponse.html">S3CopyObjectResponse</a></p></code></li>
-			
-			<li><code><p><a href="../Classes/S3CopyObjectRequest.html">S3CopyObjectRequest</a></p></code></li>
-			
-		</ul>
-	</div>
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">AmazonS3Client.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/copyPart:" title="copyPart:"></a>
-	<h3 class="subsubtitle method-title">copyPart:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>S3CopyPartResponse</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (S3CopyPartResponse *)copyPart:(S3CopyPartRequest *)<em>copyPartRequest</em></code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection see-also-section">
-		<h4 class="method-subtitle">See Also</h4>
-		<ul>
-			
-			<li><code><p><a href="../Classes/S3CopyPartResponse.html">S3CopyPartResponse</a></p></code></li>
-			
-			<li><code><p><a href="../Classes/S3CopyPartRequest.html">S3CopyPartRequest</a></p></code></li>
 			
 		</ul>
 	</div>
@@ -3950,6 +3847,111 @@ Both versions with data and delete markers are included in the results.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/objectCopy:" title="objectCopy:"></a>
+	<h3 class="subsubtitle method-title">objectCopy:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create a copy of an object that is already stored in Amazon S3.
+When copying an object, you can preserve all metadata (default) or specify new metadata.
+However, the ACL is not preserved and is set to private for the user making the request.
+To override the default ACL setting, specify a new ACL when generating a copy request.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (S3CopyObjectResponse *)objectCopy:(S3CopyObjectRequest *)<em>copyObjectRequest</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Create a copy of an object that is already stored in Amazon S3.
+When copying an object, you can preserve all metadata (default) or specify new metadata.
+However, the ACL is not preserved and is set to private for the user making the request.
+To override the default ACL setting, specify a new ACL when generating a copy request.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/S3CopyObjectResponse.html">S3CopyObjectResponse</a></p></code></li>
+			
+			<li><code><p><a href="../Classes/S3CopyObjectRequest.html">S3CopyObjectRequest</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">AmazonS3Client.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/partCopy:" title="partCopy:"></a>
+	<h3 class="subsubtitle method-title">partCopy:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>S3CopyPartResponse</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (S3CopyPartResponse *)partCopy:(S3CopyPartRequest *)<em>copyPartRequest</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/S3CopyPartResponse.html">S3CopyPartResponse</a></p></code></li>
+			
+			<li><code><p><a href="../Classes/S3CopyPartRequest.html">S3CopyPartRequest</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">AmazonS3Client.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/putObject:" title="putObject:"></a>
 	<h3 class="subsubtitle method-title">putObject:</h3>
 	
@@ -4778,7 +4780,7 @@ send all the part numbers and the corresponding etag values.</p>
 				<div id="footer"><script src="/urchin.js" type="text/javascript"></script><script type="text/javascript">urchinTracker();</script>
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Amazon Web Services, Inc.. All rights reserved. (Last updated: 2012-11-13)</span><br />
+						<p><span class="copyright">&copy; 2013 Amazon Web Services, Inc.. All rights reserved. (Last updated: 2013-08-12)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

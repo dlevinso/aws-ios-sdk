@@ -1,82 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2InstanceCount.html">
+	<File path="Classes/S3Grant.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2InstanceCount</TokenIdentifier>
-			<Abstract type="html">Instance Count</Abstract>
-			<DeclaredIn>EC2InstanceCount.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/S3Grant</TokenIdentifier>
+			<Abstract type="html">Represents a grant for an bucket/object ACL. A grant contains
+an S3Grantee and a S3Permission for that S3Grantee.
+&lt;p&gt;
+For more information on Grants/ACLs refer:</Abstract>
+			<DeclaredIn>S3Grant.h</DeclaredIn>
 			
 			<NodeRef refid="648"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceCount/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new  object.  Callers should use the
-property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2InstanceCount.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/S3Grant/setGrantee:</TokenIdentifier>
+			<Abstract type="html">Gets and sets the grantee for the grant</Abstract>
+			<DeclaredIn>S3Grant.h</DeclaredIn>			
 			
-			<Declaration>- (id)init</Declaration>
+			<Declaration>@property (nonatomic, retain) S3Grantee *grantee</Declaration>
 			
 			
-			<Anchor>//api/name/init</Anchor>
+			<Anchor>//api/name/grantee</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceCount/setState:</TokenIdentifier>
-			<Abstract type="html">The value of the State property for this object.</Abstract>
-			<DeclaredIn>EC2InstanceCount.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/S3Grant/grantee</TokenIdentifier>
+			<Abstract type="html">Gets and sets the grantee for the grant</Abstract>
+			<DeclaredIn>S3Grant.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *state</Declaration>
+			<Declaration>@property (nonatomic, retain) S3Grantee *grantee</Declaration>
 			
 			
-			<Anchor>//api/name/state</Anchor>
+			<Anchor>//api/name/grantee</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2InstanceCount/state</TokenIdentifier>
-			<Abstract type="html">The value of the State property for this object.</Abstract>
-			<DeclaredIn>EC2InstanceCount.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/S3Grant/setPermission:</TokenIdentifier>
+			<Abstract type="html">Gets and sets the permission for the grant</Abstract>
+			<DeclaredIn>S3Grant.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *state</Declaration>
+			<Declaration>@property (nonatomic, retain) S3Permission *permission</Declaration>
 			
 			
-			<Anchor>//api/name/state</Anchor>
+			<Anchor>//api/name/permission</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceCount/setInstanceCount:</TokenIdentifier>
-			<Abstract type="html">The value of the InstanceCount property for this object.</Abstract>
-			<DeclaredIn>EC2InstanceCount.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/S3Grant/permission</TokenIdentifier>
+			<Abstract type="html">Gets and sets the permission for the grant</Abstract>
+			<DeclaredIn>S3Grant.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSNumber *instanceCount</Declaration>
+			<Declaration>@property (nonatomic, retain) S3Permission *permission</Declaration>
 			
 			
-			<Anchor>//api/name/instanceCount</Anchor>
+			<Anchor>//api/name/permission</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2InstanceCount/instanceCount</TokenIdentifier>
-			<Abstract type="html">The value of the InstanceCount property for this object.</Abstract>
-			<DeclaredIn>EC2InstanceCount.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/S3Grant/initWithGrantee:withPermission:</TokenIdentifier>
+			<Abstract type="html">Initializes the object with the specified grantee and permission.</Abstract>
+			<DeclaredIn>S3Grant.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSNumber *instanceCount</Declaration>
-			
-			
-			<Anchor>//api/name/instanceCount</Anchor>
+			<Declaration>- (id)initWithGrantee:(S3Grantee *)theGrantee withPermission:(S3Permission *)thePermission</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>theGrantee</Name>
+					<Abstract type="html">The grantee for the grant.</Abstract>
+				</Parameter><Parameter>
+					<Name>thePermission</Name>
+					<Abstract type="html">The permission to grant the grantee.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An initialized object representing the grant.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithGrantee:withPermission:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceCount/description</TokenIdentifier>
-			<Abstract type="html">Returns a string representation of this object; useful for testing and
-debugging.</Abstract>
-			<DeclaredIn>EC2InstanceCount.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/clm/S3Grant/grantWithGrantee:withPermission:</TokenIdentifier>
+			<Abstract type="html">Returns an initialized instance with the specified grantee and permission</Abstract>
+			<DeclaredIn>S3Grant.h</DeclaredIn>			
 			
-			<Declaration>- (NSString *)description</Declaration>
+			<Declaration>+ (id)grantWithGrantee:(S3Grantee *)theGrantee withPermission:(S3Permission *)thePermission</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>theGrantee</Name>
+					<Abstract type="html">The grantee for the grant.</Abstract>
+				</Parameter><Parameter>
+					<Name>thePermission</Name>
+					<Abstract type="html">The permission to grant the grantee.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An initialized object representing the grant.</Abstract></ReturnValue>
+			<Anchor>//api/name/grantWithGrantee:withPermission:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/S3Grant/toXml</TokenIdentifier>
+			<Abstract type="html">Returns the XML represenation of the grant.</Abstract>
+			<DeclaredIn>S3Grant.h</DeclaredIn>			
 			
-			<ReturnValue><Abstract type="html">A string representation of this object.</Abstract></ReturnValue>
-			<Anchor>//api/name/description</Anchor>
+			<Declaration>- (NSString *)toXml</Declaration>
+			
+			
+			<Anchor>//api/name/toXml</Anchor>
 		</Token>
 		
 	</File>

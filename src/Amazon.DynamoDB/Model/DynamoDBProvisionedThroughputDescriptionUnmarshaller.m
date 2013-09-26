@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -15,7 +15,8 @@
 
 #import "DynamoDBProvisionedThroughputDescriptionUnmarshaller.h"
 #import "DynamoDBExceptionUnmarshaller.h"
-#import "../AmazonSDKUtil.h"
+
+#import "AmazonSDKUtil.h"
 
 
 @implementation DynamoDBProvisionedThroughputDescriptionUnmarshaller
@@ -34,6 +35,11 @@
 
     if ([jsonObject valueForKey:@"LastDecreaseDateTime"] != nil) {
         provisionedThroughputDescription.lastDecreaseDateTime = [AmazonSDKUtil secondsSinceEpochToDate:[jsonObject valueForKey:@"LastDecreaseDateTime"]];
+    }
+
+
+    if ([jsonObject valueForKey:@"NumberOfDecreasesToday"] != nil) {
+        provisionedThroughputDescription.numberOfDecreasesToday = [jsonObject valueForKey:@"NumberOfDecreasesToday"];
     }
 
 

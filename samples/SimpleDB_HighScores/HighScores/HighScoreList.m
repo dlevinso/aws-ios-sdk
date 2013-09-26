@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -14,6 +14,8 @@
  */
 
 #import "HighScoreList.h"
+
+#import <AWSRuntime/AWSRuntime.h>
 
 #import "Constants.h"
 
@@ -54,6 +56,8 @@
     {
         // Initial the SimpleDB Client.
         sdbClient      = [[AmazonSimpleDBClient alloc] initWithAccessKey:ACCESS_KEY_ID withSecretKey:SECRET_KEY];
+        sdbClient.endpoint = [AmazonEndpoints sdbEndpoint:US_WEST_2];
+
         self.nextToken = nil;
         sortMethod     = NO_SORT;
     }
@@ -68,6 +72,8 @@
     {
         // Initial the SimpleDB Client.
         sdbClient      = [[AmazonSimpleDBClient alloc] initWithAccessKey:ACCESS_KEY_ID withSecretKey:SECRET_KEY];
+        sdbClient.endpoint = [AmazonEndpoints sdbEndpoint:US_WEST_2];
+
         self.nextToken = nil;
         sortMethod     = theSortMethod;
     }

@@ -1,97 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/ElasticLoadBalancingDescribeLoadBalancerPoliciesRequest.html">
+	<File path="Classes/SimpleDBAttributeDoesNotExistException.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/ElasticLoadBalancingDescribeLoadBalancerPoliciesRequest</TokenIdentifier>
-			<Abstract type="html">Describe Load Balancer Policies Request</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDescribeLoadBalancerPoliciesRequest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/SimpleDBAttributeDoesNotExistException</TokenIdentifier>
+			<Abstract type="html">&lt;p&gt;
+The specified attribute does not exist.
+&lt;/p&gt;</Abstract>
+			<DeclaredIn>SimpleDBAttributeDoesNotExistException.h</DeclaredIn>
 			
 			<NodeRef refid="890"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDescribeLoadBalancerPoliciesRequest/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new  object.  Callers should use the
-property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDescribeLoadBalancerPoliciesRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SimpleDBAttributeDoesNotExistException/setBoxUsage:</TokenIdentifier>
+			<Abstract type="html">The value of the BoxUsage property for this object.</Abstract>
+			<DeclaredIn>SimpleDBAttributeDoesNotExistException.h</DeclaredIn>			
 			
-			<Declaration>- (id)init</Declaration>
+			<Declaration>@property (nonatomic, retain) NSNumber *boxUsage</Declaration>
 			
 			
-			<Anchor>//api/name/init</Anchor>
+			<Anchor>//api/name/boxUsage</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDescribeLoadBalancerPoliciesRequest/setLoadBalancerName:</TokenIdentifier>
-			<Abstract type="html">The mnemonic name associated with the LoadBalancer. If no name is
-specified, the operation returns the attributes of either all the
-sample policies pre-defined by Elastic Load Balancing or the specified
-sample polices.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDescribeLoadBalancerPoliciesRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/SimpleDBAttributeDoesNotExistException/boxUsage</TokenIdentifier>
+			<Abstract type="html">The value of the BoxUsage property for this object.</Abstract>
+			<DeclaredIn>SimpleDBAttributeDoesNotExistException.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *loadBalancerName</Declaration>
+			<Declaration>@property (nonatomic, retain) NSNumber *boxUsage</Declaration>
 			
 			
-			<Anchor>//api/name/loadBalancerName</Anchor>
+			<Anchor>//api/name/boxUsage</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingDescribeLoadBalancerPoliciesRequest/loadBalancerName</TokenIdentifier>
-			<Abstract type="html">The mnemonic name associated with the LoadBalancer. If no name is
-specified, the operation returns the attributes of either all the
-sample policies pre-defined by Elastic Load Balancing or the specified
-sample polices.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDescribeLoadBalancerPoliciesRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SimpleDBAttributeDoesNotExistException/initWithMessage:</TokenIdentifier>
+			<Abstract type="html">Initialize the exception with a message.</Abstract>
+			<DeclaredIn>SimpleDBAttributeDoesNotExistException.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *loadBalancerName</Declaration>
+			<Declaration>- (id)initWithMessage:(NSString *)message</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>message</Name>
+					<Abstract type="html">The message.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/loadBalancerName</Anchor>
+			<Anchor>//api/name/initWithMessage:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDescribeLoadBalancerPoliciesRequest/setPolicyNames:</TokenIdentifier>
-			<Abstract type="html">The names of LoadBalancer policies you&apos;ve created or Elastic Load
-Balancing sample policy names.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDescribeLoadBalancerPoliciesRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *policyNames</Declaration>
-			
-			
-			<Anchor>//api/name/policyNames</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingDescribeLoadBalancerPoliciesRequest/policyNames</TokenIdentifier>
-			<Abstract type="html">The names of LoadBalancer policies you&apos;ve created or Elastic Load
-Balancing sample policy names.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDescribeLoadBalancerPoliciesRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *policyNames</Declaration>
-			
-			
-			<Anchor>//api/name/policyNames</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDescribeLoadBalancerPoliciesRequest/addPolicyName:</TokenIdentifier>
-			<Abstract type="html">Adds a single object to policyNames.
-This function will alloc and init policyNames if not already done.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDescribeLoadBalancerPoliciesRequest.h</DeclaredIn>			
-			
-			<Declaration>- (void)addPolicyName:(NSString *)policyNameObject</Declaration>
-			
-			
-			<Anchor>//api/name/addPolicyName:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDescribeLoadBalancerPoliciesRequest/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SimpleDBAttributeDoesNotExistException/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDescribeLoadBalancerPoliciesRequest.h</DeclaredIn>			
+			<DeclaredIn>SimpleDBAttributeDoesNotExistException.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

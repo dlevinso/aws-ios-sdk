@@ -1,32 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2DescribeBundleTasksResponse.html">
+	<File path="Classes/EC2SpotPlacement.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2DescribeBundleTasksResponse</TokenIdentifier>
-			<Abstract type="html">Describe Bundle Tasks Response</Abstract>
-			<DeclaredIn>EC2DescribeBundleTasksResponse.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/EC2SpotPlacement</TokenIdentifier>
+			<Abstract type="html">Spot Placement</Abstract>
+			<DeclaredIn>EC2SpotPlacement.h</DeclaredIn>
 			
 			<NodeRef refid="480"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeBundleTasksResponse/setException:</TokenIdentifier>
-			<Abstract type="html">If an exception was thrown, this will return the exception.</Abstract>
-			<DeclaredIn>EC2DescribeBundleTasksResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2SpotPlacement/setAvailabilityZone:</TokenIdentifier>
+			<Abstract type="html">The availability zone in which an Amazon EC2 instance runs.</Abstract>
+			<DeclaredIn>EC2SpotPlacement.h</DeclaredIn>			
 			
-			<Declaration>- (void)setException:(AmazonServiceException *)theException</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *availabilityZone</Declaration>
 			
 			
-			<Anchor>//api/name/setException:</Anchor>
+			<Anchor>//api/name/availabilityZone</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeBundleTasksResponse/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new  object.  Callers should use the
+			<TokenIdentifier>//apple_ref/occ/instp/EC2SpotPlacement/availabilityZone</TokenIdentifier>
+			<Abstract type="html">The availability zone in which an Amazon EC2 instance runs.</Abstract>
+			<DeclaredIn>EC2SpotPlacement.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *availabilityZone</Declaration>
+			
+			
+			<Anchor>//api/name/availabilityZone</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2SpotPlacement/setGroupName:</TokenIdentifier>
+			<Abstract type="html">The name of the &lt;a&gt;PlacementGroup&lt;/a&gt; in which an Amazon EC2 instance
+runs. Placement groups are primarily used for launching High
+Performance Computing instances in the same group to ensure fast
+connection speeds.</Abstract>
+			<DeclaredIn>EC2SpotPlacement.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *groupName</Declaration>
+			
+			
+			<Anchor>//api/name/groupName</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2SpotPlacement/groupName</TokenIdentifier>
+			<Abstract type="html">The name of the &lt;a&gt;PlacementGroup&lt;/a&gt; in which an Amazon EC2 instance
+runs. Placement groups are primarily used for launching High
+Performance Computing instances in the same group to ensure fast
+connection speeds.</Abstract>
+			<DeclaredIn>EC2SpotPlacement.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *groupName</Declaration>
+			
+			
+			<Anchor>//api/name/groupName</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2SpotPlacement/init</TokenIdentifier>
+			<Abstract type="html">Default constructor for a new SpotPlacement object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2DescribeBundleTasksResponse.h</DeclaredIn>			
+			<DeclaredIn>EC2SpotPlacement.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -35,43 +74,28 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeBundleTasksResponse/setBundleTasks:</TokenIdentifier>
-			<Abstract type="html">The list of described bundle tasks.</Abstract>
-			<DeclaredIn>EC2DescribeBundleTasksResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2SpotPlacement/initWithAvailabilityZone:</TokenIdentifier>
+			<Abstract type="html">Constructs a new SpotPlacement object.
+Callers should use properties to initialize any additional object members.</Abstract>
+			<DeclaredIn>EC2SpotPlacement.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *bundleTasks</Declaration>
+			<Declaration>- (id)initWithAvailabilityZone:(NSString *)theAvailabilityZone</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>theAvailabilityZone</Name>
+					<Abstract type="html">The availability zone in which an Amazon
+EC2 instance runs.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/bundleTasks</Anchor>
+			<Anchor>//api/name/initWithAvailabilityZone:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2DescribeBundleTasksResponse/bundleTasks</TokenIdentifier>
-			<Abstract type="html">The list of described bundle tasks.</Abstract>
-			<DeclaredIn>EC2DescribeBundleTasksResponse.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *bundleTasks</Declaration>
-			
-			
-			<Anchor>//api/name/bundleTasks</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeBundleTasksResponse/bundleTasksObjectAtIndex:</TokenIdentifier>
-			<Abstract type="html">Returns a value from the bundleTasks array for the specified index</Abstract>
-			<DeclaredIn>EC2DescribeBundleTasksResponse.h</DeclaredIn>			
-			
-			<Declaration>- (EC2BundleTask *)bundleTasksObjectAtIndex:(int)index</Declaration>
-			
-			
-			<Anchor>//api/name/bundleTasksObjectAtIndex:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeBundleTasksResponse/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2SpotPlacement/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>EC2DescribeBundleTasksResponse.h</DeclaredIn>			
+			<DeclaredIn>EC2SpotPlacement.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

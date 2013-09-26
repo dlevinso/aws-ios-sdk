@@ -1,182 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2InstanceStatus.html">
+	<File path="Classes/S3MultipartUpload.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2InstanceStatus</TokenIdentifier>
-			<Abstract type="html">Instance Status</Abstract>
-			<DeclaredIn>EC2InstanceStatus.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/S3MultipartUpload</TokenIdentifier>
+			<Abstract type="html">The result of an initiateMultipartUpload request. The uploadId is used in all subsequent
+interactions for this multipart upload.</Abstract>
+			<DeclaredIn>S3MultipartUpload.h</DeclaredIn>
 			
 			<NodeRef refid="669"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceStatus/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new  object.  Callers should use the
-property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2InstanceStatus.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/S3MultipartUpload/setKey:</TokenIdentifier>
+			<Abstract type="html">Object key for which the multipart upload was initiated.</Abstract>
+			<DeclaredIn>S3MultipartUpload.h</DeclaredIn>			
 			
-			<Declaration>- (id)init</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *key</Declaration>
 			
 			
-			<Anchor>//api/name/init</Anchor>
+			<Anchor>//api/name/key</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceStatus/setInstanceId:</TokenIdentifier>
-			<Abstract type="html">The ID of the Amazon EC2 instance.</Abstract>
-			<DeclaredIn>EC2InstanceStatus.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/S3MultipartUpload/key</TokenIdentifier>
+			<Abstract type="html">Object key for which the multipart upload was initiated.</Abstract>
+			<DeclaredIn>S3MultipartUpload.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *key</Declaration>
 			
 			
-			<Anchor>//api/name/instanceId</Anchor>
+			<Anchor>//api/name/key</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2InstanceStatus/instanceId</TokenIdentifier>
-			<Abstract type="html">The ID of the Amazon EC2 instance.</Abstract>
-			<DeclaredIn>EC2InstanceStatus.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/S3MultipartUpload/setBucket:</TokenIdentifier>
+			<Abstract type="html">Name of the bucket to which the multipart upload was initiated.</Abstract>
+			<DeclaredIn>S3MultipartUpload.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *bucket</Declaration>
 			
 			
-			<Anchor>//api/name/instanceId</Anchor>
+			<Anchor>//api/name/bucket</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceStatus/setAvailabilityZone:</TokenIdentifier>
-			<Abstract type="html">The Amazon EC2 instance&apos;s availability zone.</Abstract>
-			<DeclaredIn>EC2InstanceStatus.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/S3MultipartUpload/bucket</TokenIdentifier>
+			<Abstract type="html">Name of the bucket to which the multipart upload was initiated.</Abstract>
+			<DeclaredIn>S3MultipartUpload.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *availabilityZone</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *bucket</Declaration>
 			
 			
-			<Anchor>//api/name/availabilityZone</Anchor>
+			<Anchor>//api/name/bucket</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2InstanceStatus/availabilityZone</TokenIdentifier>
-			<Abstract type="html">The Amazon EC2 instance&apos;s availability zone.</Abstract>
-			<DeclaredIn>EC2InstanceStatus.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/S3MultipartUpload/setUploadId:</TokenIdentifier>
+			<Abstract type="html">ID for the initiated multipart upload.</Abstract>
+			<DeclaredIn>S3MultipartUpload.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *availabilityZone</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *uploadId</Declaration>
 			
 			
-			<Anchor>//api/name/availabilityZone</Anchor>
+			<Anchor>//api/name/uploadId</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceStatus/setEvents:</TokenIdentifier>
-			<Abstract type="html">Events that affect the status of the associated Amazon EC2 instance.</Abstract>
-			<DeclaredIn>EC2InstanceStatus.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/S3MultipartUpload/uploadId</TokenIdentifier>
+			<Abstract type="html">ID for the initiated multipart upload.</Abstract>
+			<DeclaredIn>S3MultipartUpload.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *events</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *uploadId</Declaration>
 			
 			
-			<Anchor>//api/name/events</Anchor>
+			<Anchor>//api/name/uploadId</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2InstanceStatus/events</TokenIdentifier>
-			<Abstract type="html">Events that affect the status of the associated Amazon EC2 instance.</Abstract>
-			<DeclaredIn>EC2InstanceStatus.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/S3MultipartUpload/setStorageClass:</TokenIdentifier>
+			<Abstract type="html">The class of storage (STANDARD or REDUCED_REDUDANCY) that will be used to store the object when the multipart upload is complete.</Abstract>
+			<DeclaredIn>S3MultipartUpload.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *events</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *storageClass</Declaration>
 			
 			
-			<Anchor>//api/name/events</Anchor>
+			<Anchor>//api/name/storageClass</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceStatus/setInstanceState:</TokenIdentifier>
-			<Abstract type="html">Represents the state of an Amazon EC2 instance.</Abstract>
-			<DeclaredIn>EC2InstanceStatus.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/S3MultipartUpload/storageClass</TokenIdentifier>
+			<Abstract type="html">The class of storage (STANDARD or REDUCED_REDUDANCY) that will be used to store the object when the multipart upload is complete.</Abstract>
+			<DeclaredIn>S3MultipartUpload.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) EC2InstanceState *instanceState</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *storageClass</Declaration>
 			
 			
-			<Anchor>//api/name/instanceState</Anchor>
+			<Anchor>//api/name/storageClass</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2InstanceStatus/instanceState</TokenIdentifier>
-			<Abstract type="html">Represents the state of an Amazon EC2 instance.</Abstract>
-			<DeclaredIn>EC2InstanceStatus.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/S3MultipartUpload/setInitiator:</TokenIdentifier>
+			<Abstract type="html">Who initiated the multipart upload.</Abstract>
+			<DeclaredIn>S3MultipartUpload.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) EC2InstanceState *instanceState</Declaration>
+			<Declaration>@property (nonatomic, retain) S3Owner *initiator</Declaration>
 			
 			
-			<Anchor>//api/name/instanceState</Anchor>
+			<Anchor>//api/name/initiator</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceStatus/setSystemStatus:</TokenIdentifier>
-			<Abstract type="html">The value of the SystemStatus property for this object.</Abstract>
-			<DeclaredIn>EC2InstanceStatus.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/S3MultipartUpload/initiator</TokenIdentifier>
+			<Abstract type="html">Who initiated the multipart upload.</Abstract>
+			<DeclaredIn>S3MultipartUpload.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) EC2InstanceStatusSummary *systemStatus</Declaration>
+			<Declaration>@property (nonatomic, retain) S3Owner *initiator</Declaration>
 			
 			
-			<Anchor>//api/name/systemStatus</Anchor>
+			<Anchor>//api/name/initiator</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2InstanceStatus/systemStatus</TokenIdentifier>
-			<Abstract type="html">The value of the SystemStatus property for this object.</Abstract>
-			<DeclaredIn>EC2InstanceStatus.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/S3MultipartUpload/setOwner:</TokenIdentifier>
+			<Abstract type="html">Container element that identifies the object owner, after the object is created.</Abstract>
+			<DeclaredIn>S3MultipartUpload.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) EC2InstanceStatusSummary *systemStatus</Declaration>
+			<Declaration>@property (nonatomic, retain) S3Owner *owner</Declaration>
 			
 			
-			<Anchor>//api/name/systemStatus</Anchor>
+			<Anchor>//api/name/owner</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceStatus/setInstanceStatus:</TokenIdentifier>
-			<Abstract type="html">The value of the InstanceStatus property for this object.</Abstract>
-			<DeclaredIn>EC2InstanceStatus.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/S3MultipartUpload/owner</TokenIdentifier>
+			<Abstract type="html">Container element that identifies the object owner, after the object is created.</Abstract>
+			<DeclaredIn>S3MultipartUpload.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) EC2InstanceStatusSummary *instanceStatus</Declaration>
+			<Declaration>@property (nonatomic, retain) S3Owner *owner</Declaration>
 			
 			
-			<Anchor>//api/name/instanceStatus</Anchor>
+			<Anchor>//api/name/owner</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2InstanceStatus/instanceStatus</TokenIdentifier>
-			<Abstract type="html">The value of the InstanceStatus property for this object.</Abstract>
-			<DeclaredIn>EC2InstanceStatus.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/S3MultipartUpload/setInitiated:</TokenIdentifier>
+			<Abstract type="html">Date and time at which the multipart upload was initiated.</Abstract>
+			<DeclaredIn>S3MultipartUpload.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) EC2InstanceStatusSummary *instanceStatus</Declaration>
+			<Declaration>@property (nonatomic, retain) NSDate *initiated</Declaration>
 			
 			
-			<Anchor>//api/name/instanceStatus</Anchor>
+			<Anchor>//api/name/initiated</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceStatus/addEvent:</TokenIdentifier>
-			<Abstract type="html">Adds a single object to events.
-This function will alloc and init events if not already done.</Abstract>
-			<DeclaredIn>EC2InstanceStatus.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/S3MultipartUpload/initiated</TokenIdentifier>
+			<Abstract type="html">Date and time at which the multipart upload was initiated.</Abstract>
+			<DeclaredIn>S3MultipartUpload.h</DeclaredIn>			
 			
-			<Declaration>- (void)addEvent:(EC2InstanceStatusEvent *)eventObject</Declaration>
+			<Declaration>@property (nonatomic, retain) NSDate *initiated</Declaration>
 			
 			
-			<Anchor>//api/name/addEvent:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceStatus/description</TokenIdentifier>
-			<Abstract type="html">Returns a string representation of this object; useful for testing and
-debugging.</Abstract>
-			<DeclaredIn>EC2InstanceStatus.h</DeclaredIn>			
-			
-			<Declaration>- (NSString *)description</Declaration>
-			
-			<ReturnValue><Abstract type="html">A string representation of this object.</Abstract></ReturnValue>
-			<Anchor>//api/name/description</Anchor>
+			<Anchor>//api/name/initiated</Anchor>
 		</Token>
 		
 	</File>

@@ -12,7 +12,7 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">AWS SDK for iOS v1.4.4 </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">AWS SDK for iOS v1.6.1 </a></h1>
 				<a id="developerHome" href="../index.html">Amazon Web Services, Inc.</a>
 			</div>
 			
@@ -159,11 +159,12 @@ property methods to initialize this object after creating it.</p></span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/readCapacityUnits">&nbsp;&nbsp;readCapacityUnits</a></code>
-		<span class="tooltip"><p><code>ReadCapacityUnits</code> are in terms of strictly consistent
-reads, assuming items of 1k. 2k items require twice the
-<code>ReadCapacityUnits</code>. Eventually-consistent reads only
-require half the <code>ReadCapacityUnits</code> of stirctly consistent
-reads.</p>
+		<span class="tooltip"><p>The maximum number of strongly consistent reads consumed per second
+before Amazon DynamoDB returns a <i>ThrottlingException</i>. For more
+information, see <a
+eloperguide/WorkingWithDDTables.html#ProvisionedThroughput">Specifying
+Read and Write Requirements</a> of the <i>Amazon DynamoDB Developer
+Guide</i>.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -174,9 +175,12 @@ reads.</p>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/writeCapacityUnits">&nbsp;&nbsp;writeCapacityUnits</a></code>
-		<span class="tooltip"><p><code>WriteCapacityUnits</code> are in terms of strictly consistent
-reads, assuming items of 1k. 2k items require twice the
-<code>WriteCapacityUnits</code>.</p>
+		<span class="tooltip"><p>The maximum number of writes consumed per second before Amazon
+DynamoDB returns a <i>ThrottlingException</i>. For more information,
+see <a
+eloperguide/WorkingWithDDTables.html#ProvisionedThroughput">Specifying
+Read and Write Requirements</a> of the <i>Amazon DynamoDB Developer
+Guide</i>.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -212,11 +216,12 @@ debugging.</p></span>
 	
 	
 	<div class="method-subsection brief-description">
-		<p><code>ReadCapacityUnits</code> are in terms of strictly consistent
-reads, assuming items of 1k. 2k items require twice the
-<code>ReadCapacityUnits</code>. Eventually-consistent reads only
-require half the <code>ReadCapacityUnits</code> of stirctly consistent
-reads.</p>
+		<p>The maximum number of strongly consistent reads consumed per second
+before Amazon DynamoDB returns a <i>ThrottlingException</i>. For more
+information, see <a
+eloperguide/WorkingWithDDTables.html#ProvisionedThroughput">Specifying
+Read and Write Requirements</a> of the <i>Amazon DynamoDB Developer
+Guide</i>.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -237,11 +242,12 @@ reads.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p><code>ReadCapacityUnits</code> are in terms of strictly consistent
-reads, assuming items of 1k. 2k items require twice the
-<code>ReadCapacityUnits</code>. Eventually-consistent reads only
-require half the <code>ReadCapacityUnits</code> of stirctly consistent
-reads.</p>
+		<p>The maximum number of strongly consistent reads consumed per second
+before Amazon DynamoDB returns a <i>ThrottlingException</i>. For more
+information, see <a
+eloperguide/WorkingWithDDTables.html#ProvisionedThroughput">Specifying
+Read and Write Requirements</a> of the <i>Amazon DynamoDB Developer
+Guide</i>.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -269,9 +275,12 @@ reads.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p><code>WriteCapacityUnits</code> are in terms of strictly consistent
-reads, assuming items of 1k. 2k items require twice the
-<code>WriteCapacityUnits</code>.</p>
+		<p>The maximum number of writes consumed per second before Amazon
+DynamoDB returns a <i>ThrottlingException</i>. For more information,
+see <a
+eloperguide/WorkingWithDDTables.html#ProvisionedThroughput">Specifying
+Read and Write Requirements</a> of the <i>Amazon DynamoDB Developer
+Guide</i>.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -292,9 +301,12 @@ reads, assuming items of 1k. 2k items require twice the
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p><code>WriteCapacityUnits</code> are in terms of strictly consistent
-reads, assuming items of 1k. 2k items require twice the
-<code>WriteCapacityUnits</code>.</p>
+		<p>The maximum number of writes consumed per second before Amazon
+DynamoDB returns a <i>ThrottlingException</i>. For more information,
+see <a
+eloperguide/WorkingWithDDTables.html#ProvisionedThroughput">Specifying
+Read and Write Requirements</a> of the <i>Amazon DynamoDB Developer
+Guide</i>.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -429,7 +441,7 @@ property methods to initialize this object after creating it.</p>
 				<div id="footer"><script src="/urchin.js" type="text/javascript"></script><script type="text/javascript">urchinTracker();</script>
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Amazon Web Services, Inc.. All rights reserved. (Last updated: 2012-11-13)</span><br />
+						<p><span class="copyright">&copy; 2013 Amazon Web Services, Inc.. All rights reserved. (Last updated: 2013-08-12)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

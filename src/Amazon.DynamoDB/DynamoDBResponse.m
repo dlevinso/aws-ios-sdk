@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -22,6 +22,10 @@
 #define REQUEST_ID_HEADER    @"X-Amzn-Requestid"
 #define kHttpHdrAmzCrc32     @"X-Amz-Crc32"
 
+@interface DynamoDBResponse ()
+@property (nonatomic, readwrite, retain) NSDictionary *responseHeader;
+@end
+
 @implementation DynamoDBResponse
 
 @synthesize crc32;
@@ -41,7 +45,7 @@
     [super connection:connection didReceiveResponse:response];
 
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-
+    self.responseHeader = [httpResponse allHeaderFields];
     if([[httpResponse allHeaderFields] objectForKey:kHttpHdrAmzCrc32])
     {
         self.crc32 = [[NSNumber numberWithLongLong:[[[httpResponse allHeaderFields] objectForKey:kHttpHdrAmzCrc32] longLongValue]] unsignedIntValue];
@@ -99,7 +103,10 @@
 
             if (throwsExceptions == YES
                 && [(NSObject *)request.delegate respondsToSelector:@selector(request:didFailWithServiceException:)]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
                 [request.delegate request:request didFailWithServiceException:(AmazonServiceException *)crc32NotMatchException];
+#pragma clang diagnostic pop
             }
             else if (throwsExceptions == NO
                      && [(NSObject *)request.delegate respondsToSelector:@selector(request:didFailWithError:)]) {

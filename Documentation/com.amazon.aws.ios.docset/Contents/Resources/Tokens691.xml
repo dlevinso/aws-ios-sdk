@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2LicenseCapacityUnmarshaller.html">
+	<File path="Classes/S3SetBucketTaggingResponse.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2LicenseCapacityUnmarshaller</TokenIdentifier>
-			<Abstract type="html">License Capacity Unmarshaller</Abstract>
-			<DeclaredIn>EC2LicenseCapacityUnmarshaller.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/S3SetBucketTaggingResponse</TokenIdentifier>
+			<Abstract type="html">Contains all the information about the setBucketTaggingResponse operation.</Abstract>
+			<DeclaredIn>S3SetBucketTaggingResponse.h</DeclaredIn>
 			
 			<NodeRef refid="691"/>
 		</Token>

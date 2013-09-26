@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/CloudWatchRequest.html">
+	<File path="Classes/EC2CancelConversionTaskResponse.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/CloudWatchRequest</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>CloudWatchRequest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/EC2CancelConversionTaskResponse</TokenIdentifier>
+			<Abstract type="html">Cancel Conversion Task</Abstract>
+			<DeclaredIn>EC2CancelConversionTaskResponse.h</DeclaredIn>
 			
 			<NodeRef refid="244"/>
 		</Token>

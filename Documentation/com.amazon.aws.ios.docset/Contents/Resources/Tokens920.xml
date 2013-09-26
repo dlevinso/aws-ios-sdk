@@ -1,125 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/ElasticLoadBalancingInstanceState.html">
+	<File path="Classes/SimpleDBNumberItemAttributesExceededException.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/ElasticLoadBalancingInstanceState</TokenIdentifier>
-			<Abstract type="html">Instance State</Abstract>
-			<DeclaredIn>ElasticLoadBalancingInstanceState.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/SimpleDBNumberItemAttributesExceededException</TokenIdentifier>
+			<Abstract type="html">&lt;p&gt;
+Too many attributes in this item.
+&lt;/p&gt;</Abstract>
+			<DeclaredIn>SimpleDBNumberItemAttributesExceededException.h</DeclaredIn>
 			
 			<NodeRef refid="920"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingInstanceState/setInstanceId:</TokenIdentifier>
-			<Abstract type="html">Provides an EC2 instance ID.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingInstanceState.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SimpleDBNumberItemAttributesExceededException/setBoxUsage:</TokenIdentifier>
+			<Abstract type="html">The value of the BoxUsage property for this object.</Abstract>
+			<DeclaredIn>SimpleDBNumberItemAttributesExceededException.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSNumber *boxUsage</Declaration>
 			
 			
-			<Anchor>//api/name/instanceId</Anchor>
+			<Anchor>//api/name/boxUsage</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingInstanceState/instanceId</TokenIdentifier>
-			<Abstract type="html">Provides an EC2 instance ID.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingInstanceState.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/SimpleDBNumberItemAttributesExceededException/boxUsage</TokenIdentifier>
+			<Abstract type="html">The value of the BoxUsage property for this object.</Abstract>
+			<DeclaredIn>SimpleDBNumberItemAttributesExceededException.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSNumber *boxUsage</Declaration>
 			
 			
-			<Anchor>//api/name/instanceId</Anchor>
+			<Anchor>//api/name/boxUsage</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingInstanceState/setState:</TokenIdentifier>
-			<Abstract type="html">Specifies the current status of the instance.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingInstanceState.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SimpleDBNumberItemAttributesExceededException/initWithMessage:</TokenIdentifier>
+			<Abstract type="html">Initialize the exception with a message.</Abstract>
+			<DeclaredIn>SimpleDBNumberItemAttributesExceededException.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *state</Declaration>
+			<Declaration>- (id)initWithMessage:(NSString *)message</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>message</Name>
+					<Abstract type="html">The message.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/state</Anchor>
+			<Anchor>//api/name/initWithMessage:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingInstanceState/state</TokenIdentifier>
-			<Abstract type="html">Specifies the current status of the instance.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingInstanceState.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *state</Declaration>
-			
-			
-			<Anchor>//api/name/state</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingInstanceState/setReasonCode:</TokenIdentifier>
-			<Abstract type="html">Provides information about the cause of &lt;i&gt;OutOfService&lt;/i&gt; instances.
-Specifically, it indicates whether the cause is Elastic Load Balancing
-or the instance behind the LoadBalancer.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingInstanceState.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *reasonCode</Declaration>
-			
-			
-			<Anchor>//api/name/reasonCode</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingInstanceState/reasonCode</TokenIdentifier>
-			<Abstract type="html">Provides information about the cause of &lt;i&gt;OutOfService&lt;/i&gt; instances.
-Specifically, it indicates whether the cause is Elastic Load Balancing
-or the instance behind the LoadBalancer.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingInstanceState.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *reasonCode</Declaration>
-			
-			
-			<Anchor>//api/name/reasonCode</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingInstanceState/setDescriptionValue:</TokenIdentifier>
-			<Abstract type="html">Provides a description of the instance.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingInstanceState.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *descriptionValue</Declaration>
-			
-			
-			<Anchor>//api/name/descriptionValue</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingInstanceState/descriptionValue</TokenIdentifier>
-			<Abstract type="html">Provides a description of the instance.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingInstanceState.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *descriptionValue</Declaration>
-			
-			
-			<Anchor>//api/name/descriptionValue</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingInstanceState/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new InstanceState object.  Callers should use the
-property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingInstanceState.h</DeclaredIn>			
-			
-			<Declaration>- (id)init</Declaration>
-			
-			
-			<Anchor>//api/name/init</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingInstanceState/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SimpleDBNumberItemAttributesExceededException/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingInstanceState.h</DeclaredIn>			
+			<DeclaredIn>SimpleDBNumberItemAttributesExceededException.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

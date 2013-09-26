@@ -1,93 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/DynamoDBUpdateTableRequest.html">
+	<File path="Classes/EC2DescribeSecurityGroupsRequest.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/DynamoDBUpdateTableRequest</TokenIdentifier>
-			<Abstract type="html">Update Table Request</Abstract>
-			<DeclaredIn>DynamoDBUpdateTableRequest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/EC2DescribeSecurityGroupsRequest</TokenIdentifier>
+			<Abstract type="html">Describe Security Groups Request</Abstract>
+			<DeclaredIn>EC2DescribeSecurityGroupsRequest.h</DeclaredIn>
 			
 			<NodeRef refid="335"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBUpdateTableRequest/setTableName:</TokenIdentifier>
-			<Abstract type="html">The name of the table you want to update. Allowed characters are
-&lt;code&gt;a-z&lt;/code&gt;, &lt;code&gt;A-Z&lt;/code&gt;, &lt;code&gt;0-9&lt;/code&gt;, &lt;code&gt;_&lt;/code&gt;
-(underscore), &lt;code&gt;-&lt;/code&gt; (hyphen) and &lt;code&gt;.&lt;/code&gt; (period).
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;3 - 255&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[a-zA-Z0-9_.-]+&lt;br/&gt;</Abstract>
-			<DeclaredIn>DynamoDBUpdateTableRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *tableName</Declaration>
-			
-			
-			<Anchor>//api/name/tableName</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/DynamoDBUpdateTableRequest/tableName</TokenIdentifier>
-			<Abstract type="html">The name of the table you want to update. Allowed characters are
-&lt;code&gt;a-z&lt;/code&gt;, &lt;code&gt;A-Z&lt;/code&gt;, &lt;code&gt;0-9&lt;/code&gt;, &lt;code&gt;_&lt;/code&gt;
-(underscore), &lt;code&gt;-&lt;/code&gt; (hyphen) and &lt;code&gt;.&lt;/code&gt; (period).
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;3 - 255&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[a-zA-Z0-9_.-]+&lt;br/&gt;</Abstract>
-			<DeclaredIn>DynamoDBUpdateTableRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *tableName</Declaration>
-			
-			
-			<Anchor>//api/name/tableName</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBUpdateTableRequest/setProvisionedThroughput:</TokenIdentifier>
-			<Abstract type="html">Provisioned throughput reserves the required read and write resources
-for your table in terms of &lt;code&gt;ReadCapacityUnits&lt;/code&gt; and
-&lt;code&gt;WriteCapacityUnits&lt;/code&gt;. Values for provisioned throughput
-depend upon your expected read/write rates, item size, and
-consistency. Provide the expected number of read and write operations,
-assuming an item size of 1k and strictly consistent reads. For 2k item
-size, double the value. For 3k, triple the value, etc.
-Eventually-consistent reads consume half the resources of strictly
-consistent reads.</Abstract>
-			<DeclaredIn>DynamoDBUpdateTableRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) DynamoDBProvisionedThroughput *provisionedThroughput</Declaration>
-			
-			
-			<Anchor>//api/name/provisionedThroughput</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/DynamoDBUpdateTableRequest/provisionedThroughput</TokenIdentifier>
-			<Abstract type="html">Provisioned throughput reserves the required read and write resources
-for your table in terms of &lt;code&gt;ReadCapacityUnits&lt;/code&gt; and
-&lt;code&gt;WriteCapacityUnits&lt;/code&gt;. Values for provisioned throughput
-depend upon your expected read/write rates, item size, and
-consistency. Provide the expected number of read and write operations,
-assuming an item size of 1k and strictly consistent reads. For 2k item
-size, double the value. For 3k, triple the value, etc.
-Eventually-consistent reads consume half the resources of strictly
-consistent reads.</Abstract>
-			<DeclaredIn>DynamoDBUpdateTableRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) DynamoDBProvisionedThroughput *provisionedThroughput</Declaration>
-			
-			
-			<Anchor>//api/name/provisionedThroughput</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBUpdateTableRequest/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new UpdateTableRequest object.  Callers should use the
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeSecurityGroupsRequest/init</TokenIdentifier>
+			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>DynamoDBUpdateTableRequest.h</DeclaredIn>			
+			<DeclaredIn>EC2DescribeSecurityGroupsRequest.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -96,41 +24,120 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBUpdateTableRequest/initWithTableName:andProvisionedThroughput:</TokenIdentifier>
-			<Abstract type="html">Constructs a new UpdateTableRequest object.
-Callers should use properties to initialize any additional object members.</Abstract>
-			<DeclaredIn>DynamoDBUpdateTableRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeSecurityGroupsRequest/setGroupNames:</TokenIdentifier>
+			<Abstract type="html">The optional list of Amazon EC2 security groups to describe.</Abstract>
+			<DeclaredIn>EC2DescribeSecurityGroupsRequest.h</DeclaredIn>			
 			
-			<Declaration>- (id)initWithTableName:(NSString *)theTableName andProvisionedThroughput:(DynamoDBProvisionedThroughput *)theProvisionedThroughput</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>theTableName</Name>
-					<Abstract type="html">The name of the table you want to update. Allowed
-characters are &lt;code&gt;a-z&lt;/code&gt;, &lt;code&gt;A-Z&lt;/code&gt;, &lt;code&gt;0-9&lt;/code&gt;,
-&lt;code&gt;_&lt;/code&gt; (underscore), &lt;code&gt;-&lt;/code&gt; (hyphen) and
-&lt;code&gt;.&lt;/code&gt; (period).</Abstract>
-				</Parameter><Parameter>
-					<Name>theProvisionedThroughput</Name>
-					<Abstract type="html">Provisioned throughput reserves the
-required read and write resources for your table in terms of
-&lt;code&gt;ReadCapacityUnits&lt;/code&gt; and &lt;code&gt;WriteCapacityUnits&lt;/code&gt;.
-Values for provisioned throughput depend upon your expected read/write
-rates, item size, and consistency. Provide the expected number of read
-and write operations, assuming an item size of 1k and strictly
-consistent reads. For 2k item size, double the value. For 3k, triple
-the value, etc. Eventually-consistent reads consume half the resources
-of strictly consistent reads.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, retain) NSMutableArray *groupNames</Declaration>
 			
-			<Anchor>//api/name/initWithTableName:andProvisionedThroughput:</Anchor>
+			
+			<Anchor>//api/name/groupNames</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBUpdateTableRequest/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2DescribeSecurityGroupsRequest/groupNames</TokenIdentifier>
+			<Abstract type="html">The optional list of Amazon EC2 security groups to describe.</Abstract>
+			<DeclaredIn>EC2DescribeSecurityGroupsRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSMutableArray *groupNames</Declaration>
+			
+			
+			<Anchor>//api/name/groupNames</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeSecurityGroupsRequest/setGroupIds:</TokenIdentifier>
+			<Abstract type="html">The value of the GroupIds property for this object.</Abstract>
+			<DeclaredIn>EC2DescribeSecurityGroupsRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSMutableArray *groupIds</Declaration>
+			
+			
+			<Anchor>//api/name/groupIds</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2DescribeSecurityGroupsRequest/groupIds</TokenIdentifier>
+			<Abstract type="html">The value of the GroupIds property for this object.</Abstract>
+			<DeclaredIn>EC2DescribeSecurityGroupsRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSMutableArray *groupIds</Declaration>
+			
+			
+			<Anchor>//api/name/groupIds</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeSecurityGroupsRequest/setFilters:</TokenIdentifier>
+			<Abstract type="html">A list of filters used to match properties for SecurityGroups. For a
+complete reference to the available filter keys for this operation,
+see the &lt;a
+&quot;http://docs.amazonwebservices.com/AWSEC2/latest/APIReference/&quot;&gt;Amazon
+EC2 API reference&lt;/a&gt;.</Abstract>
+			<DeclaredIn>EC2DescribeSecurityGroupsRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSMutableArray *filters</Declaration>
+			
+			
+			<Anchor>//api/name/filters</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2DescribeSecurityGroupsRequest/filters</TokenIdentifier>
+			<Abstract type="html">A list of filters used to match properties for SecurityGroups. For a
+complete reference to the available filter keys for this operation,
+see the &lt;a
+&quot;http://docs.amazonwebservices.com/AWSEC2/latest/APIReference/&quot;&gt;Amazon
+EC2 API reference&lt;/a&gt;.</Abstract>
+			<DeclaredIn>EC2DescribeSecurityGroupsRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSMutableArray *filters</Declaration>
+			
+			
+			<Anchor>//api/name/filters</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeSecurityGroupsRequest/addGroupName:</TokenIdentifier>
+			<Abstract type="html">Adds a single object to groupNames.
+This function will alloc and init groupNames if not already done.</Abstract>
+			<DeclaredIn>EC2DescribeSecurityGroupsRequest.h</DeclaredIn>			
+			
+			<Declaration>- (void)addGroupName:(NSString *)groupNameObject</Declaration>
+			
+			
+			<Anchor>//api/name/addGroupName:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeSecurityGroupsRequest/addGroupId:</TokenIdentifier>
+			<Abstract type="html">Adds a single object to groupIds.
+This function will alloc and init groupIds if not already done.</Abstract>
+			<DeclaredIn>EC2DescribeSecurityGroupsRequest.h</DeclaredIn>			
+			
+			<Declaration>- (void)addGroupId:(NSString *)groupIdObject</Declaration>
+			
+			
+			<Anchor>//api/name/addGroupId:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeSecurityGroupsRequest/addFilter:</TokenIdentifier>
+			<Abstract type="html">Adds a single object to filters.
+This function will alloc and init filters if not already done.</Abstract>
+			<DeclaredIn>EC2DescribeSecurityGroupsRequest.h</DeclaredIn>			
+			
+			<Declaration>- (void)addFilter:(EC2Filter *)filterObject</Declaration>
+			
+			
+			<Anchor>//api/name/addFilter:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeSecurityGroupsRequest/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>DynamoDBUpdateTableRequest.h</DeclaredIn>			
+			<DeclaredIn>EC2DescribeSecurityGroupsRequest.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

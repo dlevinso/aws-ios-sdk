@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -38,6 +38,16 @@
     if ([[theException errorCode] isEqualToString:@"NotFound"]) {
         [newException release];
         newException = [[SNSNotFoundException alloc] initWithMessage:@""];
+    }
+
+    if ([[theException errorCode] isEqualToString:@"PlatformApplicationDisabled"]) {
+        [newException release];
+        newException = [[SNSPlatformApplicationDisabledException alloc] initWithMessage:@""];
+    }
+
+    if ([[theException errorCode] isEqualToString:@"EndpointDisabled"]) {
+        [newException release];
+        newException = [[SNSEndpointDisabledException alloc] initWithMessage:@""];
     }
 
     if ([[theException errorCode] isEqualToString:@"AuthorizationError"]) {

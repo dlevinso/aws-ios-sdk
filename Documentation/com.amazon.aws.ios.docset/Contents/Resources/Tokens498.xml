@@ -1,79 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2DescribeInstanceAttributeRequest.html">
+	<File path="Classes/EC2VolumeDetail.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2DescribeInstanceAttributeRequest</TokenIdentifier>
-			<Abstract type="html">Describe Instance Attribute Request</Abstract>
-			<DeclaredIn>EC2DescribeInstanceAttributeRequest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/EC2VolumeDetail</TokenIdentifier>
+			<Abstract type="html">Volume Detail</Abstract>
+			<DeclaredIn>EC2VolumeDetail.h</DeclaredIn>
 			
 			<NodeRef refid="498"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeInstanceAttributeRequest/setInstanceId:</TokenIdentifier>
-			<Abstract type="html">The ID of the instance whose instance attribute is being described.</Abstract>
-			<DeclaredIn>EC2DescribeInstanceAttributeRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
-			
-			
-			<Anchor>//api/name/instanceId</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2DescribeInstanceAttributeRequest/instanceId</TokenIdentifier>
-			<Abstract type="html">The ID of the instance whose instance attribute is being described.</Abstract>
-			<DeclaredIn>EC2DescribeInstanceAttributeRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
-			
-			
-			<Anchor>//api/name/instanceId</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeInstanceAttributeRequest/setAttribute:</TokenIdentifier>
-			<Abstract type="html">The name of the attribute to describe. &lt;p&gt; Available attribute names:
-&lt;code&gt;instanceType&lt;/code&gt;, &lt;code&gt;kernel&lt;/code&gt;, &lt;code&gt;ramdisk&lt;/code&gt;,
-&lt;code&gt;userData&lt;/code&gt;, &lt;code&gt;disableApiTermination&lt;/code&gt;,
-&lt;code&gt;instanceInitiatedShutdownBehavior&lt;/code&gt;,
-&lt;code&gt;rootDeviceName&lt;/code&gt;, &lt;code&gt;blockDeviceMapping&lt;/code&gt;
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Allowed Values: &lt;/b&gt;instanceType, kernel, ramdisk, userData, disableApiTermination, instanceInitiatedShutdownBehavior, rootDeviceName, blockDeviceMapping, productCodes, sourceDestCheck, groupSet, ebsOptimized</Abstract>
-			<DeclaredIn>EC2DescribeInstanceAttributeRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *attribute</Declaration>
-			
-			
-			<Anchor>//api/name/attribute</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2DescribeInstanceAttributeRequest/attribute</TokenIdentifier>
-			<Abstract type="html">The name of the attribute to describe. &lt;p&gt; Available attribute names:
-&lt;code&gt;instanceType&lt;/code&gt;, &lt;code&gt;kernel&lt;/code&gt;, &lt;code&gt;ramdisk&lt;/code&gt;,
-&lt;code&gt;userData&lt;/code&gt;, &lt;code&gt;disableApiTermination&lt;/code&gt;,
-&lt;code&gt;instanceInitiatedShutdownBehavior&lt;/code&gt;,
-&lt;code&gt;rootDeviceName&lt;/code&gt;, &lt;code&gt;blockDeviceMapping&lt;/code&gt;
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Allowed Values: &lt;/b&gt;instanceType, kernel, ramdisk, userData, disableApiTermination, instanceInitiatedShutdownBehavior, rootDeviceName, blockDeviceMapping, productCodes, sourceDestCheck, groupSet, ebsOptimized</Abstract>
-			<DeclaredIn>EC2DescribeInstanceAttributeRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *attribute</Declaration>
-			
-			
-			<Anchor>//api/name/attribute</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeInstanceAttributeRequest/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new DescribeInstanceAttributeRequest object.  Callers should use the
+			<TokenIdentifier>//apple_ref/occ/instm/EC2VolumeDetail/init</TokenIdentifier>
+			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2DescribeInstanceAttributeRequest.h</DeclaredIn>			
+			<DeclaredIn>EC2VolumeDetail.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -82,36 +24,32 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeInstanceAttributeRequest/initWithInstanceId:andAttribute:</TokenIdentifier>
-			<Abstract type="html">Constructs a new DescribeInstanceAttributeRequest object.
-Callers should use properties to initialize any additional object members.</Abstract>
-			<DeclaredIn>EC2DescribeInstanceAttributeRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2VolumeDetail/setSize:</TokenIdentifier>
+			<Abstract type="html">The value of the Size property for this object.</Abstract>
+			<DeclaredIn>EC2VolumeDetail.h</DeclaredIn>			
 			
-			<Declaration>- (id)initWithInstanceId:(NSString *)theInstanceId andAttribute:(NSString *)theAttribute</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>theInstanceId</Name>
-					<Abstract type="html">The ID of the instance whose instance attribute
-is being described.</Abstract>
-				</Parameter><Parameter>
-					<Name>theAttribute</Name>
-					<Abstract type="html">The name of the attribute to describe. &lt;p&gt;
-Available attribute names: &lt;code&gt;instanceType&lt;/code&gt;,
-&lt;code&gt;kernel&lt;/code&gt;, &lt;code&gt;ramdisk&lt;/code&gt;, &lt;code&gt;userData&lt;/code&gt;,
-&lt;code&gt;disableApiTermination&lt;/code&gt;,
-&lt;code&gt;instanceInitiatedShutdownBehavior&lt;/code&gt;,
-&lt;code&gt;rootDeviceName&lt;/code&gt;, &lt;code&gt;blockDeviceMapping&lt;/code&gt;</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, retain) NSNumber *size</Declaration>
 			
-			<Anchor>//api/name/initWithInstanceId:andAttribute:</Anchor>
+			
+			<Anchor>//api/name/size</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeInstanceAttributeRequest/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2VolumeDetail/size</TokenIdentifier>
+			<Abstract type="html">The value of the Size property for this object.</Abstract>
+			<DeclaredIn>EC2VolumeDetail.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSNumber *size</Declaration>
+			
+			
+			<Anchor>//api/name/size</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2VolumeDetail/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>EC2DescribeInstanceAttributeRequest.h</DeclaredIn>			
+			<DeclaredIn>EC2VolumeDetail.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

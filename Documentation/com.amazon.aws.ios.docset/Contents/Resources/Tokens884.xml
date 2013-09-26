@@ -1,79 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/ElasticLoadBalancingDeregisterInstancesFromLoadBalancerResponse.html">
+	<File path="Classes/SecurityTokenServiceInvalidIdentityTokenException.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/ElasticLoadBalancingDeregisterInstancesFromLoadBalancerResponse</TokenIdentifier>
-			<Abstract type="html">Deregister Instances From Load Balancer Result</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDeregisterInstancesFromLoadBalancerResponse.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/SecurityTokenServiceInvalidIdentityTokenException</TokenIdentifier>
+			<Abstract type="html">&lt;p&gt;
+The web identity token that was passed could not be validated by AWS.
+Get a new identity token from the identity provider and then retry the
+request.
+&lt;/p&gt;</Abstract>
+			<DeclaredIn>SecurityTokenServiceInvalidIdentityTokenException.h</DeclaredIn>
 			
 			<NodeRef refid="884"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDeregisterInstancesFromLoadBalancerResponse/setException:</TokenIdentifier>
-			<Abstract type="html">If an exception was thrown, this will return the exception.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDeregisterInstancesFromLoadBalancerResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SecurityTokenServiceInvalidIdentityTokenException/initWithMessage:</TokenIdentifier>
+			<Abstract type="html">Initialize the exception with a message.</Abstract>
+			<DeclaredIn>SecurityTokenServiceInvalidIdentityTokenException.h</DeclaredIn>			
 			
-			<Declaration>- (void)setException:(AmazonServiceException *)theException</Declaration>
+			<Declaration>- (id)initWithMessage:(NSString *)message</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>message</Name>
+					<Abstract type="html">The message.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/setException:</Anchor>
+			<Anchor>//api/name/initWithMessage:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDeregisterInstancesFromLoadBalancerResponse/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new  object.  Callers should use the
-property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDeregisterInstancesFromLoadBalancerResponse.h</DeclaredIn>			
-			
-			<Declaration>- (id)init</Declaration>
-			
-			
-			<Anchor>//api/name/init</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDeregisterInstancesFromLoadBalancerResponse/setInstances:</TokenIdentifier>
-			<Abstract type="html">An updated list of remaining instances registered with the
-LoadBalancer.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDeregisterInstancesFromLoadBalancerResponse.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *instances</Declaration>
-			
-			
-			<Anchor>//api/name/instances</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingDeregisterInstancesFromLoadBalancerResponse/instances</TokenIdentifier>
-			<Abstract type="html">An updated list of remaining instances registered with the
-LoadBalancer.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDeregisterInstancesFromLoadBalancerResponse.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *instances</Declaration>
-			
-			
-			<Anchor>//api/name/instances</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDeregisterInstancesFromLoadBalancerResponse/instancesObjectAtIndex:</TokenIdentifier>
-			<Abstract type="html">Returns a value from the instances array for the specified index</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDeregisterInstancesFromLoadBalancerResponse.h</DeclaredIn>			
-			
-			<Declaration>- (ElasticLoadBalancingInstance *)instancesObjectAtIndex:(int)index</Declaration>
-			
-			
-			<Anchor>//api/name/instancesObjectAtIndex:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDeregisterInstancesFromLoadBalancerResponse/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SecurityTokenServiceInvalidIdentityTokenException/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDeregisterInstancesFromLoadBalancerResponse.h</DeclaredIn>			
+			<DeclaredIn>SecurityTokenServiceInvalidIdentityTokenException.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

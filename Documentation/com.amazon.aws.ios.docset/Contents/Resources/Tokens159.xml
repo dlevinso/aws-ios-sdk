@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/AutoScalingResponse.html">
+	<File path="Classes/CloudWatchRequest.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/AutoScalingResponse</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/cl/CloudWatchRequest</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>AutoScalingResponse.h</DeclaredIn>
+			<DeclaredIn>CloudWatchRequest.h</DeclaredIn>
 			
 			<NodeRef refid="159"/>
 		</Token>

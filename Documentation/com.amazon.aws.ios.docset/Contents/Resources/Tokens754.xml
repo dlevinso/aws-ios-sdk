@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2ReservedInstances.html">
+	<File path="Classes/SNSCreatePlatformApplicationRequest.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2ReservedInstances</TokenIdentifier>
-			<Abstract type="html">Reserved Instances</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/SNSCreatePlatformApplicationRequest</TokenIdentifier>
+			<Abstract type="html">Create Platform Application Request</Abstract>
+			<DeclaredIn>SNSCreatePlatformApplicationRequest.h</DeclaredIn>
 			
 			<NodeRef refid="754"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ReservedInstances/init</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SNSCreatePlatformApplicationRequest/init</TokenIdentifier>
 			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
+			<DeclaredIn>SNSCreatePlatformApplicationRequest.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -24,374 +24,98 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ReservedInstances/setReservedInstancesId:</TokenIdentifier>
-			<Abstract type="html">The unique ID of the Reserved Instances purchase.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SNSCreatePlatformApplicationRequest/setName:</TokenIdentifier>
+			<Abstract type="html">Application names must be made up of only uppercase and lowercase
+ASCII letters, numbers, underscores, hyphens, and periods, and must be
+between 1 and 256 characters long.</Abstract>
+			<DeclaredIn>SNSCreatePlatformApplicationRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *reservedInstancesId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *name</Declaration>
 			
 			
-			<Anchor>//api/name/reservedInstancesId</Anchor>
+			<Anchor>//api/name/name</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2ReservedInstances/reservedInstancesId</TokenIdentifier>
-			<Abstract type="html">The unique ID of the Reserved Instances purchase.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/SNSCreatePlatformApplicationRequest/name</TokenIdentifier>
+			<Abstract type="html">Application names must be made up of only uppercase and lowercase
+ASCII letters, numbers, underscores, hyphens, and periods, and must be
+between 1 and 256 characters long.</Abstract>
+			<DeclaredIn>SNSCreatePlatformApplicationRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *reservedInstancesId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *name</Declaration>
 			
 			
-			<Anchor>//api/name/reservedInstancesId</Anchor>
+			<Anchor>//api/name/name</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ReservedInstances/setInstanceType:</TokenIdentifier>
-			<Abstract type="html">The instance type on which the Reserved Instances can be used.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Allowed Values: &lt;/b&gt;t1.micro, m1.small, m1.medium, m1.large, m1.xlarge, m2.xlarge, m2.2xlarge, m2.4xlarge, c1.medium, c1.xlarge, hi1.4xlarge, cc1.4xlarge, cc2.8xlarge, cg1.4xlarge</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SNSCreatePlatformApplicationRequest/setPlatform:</TokenIdentifier>
+			<Abstract type="html">The following platforms are supported: ADM (Amazon Device Messaging),
+APNS (Apple Push Notification Service), APNS_SANDBOX, and GCM (Google
+Cloud Messaging).</Abstract>
+			<DeclaredIn>SNSCreatePlatformApplicationRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *instanceType</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *platform</Declaration>
 			
 			
-			<Anchor>//api/name/instanceType</Anchor>
+			<Anchor>//api/name/platform</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2ReservedInstances/instanceType</TokenIdentifier>
-			<Abstract type="html">The instance type on which the Reserved Instances can be used.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Allowed Values: &lt;/b&gt;t1.micro, m1.small, m1.medium, m1.large, m1.xlarge, m2.xlarge, m2.2xlarge, m2.4xlarge, c1.medium, c1.xlarge, hi1.4xlarge, cc1.4xlarge, cc2.8xlarge, cg1.4xlarge</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/SNSCreatePlatformApplicationRequest/platform</TokenIdentifier>
+			<Abstract type="html">The following platforms are supported: ADM (Amazon Device Messaging),
+APNS (Apple Push Notification Service), APNS_SANDBOX, and GCM (Google
+Cloud Messaging).</Abstract>
+			<DeclaredIn>SNSCreatePlatformApplicationRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *instanceType</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *platform</Declaration>
 			
 			
-			<Anchor>//api/name/instanceType</Anchor>
+			<Anchor>//api/name/platform</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ReservedInstances/setAvailabilityZone:</TokenIdentifier>
-			<Abstract type="html">The Availability Zone in which the Reserved Instances can be used.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SNSCreatePlatformApplicationRequest/setAttributes:</TokenIdentifier>
+			<Abstract type="html">For a list of attributes, see &lt;a
+atformApplicationAttributes.html&quot;&gt;SetPlatformApplicationAttributes&lt;/a&gt;</Abstract>
+			<DeclaredIn>SNSCreatePlatformApplicationRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *availabilityZone</Declaration>
+			<Declaration>@property (nonatomic, retain) NSMutableDictionary *attributes</Declaration>
 			
 			
-			<Anchor>//api/name/availabilityZone</Anchor>
+			<Anchor>//api/name/attributes</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2ReservedInstances/availabilityZone</TokenIdentifier>
-			<Abstract type="html">The Availability Zone in which the Reserved Instances can be used.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/SNSCreatePlatformApplicationRequest/attributes</TokenIdentifier>
+			<Abstract type="html">For a list of attributes, see &lt;a
+atformApplicationAttributes.html&quot;&gt;SetPlatformApplicationAttributes&lt;/a&gt;</Abstract>
+			<DeclaredIn>SNSCreatePlatformApplicationRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *availabilityZone</Declaration>
+			<Declaration>@property (nonatomic, retain) NSMutableDictionary *attributes</Declaration>
 			
 			
-			<Anchor>//api/name/availabilityZone</Anchor>
+			<Anchor>//api/name/attributes</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ReservedInstances/setStart:</TokenIdentifier>
-			<Abstract type="html">The date and time the Reserved Instances started.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SNSCreatePlatformApplicationRequest/setAttributesValue:forKey:</TokenIdentifier>
+			<Abstract type="html">Set a value in the dictionary attributes for the specified key.
+This function will alloc and init attributes if not already done.</Abstract>
+			<DeclaredIn>SNSCreatePlatformApplicationRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSDate *start</Declaration>
+			<Declaration>- (void)setAttributesValue:(NSString *)theValue forKey:(NSString *)theKey</Declaration>
 			
 			
-			<Anchor>//api/name/start</Anchor>
+			<Anchor>//api/name/setAttributesValue:forKey:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2ReservedInstances/start</TokenIdentifier>
-			<Abstract type="html">The date and time the Reserved Instances started.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSDate *start</Declaration>
-			
-			
-			<Anchor>//api/name/start</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ReservedInstances/setDuration:</TokenIdentifier>
-			<Abstract type="html">The duration of the Reserved Instances, in seconds.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSNumber *duration</Declaration>
-			
-			
-			<Anchor>//api/name/duration</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2ReservedInstances/duration</TokenIdentifier>
-			<Abstract type="html">The duration of the Reserved Instances, in seconds.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSNumber *duration</Declaration>
-			
-			
-			<Anchor>//api/name/duration</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ReservedInstances/setUsagePrice:</TokenIdentifier>
-			<Abstract type="html">The usage price of the Reserved Instances, per hour.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSNumber *usagePrice</Declaration>
-			
-			
-			<Anchor>//api/name/usagePrice</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2ReservedInstances/usagePrice</TokenIdentifier>
-			<Abstract type="html">The usage price of the Reserved Instances, per hour.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSNumber *usagePrice</Declaration>
-			
-			
-			<Anchor>//api/name/usagePrice</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ReservedInstances/setFixedPrice:</TokenIdentifier>
-			<Abstract type="html">The purchase price of the Reserved Instances.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSNumber *fixedPrice</Declaration>
-			
-			
-			<Anchor>//api/name/fixedPrice</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2ReservedInstances/fixedPrice</TokenIdentifier>
-			<Abstract type="html">The purchase price of the Reserved Instances.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSNumber *fixedPrice</Declaration>
-			
-			
-			<Anchor>//api/name/fixedPrice</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ReservedInstances/setInstanceCount:</TokenIdentifier>
-			<Abstract type="html">The number of Reserved Instances purchased.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSNumber *instanceCount</Declaration>
-			
-			
-			<Anchor>//api/name/instanceCount</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2ReservedInstances/instanceCount</TokenIdentifier>
-			<Abstract type="html">The number of Reserved Instances purchased.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSNumber *instanceCount</Declaration>
-			
-			
-			<Anchor>//api/name/instanceCount</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ReservedInstances/setProductDescription:</TokenIdentifier>
-			<Abstract type="html">The Reserved Instances product description (ex: Windows or
-Unix/Linux).</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *productDescription</Declaration>
-			
-			
-			<Anchor>//api/name/productDescription</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2ReservedInstances/productDescription</TokenIdentifier>
-			<Abstract type="html">The Reserved Instances product description (ex: Windows or
-Unix/Linux).</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *productDescription</Declaration>
-			
-			
-			<Anchor>//api/name/productDescription</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ReservedInstances/setState:</TokenIdentifier>
-			<Abstract type="html">The state of the Reserved Instances purchase.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *state</Declaration>
-			
-			
-			<Anchor>//api/name/state</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2ReservedInstances/state</TokenIdentifier>
-			<Abstract type="html">The state of the Reserved Instances purchase.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *state</Declaration>
-			
-			
-			<Anchor>//api/name/state</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ReservedInstances/setTags:</TokenIdentifier>
-			<Abstract type="html">A list of tags for the ReservedInstances.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *tags</Declaration>
-			
-			
-			<Anchor>//api/name/tags</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2ReservedInstances/tags</TokenIdentifier>
-			<Abstract type="html">A list of tags for the ReservedInstances.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *tags</Declaration>
-			
-			
-			<Anchor>//api/name/tags</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ReservedInstances/setInstanceTenancy:</TokenIdentifier>
-			<Abstract type="html">The tenancy of the reserved instance (ex: default or dedicated).</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *instanceTenancy</Declaration>
-			
-			
-			<Anchor>//api/name/instanceTenancy</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2ReservedInstances/instanceTenancy</TokenIdentifier>
-			<Abstract type="html">The tenancy of the reserved instance (ex: default or dedicated).</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *instanceTenancy</Declaration>
-			
-			
-			<Anchor>//api/name/instanceTenancy</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ReservedInstances/setCurrencyCode:</TokenIdentifier>
-			<Abstract type="html">The currency of the reserved instance. Specified using ISO 4217
-standard (e.g., USD, JPY).</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *currencyCode</Declaration>
-			
-			
-			<Anchor>//api/name/currencyCode</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2ReservedInstances/currencyCode</TokenIdentifier>
-			<Abstract type="html">The currency of the reserved instance. Specified using ISO 4217
-standard (e.g., USD, JPY).</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *currencyCode</Declaration>
-			
-			
-			<Anchor>//api/name/currencyCode</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ReservedInstances/setOfferingType:</TokenIdentifier>
-			<Abstract type="html">The Reserved Instance offering type.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *offeringType</Declaration>
-			
-			
-			<Anchor>//api/name/offeringType</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2ReservedInstances/offeringType</TokenIdentifier>
-			<Abstract type="html">The Reserved Instance offering type.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *offeringType</Declaration>
-			
-			
-			<Anchor>//api/name/offeringType</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ReservedInstances/setRecurringCharges:</TokenIdentifier>
-			<Abstract type="html">The recurring charge tag assigned to the resource.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *recurringCharges</Declaration>
-			
-			
-			<Anchor>//api/name/recurringCharges</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2ReservedInstances/recurringCharges</TokenIdentifier>
-			<Abstract type="html">The recurring charge tag assigned to the resource.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *recurringCharges</Declaration>
-			
-			
-			<Anchor>//api/name/recurringCharges</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ReservedInstances/addTag:</TokenIdentifier>
-			<Abstract type="html">Adds a single object to tags.
-This function will alloc and init tags if not already done.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>- (void)addTag:(EC2Tag *)tagObject</Declaration>
-			
-			
-			<Anchor>//api/name/addTag:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ReservedInstances/addRecurringCharge:</TokenIdentifier>
-			<Abstract type="html">Adds a single object to recurringCharges.
-This function will alloc and init recurringCharges if not already done.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
-			
-			<Declaration>- (void)addRecurringCharge:(EC2RecurringCharge *)recurringChargeObject</Declaration>
-			
-			
-			<Anchor>//api/name/addRecurringCharge:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2ReservedInstances/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SNSCreatePlatformApplicationRequest/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>EC2ReservedInstances.h</DeclaredIn>			
+			<DeclaredIn>SNSCreatePlatformApplicationRequest.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

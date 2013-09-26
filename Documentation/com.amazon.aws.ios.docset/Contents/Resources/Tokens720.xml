@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2PrivateIpAddressSpecification.html">
+	<File path="Classes/SESIdentityVerificationAttributes.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2PrivateIpAddressSpecification</TokenIdentifier>
-			<Abstract type="html">Private Ip Address Specification</Abstract>
-			<DeclaredIn>EC2PrivateIpAddressSpecification.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/SESIdentityVerificationAttributes</TokenIdentifier>
+			<Abstract type="html">Identity Verification Attributes</Abstract>
+			<DeclaredIn>SESIdentityVerificationAttributes.h</DeclaredIn>
 			
 			<NodeRef refid="720"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2PrivateIpAddressSpecification/init</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SESIdentityVerificationAttributes/init</TokenIdentifier>
 			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2PrivateIpAddressSpecification.h</DeclaredIn>			
+			<DeclaredIn>SESIdentityVerificationAttributes.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -24,54 +24,64 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2PrivateIpAddressSpecification/setPrivateIpAddress:</TokenIdentifier>
-			<Abstract type="html">The value of the PrivateIpAddress property for this object.</Abstract>
-			<DeclaredIn>EC2PrivateIpAddressSpecification.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SESIdentityVerificationAttributes/setVerificationStatus:</TokenIdentifier>
+			<Abstract type="html">The verification status of the identity: &quot;Pending&quot;, &quot;Success&quot;,
+&quot;Failed&quot;, or &quot;TemporaryFailure&quot;.
+&lt;p&gt;
+&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
+&lt;b&gt;Allowed Values: &lt;/b&gt;Pending, Success, Failed, TemporaryFailure</Abstract>
+			<DeclaredIn>SESIdentityVerificationAttributes.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *privateIpAddress</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *verificationStatus</Declaration>
 			
 			
-			<Anchor>//api/name/privateIpAddress</Anchor>
+			<Anchor>//api/name/verificationStatus</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2PrivateIpAddressSpecification/privateIpAddress</TokenIdentifier>
-			<Abstract type="html">The value of the PrivateIpAddress property for this object.</Abstract>
-			<DeclaredIn>EC2PrivateIpAddressSpecification.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/SESIdentityVerificationAttributes/verificationStatus</TokenIdentifier>
+			<Abstract type="html">The verification status of the identity: &quot;Pending&quot;, &quot;Success&quot;,
+&quot;Failed&quot;, or &quot;TemporaryFailure&quot;.
+&lt;p&gt;
+&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
+&lt;b&gt;Allowed Values: &lt;/b&gt;Pending, Success, Failed, TemporaryFailure</Abstract>
+			<DeclaredIn>SESIdentityVerificationAttributes.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *privateIpAddress</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *verificationStatus</Declaration>
 			
 			
-			<Anchor>//api/name/privateIpAddress</Anchor>
+			<Anchor>//api/name/verificationStatus</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2PrivateIpAddressSpecification/setPrimary:</TokenIdentifier>
-			<Abstract type="html">The value of the Primary property for this object.</Abstract>
-			<DeclaredIn>EC2PrivateIpAddressSpecification.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SESIdentityVerificationAttributes/setVerificationToken:</TokenIdentifier>
+			<Abstract type="html">The verification token for a domain identity. Null for email address
+identities.</Abstract>
+			<DeclaredIn>SESIdentityVerificationAttributes.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic) bool primary</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *verificationToken</Declaration>
 			
 			
-			<Anchor>//api/name/primary</Anchor>
+			<Anchor>//api/name/verificationToken</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2PrivateIpAddressSpecification/primary</TokenIdentifier>
-			<Abstract type="html">The value of the Primary property for this object.</Abstract>
-			<DeclaredIn>EC2PrivateIpAddressSpecification.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/SESIdentityVerificationAttributes/verificationToken</TokenIdentifier>
+			<Abstract type="html">The verification token for a domain identity. Null for email address
+identities.</Abstract>
+			<DeclaredIn>SESIdentityVerificationAttributes.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic) bool primary</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *verificationToken</Declaration>
 			
 			
-			<Anchor>//api/name/primary</Anchor>
+			<Anchor>//api/name/verificationToken</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2PrivateIpAddressSpecification/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SESIdentityVerificationAttributes/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>EC2PrivateIpAddressSpecification.h</DeclaredIn>			
+			<DeclaredIn>SESIdentityVerificationAttributes.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

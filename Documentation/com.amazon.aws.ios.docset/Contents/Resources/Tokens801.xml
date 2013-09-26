@@ -1,71 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2StopInstancesRequest.html">
+	<File path="Classes/SNSSetSubscriptionAttributesRequest.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2StopInstancesRequest</TokenIdentifier>
-			<Abstract type="html">Stop Instances Request</Abstract>
-			<DeclaredIn>EC2StopInstancesRequest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/SNSSetSubscriptionAttributesRequest</TokenIdentifier>
+			<Abstract type="html">Set Subscription Attributes Request</Abstract>
+			<DeclaredIn>SNSSetSubscriptionAttributesRequest.h</DeclaredIn>
 			
 			<NodeRef refid="801"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2StopInstancesRequest/setInstanceIds:</TokenIdentifier>
-			<Abstract type="html">The list of Amazon EC2 instances to stop.</Abstract>
-			<DeclaredIn>EC2StopInstancesRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SNSSetSubscriptionAttributesRequest/setSubscriptionArn:</TokenIdentifier>
+			<Abstract type="html">The ARN of the subscription to modify.</Abstract>
+			<DeclaredIn>SNSSetSubscriptionAttributesRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *instanceIds</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *subscriptionArn</Declaration>
 			
 			
-			<Anchor>//api/name/instanceIds</Anchor>
+			<Anchor>//api/name/subscriptionArn</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2StopInstancesRequest/instanceIds</TokenIdentifier>
-			<Abstract type="html">The list of Amazon EC2 instances to stop.</Abstract>
-			<DeclaredIn>EC2StopInstancesRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/SNSSetSubscriptionAttributesRequest/subscriptionArn</TokenIdentifier>
+			<Abstract type="html">The ARN of the subscription to modify.</Abstract>
+			<DeclaredIn>SNSSetSubscriptionAttributesRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *instanceIds</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *subscriptionArn</Declaration>
 			
 			
-			<Anchor>//api/name/instanceIds</Anchor>
+			<Anchor>//api/name/subscriptionArn</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2StopInstancesRequest/setForce:</TokenIdentifier>
-			<Abstract type="html">Forces the instance to stop. The instance will not have an opportunity
-to flush file system caches nor file system meta data. If you use this
-option, you must perform file system check and repair procedures. This
-option is not recommended for Windows instances.</Abstract>
-			<DeclaredIn>EC2StopInstancesRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SNSSetSubscriptionAttributesRequest/setAttributeName:</TokenIdentifier>
+			<Abstract type="html">The name of the attribute you want to set. Only a subset of the
+subscriptions attributes are mutable. &lt;p&gt;Valid values:
+&lt;code&gt;DeliveryPolicy&lt;/code&gt;</Abstract>
+			<DeclaredIn>SNSSetSubscriptionAttributesRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic) bool force</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *attributeName</Declaration>
 			
 			
-			<Anchor>//api/name/force</Anchor>
+			<Anchor>//api/name/attributeName</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2StopInstancesRequest/force</TokenIdentifier>
-			<Abstract type="html">Forces the instance to stop. The instance will not have an opportunity
-to flush file system caches nor file system meta data. If you use this
-option, you must perform file system check and repair procedures. This
-option is not recommended for Windows instances.</Abstract>
-			<DeclaredIn>EC2StopInstancesRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/SNSSetSubscriptionAttributesRequest/attributeName</TokenIdentifier>
+			<Abstract type="html">The name of the attribute you want to set. Only a subset of the
+subscriptions attributes are mutable. &lt;p&gt;Valid values:
+&lt;code&gt;DeliveryPolicy&lt;/code&gt;</Abstract>
+			<DeclaredIn>SNSSetSubscriptionAttributesRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic) bool force</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *attributeName</Declaration>
 			
 			
-			<Anchor>//api/name/force</Anchor>
+			<Anchor>//api/name/attributeName</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2StopInstancesRequest/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new StopInstancesRequest object.  Callers should use the
+			<TokenIdentifier>//apple_ref/occ/instm/SNSSetSubscriptionAttributesRequest/setAttributeValue:</TokenIdentifier>
+			<Abstract type="html">The new value for the attribute in JSON format.</Abstract>
+			<DeclaredIn>SNSSetSubscriptionAttributesRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *attributeValue</Declaration>
+			
+			
+			<Anchor>//api/name/attributeValue</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SNSSetSubscriptionAttributesRequest/attributeValue</TokenIdentifier>
+			<Abstract type="html">The new value for the attribute in JSON format.</Abstract>
+			<DeclaredIn>SNSSetSubscriptionAttributesRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *attributeValue</Declaration>
+			
+			
+			<Anchor>//api/name/attributeValue</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SNSSetSubscriptionAttributesRequest/init</TokenIdentifier>
+			<Abstract type="html">Default constructor for a new SetSubscriptionAttributesRequest object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2StopInstancesRequest.h</DeclaredIn>			
+			<DeclaredIn>SNSSetSubscriptionAttributesRequest.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -74,39 +94,36 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2StopInstancesRequest/initWithInstanceIds:</TokenIdentifier>
-			<Abstract type="html">Constructs a new StopInstancesRequest object.
+			<TokenIdentifier>//apple_ref/occ/instm/SNSSetSubscriptionAttributesRequest/initWithSubscriptionArn:andAttributeName:andAttributeValue:</TokenIdentifier>
+			<Abstract type="html">Constructs a new SetSubscriptionAttributesRequest object.
 Callers should use properties to initialize any additional object members.</Abstract>
-			<DeclaredIn>EC2StopInstancesRequest.h</DeclaredIn>			
+			<DeclaredIn>SNSSetSubscriptionAttributesRequest.h</DeclaredIn>			
 			
-			<Declaration>- (id)initWithInstanceIds:(NSMutableArray *)theInstanceIds</Declaration>
+			<Declaration>- (id)initWithSubscriptionArn:(NSString *)theSubscriptionArn andAttributeName:(NSString *)theAttributeName andAttributeValue:(NSString *)theAttributeValue</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>theInstanceIds</Name>
-					<Abstract type="html">The list of Amazon EC2 instances to stop.</Abstract>
+					<Name>theSubscriptionArn</Name>
+					<Abstract type="html">The ARN of the subscription to modify.</Abstract>
+				</Parameter><Parameter>
+					<Name>theAttributeName</Name>
+					<Abstract type="html">The name of the attribute you want to set.
+Only a subset of the subscriptions attributes are mutable. &lt;p&gt;Valid
+values: &lt;code&gt;DeliveryPolicy&lt;/code&gt;</Abstract>
+				</Parameter><Parameter>
+					<Name>theAttributeValue</Name>
+					<Abstract type="html">The new value for the attribute in JSON
+format.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/initWithInstanceIds:</Anchor>
+			<Anchor>//api/name/initWithSubscriptionArn:andAttributeName:andAttributeValue:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2StopInstancesRequest/addInstanceId:</TokenIdentifier>
-			<Abstract type="html">Adds a single object to instanceIds.
-This function will alloc and init instanceIds if not already done.</Abstract>
-			<DeclaredIn>EC2StopInstancesRequest.h</DeclaredIn>			
-			
-			<Declaration>- (void)addInstanceId:(NSString *)instanceIdObject</Declaration>
-			
-			
-			<Anchor>//api/name/addInstanceId:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2StopInstancesRequest/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SNSSetSubscriptionAttributesRequest/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>EC2StopInstancesRequest.h</DeclaredIn>			
+			<DeclaredIn>SNSSetSubscriptionAttributesRequest.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

@@ -1,86 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2EbsInstanceBlockDeviceSpecification.html">
+	<File path="Classes/S3BucketPolicy.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2EbsInstanceBlockDeviceSpecification</TokenIdentifier>
-			<Abstract type="html">Ebs Instance Block Device Specification</Abstract>
-			<DeclaredIn>EC2EbsInstanceBlockDeviceSpecification.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/S3BucketPolicy</TokenIdentifier>
+			<Abstract type="html">Represents a Amazon S3 bucket policy.
+Bucket policies provide access control management at the bucket level for
+both the bucket resource and contained object resources. Only one policy may
+be specified per bucket.</Abstract>
+			<DeclaredIn>S3BucketPolicy.h</DeclaredIn>
 			
 			<NodeRef refid="594"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2EbsInstanceBlockDeviceSpecification/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new  object.  Callers should use the
-property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2EbsInstanceBlockDeviceSpecification.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/S3BucketPolicy/setPolicyText:</TokenIdentifier>
+			<Abstract type="html">The raw, policy JSON text, as returned by Amazon S3</Abstract>
+			<DeclaredIn>S3BucketPolicy.h</DeclaredIn>			
 			
-			<Declaration>- (id)init</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *policyText</Declaration>
 			
 			
-			<Anchor>//api/name/init</Anchor>
+			<Anchor>//api/name/policyText</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2EbsInstanceBlockDeviceSpecification/setVolumeId:</TokenIdentifier>
-			<Abstract type="html">The ID of the EBS volume that should be mounted as a block device on
-an Amazon EC2 instance.</Abstract>
-			<DeclaredIn>EC2EbsInstanceBlockDeviceSpecification.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/S3BucketPolicy/policyText</TokenIdentifier>
+			<Abstract type="html">The raw, policy JSON text, as returned by Amazon S3</Abstract>
+			<DeclaredIn>S3BucketPolicy.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *volumeId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *policyText</Declaration>
 			
 			
-			<Anchor>//api/name/volumeId</Anchor>
+			<Anchor>//api/name/policyText</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2EbsInstanceBlockDeviceSpecification/volumeId</TokenIdentifier>
-			<Abstract type="html">The ID of the EBS volume that should be mounted as a block device on
-an Amazon EC2 instance.</Abstract>
-			<DeclaredIn>EC2EbsInstanceBlockDeviceSpecification.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/S3BucketPolicy/initWithPolicy:</TokenIdentifier>
+			<Abstract type="html">Initialize the object with a policy</Abstract>
+			<DeclaredIn>S3BucketPolicy.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *volumeId</Declaration>
-			
-			
-			<Anchor>//api/name/volumeId</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2EbsInstanceBlockDeviceSpecification/setDeleteOnTermination:</TokenIdentifier>
-			<Abstract type="html">Specifies whether the Amazon EBS volume is deleted on instance
-termination.</Abstract>
-			<DeclaredIn>EC2EbsInstanceBlockDeviceSpecification.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic) bool deleteOnTermination</Declaration>
+			<Declaration>- (id)initWithPolicy:(NSString *)policyText</Declaration>
 			
 			
-			<Anchor>//api/name/deleteOnTermination</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2EbsInstanceBlockDeviceSpecification/deleteOnTermination</TokenIdentifier>
-			<Abstract type="html">Specifies whether the Amazon EBS volume is deleted on instance
-termination.</Abstract>
-			<DeclaredIn>EC2EbsInstanceBlockDeviceSpecification.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic) bool deleteOnTermination</Declaration>
-			
-			
-			<Anchor>//api/name/deleteOnTermination</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2EbsInstanceBlockDeviceSpecification/description</TokenIdentifier>
-			<Abstract type="html">Returns a string representation of this object; useful for testing and
-debugging.</Abstract>
-			<DeclaredIn>EC2EbsInstanceBlockDeviceSpecification.h</DeclaredIn>			
-			
-			<Declaration>- (NSString *)description</Declaration>
-			
-			<ReturnValue><Abstract type="html">A string representation of this object.</Abstract></ReturnValue>
-			<Anchor>//api/name/description</Anchor>
+			<Anchor>//api/name/initWithPolicy:</Anchor>
 		</Token>
 		
 	</File>

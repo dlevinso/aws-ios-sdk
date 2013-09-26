@@ -1,109 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/ElasticLoadBalancingDescribeInstanceHealthRequest.html">
+	<File path="Classes/SecurityTokenServicePackedPolicyTooLargeException.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/ElasticLoadBalancingDescribeInstanceHealthRequest</TokenIdentifier>
-			<Abstract type="html">Describe Instance Health Request</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDescribeInstanceHealthRequest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/SecurityTokenServicePackedPolicyTooLargeException</TokenIdentifier>
+			<Abstract type="html">&lt;p&gt;
+The request was rejected because the policy document was too large.
+The error message describes how big the policy document is, in packed
+form, as a percentage of what the API allows.
+&lt;/p&gt;</Abstract>
+			<DeclaredIn>SecurityTokenServicePackedPolicyTooLargeException.h</DeclaredIn>
 			
 			<NodeRef refid="886"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDescribeInstanceHealthRequest/setLoadBalancerName:</TokenIdentifier>
-			<Abstract type="html">The name associated with the LoadBalancer. The name must be unique
-within the client AWS account.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDescribeInstanceHealthRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SecurityTokenServicePackedPolicyTooLargeException/initWithMessage:</TokenIdentifier>
+			<Abstract type="html">Initialize the exception with a message.</Abstract>
+			<DeclaredIn>SecurityTokenServicePackedPolicyTooLargeException.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *loadBalancerName</Declaration>
-			
-			
-			<Anchor>//api/name/loadBalancerName</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingDescribeInstanceHealthRequest/loadBalancerName</TokenIdentifier>
-			<Abstract type="html">The name associated with the LoadBalancer. The name must be unique
-within the client AWS account.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDescribeInstanceHealthRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *loadBalancerName</Declaration>
-			
-			
-			<Anchor>//api/name/loadBalancerName</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDescribeInstanceHealthRequest/setInstances:</TokenIdentifier>
-			<Abstract type="html">A list of instance IDs whose states are being queried.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDescribeInstanceHealthRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *instances</Declaration>
-			
-			
-			<Anchor>//api/name/instances</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingDescribeInstanceHealthRequest/instances</TokenIdentifier>
-			<Abstract type="html">A list of instance IDs whose states are being queried.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDescribeInstanceHealthRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *instances</Declaration>
-			
-			
-			<Anchor>//api/name/instances</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDescribeInstanceHealthRequest/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new DescribeInstanceHealthRequest object.  Callers should use the
-property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDescribeInstanceHealthRequest.h</DeclaredIn>			
-			
-			<Declaration>- (id)init</Declaration>
-			
-			
-			<Anchor>//api/name/init</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDescribeInstanceHealthRequest/initWithLoadBalancerName:</TokenIdentifier>
-			<Abstract type="html">Constructs a new DescribeInstanceHealthRequest object.
-Callers should use properties to initialize any additional object members.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDescribeInstanceHealthRequest.h</DeclaredIn>			
-			
-			<Declaration>- (id)initWithLoadBalancerName:(NSString *)theLoadBalancerName</Declaration>
+			<Declaration>- (id)initWithMessage:(NSString *)message</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>theLoadBalancerName</Name>
-					<Abstract type="html">The name associated with the LoadBalancer.
-The name must be unique within the client AWS account.</Abstract>
+					<Name>message</Name>
+					<Abstract type="html">The message.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/initWithLoadBalancerName:</Anchor>
+			<Anchor>//api/name/initWithMessage:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDescribeInstanceHealthRequest/addInstance:</TokenIdentifier>
-			<Abstract type="html">Adds a single object to instances.
-This function will alloc and init instances if not already done.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDescribeInstanceHealthRequest.h</DeclaredIn>			
-			
-			<Declaration>- (void)addInstance:(ElasticLoadBalancingInstance *)instanceObject</Declaration>
-			
-			
-			<Anchor>//api/name/addInstance:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingDescribeInstanceHealthRequest/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SecurityTokenServicePackedPolicyTooLargeException/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingDescribeInstanceHealthRequest.h</DeclaredIn>			
+			<DeclaredIn>SecurityTokenServicePackedPolicyTooLargeException.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

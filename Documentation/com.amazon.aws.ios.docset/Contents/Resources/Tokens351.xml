@@ -1,155 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2AssociateAddressRequest.html">
+	<File path="Classes/EC2DescribeVolumeAttributeRequest.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2AssociateAddressRequest</TokenIdentifier>
-			<Abstract type="html">Associate Address Request</Abstract>
-			<DeclaredIn>EC2AssociateAddressRequest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/EC2DescribeVolumeAttributeRequest</TokenIdentifier>
+			<Abstract type="html">Describe Volume Attribute Request</Abstract>
+			<DeclaredIn>EC2DescribeVolumeAttributeRequest.h</DeclaredIn>
 			
 			<NodeRef refid="351"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2AssociateAddressRequest/setInstanceId:</TokenIdentifier>
-			<Abstract type="html">The instance to associate with the IP address.</Abstract>
-			<DeclaredIn>EC2AssociateAddressRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
-			
-			
-			<Anchor>//api/name/instanceId</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2AssociateAddressRequest/instanceId</TokenIdentifier>
-			<Abstract type="html">The instance to associate with the IP address.</Abstract>
-			<DeclaredIn>EC2AssociateAddressRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
-			
-			
-			<Anchor>//api/name/instanceId</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2AssociateAddressRequest/setPublicIp:</TokenIdentifier>
-			<Abstract type="html">IP address that you are assigning to the instance.</Abstract>
-			<DeclaredIn>EC2AssociateAddressRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *publicIp</Declaration>
-			
-			
-			<Anchor>//api/name/publicIp</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2AssociateAddressRequest/publicIp</TokenIdentifier>
-			<Abstract type="html">IP address that you are assigning to the instance.</Abstract>
-			<DeclaredIn>EC2AssociateAddressRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *publicIp</Declaration>
-			
-			
-			<Anchor>//api/name/publicIp</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2AssociateAddressRequest/setAllocationId:</TokenIdentifier>
-			<Abstract type="html">The allocation ID that AWS returned when you allocated the elastic IP
-address for use with Amazon VPC.</Abstract>
-			<DeclaredIn>EC2AssociateAddressRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *allocationId</Declaration>
-			
-			
-			<Anchor>//api/name/allocationId</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2AssociateAddressRequest/allocationId</TokenIdentifier>
-			<Abstract type="html">The allocation ID that AWS returned when you allocated the elastic IP
-address for use with Amazon VPC.</Abstract>
-			<DeclaredIn>EC2AssociateAddressRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *allocationId</Declaration>
-			
-			
-			<Anchor>//api/name/allocationId</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2AssociateAddressRequest/setNetworkInterfaceId:</TokenIdentifier>
-			<Abstract type="html">The value of the NetworkInterfaceId property for this object.</Abstract>
-			<DeclaredIn>EC2AssociateAddressRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *networkInterfaceId</Declaration>
-			
-			
-			<Anchor>//api/name/networkInterfaceId</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2AssociateAddressRequest/networkInterfaceId</TokenIdentifier>
-			<Abstract type="html">The value of the NetworkInterfaceId property for this object.</Abstract>
-			<DeclaredIn>EC2AssociateAddressRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *networkInterfaceId</Declaration>
-			
-			
-			<Anchor>//api/name/networkInterfaceId</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2AssociateAddressRequest/setPrivateIpAddress:</TokenIdentifier>
-			<Abstract type="html">The value of the PrivateIpAddress property for this object.</Abstract>
-			<DeclaredIn>EC2AssociateAddressRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *privateIpAddress</Declaration>
-			
-			
-			<Anchor>//api/name/privateIpAddress</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2AssociateAddressRequest/privateIpAddress</TokenIdentifier>
-			<Abstract type="html">The value of the PrivateIpAddress property for this object.</Abstract>
-			<DeclaredIn>EC2AssociateAddressRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *privateIpAddress</Declaration>
-			
-			
-			<Anchor>//api/name/privateIpAddress</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2AssociateAddressRequest/setAllowReassociation:</TokenIdentifier>
-			<Abstract type="html">The value of the AllowReassociation property for this object.</Abstract>
-			<DeclaredIn>EC2AssociateAddressRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic) bool allowReassociation</Declaration>
-			
-			
-			<Anchor>//api/name/allowReassociation</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2AssociateAddressRequest/allowReassociation</TokenIdentifier>
-			<Abstract type="html">The value of the AllowReassociation property for this object.</Abstract>
-			<DeclaredIn>EC2AssociateAddressRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic) bool allowReassociation</Declaration>
-			
-			
-			<Anchor>//api/name/allowReassociation</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2AssociateAddressRequest/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new AssociateAddressRequest object.  Callers should use the
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeVolumeAttributeRequest/init</TokenIdentifier>
+			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2AssociateAddressRequest.h</DeclaredIn>			
+			<DeclaredIn>EC2DescribeVolumeAttributeRequest.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -158,30 +24,60 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2AssociateAddressRequest/initWithInstanceId:andPublicIp:</TokenIdentifier>
-			<Abstract type="html">Constructs a new AssociateAddressRequest object.
-Callers should use properties to initialize any additional object members.</Abstract>
-			<DeclaredIn>EC2AssociateAddressRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeVolumeAttributeRequest/setVolumeId:</TokenIdentifier>
+			<Abstract type="html">The value of the VolumeId property for this object.</Abstract>
+			<DeclaredIn>EC2DescribeVolumeAttributeRequest.h</DeclaredIn>			
 			
-			<Declaration>- (id)initWithInstanceId:(NSString *)theInstanceId andPublicIp:(NSString *)thePublicIp</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>theInstanceId</Name>
-					<Abstract type="html">The instance to associate with the IP address.</Abstract>
-				</Parameter><Parameter>
-					<Name>thePublicIp</Name>
-					<Abstract type="html">IP address that you are assigning to the instance.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, retain) NSString *volumeId</Declaration>
 			
-			<Anchor>//api/name/initWithInstanceId:andPublicIp:</Anchor>
+			
+			<Anchor>//api/name/volumeId</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2AssociateAddressRequest/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2DescribeVolumeAttributeRequest/volumeId</TokenIdentifier>
+			<Abstract type="html">The value of the VolumeId property for this object.</Abstract>
+			<DeclaredIn>EC2DescribeVolumeAttributeRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *volumeId</Declaration>
+			
+			
+			<Anchor>//api/name/volumeId</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeVolumeAttributeRequest/setAttribute:</TokenIdentifier>
+			<Abstract type="html">The value of the Attribute property for this object.
+&lt;p&gt;
+&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
+&lt;b&gt;Allowed Values: &lt;/b&gt;autoEnableIO, productCodes</Abstract>
+			<DeclaredIn>EC2DescribeVolumeAttributeRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *attribute</Declaration>
+			
+			
+			<Anchor>//api/name/attribute</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2DescribeVolumeAttributeRequest/attribute</TokenIdentifier>
+			<Abstract type="html">The value of the Attribute property for this object.
+&lt;p&gt;
+&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
+&lt;b&gt;Allowed Values: &lt;/b&gt;autoEnableIO, productCodes</Abstract>
+			<DeclaredIn>EC2DescribeVolumeAttributeRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *attribute</Declaration>
+			
+			
+			<Anchor>//api/name/attribute</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2DescribeVolumeAttributeRequest/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>EC2AssociateAddressRequest.h</DeclaredIn>			
+			<DeclaredIn>EC2DescribeVolumeAttributeRequest.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

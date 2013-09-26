@@ -65,7 +65,7 @@
 			<Abstract type="html">Sent when the request transmitted data.</Abstract>
 			<DeclaredIn>AmazonRequestDelegate.h</DeclaredIn>			
 			
-			<Declaration>- (void)request:(AmazonServiceRequest *)request didSendData:(NSInteger)bytesWritten totalBytesWritten:(NSInteger)totalBytesWritten totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite</Declaration>
+			<Declaration>- (void)request:(AmazonServiceRequest *)request didSendData:(long long)bytesWritten totalBytesWritten:(long long)totalBytesWritten totalBytesExpectedToWrite:(long long)totalBytesExpectedToWrite</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>request</Name>

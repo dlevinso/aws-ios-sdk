@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/AutoScalingSetInstanceHealthRequest.html">
+	<File path="Classes/DynamoDBBatchGetItemResponse.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/AutoScalingSetInstanceHealthRequest</TokenIdentifier>
-			<Abstract type="html">Set Instance Health Request</Abstract>
-			<DeclaredIn>AutoScalingSetInstanceHealthRequest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/DynamoDBBatchGetItemResponse</TokenIdentifier>
+			<Abstract type="html">Batch Get Item Result</Abstract>
+			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>
 			
 			<NodeRef refid="171"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingSetInstanceHealthRequest/init</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBBatchGetItemResponse/setException:</TokenIdentifier>
+			<Abstract type="html">If an exception was thrown, this will return the exception.</Abstract>
+			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>			
+			
+			<Declaration>- (void)setException:(AmazonServiceException *)theException</Declaration>
+			
+			
+			<Anchor>//api/name/setException:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBBatchGetItemResponse/init</TokenIdentifier>
 			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>AutoScalingSetInstanceHealthRequest.h</DeclaredIn>			
+			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -24,98 +35,165 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingSetInstanceHealthRequest/setInstanceId:</TokenIdentifier>
-			<Abstract type="html">The identifier of the Amazon EC2 instance.
+			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBBatchGetItemResponse/setResponses:</TokenIdentifier>
+			<Abstract type="html">A map of table name to a list of items. Each object in
+&lt;i&gt;Responses&lt;/i&gt;consists of a table name, along with a map of
+attribute data consisting of the data type and attribute value.</Abstract>
+			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSMutableDictionary *responses</Declaration>
+			
+			
+			<Anchor>//api/name/responses</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DynamoDBBatchGetItemResponse/responses</TokenIdentifier>
+			<Abstract type="html">A map of table name to a list of items. Each object in
+&lt;i&gt;Responses&lt;/i&gt;consists of a table name, along with a map of
+attribute data consisting of the data type and attribute value.</Abstract>
+			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSMutableDictionary *responses</Declaration>
+			
+			
+			<Anchor>//api/name/responses</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBBatchGetItemResponse/setUnprocessedKeys:</TokenIdentifier>
+			<Abstract type="html">A map of tables and their respective keys that were not processed with
+the current response, possibly due to reaching a limit on the response
+size. The &lt;i&gt;UnprocessedKeys&lt;/i&gt; value is in the same form as
+&lt;i&gt;RequestItems&lt;/i&gt;, so the value can be provided directly to a
+subsequent &lt;i&gt;BatchGetItem&lt;/i&gt; operation. For more information, see
+&lt;i&gt;RequestItems&lt;/i&gt; in the Request Parameters section. &lt;p&gt;Each element
+consists of: &lt;ul&gt; &lt;li&gt; &lt;p&gt;&lt;i&gt;Keys&lt;/i&gt;-The primary key attribute values
+that define the items and the attributes associated with the items.
+&lt;/li&gt; &lt;li&gt; &lt;p&gt;&lt;i&gt;AttributesToGet&lt;/i&gt;-One or more attributes to
+retrieve from the table or index. If no attribute names are specified
+then all attributes will be returned. If any of the specified
+attributes are not found, they will not appear in the result. &lt;p&gt;If
+you are querying an index and only request attributes that are
+projected into that index, the operation will consult the index and
+bypass the table. If any of the requested attributes are not projected
+into the index, Amazon DynamoDB will need to fetch each matching item
+from the table. This extra fetching incurs additional throughput cost
+and latency. &lt;/li&gt; &lt;li&gt; &lt;p&gt;&lt;i&gt;ConsistentRead&lt;/i&gt;-The consistency of a
+read operation. If set to &lt;code&gt;true&lt;/code&gt;, then a strongly
+consistent read is used; otherwise, an eventually consistent read is
+used. &lt;/li&gt; &lt;/ul&gt;
 &lt;p&gt;
 &lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 16&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingSetInstanceHealthRequest.h</DeclaredIn>			
+&lt;b&gt;Length: &lt;/b&gt;1 - 100&lt;br/&gt;</Abstract>
+			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSMutableDictionary *unprocessedKeys</Declaration>
 			
 			
-			<Anchor>//api/name/instanceId</Anchor>
+			<Anchor>//api/name/unprocessedKeys</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingSetInstanceHealthRequest/instanceId</TokenIdentifier>
-			<Abstract type="html">The identifier of the Amazon EC2 instance.
+			<TokenIdentifier>//apple_ref/occ/instp/DynamoDBBatchGetItemResponse/unprocessedKeys</TokenIdentifier>
+			<Abstract type="html">A map of tables and their respective keys that were not processed with
+the current response, possibly due to reaching a limit on the response
+size. The &lt;i&gt;UnprocessedKeys&lt;/i&gt; value is in the same form as
+&lt;i&gt;RequestItems&lt;/i&gt;, so the value can be provided directly to a
+subsequent &lt;i&gt;BatchGetItem&lt;/i&gt; operation. For more information, see
+&lt;i&gt;RequestItems&lt;/i&gt; in the Request Parameters section. &lt;p&gt;Each element
+consists of: &lt;ul&gt; &lt;li&gt; &lt;p&gt;&lt;i&gt;Keys&lt;/i&gt;-The primary key attribute values
+that define the items and the attributes associated with the items.
+&lt;/li&gt; &lt;li&gt; &lt;p&gt;&lt;i&gt;AttributesToGet&lt;/i&gt;-One or more attributes to
+retrieve from the table or index. If no attribute names are specified
+then all attributes will be returned. If any of the specified
+attributes are not found, they will not appear in the result. &lt;p&gt;If
+you are querying an index and only request attributes that are
+projected into that index, the operation will consult the index and
+bypass the table. If any of the requested attributes are not projected
+into the index, Amazon DynamoDB will need to fetch each matching item
+from the table. This extra fetching incurs additional throughput cost
+and latency. &lt;/li&gt; &lt;li&gt; &lt;p&gt;&lt;i&gt;ConsistentRead&lt;/i&gt;-The consistency of a
+read operation. If set to &lt;code&gt;true&lt;/code&gt;, then a strongly
+consistent read is used; otherwise, an eventually consistent read is
+used. &lt;/li&gt; &lt;/ul&gt;
 &lt;p&gt;
 &lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 16&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingSetInstanceHealthRequest.h</DeclaredIn>			
+&lt;b&gt;Length: &lt;/b&gt;1 - 100&lt;br/&gt;</Abstract>
+			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSMutableDictionary *unprocessedKeys</Declaration>
 			
 			
-			<Anchor>//api/name/instanceId</Anchor>
+			<Anchor>//api/name/unprocessedKeys</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingSetInstanceHealthRequest/setHealthStatus:</TokenIdentifier>
-			<Abstract type="html">The health status of the instance. &quot;Healthy&quot; means that the instance
-is healthy and should remain in service. &quot;Unhealthy&quot; means that the
-instance is unhealthy. Auto Scaling should terminate and replace it.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 32&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingSetInstanceHealthRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBBatchGetItemResponse/setConsumedCapacity:</TokenIdentifier>
+			<Abstract type="html">The capacity units consumed by the operation. &lt;p&gt;Each element consists
+of: &lt;ul&gt; &lt;li&gt; &lt;p&gt;&lt;i&gt;TableName&lt;/i&gt;-The table that consumed the
+provisioned throughput. &lt;/li&gt; &lt;li&gt; &lt;p&gt;&lt;i&gt;CapacityUnits&lt;/i&gt;-The total
+number of capacity units consumed. &lt;/li&gt; &lt;/ul&gt;</Abstract>
+			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *healthStatus</Declaration>
+			<Declaration>@property (nonatomic, retain) NSMutableArray *consumedCapacity</Declaration>
 			
 			
-			<Anchor>//api/name/healthStatus</Anchor>
+			<Anchor>//api/name/consumedCapacity</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingSetInstanceHealthRequest/healthStatus</TokenIdentifier>
-			<Abstract type="html">The health status of the instance. &quot;Healthy&quot; means that the instance
-is healthy and should remain in service. &quot;Unhealthy&quot; means that the
-instance is unhealthy. Auto Scaling should terminate and replace it.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 32&lt;br/&gt;
-&lt;b&gt;Pattern: &lt;/b&gt;[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*&lt;br/&gt;</Abstract>
-			<DeclaredIn>AutoScalingSetInstanceHealthRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/DynamoDBBatchGetItemResponse/consumedCapacity</TokenIdentifier>
+			<Abstract type="html">The capacity units consumed by the operation. &lt;p&gt;Each element consists
+of: &lt;ul&gt; &lt;li&gt; &lt;p&gt;&lt;i&gt;TableName&lt;/i&gt;-The table that consumed the
+provisioned throughput. &lt;/li&gt; &lt;li&gt; &lt;p&gt;&lt;i&gt;CapacityUnits&lt;/i&gt;-The total
+number of capacity units consumed. &lt;/li&gt; &lt;/ul&gt;</Abstract>
+			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *healthStatus</Declaration>
+			<Declaration>@property (nonatomic, retain) NSMutableArray *consumedCapacity</Declaration>
 			
 			
-			<Anchor>//api/name/healthStatus</Anchor>
+			<Anchor>//api/name/consumedCapacity</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingSetInstanceHealthRequest/setShouldRespectGracePeriod:</TokenIdentifier>
-			<Abstract type="html">If True, this call should respect the grace period associated with the
-group.</Abstract>
-			<DeclaredIn>AutoScalingSetInstanceHealthRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBBatchGetItemResponse/responsesValueForKey:</TokenIdentifier>
+			<Abstract type="html">Returns a value from the responses dictionary for the specified key.</Abstract>
+			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic) bool shouldRespectGracePeriod</Declaration>
+			<Declaration>- (NSArray *)responsesValueForKey:(NSString *)theKey</Declaration>
 			
 			
-			<Anchor>//api/name/shouldRespectGracePeriod</Anchor>
+			<Anchor>//api/name/responsesValueForKey:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AutoScalingSetInstanceHealthRequest/shouldRespectGracePeriod</TokenIdentifier>
-			<Abstract type="html">If True, this call should respect the grace period associated with the
-group.</Abstract>
-			<DeclaredIn>AutoScalingSetInstanceHealthRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBBatchGetItemResponse/unprocessedKeysValueForKey:</TokenIdentifier>
+			<Abstract type="html">Returns a value from the unprocessedKeys dictionary for the specified key.</Abstract>
+			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic) bool shouldRespectGracePeriod</Declaration>
+			<Declaration>- (DynamoDBKeysAndAttributes *)unprocessedKeysValueForKey:(NSString *)theKey</Declaration>
 			
 			
-			<Anchor>//api/name/shouldRespectGracePeriod</Anchor>
+			<Anchor>//api/name/unprocessedKeysValueForKey:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AutoScalingSetInstanceHealthRequest/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBBatchGetItemResponse/consumedCapacityObjectAtIndex:</TokenIdentifier>
+			<Abstract type="html">Returns a value from the consumedCapacity array for the specified index</Abstract>
+			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>			
+			
+			<Declaration>- (DynamoDBConsumedCapacity *)consumedCapacityObjectAtIndex:(int)index</Declaration>
+			
+			
+			<Anchor>//api/name/consumedCapacityObjectAtIndex:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBBatchGetItemResponse/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>AutoScalingSetInstanceHealthRequest.h</DeclaredIn>			
+			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

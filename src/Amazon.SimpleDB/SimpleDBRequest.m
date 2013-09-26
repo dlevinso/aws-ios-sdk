@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -14,8 +14,21 @@
  */
 
 #import "SimpleDBRequest.h"
-
+#import "AmazonAuthUtils.h"
 
 @implementation SimpleDBRequest
+
+-(void)sign
+{
+    [self setParameterValue:credentials.accessKey forKey:@"AWSAccessKeyId"];
+    [self setParameterValue:@"2"                                        forKey:@"SignatureVersion"];
+    [self setParameterValue:[NSDate ISO8061FormattedCurrentTimestamp]   forKey:@"Timestamp"];
+    [self setParameterValue:@"HmacSHA256"                               forKey:@"SignatureMethod"];
+    
+    NSData   *dataToSign = [[AmazonAuthUtils getV2StringToSign:[NSURL URLWithString:self.endpoint] request:self] dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *signature  = [AmazonAuthUtils HMACSign:dataToSign withKey:credentials.secretKey usingAlgorithm:kCCHmacAlgSHA256];
+    
+    [self setParameterValue:signature forKey:@"Signature"];
+}
 
 @end

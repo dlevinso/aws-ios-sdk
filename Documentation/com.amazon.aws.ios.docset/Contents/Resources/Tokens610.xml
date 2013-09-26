@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2GetPasswordDataRequestMarshaller.html">
+	<File path="Classes/S3CreateBucketResponse.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2GetPasswordDataRequestMarshaller</TokenIdentifier>
-			<Abstract type="html">Get Password Data Request Marshaller</Abstract>
-			<DeclaredIn>EC2GetPasswordDataRequestMarshaller.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/S3CreateBucketResponse</TokenIdentifier>
+			<Abstract type="html">Contains the response from a createBucket operation.</Abstract>
+			<DeclaredIn>S3CreateBucketResponse.h</DeclaredIn>
 			
 			<NodeRef refid="610"/>
 		</Token>

@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -32,6 +32,11 @@
     if (publishRequest != nil) {
         if (publishRequest.topicArn != nil) {
             [request setParameterValue:[NSString stringWithFormat:@"%@", publishRequest.topicArn] forKey:[NSString stringWithFormat:@"%@", @"TopicArn"]];
+        }
+    }
+    if (publishRequest != nil) {
+        if (publishRequest.targetArn != nil) {
+            [request setParameterValue:[NSString stringWithFormat:@"%@", publishRequest.targetArn] forKey:[NSString stringWithFormat:@"%@", @"TargetArn"]];
         }
     }
     if (publishRequest != nil) {

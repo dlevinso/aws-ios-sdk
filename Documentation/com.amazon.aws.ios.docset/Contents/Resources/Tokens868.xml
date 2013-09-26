@@ -1,143 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/ElasticLoadBalancingCreateLoadBalancerRequest.html">
+	<File path="Classes/SecurityTokenServiceAssumeRoleResponse.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/ElasticLoadBalancingCreateLoadBalancerRequest</TokenIdentifier>
-			<Abstract type="html">Create Load Balancer Request</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateLoadBalancerRequest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/SecurityTokenServiceAssumeRoleResponse</TokenIdentifier>
+			<Abstract type="html">Assume Role Result</Abstract>
+			<DeclaredIn>SecurityTokenServiceAssumeRoleResponse.h</DeclaredIn>
 			
 			<NodeRef refid="868"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingCreateLoadBalancerRequest/setLoadBalancerName:</TokenIdentifier>
-			<Abstract type="html">The name associated with the LoadBalancer. The name must be unique
-within your set of LoadBalancers.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateLoadBalancerRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SecurityTokenServiceAssumeRoleResponse/setException:</TokenIdentifier>
+			<Abstract type="html">If an exception was thrown, this will return the exception.</Abstract>
+			<DeclaredIn>SecurityTokenServiceAssumeRoleResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *loadBalancerName</Declaration>
+			<Declaration>- (void)setException:(AmazonServiceException *)theException</Declaration>
 			
 			
-			<Anchor>//api/name/loadBalancerName</Anchor>
+			<Anchor>//api/name/setException:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingCreateLoadBalancerRequest/loadBalancerName</TokenIdentifier>
-			<Abstract type="html">The name associated with the LoadBalancer. The name must be unique
-within your set of LoadBalancers.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateLoadBalancerRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *loadBalancerName</Declaration>
-			
-			
-			<Anchor>//api/name/loadBalancerName</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingCreateLoadBalancerRequest/setListeners:</TokenIdentifier>
-			<Abstract type="html">A list of the following tuples: LoadBalancerPort, InstancePort, and
-Protocol.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateLoadBalancerRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *listeners</Declaration>
-			
-			
-			<Anchor>//api/name/listeners</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingCreateLoadBalancerRequest/listeners</TokenIdentifier>
-			<Abstract type="html">A list of the following tuples: LoadBalancerPort, InstancePort, and
-Protocol.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateLoadBalancerRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *listeners</Declaration>
-			
-			
-			<Anchor>//api/name/listeners</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingCreateLoadBalancerRequest/setAvailabilityZones:</TokenIdentifier>
-			<Abstract type="html">A list of Availability Zones. &lt;p&gt; At least one Availability Zone must
-be specified. Specified Availability Zones must be in the same EC2
-Region as the LoadBalancer. Traffic will be equally distributed across
-all zones. &lt;p&gt; This list can be modified after the creation of the
-LoadBalancer.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateLoadBalancerRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *availabilityZones</Declaration>
-			
-			
-			<Anchor>//api/name/availabilityZones</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingCreateLoadBalancerRequest/availabilityZones</TokenIdentifier>
-			<Abstract type="html">A list of Availability Zones. &lt;p&gt; At least one Availability Zone must
-be specified. Specified Availability Zones must be in the same EC2
-Region as the LoadBalancer. Traffic will be equally distributed across
-all zones. &lt;p&gt; This list can be modified after the creation of the
-LoadBalancer.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateLoadBalancerRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *availabilityZones</Declaration>
-			
-			
-			<Anchor>//api/name/availabilityZones</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingCreateLoadBalancerRequest/setSubnets:</TokenIdentifier>
-			<Abstract type="html">A list of subnet IDs in your VPC to attach to your LoadBalancer.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateLoadBalancerRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *subnets</Declaration>
-			
-			
-			<Anchor>//api/name/subnets</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingCreateLoadBalancerRequest/subnets</TokenIdentifier>
-			<Abstract type="html">A list of subnet IDs in your VPC to attach to your LoadBalancer.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateLoadBalancerRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *subnets</Declaration>
-			
-			
-			<Anchor>//api/name/subnets</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingCreateLoadBalancerRequest/setSecurityGroups:</TokenIdentifier>
-			<Abstract type="html">The security groups assigned to your LoadBalancer within your VPC.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateLoadBalancerRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *securityGroups</Declaration>
-			
-			
-			<Anchor>//api/name/securityGroups</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/ElasticLoadBalancingCreateLoadBalancerRequest/securityGroups</TokenIdentifier>
-			<Abstract type="html">The security groups assigned to your LoadBalancer within your VPC.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateLoadBalancerRequest.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableArray *securityGroups</Declaration>
-			
-			
-			<Anchor>//api/name/securityGroups</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingCreateLoadBalancerRequest/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new CreateLoadBalancerRequest object.  Callers should use the
+			<TokenIdentifier>//apple_ref/occ/instm/SecurityTokenServiceAssumeRoleResponse/init</TokenIdentifier>
+			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateLoadBalancerRequest.h</DeclaredIn>			
+			<DeclaredIn>SecurityTokenServiceAssumeRoleResponse.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -146,105 +35,98 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingCreateLoadBalancerRequest/initWithLoadBalancerName:</TokenIdentifier>
-			<Abstract type="html">Constructs a new CreateLoadBalancerRequest object.
-Callers should use properties to initialize any additional object members.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateLoadBalancerRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SecurityTokenServiceAssumeRoleResponse/setCredentials:</TokenIdentifier>
+			<Abstract type="html">The temporary security credentials, which include an access key ID, a
+secret access key, and a security token.</Abstract>
+			<DeclaredIn>SecurityTokenServiceAssumeRoleResponse.h</DeclaredIn>			
 			
-			<Declaration>- (id)initWithLoadBalancerName:(NSString *)theLoadBalancerName</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>theLoadBalancerName</Name>
-					<Abstract type="html">The name associated with the LoadBalancer.
-The name must be unique within your set of LoadBalancers.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, retain) SecurityTokenServiceCredentials *credentials</Declaration>
 			
-			<Anchor>//api/name/initWithLoadBalancerName:</Anchor>
+			
+			<Anchor>//api/name/credentials</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingCreateLoadBalancerRequest/initWithLoadBalancerName:andListeners:andAvailabilityZones:</TokenIdentifier>
-			<Abstract type="html">Constructs a new CreateLoadBalancerRequest object.
-Callers should use properties to initialize any additional object members.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateLoadBalancerRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/SecurityTokenServiceAssumeRoleResponse/credentials</TokenIdentifier>
+			<Abstract type="html">The temporary security credentials, which include an access key ID, a
+secret access key, and a security token.</Abstract>
+			<DeclaredIn>SecurityTokenServiceAssumeRoleResponse.h</DeclaredIn>			
 			
-			<Declaration>- (id)initWithLoadBalancerName:(NSString *)theLoadBalancerName andListeners:(NSMutableArray *)theListeners andAvailabilityZones:(NSMutableArray *)theAvailabilityZones</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>theLoadBalancerName</Name>
-					<Abstract type="html">The name associated with the LoadBalancer.
-The name must be unique within your set of LoadBalancers.</Abstract>
-				</Parameter><Parameter>
-					<Name>theListeners</Name>
-					<Abstract type="html">A list of the following tuples: LoadBalancerPort,
-InstancePort, and Protocol.</Abstract>
-				</Parameter><Parameter>
-					<Name>theAvailabilityZones</Name>
-					<Abstract type="html">A list of Availability Zones. &lt;p&gt; At least
-one Availability Zone must be specified. Specified Availability Zones
-must be in the same EC2 Region as the LoadBalancer. Traffic will be
-equally distributed across all zones. &lt;p&gt; This list can be modified
-after the creation of the LoadBalancer.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, retain) SecurityTokenServiceCredentials *credentials</Declaration>
 			
-			<Anchor>//api/name/initWithLoadBalancerName:andListeners:andAvailabilityZones:</Anchor>
+			
+			<Anchor>//api/name/credentials</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingCreateLoadBalancerRequest/addListener:</TokenIdentifier>
-			<Abstract type="html">Adds a single object to listeners.
-This function will alloc and init listeners if not already done.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateLoadBalancerRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SecurityTokenServiceAssumeRoleResponse/setAssumedRoleUser:</TokenIdentifier>
+			<Abstract type="html">The Amazon Resource Name (ARN) and the assumed role ID, which are
+identifiers that you can use to refer to the resulting temporary
+security credentials. For example, you can reference these credentials
+as a principal in a resource-based policy by using the ARN or assumed
+role ID. The ARN and ID include the &lt;code&gt;RoleSessionName&lt;/code&gt; that
+you specified when you called &lt;code&gt;AssumeRole&lt;/code&gt;.</Abstract>
+			<DeclaredIn>SecurityTokenServiceAssumeRoleResponse.h</DeclaredIn>			
 			
-			<Declaration>- (void)addListener:(ElasticLoadBalancingListener *)listenerObject</Declaration>
+			<Declaration>@property (nonatomic, retain) SecurityTokenServiceAssumedRoleUser *assumedRoleUser</Declaration>
 			
 			
-			<Anchor>//api/name/addListener:</Anchor>
+			<Anchor>//api/name/assumedRoleUser</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingCreateLoadBalancerRequest/addAvailabilityZone:</TokenIdentifier>
-			<Abstract type="html">Adds a single object to availabilityZones.
-This function will alloc and init availabilityZones if not already done.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateLoadBalancerRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/SecurityTokenServiceAssumeRoleResponse/assumedRoleUser</TokenIdentifier>
+			<Abstract type="html">The Amazon Resource Name (ARN) and the assumed role ID, which are
+identifiers that you can use to refer to the resulting temporary
+security credentials. For example, you can reference these credentials
+as a principal in a resource-based policy by using the ARN or assumed
+role ID. The ARN and ID include the &lt;code&gt;RoleSessionName&lt;/code&gt; that
+you specified when you called &lt;code&gt;AssumeRole&lt;/code&gt;.</Abstract>
+			<DeclaredIn>SecurityTokenServiceAssumeRoleResponse.h</DeclaredIn>			
 			
-			<Declaration>- (void)addAvailabilityZone:(NSString *)availabilityZoneObject</Declaration>
+			<Declaration>@property (nonatomic, retain) SecurityTokenServiceAssumedRoleUser *assumedRoleUser</Declaration>
 			
 			
-			<Anchor>//api/name/addAvailabilityZone:</Anchor>
+			<Anchor>//api/name/assumedRoleUser</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingCreateLoadBalancerRequest/addSubnet:</TokenIdentifier>
-			<Abstract type="html">Adds a single object to subnets.
-This function will alloc and init subnets if not already done.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateLoadBalancerRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/SecurityTokenServiceAssumeRoleResponse/setPackedPolicySize:</TokenIdentifier>
+			<Abstract type="html">A percentage value that indicates the size of the policy in packed
+form. The service rejects any policy with a packed size greater than
+100 percent, which means the policy exceeded the allowed space.
+&lt;p&gt;
+&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
+&lt;b&gt;Range: &lt;/b&gt;0 - &lt;br/&gt;</Abstract>
+			<DeclaredIn>SecurityTokenServiceAssumeRoleResponse.h</DeclaredIn>			
 			
-			<Declaration>- (void)addSubnet:(NSString *)subnetObject</Declaration>
+			<Declaration>@property (nonatomic, retain) NSNumber *packedPolicySize</Declaration>
 			
 			
-			<Anchor>//api/name/addSubnet:</Anchor>
+			<Anchor>//api/name/packedPolicySize</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingCreateLoadBalancerRequest/addSecurityGroup:</TokenIdentifier>
-			<Abstract type="html">Adds a single object to securityGroups.
-This function will alloc and init securityGroups if not already done.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateLoadBalancerRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/SecurityTokenServiceAssumeRoleResponse/packedPolicySize</TokenIdentifier>
+			<Abstract type="html">A percentage value that indicates the size of the policy in packed
+form. The service rejects any policy with a packed size greater than
+100 percent, which means the policy exceeded the allowed space.
+&lt;p&gt;
+&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
+&lt;b&gt;Range: &lt;/b&gt;0 - &lt;br/&gt;</Abstract>
+			<DeclaredIn>SecurityTokenServiceAssumeRoleResponse.h</DeclaredIn>			
 			
-			<Declaration>- (void)addSecurityGroup:(NSString *)securityGroupObject</Declaration>
+			<Declaration>@property (nonatomic, retain) NSNumber *packedPolicySize</Declaration>
 			
 			
-			<Anchor>//api/name/addSecurityGroup:</Anchor>
+			<Anchor>//api/name/packedPolicySize</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingCreateLoadBalancerRequest/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SecurityTokenServiceAssumeRoleResponse/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCreateLoadBalancerRequest.h</DeclaredIn>			
+			<DeclaredIn>SecurityTokenServiceAssumeRoleResponse.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

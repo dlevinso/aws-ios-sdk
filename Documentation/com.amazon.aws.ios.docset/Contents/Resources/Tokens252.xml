@@ -1,104 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/DeletedObject.html">
+	<File path="Classes/EC2ConfirmProductInstanceRequest.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/DeletedObject</TokenIdentifier>
-			<Abstract type="html">A successfully deleted object.</Abstract>
-			<DeclaredIn>DeletedObject.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/EC2ConfirmProductInstanceRequest</TokenIdentifier>
+			<Abstract type="html">Confirm Product Instance Request</Abstract>
+			<DeclaredIn>EC2ConfirmProductInstanceRequest.h</DeclaredIn>
 			
 			<NodeRef refid="252"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DeletedObject/setKey:</TokenIdentifier>
-			<Abstract type="html">Returns the key that was successfully deleted.</Abstract>
-			<DeclaredIn>DeletedObject.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2ConfirmProductInstanceRequest/setProductCode:</TokenIdentifier>
+			<Abstract type="html">The product code to confirm.</Abstract>
+			<DeclaredIn>EC2ConfirmProductInstanceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *key</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *productCode</Declaration>
 			
 			
-			<Anchor>//api/name/key</Anchor>
+			<Anchor>//api/name/productCode</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/DeletedObject/key</TokenIdentifier>
-			<Abstract type="html">Returns the key that was successfully deleted.</Abstract>
-			<DeclaredIn>DeletedObject.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/EC2ConfirmProductInstanceRequest/productCode</TokenIdentifier>
+			<Abstract type="html">The product code to confirm.</Abstract>
+			<DeclaredIn>EC2ConfirmProductInstanceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *key</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *productCode</Declaration>
 			
 			
-			<Anchor>//api/name/key</Anchor>
+			<Anchor>//api/name/productCode</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DeletedObject/setVersionId:</TokenIdentifier>
-			<Abstract type="html">Returns the version deleted, or null for unversioned objects.</Abstract>
-			<DeclaredIn>DeletedObject.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2ConfirmProductInstanceRequest/setInstanceId:</TokenIdentifier>
+			<Abstract type="html">The ID of the instance to confirm.</Abstract>
+			<DeclaredIn>EC2ConfirmProductInstanceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *versionId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
 			
 			
-			<Anchor>//api/name/versionId</Anchor>
+			<Anchor>//api/name/instanceId</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/DeletedObject/versionId</TokenIdentifier>
-			<Abstract type="html">Returns the version deleted, or null for unversioned objects.</Abstract>
-			<DeclaredIn>DeletedObject.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/EC2ConfirmProductInstanceRequest/instanceId</TokenIdentifier>
+			<Abstract type="html">The ID of the instance to confirm.</Abstract>
+			<DeclaredIn>EC2ConfirmProductInstanceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *versionId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
 			
 			
-			<Anchor>//api/name/versionId</Anchor>
+			<Anchor>//api/name/instanceId</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DeletedObject/setDeleteMarker:</TokenIdentifier>
-			<Abstract type="html">Returns whether the object deleted was a delete marker.</Abstract>
-			<DeclaredIn>DeletedObject.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2ConfirmProductInstanceRequest/init</TokenIdentifier>
+			<Abstract type="html">Default constructor for a new ConfirmProductInstanceRequest object.  Callers should use the
+property methods to initialize this object after creating it.</Abstract>
+			<DeclaredIn>EC2ConfirmProductInstanceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, assign) BOOL deleteMarker</Declaration>
+			<Declaration>- (id)init</Declaration>
 			
 			
-			<Anchor>//api/name/deleteMarker</Anchor>
+			<Anchor>//api/name/init</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/DeletedObject/deleteMarker</TokenIdentifier>
-			<Abstract type="html">Returns whether the object deleted was a delete marker.</Abstract>
-			<DeclaredIn>DeletedObject.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2ConfirmProductInstanceRequest/initWithProductCode:andInstanceId:</TokenIdentifier>
+			<Abstract type="html">Constructs a new ConfirmProductInstanceRequest object.
+Callers should use properties to initialize any additional object members.</Abstract>
+			<DeclaredIn>EC2ConfirmProductInstanceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, assign) BOOL deleteMarker</Declaration>
+			<Declaration>- (id)initWithProductCode:(NSString *)theProductCode andInstanceId:(NSString *)theInstanceId</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>theProductCode</Name>
+					<Abstract type="html">The product code to confirm.</Abstract>
+				</Parameter><Parameter>
+					<Name>theInstanceId</Name>
+					<Abstract type="html">The ID of the instance to confirm.</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/deleteMarker</Anchor>
+			<Anchor>//api/name/initWithProductCode:andInstanceId:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DeletedObject/setDeleteMarkerVersionId:</TokenIdentifier>
-			<Abstract type="html">Returns the versionId for the delete marker that was created when
-doing a non-versioned delete in a versioned bucket.</Abstract>
-			<DeclaredIn>DeletedObject.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2ConfirmProductInstanceRequest/description</TokenIdentifier>
+			<Abstract type="html">Returns a string representation of this object; useful for testing and
+debugging.</Abstract>
+			<DeclaredIn>EC2ConfirmProductInstanceRequest.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *deleteMarkerVersionId</Declaration>
+			<Declaration>- (NSString *)description</Declaration>
 			
-			
-			<Anchor>//api/name/deleteMarkerVersionId</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/DeletedObject/deleteMarkerVersionId</TokenIdentifier>
-			<Abstract type="html">Returns the versionId for the delete marker that was created when
-doing a non-versioned delete in a versioned bucket.</Abstract>
-			<DeclaredIn>DeletedObject.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *deleteMarkerVersionId</Declaration>
-			
-			
-			<Anchor>//api/name/deleteMarkerVersionId</Anchor>
+			<ReturnValue><Abstract type="html">A string representation of this object.</Abstract></ReturnValue>
+			<Anchor>//api/name/description</Anchor>
 		</Token>
 		
 	</File>

@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@
     AmazonServiceRequest *request = [[EC2Request alloc] init];
 
     [request setParameterValue:@"RunInstances"           forKey:@"Action"];
-    [request setParameterValue:@"2012-10-01"   forKey:@"Version"];
+    [request setParameterValue:@"2013-02-01"   forKey:@"Version"];
 
     [request setDelegate:[runInstancesRequest delegate]];
     [request setCredentials:[runInstancesRequest credentials]];
@@ -74,11 +74,6 @@
     if (runInstancesRequest != nil) {
         if (runInstancesRequest.userData != nil) {
             [request setParameterValue:[NSString stringWithFormat:@"%@", runInstancesRequest.userData] forKey:[NSString stringWithFormat:@"%@", @"UserData"]];
-        }
-    }
-    if (runInstancesRequest != nil) {
-        if (runInstancesRequest.addressingType != nil) {
-            [request setParameterValue:[NSString stringWithFormat:@"%@", runInstancesRequest.addressingType] forKey:[NSString stringWithFormat:@"%@", @"AddressingType"]];
         }
     }
     if (runInstancesRequest != nil) {

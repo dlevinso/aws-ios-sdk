@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -18,6 +18,8 @@
 
 #import "AmazonSDKUtil.h"
 #import <CommonCrypto/CommonDigest.h>
+#import "AmazonClientException.h"
+
 
 static char        base64EncodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
@@ -40,6 +42,11 @@ static const short base64DecodingTable[] =
     -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2,
     -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2
 };
+
+NSString *const AWSDefaultRunLoopMode = @"com.amazonaws.DefaultRunLoopMode";
+NSString *const AWSS3TransferManagerUserAgentPrefix = @"Transfer Manager";
+
+static NSTimeInterval _clockskew = 0.0;
 
 @implementation AmazonSDKUtil
 
@@ -283,7 +290,7 @@ static const short base64DecodingTable[] =
                        @"audio/mp4a-latm", @"m4a",
                        nil];
     }
-    NSString *mimetype = (NSString *)[lookupTable objectForKey:extension];
+    NSString *mimetype = (NSString *)[lookupTable objectForKey:[extension lowercaseString]];
     return mimetype == nil ? @"application/octet-stream" : mimetype;
 }
 
@@ -311,12 +318,12 @@ static const short base64DecodingTable[] =
 
 +(NSDate *)millisSinceEpochToDate:(NSNumber *)millisSinceEpoch
 {
-    return [NSDate dateWithTimeIntervalSince1970:([millisSinceEpoch doubleValue] / 1000)];
+    return [NSDate dateWithTimeIntervalSince1970:([millisSinceEpoch doubleValue] / 1000)-_clockskew];
 }
 
 +(NSDate *)secondsSinceEpochToDate:(NSNumber *)secondsSinceEpoch
 {
-    return [NSDate dateWithTimeIntervalSince1970:[secondsSinceEpoch doubleValue]];
+    return [NSDate dateWithTimeIntervalSince1970:[secondsSinceEpoch doubleValue]-_clockskew];
 }
 
 +(NSDate *)convertStringToDate:(NSString *)string usingFormat:(NSString *)dateFormat
@@ -329,9 +336,28 @@ static const short base64DecodingTable[] =
 
     NSDate *parsed = [dateFormatter dateFromString:string];
 
+    NSDate *localDate = [parsed dateByAddingTimeInterval:_clockskew];
+    
     [dateFormatter release];
+    
+    return localDate;
+}
 
-    return parsed;
++(NSString *)convertDateToString:(NSDate *)date usingFormat:(NSString *)dateFormat
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
+    [dateFormatter setDateFormat:dateFormat];
+    [dateFormatter setLocale:[AmazonSDKUtil timestampLocale]];
+    
+    NSDate *realDate =  [date dateByAddingTimeInterval:-1*_clockskew];
+    
+    NSString *formatted = [dateFormatter stringFromDate:realDate];
+    
+    [dateFormatter release];
+    
+    return formatted;
 }
 
 +(NSURL *)URLWithURL:(NSURL *)theURL andProtocol:(NSString *)theProtocol
@@ -371,83 +397,43 @@ static const short base64DecodingTable[] =
     return _tsLoc;
 }
 
++(void)setRuntimeClockSkew:(NSTimeInterval)clockskew
+{
+    _clockskew = clockskew;
+}
+
++(NSTimeInterval)getRuntimeClockSkew
+{
+    return _clockskew;
+}
+
 @end
 
-@implementation NSDate (WithISO8061Format)
+@implementation NSDate (AmazonSDKUtil)
 
 -(NSString *)stringWithISO8061Format
 {
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-
-    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
-    [dateFormatter setDateFormat:kISO8061DateFormat];
-    [dateFormatter setLocale:[AmazonSDKUtil timestampLocale]];
-
-    NSString *formatted = [dateFormatter stringFromDate:self];
-
-    [dateFormatter release];
-
-    return formatted;
+    return [AmazonSDKUtil convertDateToString:self usingFormat:kISO8061DateFormat];
 }
 
 -(NSString *)stringWithISO8601Format
 {
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-
-    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
-    [dateFormatter setDateFormat:kISO8601DateFormat];
-    [dateFormatter setLocale:[AmazonSDKUtil timestampLocale]];
-
-    NSString *formatted = [dateFormatter stringFromDate:self];
-
-    [dateFormatter release];
-
-    return formatted;
+    return [AmazonSDKUtil convertDateToString:self usingFormat:kISO8601DateFormat];
 }
 
 -(NSString *)stringWithRFC822Format
 {
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-
-    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
-    [dateFormatter setDateFormat:kRFC822DateFormat];
-    [dateFormatter setLocale:[AmazonSDKUtil timestampLocale]];
-
-    NSString *formatted = [dateFormatter stringFromDate:self];
-
-    [dateFormatter release];
-
-    return formatted;
+    return [AmazonSDKUtil convertDateToString:self usingFormat:kRFC822DateFormat];
 }
 
 +(NSDate *)dateWithISO8061Format:(NSString *)dateString
 {
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-
-    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
-    [dateFormatter setDateFormat:kISO8061DateFormat];
-    [dateFormatter setLocale:[AmazonSDKUtil timestampLocale]];
-
-    NSDate *parsed = [dateFormatter dateFromString:dateString];
-
-    [dateFormatter release];
-
-    return parsed;
+    return [AmazonSDKUtil convertStringToDate:dateString usingFormat:kISO8061DateFormat];
 }
 
 +(NSDate *)dateWithRFC822Format:(NSString *)dateString
 {
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    
-    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
-    [dateFormatter setDateFormat:kRFC822DateFormat];
-    [dateFormatter setLocale:[AmazonSDKUtil timestampLocale]];
-    
-    NSDate *parsed = [dateFormatter dateFromString:dateString];
-    
-    [dateFormatter release];
-    
-    return parsed;
+    return [AmazonSDKUtil convertStringToDate:dateString usingFormat:kRFC822DateFormat];
 }
 
 +(NSString *)ISO8061FormattedCurrentTimestamp
@@ -457,35 +443,13 @@ static const short base64DecodingTable[] =
 
 -(NSString *)dateStamp
 {
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-
-    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
-    [dateFormatter setDateFormat:kDateStampFormat];
-    [dateFormatter setLocale:[AmazonSDKUtil timestampLocale]];
-
-    NSString *formatted = [dateFormatter stringFromDate:self];
-
-    [dateFormatter release];
-
-    return formatted;
+    return [AmazonSDKUtil convertDateToString:self usingFormat:kDateStampFormat];
 }
 
 -(NSString *)dateTime
 {
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-
-    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
-    [dateFormatter setDateFormat:kDateTimeFormat];
-    [dateFormatter setLocale:[AmazonSDKUtil timestampLocale]];
-
-    NSString *formatted = [dateFormatter stringFromDate:self];
-
-    [dateFormatter release];
-
-    return formatted;
+    return [AmazonSDKUtil convertDateToString:self usingFormat:kDateTimeFormat];
 }
-
-
 
 @end
 

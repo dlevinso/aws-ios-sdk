@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -12,8 +12,10 @@
  * express or implied. See the License for the specific language governing
  * permissions and limitations under the License.
  */
-#import <AWSiOSSDK/AmazonLogger.h>
-#import <AWSiOSSDK/AmazonErrorHandler.h>
+
+#import <AWSPersistence/AWSPersistenceDynamoDBIncrementalStore.h>
+
+#import <AWSRuntime/AWSRuntime.h>
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
@@ -151,10 +153,15 @@
     NSDictionary *tableMapper = [NSDictionary dictionaryWithObjectsAndKeys:
                                  LOCATIONS_TABLE, @"Location",
                                  CHECKINS_TABLE, @"Checkin", nil];
+
+    AmazonClientManager *provider = [AmazonClientManager new];
+    AmazonDynamoDBClient *ddb = [[AmazonDynamoDBClient alloc] initWithCredentialsProvider:provider];
+    ddb.endpoint = [AmazonEndpoints ddbEndpoint:US_WEST_2];
+
     NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
                              hashKeys, AWSPersistenceDynamoDBHashKey, 
                              versions, AWSPersistenceDynamoDBVersionKey,
-                             self, AWSPersistenceDynamoDBDelegate,
+                             ddb, AWSPersistenceDynamoDBClient,
                              tableMapper, AWSPersistenceDynamoDBTableMapper, nil];
     
     // Adds the AWSNSIncrementalStore to the PersistentStoreCoordinator
@@ -171,16 +178,6 @@
     return _persistentStoreCoordinator;
 }
 
-#pragma mark - AWSPersistenceDynamoDBIncrementalStoreDelegate
-
-- (AmazonCredentials *)credentials
-{
-    return [AmazonClientManager credentials];
-}
-
-- (void)handleAuthenticationFailure
-{
-    [AmazonClientManager wipeAllCredentials];
-}
+#pragma mark -
 
 @end

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2CreateVolumePermission.html">
+	<File path="Classes/EC2PriceSchedule.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2CreateVolumePermission</TokenIdentifier>
-			<Abstract type="html">Create Volume Permission</Abstract>
-			<DeclaredIn>EC2CreateVolumePermission.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/EC2PriceSchedule</TokenIdentifier>
+			<Abstract type="html">Price Schedule</Abstract>
+			<DeclaredIn>EC2PriceSchedule.h</DeclaredIn>
 			
 			<NodeRef refid="436"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2CreateVolumePermission/init</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2PriceSchedule/init</TokenIdentifier>
 			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2CreateVolumePermission.h</DeclaredIn>			
+			<DeclaredIn>EC2PriceSchedule.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -24,56 +24,98 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2CreateVolumePermission/setUserId:</TokenIdentifier>
-			<Abstract type="html">The user ID of the user that can create volumes from the snapshot.</Abstract>
-			<DeclaredIn>EC2CreateVolumePermission.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2PriceSchedule/setTerm:</TokenIdentifier>
+			<Abstract type="html">The value of the Term property for this object.</Abstract>
+			<DeclaredIn>EC2PriceSchedule.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *userId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSNumber *term</Declaration>
 			
 			
-			<Anchor>//api/name/userId</Anchor>
+			<Anchor>//api/name/term</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2CreateVolumePermission/userId</TokenIdentifier>
-			<Abstract type="html">The user ID of the user that can create volumes from the snapshot.</Abstract>
-			<DeclaredIn>EC2CreateVolumePermission.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/EC2PriceSchedule/term</TokenIdentifier>
+			<Abstract type="html">The value of the Term property for this object.</Abstract>
+			<DeclaredIn>EC2PriceSchedule.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *userId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSNumber *term</Declaration>
 			
 			
-			<Anchor>//api/name/userId</Anchor>
+			<Anchor>//api/name/term</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2CreateVolumePermission/setGroup:</TokenIdentifier>
-			<Abstract type="html">The group that is allowed to create volumes from the snapshot
-(currently supports &quot;all&quot;).</Abstract>
-			<DeclaredIn>EC2CreateVolumePermission.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2PriceSchedule/setPrice:</TokenIdentifier>
+			<Abstract type="html">The value of the Price property for this object.</Abstract>
+			<DeclaredIn>EC2PriceSchedule.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *group</Declaration>
+			<Declaration>@property (nonatomic, retain) NSNumber *price</Declaration>
 			
 			
-			<Anchor>//api/name/group</Anchor>
+			<Anchor>//api/name/price</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2CreateVolumePermission/group</TokenIdentifier>
-			<Abstract type="html">The group that is allowed to create volumes from the snapshot
-(currently supports &quot;all&quot;).</Abstract>
-			<DeclaredIn>EC2CreateVolumePermission.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/EC2PriceSchedule/price</TokenIdentifier>
+			<Abstract type="html">The value of the Price property for this object.</Abstract>
+			<DeclaredIn>EC2PriceSchedule.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *group</Declaration>
+			<Declaration>@property (nonatomic, retain) NSNumber *price</Declaration>
 			
 			
-			<Anchor>//api/name/group</Anchor>
+			<Anchor>//api/name/price</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2CreateVolumePermission/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2PriceSchedule/setCurrencyCode:</TokenIdentifier>
+			<Abstract type="html">The value of the CurrencyCode property for this object.</Abstract>
+			<DeclaredIn>EC2PriceSchedule.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *currencyCode</Declaration>
+			
+			
+			<Anchor>//api/name/currencyCode</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2PriceSchedule/currencyCode</TokenIdentifier>
+			<Abstract type="html">The value of the CurrencyCode property for this object.</Abstract>
+			<DeclaredIn>EC2PriceSchedule.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *currencyCode</Declaration>
+			
+			
+			<Anchor>//api/name/currencyCode</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2PriceSchedule/setActive:</TokenIdentifier>
+			<Abstract type="html">The value of the Active property for this object.</Abstract>
+			<DeclaredIn>EC2PriceSchedule.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) bool active</Declaration>
+			
+			
+			<Anchor>//api/name/active</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2PriceSchedule/active</TokenIdentifier>
+			<Abstract type="html">The value of the Active property for this object.</Abstract>
+			<DeclaredIn>EC2PriceSchedule.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) bool active</Declaration>
+			
+			
+			<Anchor>//api/name/active</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2PriceSchedule/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>EC2CreateVolumePermission.h</DeclaredIn>			
+			<DeclaredIn>EC2PriceSchedule.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

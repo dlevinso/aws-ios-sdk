@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/ElasticLoadBalancingCertificateNotFoundException.html">
+	<File path="Classes/SQSQueueDeletedRecentlyException.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/ElasticLoadBalancingCertificateNotFoundException</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/cl/SQSQueueDeletedRecentlyException</TokenIdentifier>
 			<Abstract type="html">&lt;p&gt;
-The specified SSL ID does not refer to a valid SSL certificate in the
-AWS Identity and Access Management Service.
+You must wait 60 seconds after deleting a queue before you can create
+another with the same name.
 &lt;/p&gt;</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCertificateNotFoundException.h</DeclaredIn>
+			<DeclaredIn>SQSQueueDeletedRecentlyException.h</DeclaredIn>
 			
 			<NodeRef refid="848"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingCertificateNotFoundException/initWithMessage:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SQSQueueDeletedRecentlyException/initWithMessage:</TokenIdentifier>
 			<Abstract type="html">Initialize the exception with a message.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCertificateNotFoundException.h</DeclaredIn>			
+			<DeclaredIn>SQSQueueDeletedRecentlyException.h</DeclaredIn>			
 			
 			<Declaration>- (id)initWithMessage:(NSString *)message</Declaration>
 			<Parameters>
@@ -31,10 +31,10 @@ AWS Identity and Access Management Service.
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/ElasticLoadBalancingCertificateNotFoundException/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SQSQueueDeletedRecentlyException/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>ElasticLoadBalancingCertificateNotFoundException.h</DeclaredIn>			
+			<DeclaredIn>SQSQueueDeletedRecentlyException.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

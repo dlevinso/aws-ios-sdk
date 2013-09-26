@@ -1,32 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2CreateKeyPairResponse.html">
+	<File path="Classes/EC2InstanceStatusDetails.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2CreateKeyPairResponse</TokenIdentifier>
-			<Abstract type="html">Create Key Pair Response</Abstract>
-			<DeclaredIn>EC2CreateKeyPairResponse.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/EC2InstanceStatusDetails</TokenIdentifier>
+			<Abstract type="html">Instance Status Details</Abstract>
+			<DeclaredIn>EC2InstanceStatusDetails.h</DeclaredIn>
 			
 			<NodeRef refid="412"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2CreateKeyPairResponse/setException:</TokenIdentifier>
-			<Abstract type="html">If an exception was thrown, this will return the exception.</Abstract>
-			<DeclaredIn>EC2CreateKeyPairResponse.h</DeclaredIn>			
-			
-			<Declaration>- (void)setException:(AmazonServiceException *)theException</Declaration>
-			
-			
-			<Anchor>//api/name/setException:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2CreateKeyPairResponse/init</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceStatusDetails/init</TokenIdentifier>
 			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2CreateKeyPairResponse.h</DeclaredIn>			
+			<DeclaredIn>EC2InstanceStatusDetails.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -35,32 +24,76 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2CreateKeyPairResponse/setKeyPair:</TokenIdentifier>
-			<Abstract type="html">The newly created EC2 key pair.</Abstract>
-			<DeclaredIn>EC2CreateKeyPairResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceStatusDetails/setName:</TokenIdentifier>
+			<Abstract type="html">The value of the Name property for this object.</Abstract>
+			<DeclaredIn>EC2InstanceStatusDetails.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) EC2KeyPair *keyPair</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *name</Declaration>
 			
 			
-			<Anchor>//api/name/keyPair</Anchor>
+			<Anchor>//api/name/name</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2CreateKeyPairResponse/keyPair</TokenIdentifier>
-			<Abstract type="html">The newly created EC2 key pair.</Abstract>
-			<DeclaredIn>EC2CreateKeyPairResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/EC2InstanceStatusDetails/name</TokenIdentifier>
+			<Abstract type="html">The value of the Name property for this object.</Abstract>
+			<DeclaredIn>EC2InstanceStatusDetails.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) EC2KeyPair *keyPair</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *name</Declaration>
 			
 			
-			<Anchor>//api/name/keyPair</Anchor>
+			<Anchor>//api/name/name</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2CreateKeyPairResponse/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceStatusDetails/setStatus:</TokenIdentifier>
+			<Abstract type="html">The value of the Status property for this object.</Abstract>
+			<DeclaredIn>EC2InstanceStatusDetails.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *status</Declaration>
+			
+			
+			<Anchor>//api/name/status</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2InstanceStatusDetails/status</TokenIdentifier>
+			<Abstract type="html">The value of the Status property for this object.</Abstract>
+			<DeclaredIn>EC2InstanceStatusDetails.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *status</Declaration>
+			
+			
+			<Anchor>//api/name/status</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceStatusDetails/setImpairedSince:</TokenIdentifier>
+			<Abstract type="html">The value of the ImpairedSince property for this object.</Abstract>
+			<DeclaredIn>EC2InstanceStatusDetails.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSDate *impairedSince</Declaration>
+			
+			
+			<Anchor>//api/name/impairedSince</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2InstanceStatusDetails/impairedSince</TokenIdentifier>
+			<Abstract type="html">The value of the ImpairedSince property for this object.</Abstract>
+			<DeclaredIn>EC2InstanceStatusDetails.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSDate *impairedSince</Declaration>
+			
+			
+			<Anchor>//api/name/impairedSince</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2InstanceStatusDetails/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>EC2CreateKeyPairResponse.h</DeclaredIn>			
+			<DeclaredIn>EC2InstanceStatusDetails.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

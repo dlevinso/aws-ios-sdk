@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -14,6 +14,11 @@
  */
 
 #import "EC2InstanceNetworkInterfaceAssociationUnmarshaller.h"
+#ifdef AWS_MULTI_FRAMEWORK
+#import <AWSRuntime/AmazonServiceExceptionUnmarshaller.h>
+#else
+#import "../AmazonServiceExceptionUnmarshaller.h"
+#endif
 
 @implementation EC2InstanceNetworkInterfaceAssociationUnmarshaller
 
@@ -43,6 +48,11 @@
 
     if ([elementName isEqualToString:@"publicIp"]) {
         self.response.publicIp = self.currentText;
+        return;
+    }
+
+    if ([elementName isEqualToString:@"publicDnsName"]) {
+        self.response.publicDnsName = self.currentText;
         return;
     }
 

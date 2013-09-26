@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -19,14 +19,16 @@
 @implementation EC2InstanceNetworkInterfaceAssociation
 
 @synthesize publicIp;
+@synthesize publicDnsName;
 @synthesize ipOwnerId;
 
 
 -(id)init
 {
     if (self = [super init]) {
-        publicIp  = nil;
-        ipOwnerId = nil;
+        publicIp      = nil;
+        publicDnsName = nil;
+        ipOwnerId     = nil;
     }
 
     return self;
@@ -40,6 +42,7 @@
 
     [buffer appendString:@"{"];
     [buffer appendString:[[[NSString alloc] initWithFormat:@"PublicIp: %@,", publicIp] autorelease]];
+    [buffer appendString:[[[NSString alloc] initWithFormat:@"PublicDnsName: %@,", publicDnsName] autorelease]];
     [buffer appendString:[[[NSString alloc] initWithFormat:@"IpOwnerId: %@,", ipOwnerId] autorelease]];
     [buffer appendString:[super description]];
     [buffer appendString:@"}"];
@@ -52,6 +55,7 @@
 -(void)dealloc
 {
     [publicIp release];
+    [publicDnsName release];
     [ipOwnerId release];
 
     [super dealloc];

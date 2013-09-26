@@ -12,7 +12,7 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">AWS SDK for iOS v1.4.4 </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">AWS SDK for iOS v1.6.1 </a></h1>
 				<a id="developerHome" href="../index.html">Amazon Web Services, Inc.</a>
 			</div>
 			
@@ -40,7 +40,11 @@
 	
 	<option value="properties">Properties</option>
 	
+	<option value="//api/name/attributeDefinitions">&nbsp;&nbsp;&nbsp;&nbsp;attributeDefinitions</option>
+	
 	<option value="//api/name/keySchema">&nbsp;&nbsp;&nbsp;&nbsp;keySchema</option>
+	
+	<option value="//api/name/localSecondaryIndexes">&nbsp;&nbsp;&nbsp;&nbsp;localSecondaryIndexes</option>
 	
 	<option value="//api/name/provisionedThroughput">&nbsp;&nbsp;&nbsp;&nbsp;provisionedThroughput</option>
 	
@@ -52,6 +56,12 @@
 	
 	
 	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/addAttributeDefinition:">&nbsp;&nbsp;&nbsp;&nbsp;- addAttributeDefinition:</option>
+	
+	<option value="//api/name/addKeySchema:">&nbsp;&nbsp;&nbsp;&nbsp;- addKeySchema:</option>
+	
+	<option value="//api/name/addLocalSecondaryIndexe:">&nbsp;&nbsp;&nbsp;&nbsp;- addLocalSecondaryIndexe:</option>
 	
 	<option value="//api/name/description">&nbsp;&nbsp;&nbsp;&nbsp;- description</option>
 	
@@ -85,7 +95,11 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/attributeDefinitions">attributeDefinitions</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/keySchema">keySchema</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/localSecondaryIndexes">localSecondaryIndexes</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/provisionedThroughput">provisionedThroughput</a></span></li>
 	
@@ -98,6 +112,12 @@
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addAttributeDefinition:">addAttributeDefinition:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addKeySchema:">addKeySchema:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addLocalSecondaryIndexe:">addLocalSecondaryIndexe:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/description">description</a></span></li>
 	
@@ -162,10 +182,16 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
+		<code><a href="#//api/name/attributeDefinitions">&nbsp;&nbsp;attributeDefinitions</a></code>
+		<span class="tooltip"><p>An array of attributes that describe the key schema for the table and
+indexes.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/tableName">&nbsp;&nbsp;tableName</a></code>
-		<span class="tooltip"><p>The name of the table you want to create. Allowed characters are
-<code>a-z</code>, <code>A-Z</code>, <code>0-9</code>, <code>_</code>
-(underscore), <code>&ndash;</code> (hyphen) and <code>.</code> (period).</p>
+		<span class="tooltip"><p>The name of the table to create.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -177,27 +203,67 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/keySchema">&nbsp;&nbsp;keySchema</a></code>
-		<span class="tooltip"><p>The KeySchema identifies the primary key as a one attribute primary
-key (hash) or a composite two attribute (hash-and-range) primary key.
-Single attribute primary keys have one index value: a
-<code>HashKeyElement</code>. A composite hash-and-range primary key
-contains two attribute values: a <code>HashKeyElement</code> and a
-<code>RangeKeyElement</code>.</p></span>
+		<span class="tooltip"><p>Specifies the attributes that make up the primary key for the table.
+The attributes in <i>KeySchema</i> must also be defined in the
+<i>AttributeDefinitions</i> array. For more information, see <a
+s.amazon.com/amazondynamodb/latest/developerguide/DataModel.html">Data
+Model</a> of the <i>Amazon DynamoDB Developer Guide</i>. <p>Each
+<i>KeySchemaElement</i> in the array is composed of: <ul> <li></p>
+
+<p><p><i>AttributeName</i>-The name of this key attribute. </li> <li>
+<p><i>KeyType</i>-Determines whether the key attribute is
+<code>HASH</code> or <code>RANGE</code>. </li> </ul> <p>For more
+information, see <a
+e/WorkingWithDDTables.html#WorkingWithDDTables.primary.key">Specifying
+the Primary Key</a> of the <i>Amazon DynamoDB Developer Guide</i>.
+<p>
+<b>Constraints:</b><br/>
+<b>Length: </b>1 &ndash; 2<br/></p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/localSecondaryIndexes">&nbsp;&nbsp;localSecondaryIndexes</a></code>
+		<span class="tooltip"><p>One or more secondary indexes (the maximum is five) to be created on
+the table. Each index is scoped to a given hash key value. There is a
+10 gigabyte size limit per hash key; otherwise, the size of a local
+secondary index is unconstrained. <p>Each secondary index in the array
+includes the following: <ul> <li> <p><i>IndexName</i>-The name of the
+secondary index. Must be unique only for this table. <p> </li> <li></p>
+
+<p><p><i>KeySchema</i>-Specifies the key schema for the index. The key
+schema must begin with the same hash key attribute as the table. </li>
+<li> <p><i>Projection</i>-Specifies attributes that are copied
+(projected) from the table into the index. These are in addition to
+the primary key attributes and index key attributes, which are
+automatically projected. Each attribute specification is composed of:
+<ul> <li> <p><i>ProjectionType</i>-One of the following: <ul> <li>
+<p><code>KEYS_ONLY</code>-Only the index and primary keys are
+projected into the index. </li> <li> <p><code>INCLUDE</code>-Only the
+specified table attributes are projected into the index. The list of
+projected attributes are in <i>NonKeyAttributes</i>. </li> <li>
+<p><code>ALL</code>-All of the table attributes are projected into the
+index. </li> </ul> </li> <li> <p><i>NonKeyAttributes</i>-A list of one
+or more non-key attribute names that are projected into the index. The
+total count of attributes specified in <i>NonKeyAttributes</i>, summed
+across all of the local secondary indexes, must not exceed 20. If you
+project the same attribute into two different indexes, this counts as
+two distinct attributes when determining the total. </li> </ul> </li>
+</ul></p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/provisionedThroughput">&nbsp;&nbsp;provisionedThroughput</a></code>
-		<span class="tooltip"><p>Provisioned throughput reserves the required read and write resources
-for your table in terms of <code>ReadCapacityUnits</code> and
-<code>WriteCapacityUnits</code>. Values for provisioned throughput
-depend upon your expected read/write rates, item size, and
-consistency. Provide the expected number of read and write operations,
-assuming an item size of 1k and strictly consistent reads. For 2k item
-size, double the value. For 3k, triple the value, etc.
-Eventually-consistent reads consume half the resources of strictly
-consistent reads.</p></span>
+		<span class="tooltip"><p>The provisioned throughput settings for the specified table. The
+settings can be modified using the <i>UpdateTable</i> operation.</p>
+
+<p><p>For current minimum and maximum provisioned throughput values, see
+<a
+mazon.com/amazondynamodb/latest/developerguide/Limits.html">Limits</a>
+of the <i>Amazon DynamoDB Developer Guide</i>.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -227,6 +293,30 @@ Callers should use properties to initialize any additional object members.</p></
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/addAttributeDefinition:">&ndash;&nbsp;addAttributeDefinition:</a></code>
+		<span class="tooltip"><p>Adds a single object to attributeDefinitions.
+This function will alloc and init attributeDefinitions if not already done.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addKeySchema:">&ndash;&nbsp;addKeySchema:</a></code>
+		<span class="tooltip"><p>Adds a single object to keySchema.
+This function will alloc and init keySchema if not already done.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addLocalSecondaryIndexe:">&ndash;&nbsp;addLocalSecondaryIndexe:</a></code>
+		<span class="tooltip"><p>Adds a single object to localSecondaryIndexes.
+This function will alloc and init localSecondaryIndexes if not already done.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/description">&ndash;&nbsp;description</a></code>
 		<span class="tooltip"><p>Returns a string representation of this object; useful for testing and
 debugging.</p></span>
@@ -247,23 +337,19 @@ debugging.</p></span>
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/keySchema" title="keySchema"></a>
-	<h3 class="subsubtitle method-title">keySchema</h3>
+	<a name="//api/name/attributeDefinitions" title="attributeDefinitions"></a>
+	<h3 class="subsubtitle method-title">attributeDefinitions</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The KeySchema identifies the primary key as a one attribute primary
-key (hash) or a composite two attribute (hash-and-range) primary key.
-Single attribute primary keys have one index value: a
-<code>HashKeyElement</code>. A composite hash-and-range primary key
-contains two attribute values: a <code>HashKeyElement</code> and a
-<code>RangeKeyElement</code>.</p>
+		<p>An array of attributes that describe the key schema for the table and
+indexes.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) DynamoDBKeySchema *keySchema</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) NSMutableArray *attributeDefinitions</code></div>
 
     
 	
@@ -275,12 +361,170 @@ contains two attribute values: a <code>HashKeyElement</code> and a
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The KeySchema identifies the primary key as a one attribute primary
-key (hash) or a composite two attribute (hash-and-range) primary key.
-Single attribute primary keys have one index value: a
-<code>HashKeyElement</code>. A composite hash-and-range primary key
-contains two attribute values: a <code>HashKeyElement</code> and a
-<code>RangeKeyElement</code>.</p>
+		<p>An array of attributes that describe the key schema for the table and
+indexes.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DynamoDBCreateTableRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/keySchema" title="keySchema"></a>
+	<h3 class="subsubtitle method-title">keySchema</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Specifies the attributes that make up the primary key for the table.
+The attributes in <i>KeySchema</i> must also be defined in the
+<i>AttributeDefinitions</i> array. For more information, see <a
+s.amazon.com/amazondynamodb/latest/developerguide/DataModel.html">Data
+Model</a> of the <i>Amazon DynamoDB Developer Guide</i>. <p>Each
+<i>KeySchemaElement</i> in the array is composed of: <ul> <li></p>
+
+<p><p><i>AttributeName</i>-The name of this key attribute. </li> <li>
+<p><i>KeyType</i>-Determines whether the key attribute is
+<code>HASH</code> or <code>RANGE</code>. </li> </ul> <p>For more
+information, see <a
+e/WorkingWithDDTables.html#WorkingWithDDTables.primary.key">Specifying
+the Primary Key</a> of the <i>Amazon DynamoDB Developer Guide</i>.
+<p>
+<b>Constraints:</b><br/>
+<b>Length: </b>1 &ndash; 2<br/></p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) NSMutableArray *keySchema</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Specifies the attributes that make up the primary key for the table.
+The attributes in <i>KeySchema</i> must also be defined in the
+<i>AttributeDefinitions</i> array. For more information, see <a
+s.amazon.com/amazondynamodb/latest/developerguide/DataModel.html">Data
+Model</a> of the <i>Amazon DynamoDB Developer Guide</i>. <p>Each
+<i>KeySchemaElement</i> in the array is composed of: <ul> <li></p>
+
+<p><p><i>AttributeName</i>-The name of this key attribute. </li> <li>
+<p><i>KeyType</i>-Determines whether the key attribute is
+<code>HASH</code> or <code>RANGE</code>. </li> </ul> <p>For more
+information, see <a
+e/WorkingWithDDTables.html#WorkingWithDDTables.primary.key">Specifying
+the Primary Key</a> of the <i>Amazon DynamoDB Developer Guide</i>.
+<p>
+<b>Constraints:</b><br/>
+<b>Length: </b>1 &ndash; 2<br/></p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DynamoDBCreateTableRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/localSecondaryIndexes" title="localSecondaryIndexes"></a>
+	<h3 class="subsubtitle method-title">localSecondaryIndexes</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>One or more secondary indexes (the maximum is five) to be created on
+the table. Each index is scoped to a given hash key value. There is a
+10 gigabyte size limit per hash key; otherwise, the size of a local
+secondary index is unconstrained. <p>Each secondary index in the array
+includes the following: <ul> <li> <p><i>IndexName</i>-The name of the
+secondary index. Must be unique only for this table. <p> </li> <li></p>
+
+<p><p><i>KeySchema</i>-Specifies the key schema for the index. The key
+schema must begin with the same hash key attribute as the table. </li>
+<li> <p><i>Projection</i>-Specifies attributes that are copied
+(projected) from the table into the index. These are in addition to
+the primary key attributes and index key attributes, which are
+automatically projected. Each attribute specification is composed of:
+<ul> <li> <p><i>ProjectionType</i>-One of the following: <ul> <li>
+<p><code>KEYS_ONLY</code>-Only the index and primary keys are
+projected into the index. </li> <li> <p><code>INCLUDE</code>-Only the
+specified table attributes are projected into the index. The list of
+projected attributes are in <i>NonKeyAttributes</i>. </li> <li>
+<p><code>ALL</code>-All of the table attributes are projected into the
+index. </li> </ul> </li> <li> <p><i>NonKeyAttributes</i>-A list of one
+or more non-key attribute names that are projected into the index. The
+total count of attributes specified in <i>NonKeyAttributes</i>, summed
+across all of the local secondary indexes, must not exceed 20. If you
+project the same attribute into two different indexes, this counts as
+two distinct attributes when determining the total. </li> </ul> </li>
+</ul></p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) NSMutableArray *localSecondaryIndexes</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>One or more secondary indexes (the maximum is five) to be created on
+the table. Each index is scoped to a given hash key value. There is a
+10 gigabyte size limit per hash key; otherwise, the size of a local
+secondary index is unconstrained. <p>Each secondary index in the array
+includes the following: <ul> <li> <p><i>IndexName</i>-The name of the
+secondary index. Must be unique only for this table. <p> </li> <li></p>
+
+<p><p><i>KeySchema</i>-Specifies the key schema for the index. The key
+schema must begin with the same hash key attribute as the table. </li>
+<li> <p><i>Projection</i>-Specifies attributes that are copied
+(projected) from the table into the index. These are in addition to
+the primary key attributes and index key attributes, which are
+automatically projected. Each attribute specification is composed of:
+<ul> <li> <p><i>ProjectionType</i>-One of the following: <ul> <li>
+<p><code>KEYS_ONLY</code>-Only the index and primary keys are
+projected into the index. </li> <li> <p><code>INCLUDE</code>-Only the
+specified table attributes are projected into the index. The list of
+projected attributes are in <i>NonKeyAttributes</i>. </li> <li>
+<p><code>ALL</code>-All of the table attributes are projected into the
+index. </li> </ul> </li> <li> <p><i>NonKeyAttributes</i>-A list of one
+or more non-key attribute names that are projected into the index. The
+total count of attributes specified in <i>NonKeyAttributes</i>, summed
+across all of the local secondary indexes, must not exceed 20. If you
+project the same attribute into two different indexes, this counts as
+two distinct attributes when determining the total. </li> </ul> </li>
+</ul></p>
 	</div>
 	
 	
@@ -304,15 +548,13 @@ contains two attribute values: a <code>HashKeyElement</code> and a
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Provisioned throughput reserves the required read and write resources
-for your table in terms of <code>ReadCapacityUnits</code> and
-<code>WriteCapacityUnits</code>. Values for provisioned throughput
-depend upon your expected read/write rates, item size, and
-consistency. Provide the expected number of read and write operations,
-assuming an item size of 1k and strictly consistent reads. For 2k item
-size, double the value. For 3k, triple the value, etc.
-Eventually-consistent reads consume half the resources of strictly
-consistent reads.</p>
+		<p>The provisioned throughput settings for the specified table. The
+settings can be modified using the <i>UpdateTable</i> operation.</p>
+
+<p><p>For current minimum and maximum provisioned throughput values, see
+<a
+mazon.com/amazondynamodb/latest/developerguide/Limits.html">Limits</a>
+of the <i>Amazon DynamoDB Developer Guide</i>.</p>
 	</div>		
 	
     
@@ -329,15 +571,13 @@ consistent reads.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Provisioned throughput reserves the required read and write resources
-for your table in terms of <code>ReadCapacityUnits</code> and
-<code>WriteCapacityUnits</code>. Values for provisioned throughput
-depend upon your expected read/write rates, item size, and
-consistency. Provide the expected number of read and write operations,
-assuming an item size of 1k and strictly consistent reads. For 2k item
-size, double the value. For 3k, triple the value, etc.
-Eventually-consistent reads consume half the resources of strictly
-consistent reads.</p>
+		<p>The provisioned throughput settings for the specified table. The
+settings can be modified using the <i>UpdateTable</i> operation.</p>
+
+<p><p>For current minimum and maximum provisioned throughput values, see
+<a
+mazon.com/amazondynamodb/latest/developerguide/Limits.html">Limits</a>
+of the <i>Amazon DynamoDB Developer Guide</i>.</p>
 	</div>
 	
 	
@@ -361,9 +601,7 @@ consistent reads.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The name of the table you want to create. Allowed characters are
-<code>a-z</code>, <code>A-Z</code>, <code>0-9</code>, <code>_</code>
-(underscore), <code>&ndash;</code> (hyphen) and <code>.</code> (period).</p>
+		<p>The name of the table to create.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -385,9 +623,7 @@ consistent reads.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The name of the table you want to create. Allowed characters are
-<code>a-z</code>, <code>A-Z</code>, <code>0-9</code>, <code>_</code>
-(underscore), <code>&ndash;</code> (hyphen) and <code>.</code> (period).</p>
+		<p>The name of the table to create.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -418,6 +654,135 @@ consistent reads.</p>
 					<div class="section section-methods">
 						<a title="Instance Methods" name="instance_methods"></a>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/addAttributeDefinition:" title="addAttributeDefinition:"></a>
+	<h3 class="subsubtitle method-title">addAttributeDefinition:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Adds a single object to attributeDefinitions.
+This function will alloc and init attributeDefinitions if not already done.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addAttributeDefinition:(DynamoDBAttributeDefinition *)<em>attributeDefinitionObject</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Adds a single object to attributeDefinitions.
+This function will alloc and init attributeDefinitions if not already done.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DynamoDBCreateTableRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addKeySchema:" title="addKeySchema:"></a>
+	<h3 class="subsubtitle method-title">addKeySchema:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Adds a single object to keySchema.
+This function will alloc and init keySchema if not already done.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addKeySchema:(DynamoDBKeySchemaElement *)<em>keySchemaObject</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Adds a single object to keySchema.
+This function will alloc and init keySchema if not already done.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DynamoDBCreateTableRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addLocalSecondaryIndexe:" title="addLocalSecondaryIndexe:"></a>
+	<h3 class="subsubtitle method-title">addLocalSecondaryIndexe:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Adds a single object to localSecondaryIndexes.
+This function will alloc and init localSecondaryIndexes if not already done.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addLocalSecondaryIndexe:(DynamoDBLocalSecondaryIndex *)<em>localSecondaryIndexeObject</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Adds a single object to localSecondaryIndexes.
+This function will alloc and init localSecondaryIndexes if not already done.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DynamoDBCreateTableRequest.h</code><br />
+	</div>				
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/description" title="description"></a>
@@ -523,7 +888,7 @@ Callers should use properties to initialize any additional object members.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (id)initWithTableName:(NSString *)<em>theTableName</em> andKeySchema:(DynamoDBKeySchema *)<em>theKeySchema</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (id)initWithTableName:(NSString *)<em>theTableName</em> andKeySchema:(NSMutableArray *)<em>theKeySchema</em></code></div>
 
     
 	
@@ -532,20 +897,25 @@ Callers should use properties to initialize any additional object members.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>theTableName</em></dt>
-			<dd><p>The name of the table you want to create. Allowed
-characters are <code>a-z</code>, <code>A-Z</code>, <code>0-9</code>,
-<code>_</code> (underscore), <code>&ndash;</code> (hyphen) and
-<code>.</code> (period).</p></dd>
+			<dd><p>The name of the table to create.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>theKeySchema</em></dt>
-			<dd><p>The KeySchema identifies the primary key as a one
-attribute primary key (hash) or a composite two attribute
-(hash-and-range) primary key. Single attribute primary keys have one
-index value: a <code>HashKeyElement</code>. A composite hash-and-range
-primary key contains two attribute values: a
-<code>HashKeyElement</code> and a <code>RangeKeyElement</code>.</p></dd>
+			<dd><p>Specifies the attributes that make up the primary
+key for the table. The attributes in <i>KeySchema</i> must also be
+defined in the <i>AttributeDefinitions</i> array. For more
+information, see <a
+s.amazon.com/amazondynamodb/latest/developerguide/DataModel.html">Data
+Model</a> of the <i>Amazon DynamoDB Developer Guide</i>. <p>Each
+<i>KeySchemaElement</i> in the array is composed of: <ul> <li></p>
+
+<p><p><i>AttributeName</i>-The name of this key attribute. </li> <li>
+<p><i>KeyType</i>-Determines whether the key attribute is
+<code>HASH</code> or <code>RANGE</code>. </li> </ul> <p>For more
+information, see <a
+e/WorkingWithDDTables.html#WorkingWithDDTables.primary.key">Specifying
+the Primary Key</a> of the <i>Amazon DynamoDB Developer Guide</i>.</p></dd>
 		</dl>
 		
 	</div>
@@ -589,7 +959,7 @@ Callers should use properties to initialize any additional object members.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (id)initWithTableName:(NSString *)<em>theTableName</em> andKeySchema:(DynamoDBKeySchema *)<em>theKeySchema</em> andProvisionedThroughput:(DynamoDBProvisionedThroughput *)<em>theProvisionedThroughput</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (id)initWithTableName:(NSString *)<em>theTableName</em> andKeySchema:(NSMutableArray *)<em>theKeySchema</em> andProvisionedThroughput:(DynamoDBProvisionedThroughput *)<em>theProvisionedThroughput</em></code></div>
 
     
 	
@@ -598,33 +968,35 @@ Callers should use properties to initialize any additional object members.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>theTableName</em></dt>
-			<dd><p>The name of the table you want to create. Allowed
-characters are <code>a-z</code>, <code>A-Z</code>, <code>0-9</code>,
-<code>_</code> (underscore), <code>&ndash;</code> (hyphen) and
-<code>.</code> (period).</p></dd>
+			<dd><p>The name of the table to create.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>theKeySchema</em></dt>
-			<dd><p>The KeySchema identifies the primary key as a one
-attribute primary key (hash) or a composite two attribute
-(hash-and-range) primary key. Single attribute primary keys have one
-index value: a <code>HashKeyElement</code>. A composite hash-and-range
-primary key contains two attribute values: a
-<code>HashKeyElement</code> and a <code>RangeKeyElement</code>.</p></dd>
+			<dd><p>Specifies the attributes that make up the primary
+key for the table. The attributes in <i>KeySchema</i> must also be
+defined in the <i>AttributeDefinitions</i> array. For more
+information, see <a
+s.amazon.com/amazondynamodb/latest/developerguide/DataModel.html">Data
+Model</a> of the <i>Amazon DynamoDB Developer Guide</i>. <p>Each
+<i>KeySchemaElement</i> in the array is composed of: <ul> <li></p>
+
+<p><p><i>AttributeName</i>-The name of this key attribute. </li> <li>
+<p><i>KeyType</i>-Determines whether the key attribute is
+<code>HASH</code> or <code>RANGE</code>. </li> </ul> <p>For more
+information, see <a
+e/WorkingWithDDTables.html#WorkingWithDDTables.primary.key">Specifying
+the Primary Key</a> of the <i>Amazon DynamoDB Developer Guide</i>.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>theProvisionedThroughput</em></dt>
-			<dd><p>Provisioned throughput reserves the
-required read and write resources for your table in terms of
-<code>ReadCapacityUnits</code> and <code>WriteCapacityUnits</code>.
-Values for provisioned throughput depend upon your expected read/write
-rates, item size, and consistency. Provide the expected number of read
-and write operations, assuming an item size of 1k and strictly
-consistent reads. For 2k item size, double the value. For 3k, triple
-the value, etc. Eventually-consistent reads consume half the resources
-of strictly consistent reads.</p></dd>
+			<dd><p>The provisioned throughput settings
+for the specified table. The settings can be modified using the
+<i>UpdateTable</i> operation. <p>For current minimum and maximum
+provisioned throughput values, see <a
+mazon.com/amazondynamodb/latest/developerguide/Limits.html">Limits</a>
+of the <i>Amazon DynamoDB Developer Guide</i>.</p></dd>
 		</dl>
 		
 	</div>
@@ -668,7 +1040,7 @@ Callers should use properties to initialize any additional object members.</p>
 				<div id="footer"><script src="/urchin.js" type="text/javascript"></script><script type="text/javascript">urchinTracker();</script>
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Amazon Web Services, Inc.. All rights reserved. (Last updated: 2012-11-13)</span><br />
+						<p><span class="copyright">&copy; 2013 Amazon Web Services, Inc.. All rights reserved. (Last updated: 2013-08-12)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

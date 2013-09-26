@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -18,42 +18,33 @@
 
 @implementation S3PutObjectRequest
 
-@synthesize cacheControl;
-@synthesize contentDisposition;
-@synthesize contentEncoding;
-@synthesize contentMD5;
-@synthesize filename;
-@synthesize data;
-@synthesize stream;
-@synthesize expect;
-@synthesize generateMD5;
-@synthesize expires;
-@synthesize redirectLocation;
-
 -(id)init
 {
     if (self = [super init])
     {
-        cacheControl = nil;
-        contentDisposition = nil;
-        contentEncoding = nil;
-        contentMD5 = nil;
-        expect = nil;
-        data = nil;
-        stream = nil;
-        filename = nil;
-        redirectLocation = nil;
-        
-        expires = 0;
+        _expires = 0;
+        _generateMD5 = YES;
+
         expiresSet  = NO;
-        generateMD5 = NO;
     }
+    
+    return self;
+}
+
+-(id)initWithKey:(NSString *)aKey inBucket:(NSString *)aBucket
+{
+    if(self = [self init])
+    {
+        self.key    = aKey;
+        self.bucket = aBucket;
+    }
+
     return self;
 }
 
 -(void)setExpires:(NSInteger)exp
 {
-    expires    = exp;
+    _expires    = exp;
     expiresSet = YES;
 }
 
@@ -66,8 +57,8 @@
             self.contentMD5 = [AmazonMD5Util base64md5FromData:self.data];
         }
         else {
-            if (self.filename != nil) {
-                NSInputStream *inputStream = [[NSInputStream alloc] initWithFileAtPath:filename];
+            if (nil != self.filename) {
+                NSInputStream *inputStream = [[NSInputStream alloc] initWithFileAtPath:self.filename];
                 [inputStream open];
 
                 self.contentMD5 = [AmazonMD5Util base64md5FromStream:inputStream];
@@ -114,9 +105,9 @@
         [self.urlRequest setHTTPBodyStream:self.stream];
     }
     else {
-        [self.urlRequest setHTTPBody:data];
+        [self.urlRequest setHTTPBody:self.data];
         if (self.contentLength < 1) {
-            [self.urlRequest setValue:[NSString stringWithFormat:@"%d", [data length]]
+            [self.urlRequest setValue:[NSString stringWithFormat:@"%d", [self.data length]]
                    forHTTPHeaderField:kHttpHdrContentLength];
         }
     }
@@ -124,47 +115,38 @@
     return urlRequest;
 }
 
--(id)initWithKey:(NSString *)aKey inBucket:(NSString *)aBucket
-{
-    if(self = [self init])
-    {
-        self.key    = aKey;
-        self.bucket = aBucket;
-    }
-
-    return self;
-}
-
 - (AmazonClientException *)validate
 {
     AmazonClientException *clientException = [super validate];
-    
+
     if(clientException == nil)
     {
         if(self.filename != nil)
         {
             if (![[NSFileManager defaultManager] isReadableFileAtPath:self.filename]) {
-                
+
                 clientException = [AmazonClientException exceptionWithMessage:@"The specified file cannot be read."];
             }
             else {
-                self.contentLength = [[[[NSFileManager defaultManager] attributesOfItemAtPath:self.filename 
-                                                                                                    error:nil] 
-                                                   valueForKey:NSFileSize] intValue];
+                self.contentLength = [[[[NSFileManager defaultManager] attributesOfItemAtPath:self.filename
+                                                                                        error:nil]
+                                       valueForKey:NSFileSize] longLongValue];
                 self.contentType   = [AmazonSDKUtil MIMETypeForExtension:[self.filename pathExtension]];
-                
+
                 @try {
-                    self.stream = [[NSInputStream alloc] initWithFileAtPath:self.filename];
+                    NSInputStream *inputStream = [[NSInputStream alloc] initWithFileAtPath:self.filename];
+                    self.stream = inputStream;
+                    [inputStream release];
                 }
                 @catch (NSException *e) {
-                    
+
                     clientException = [AmazonClientException exceptionWithMessage:
                                        [NSString stringWithFormat:@"Could not open file for streaming: %@", e.reason]];
                 }
             }
         }
     }
-    
+
     return clientException;
 }
 
@@ -177,15 +159,16 @@
 
 -(void)dealloc
 {
-    [expect release];
-    [contentMD5 release];
-    [cacheControl release];
-    [contentEncoding release];
-    [contentDisposition release];
-    [filename release];
-    [stream release];
-    [data release];
-
+    [_cacheControl release];
+    [_contentDisposition release];
+    [_contentEncoding release];
+    [_contentMD5 release];
+    [_expect release];
+    [_data release];
+    [_stream release];
+    [_filename release];
+    [_redirectLocation release];
+    
     [super dealloc];
 }
 

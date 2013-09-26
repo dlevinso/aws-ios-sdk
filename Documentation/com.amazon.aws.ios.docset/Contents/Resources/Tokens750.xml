@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2RequestSpotInstancesResponseUnmarshaller.html">
+	<File path="Classes/SNSAddPermissionResponse.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2RequestSpotInstancesResponseUnmarshaller</TokenIdentifier>
-			<Abstract type="html">Request Spot Instances Response Unmarshaller</Abstract>
-			<DeclaredIn>EC2RequestSpotInstancesResponseUnmarshaller.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/SNSAddPermissionResponse</TokenIdentifier>
+			<Abstract type="html">Add Permission</Abstract>
+			<DeclaredIn>SNSAddPermissionResponse.h</DeclaredIn>
 			
 			<NodeRef refid="750"/>
 		</Token>

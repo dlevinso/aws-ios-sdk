@@ -12,7 +12,7 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">AWS SDK for iOS v1.4.4 </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">AWS SDK for iOS v1.6.1 </a></h1>
 				<a id="developerHome" href="../index.html">Amazon Web Services, Inc.</a>
 			</div>
 			
@@ -41,6 +41,10 @@
 	<option value="properties">Properties</option>
 	
 	<option value="//api/name/requestItems">&nbsp;&nbsp;&nbsp;&nbsp;requestItems</option>
+	
+	<option value="//api/name/returnConsumedCapacity">&nbsp;&nbsp;&nbsp;&nbsp;returnConsumedCapacity</option>
+	
+	<option value="//api/name/returnItemCollectionMetrics">&nbsp;&nbsp;&nbsp;&nbsp;returnItemCollectionMetrics</option>
 	
 	
 	
@@ -80,6 +84,10 @@
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestItems">requestItems</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/returnConsumedCapacity">returnConsumedCapacity</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/returnItemCollectionMetrics">returnItemCollectionMetrics</a></span></li>
 	
 </ul></li>
 
@@ -159,12 +167,55 @@ property methods to initialize this object after creating it.</p></span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/requestItems">&nbsp;&nbsp;requestItems</a></code>
-		<span class="tooltip"><p>A map of table name to list-of-write-requests. Used as input to the
-<code>BatchWriteItem</code> API call</p>
+		<span class="tooltip"><p>A map of one or more table names and, for each table, a list of
+operations to perform (<i>DeleteRequest</i> or <i>PutRequest</i>).</p>
+
+<ul> <li> <p><i>DeleteRequest</i>-Perform a <i>DeleteItem</i>
+operation on the specified item. The item to be deleted is identified
+by: <ul> <li> <p><i>Key</i>-A map of primary key attribute values that
+uniquely identify the item. Each entry in this map consists of an
+attribute name and an attribute value. </li> </ul> </li> <li>
+<p><i>PutRequest</i>-Perform a <i>PutItem</i> operation on the
+specified item. The item to be updated is identified by: <ul>
+<li><p><i>Item</i>-A map of attributes and their values. Each entry in
+this map consists of an attribute name and an attribute value. <p>If
+you specify any attributes that are part of an index key, then the
+data types for those attributes must match those of the schema in the
+table's attribute definition.</li> </ul> </li> </ul>
+
 
 <p><p>
 <b>Constraints:</b><br/>
 <b>Length: </b>1 &ndash; 25<br/></p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/returnConsumedCapacity">&nbsp;&nbsp;returnConsumedCapacity</a></code>
+		<span class="tooltip"><p>Determines whether to include consumed capacity information in the
+output. If this is set to <code>TOTAL</code>, then this information is
+shown in the output; otherwise, the consumed capacity information is
+not shown.</p>
+
+<p><p>
+<b>Constraints:</b><br/>
+<b>Allowed Values: </b>TOTAL, NONE</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/returnItemCollectionMetrics">&nbsp;&nbsp;returnItemCollectionMetrics</a></code>
+		<span class="tooltip"><p>Indicates whether to return statistics about item collections, if any,
+that were modified during the operation. The default for
+<i>ReturnItemCollectionMetrics</i> is <code>NONE</code>, meaning that
+no statistics will be returned. To obtain the statistics, set
+<i>ReturnItemCollectionMetrics</i> to <code>SIZE</code>.</p>
+
+<p><p>
+<b>Constraints:</b><br/>
+<b>Allowed Values: </b>SIZE, NONE</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -204,8 +255,22 @@ debugging.</p></span>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>A map of table name to list-of-write-requests. Used as input to the
-<code>BatchWriteItem</code> API call</p>
+		<p>A map of one or more table names and, for each table, a list of
+operations to perform (<i>DeleteRequest</i> or <i>PutRequest</i>).</p>
+
+<ul> <li> <p><i>DeleteRequest</i>-Perform a <i>DeleteItem</i>
+operation on the specified item. The item to be deleted is identified
+by: <ul> <li> <p><i>Key</i>-A map of primary key attribute values that
+uniquely identify the item. Each entry in this map consists of an
+attribute name and an attribute value. </li> </ul> </li> <li>
+<p><i>PutRequest</i>-Perform a <i>PutItem</i> operation on the
+specified item. The item to be updated is identified by: <ul>
+<li><p><i>Item</i>-A map of attributes and their values. Each entry in
+this map consists of an attribute name and an attribute value. <p>If
+you specify any attributes that are part of an index key, then the
+data types for those attributes must match those of the schema in the
+table's attribute definition.</li> </ul> </li> </ul>
+
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -226,12 +291,138 @@ debugging.</p></span>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>A map of table name to list-of-write-requests. Used as input to the
-<code>BatchWriteItem</code> API call</p>
+		<p>A map of one or more table names and, for each table, a list of
+operations to perform (<i>DeleteRequest</i> or <i>PutRequest</i>).</p>
+
+<ul> <li> <p><i>DeleteRequest</i>-Perform a <i>DeleteItem</i>
+operation on the specified item. The item to be deleted is identified
+by: <ul> <li> <p><i>Key</i>-A map of primary key attribute values that
+uniquely identify the item. Each entry in this map consists of an
+attribute name and an attribute value. </li> </ul> </li> <li>
+<p><i>PutRequest</i>-Perform a <i>PutItem</i> operation on the
+specified item. The item to be updated is identified by: <ul>
+<li><p><i>Item</i>-A map of attributes and their values. Each entry in
+this map consists of an attribute name and an attribute value. <p>If
+you specify any attributes that are part of an index key, then the
+data types for those attributes must match those of the schema in the
+table's attribute definition.</li> </ul> </li> </ul>
+
 
 <p><p>
 <b>Constraints:</b><br/>
 <b>Length: </b>1 &ndash; 25<br/></p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DynamoDBBatchWriteItemRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/returnConsumedCapacity" title="returnConsumedCapacity"></a>
+	<h3 class="subsubtitle method-title">returnConsumedCapacity</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Determines whether to include consumed capacity information in the
+output. If this is set to <code>TOTAL</code>, then this information is
+shown in the output; otherwise, the consumed capacity information is
+not shown.</p>
+
+<p><p>
+<b>Constraints:</b><br/>
+<b>Allowed Values: </b>TOTAL, NONE</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) NSString *returnConsumedCapacity</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Determines whether to include consumed capacity information in the
+output. If this is set to <code>TOTAL</code>, then this information is
+shown in the output; otherwise, the consumed capacity information is
+not shown.</p>
+
+<p><p>
+<b>Constraints:</b><br/>
+<b>Allowed Values: </b>TOTAL, NONE</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">DynamoDBBatchWriteItemRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/returnItemCollectionMetrics" title="returnItemCollectionMetrics"></a>
+	<h3 class="subsubtitle method-title">returnItemCollectionMetrics</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Indicates whether to return statistics about item collections, if any,
+that were modified during the operation. The default for
+<i>ReturnItemCollectionMetrics</i> is <code>NONE</code>, meaning that
+no statistics will be returned. To obtain the statistics, set
+<i>ReturnItemCollectionMetrics</i> to <code>SIZE</code>.</p>
+
+<p><p>
+<b>Constraints:</b><br/>
+<b>Allowed Values: </b>SIZE, NONE</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) NSString *returnItemCollectionMetrics</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Indicates whether to return statistics about item collections, if any,
+that were modified during the operation. The default for
+<i>ReturnItemCollectionMetrics</i> is <code>NONE</code>, meaning that
+no statistics will be returned. To obtain the statistics, set
+<i>ReturnItemCollectionMetrics</i> to <code>SIZE</code>.</p>
+
+<p><p>
+<b>Constraints:</b><br/>
+<b>Allowed Values: </b>SIZE, NONE</p>
 	</div>
 	
 	
@@ -405,7 +596,7 @@ This function will alloc and init requestItems if not already done.</p>
 				<div id="footer"><script src="/urchin.js" type="text/javascript"></script><script type="text/javascript">urchinTracker();</script>
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Amazon Web Services, Inc.. All rights reserved. (Last updated: 2012-11-13)</span><br />
+						<p><span class="copyright">&copy; 2013 Amazon Web Services, Inc.. All rights reserved. (Last updated: 2013-08-12)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

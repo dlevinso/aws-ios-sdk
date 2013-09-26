@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -70,7 +70,8 @@
     NSString *filename   = [[NSBundle mainBundle] pathForResource:@"temp" ofType:@"txt"];
     
     // Create the Bucket to put the Object.
-    S3CreateBucketResponse *createBucketResponse = [[AmazonClientManager s3] createBucketWithName:bucketName];
+    S3CreateBucketRequest  *createBucketRequest = [[[S3CreateBucketRequest alloc] initWithName:bucketName andRegion:[S3Region USWest2]]autorelease];
+    S3CreateBucketResponse *createBucketResponse = [[AmazonClientManager s3] createBucket:createBucketRequest];
     if(createBucketResponse.error != nil)
     {
         NSLog(@"Error: %@", createBucketResponse.error);

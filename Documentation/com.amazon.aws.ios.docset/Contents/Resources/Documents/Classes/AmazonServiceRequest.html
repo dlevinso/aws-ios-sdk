@@ -12,7 +12,7 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">AWS SDK for iOS v1.4.4 </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">AWS SDK for iOS v1.6.1 </a></h1>
 				<a id="developerHome" href="../index.html">Amazon Web Services, Inc.</a>
 			</div>
 			
@@ -40,6 +40,8 @@
 	
 	<option value="//api/name/credentials">&nbsp;&nbsp;&nbsp;&nbsp;credentials</option>
 	
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
+	
 	<option value="//api/name/httpMethod">&nbsp;&nbsp;&nbsp;&nbsp;httpMethod</option>
 	
 	<option value="//api/name/requestTag">&nbsp;&nbsp;&nbsp;&nbsp;requestTag</option>
@@ -59,7 +61,7 @@
 	
 	<option value="//api/name/cancel">&nbsp;&nbsp;&nbsp;&nbsp;- cancel</option>
 	
-	<option value="//api/name/setDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- setDelegate:</option>
+	<option value="//api/name/constructResponse">&nbsp;&nbsp;&nbsp;&nbsp;- constructResponse</option>
 	
 	<option value="//api/name/validate">&nbsp;&nbsp;&nbsp;&nbsp;- validate</option>
 	
@@ -87,6 +89,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/credentials">credentials</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/httpMethod">httpMethod</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestTag">requestTag</a></span></li>
@@ -107,7 +111,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cancel">cancel</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDelegate:">setDelegate:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/constructResponse">constructResponse</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/validate">validate</a></span></li>
 	
@@ -195,17 +199,17 @@ This property is read-only.</p></span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/requestTag">&nbsp;&nbsp;requestTag</a></code>
-		<span class="tooltip"><p>Open property that enables user to distinquish various requests.</p></span>
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+		<span class="tooltip"><p>The delegate object for the request.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/setDelegate:">&ndash;&nbsp;setDelegate:</a></code>
-		<span class="tooltip"><p>Sets the delegate object for the request.</p></span>
+		<code><a href="#//api/name/requestTag">&nbsp;&nbsp;requestTag</a></code>
+		<span class="tooltip"><p>Open property that enables user to distinquish various requests.</p></span>
 	</span>
-	
+	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
@@ -221,6 +225,13 @@ All methods inheriting this method must call [super validate] first to check if 
 		<code><a href="#//api/name/cancel">&ndash;&nbsp;cancel</a></code>
 		<span class="tooltip"><p>Cancel asynchronous operations. The thread invoked this request needs to call this method to cancel the operation. Once cancelled, it cannot be resumed. Create another request object and invoke it again.
 It has no effect on synchronous operations.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/constructResponse">&ndash;&nbsp;constructResponse</a></code>
+		<span class="tooltip"><p>Internal helper method to create the appropriate response object for the request.</p></span>
 	</span>
 	
 	
@@ -262,6 +273,54 @@ It has no effect on synchronous operations.</p></span>
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Request specific credentials.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">AmazonServiceRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The delegate object for the request.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id&lt;&gt; delegate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The delegate object for the request.</p>
+
+<p>In the absence of a delegate, the client method that was called with the request will return the
+response, occasionally processing inputs on the run loop which called the client method.</p>
+
+<p>If a delegate is assigned, the request proceeds asynchronously and will send the delegate messages
+as the request progresses. The response will be send to the delegate in the request:didCompleteWithResponse
+delegate method.</p>
 	</div>
 	
 	
@@ -541,30 +600,20 @@ It has no effect on synchronous operations.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/setDelegate:" title="setDelegate:"></a>
-	<h3 class="subsubtitle method-title">setDelegate:</h3>
+	<a name="//api/name/constructResponse" title="constructResponse"></a>
+	<h3 class="subsubtitle method-title">constructResponse</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Sets the delegate object for the request.</p>
+		<p>Internal helper method to create the appropriate response object for the request.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)setDelegate:(id&lt;AmazonServiceRequestDelegate&gt;)<em>delegate</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (AmazonServiceResponse *)constructResponse</code></div>
 
     
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>delegate</em></dt>
-			<dd><p>An object which implements one or more of the methods in the AmazonServiceRequestDelegate protocol.</p></dd>
-		</dl>
-		
-	</div>
 	
 	
 	
@@ -574,14 +623,7 @@ It has no effect on synchronous operations.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Sets the delegate object for the request.</p>
-
-<p>In the absence of a delegate, the client method that was called with the request will return the
-response, occasionally processing inputs on the run loop which called the client method.</p>
-
-<p>If a delegate is assigned, the request proceeds asynchronously and will send the delegate messages
-as the request progresses. The response will be send to the delegate in the request:didCompleteWithResponse
-delegate method.</p>
+		<p>Internal helper method to create the appropriate response object for the request.</p>
 	</div>
 	
 	
@@ -656,7 +698,7 @@ All methods inheriting this method must call [super validate] first to check if 
 				<div id="footer"><script src="/urchin.js" type="text/javascript"></script><script type="text/javascript">urchinTracker();</script>
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Amazon Web Services, Inc.. All rights reserved. (Last updated: 2012-11-13)</span><br />
+						<p><span class="copyright">&copy; 2013 Amazon Web Services, Inc.. All rights reserved. (Last updated: 2013-08-12)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

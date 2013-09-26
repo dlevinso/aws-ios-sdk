@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -13,10 +13,10 @@
  * permissions and limitations under the License.
  */
 
-
 #import "MessageBoard.h"
 #import "Constants.h"
-#import <AWSiOSSDK/SBJsonWriter.h>
+
+#import <AWSRuntime/AWSRuntime.h>
 
 
 // This singleton class provides all the functionality to manipulate the Amazon
@@ -45,7 +45,10 @@ static MessageBoard *_instance = nil;
     self = [super init];
     if (self != nil) {
         snsClient = [[AmazonSNSClient alloc] initWithAccessKey:ACCESS_KEY_ID withSecretKey:SECRET_KEY];
+        snsClient.endpoint = [AmazonEndpoints snsEndpoint:US_WEST_2];
+
         sqsClient = [[AmazonSQSClient alloc] initWithAccessKey:ACCESS_KEY_ID withSecretKey:SECRET_KEY];
+        sqsClient.endpoint = [AmazonEndpoints sqsEndpoint:US_WEST_2];
         
         // Find the Topic for this App or create one.
         topicARN = [[self findTopicArn] retain];
@@ -203,7 +206,7 @@ static MessageBoard *_instance = nil;
 {
     SQSReceiveMessageRequest *rmr = [[[SQSReceiveMessageRequest alloc] initWithQueueUrl:queueUrl] autorelease];
     rmr.maxNumberOfMessages = [NSNumber numberWithInt:10];
-    rmr.visibilityTimeout   = [NSNumber numberWithInt:2];
+    rmr.visibilityTimeout   = [NSNumber numberWithInt:50];
     
     SQSReceiveMessageResponse *response    = nil;
     NSMutableArray *allMessages = [NSMutableArray array];
@@ -216,7 +219,7 @@ static MessageBoard *_instance = nil;
         }
         
         [allMessages addObjectsFromArray:response.messages];
-        [NSThread sleepForTimeInterval:1.0];
+        [NSThread sleepForTimeInterval:0.2];
     } while ( [response.messages count] != 0);
     
     return allMessages;
@@ -284,7 +287,7 @@ static MessageBoard *_instance = nil;
                                                           nil], 
                                 nil], @"Statement",
                                nil];
-    SBJsonWriter *writer = [[SBJsonWriter new] autorelease];
+    AWS_SBJsonWriter *writer = [[AWS_SBJsonWriter new] autorelease];
     
     return [writer stringWithObject:policyDic];
 }

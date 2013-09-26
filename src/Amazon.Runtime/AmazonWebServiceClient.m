@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -20,13 +20,12 @@
 
 -(id)initWithAccessKey:(NSString *)theAccessKey withSecretKey:(NSString *)theSecretKey
 {
-    if (self = [self init]) {
-        credentials = [[AmazonCredentials alloc] initWithAccessKey:theAccessKey withSecretKey:theSecretKey];
-        maxRetries  = 5;
-        timeout     = 240;
-        delay       = 0.2;
-        userAgent   = [[AmazonSDKUtil userAgentString] retain];
+    AmazonCredentials *credentials = [[AmazonCredentials alloc] initWithAccessKey:theAccessKey withSecretKey:theSecretKey];
+    if (self = [self initWithCredentials:credentials]) {
     }
+    
+    [credentials release];
+    
     return self;
 }
 

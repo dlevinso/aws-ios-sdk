@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -20,13 +20,15 @@
 
 @synthesize responses;
 @synthesize unprocessedKeys;
+@synthesize consumedCapacity;
 
 
 -(id)init
 {
     if (self = [super init]) {
-        responses       = [[NSMutableDictionary alloc] initWithCapacity:1];
-        unprocessedKeys = [[NSMutableDictionary alloc] initWithCapacity:1];
+        responses        = [[NSMutableDictionary alloc] initWithCapacity:1];
+        unprocessedKeys  = [[NSMutableDictionary alloc] initWithCapacity:1];
+        consumedCapacity = [[NSMutableArray alloc] initWithCapacity:1];
     }
 
     return self;
@@ -37,6 +39,11 @@
 {
     AmazonServiceException *newException = nil;
 
+    if ([[theException errorCode] isEqualToString:@"ResourceNotFoundException"]) {
+        [newException release];
+        newException = [[DynamoDBResourceNotFoundException alloc] initWithMessage:@""];
+    }
+
     if ([[theException errorCode] isEqualToString:@"ProvisionedThroughputExceededException"]) {
         [newException release];
         newException = [[DynamoDBProvisionedThroughputExceededException alloc] initWithMessage:@""];
@@ -45,11 +52,6 @@
     if ([[theException errorCode] isEqualToString:@"InternalServerError"]) {
         [newException release];
         newException = [[DynamoDBInternalServerErrorException alloc] initWithMessage:@""];
-    }
-
-    if ([[theException errorCode] isEqualToString:@"ResourceNotFoundException"]) {
-        [newException release];
-        newException = [[DynamoDBResourceNotFoundException alloc] initWithMessage:@""];
     }
 
     if (newException != nil) {
@@ -64,14 +66,20 @@
 }
 
 
--(DynamoDBBatchResponse *)responsesValueForKey:(NSString *)theKey
+-(NSArray *)responsesValueForKey:(NSString *)theKey
 {
-    return (DynamoDBBatchResponse *)[responses valueForKey:theKey];
+    return (NSArray *)[responses valueForKey:theKey];
 }
 
 -(DynamoDBKeysAndAttributes *)unprocessedKeysValueForKey:(NSString *)theKey
 {
     return (DynamoDBKeysAndAttributes *)[unprocessedKeys valueForKey:theKey];
+}
+
+
+-(DynamoDBConsumedCapacity *)consumedCapacityObjectAtIndex:(int)index
+{
+    return (DynamoDBConsumedCapacity *)[consumedCapacity objectAtIndex:index];
 }
 
 
@@ -82,6 +90,7 @@
     [buffer appendString:@"{"];
     [buffer appendString:[[[NSString alloc] initWithFormat:@"Responses: %@,", responses] autorelease]];
     [buffer appendString:[[[NSString alloc] initWithFormat:@"UnprocessedKeys: %@,", unprocessedKeys] autorelease]];
+    [buffer appendString:[[[NSString alloc] initWithFormat:@"ConsumedCapacity: %@,", consumedCapacity] autorelease]];
     [buffer appendString:[super description]];
     [buffer appendString:@"}"];
 
@@ -94,6 +103,7 @@
 {
     [responses release];
     [unprocessedKeys release];
+    [consumedCapacity release];
 
     [super dealloc];
 }

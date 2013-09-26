@@ -101,7 +101,7 @@ the client. Service exceptions are indicated by throwing AWSServiceException.</A
 			<Abstract type="html">Return an exception with the given message</Abstract>
 			<DeclaredIn>AmazonClientException.h</DeclaredIn>			
 			
-			<Declaration>+ (AmazonClientException *)exceptionWithMessage:(NSString *)theMessage</Declaration>
+			<Declaration>+ (id)exceptionWithMessage:(NSString *)theMessage</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>theMessage</Name>
@@ -117,7 +117,7 @@ the client. Service exceptions are indicated by throwing AWSServiceException.</A
 			<Abstract type="html">Return an exception with the given message and error.</Abstract>
 			<DeclaredIn>AmazonClientException.h</DeclaredIn>			
 			
-			<Declaration>+ (AmazonClientException *)exceptionWithMessage:(NSString *)theMessage andError:(NSError *)theError</Declaration>
+			<Declaration>+ (id)exceptionWithMessage:(NSString *)theMessage andError:(NSError *)theError</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>theMessage</Name>

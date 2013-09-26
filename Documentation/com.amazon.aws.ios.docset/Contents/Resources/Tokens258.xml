@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/DynamoDBBatchGetItemResponse.html">
+	<File path="Classes/EC2CopySnapshotResponse.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/DynamoDBBatchGetItemResponse</TokenIdentifier>
-			<Abstract type="html">Batch Get Item Result</Abstract>
-			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/EC2CopySnapshotResponse</TokenIdentifier>
+			<Abstract type="html">Copy Snapshot Response</Abstract>
+			<DeclaredIn>EC2CopySnapshotResponse.h</DeclaredIn>
 			
 			<NodeRef refid="258"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBBatchGetItemResponse/setException:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2CopySnapshotResponse/setException:</TokenIdentifier>
 			<Abstract type="html">If an exception was thrown, this will return the exception.</Abstract>
-			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>			
+			<DeclaredIn>EC2CopySnapshotResponse.h</DeclaredIn>			
 			
 			<Declaration>- (void)setException:(AmazonServiceException *)theException</Declaration>
 			
@@ -23,10 +23,10 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBBatchGetItemResponse/init</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2CopySnapshotResponse/init</TokenIdentifier>
 			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>			
+			<DeclaredIn>EC2CopySnapshotResponse.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -35,94 +35,32 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBBatchGetItemResponse/setResponses:</TokenIdentifier>
-			<Abstract type="html">Table names and the respective item attributes from the tables.</Abstract>
-			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2CopySnapshotResponse/setSnapshotId:</TokenIdentifier>
+			<Abstract type="html">The value of the SnapshotId property for this object.</Abstract>
+			<DeclaredIn>EC2CopySnapshotResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSMutableDictionary *responses</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *snapshotId</Declaration>
 			
 			
-			<Anchor>//api/name/responses</Anchor>
+			<Anchor>//api/name/snapshotId</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/DynamoDBBatchGetItemResponse/responses</TokenIdentifier>
-			<Abstract type="html">Table names and the respective item attributes from the tables.</Abstract>
-			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/EC2CopySnapshotResponse/snapshotId</TokenIdentifier>
+			<Abstract type="html">The value of the SnapshotId property for this object.</Abstract>
+			<DeclaredIn>EC2CopySnapshotResponse.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSMutableDictionary *responses</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *snapshotId</Declaration>
 			
 			
-			<Anchor>//api/name/responses</Anchor>
+			<Anchor>//api/name/snapshotId</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBBatchGetItemResponse/setUnprocessedKeys:</TokenIdentifier>
-			<Abstract type="html">Contains a map of tables and their respective keys that were not
-processed with the current response, possibly due to reaching a limit
-on the response size. The &lt;code&gt;UnprocessedKeys&lt;/code&gt; value is in the
-same form as a &lt;code&gt;RequestItems&lt;/code&gt; parameter (so the value can
-be provided directly to a subsequent &lt;code&gt;BatchGetItem&lt;/code&gt;
-operation). For more information, see the above
-&lt;code&gt;RequestItems&lt;/code&gt; parameter.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 100&lt;br/&gt;</Abstract>
-			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableDictionary *unprocessedKeys</Declaration>
-			
-			
-			<Anchor>//api/name/unprocessedKeys</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/DynamoDBBatchGetItemResponse/unprocessedKeys</TokenIdentifier>
-			<Abstract type="html">Contains a map of tables and their respective keys that were not
-processed with the current response, possibly due to reaching a limit
-on the response size. The &lt;code&gt;UnprocessedKeys&lt;/code&gt; value is in the
-same form as a &lt;code&gt;RequestItems&lt;/code&gt; parameter (so the value can
-be provided directly to a subsequent &lt;code&gt;BatchGetItem&lt;/code&gt;
-operation). For more information, see the above
-&lt;code&gt;RequestItems&lt;/code&gt; parameter.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Length: &lt;/b&gt;1 - 100&lt;br/&gt;</Abstract>
-			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSMutableDictionary *unprocessedKeys</Declaration>
-			
-			
-			<Anchor>//api/name/unprocessedKeys</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBBatchGetItemResponse/responsesValueForKey:</TokenIdentifier>
-			<Abstract type="html">Returns a value from the responses dictionary for the specified key.</Abstract>
-			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>			
-			
-			<Declaration>- (DynamoDBBatchResponse *)responsesValueForKey:(NSString *)theKey</Declaration>
-			
-			
-			<Anchor>//api/name/responsesValueForKey:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBBatchGetItemResponse/unprocessedKeysValueForKey:</TokenIdentifier>
-			<Abstract type="html">Returns a value from the unprocessedKeys dictionary for the specified key.</Abstract>
-			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>			
-			
-			<Declaration>- (DynamoDBKeysAndAttributes *)unprocessedKeysValueForKey:(NSString *)theKey</Declaration>
-			
-			
-			<Anchor>//api/name/unprocessedKeysValueForKey:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBBatchGetItemResponse/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2CopySnapshotResponse/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>DynamoDBBatchGetItemResponse.h</DeclaredIn>			
+			<DeclaredIn>EC2CopySnapshotResponse.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

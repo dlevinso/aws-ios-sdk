@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -15,7 +15,8 @@
 
 #import "DynamoDBKeySchemaElementUnmarshaller.h"
 #import "DynamoDBExceptionUnmarshaller.h"
-#import "../AmazonSDKUtil.h"
+
+#import "AmazonSDKUtil.h"
 
 
 @implementation DynamoDBKeySchemaElementUnmarshaller
@@ -32,8 +33,8 @@
     }
 
 
-    if ([jsonObject valueForKey:@"AttributeType"] != nil) {
-        keySchemaElement.attributeType = [jsonObject valueForKey:@"AttributeType"];
+    if ([jsonObject valueForKey:@"KeyType"] != nil) {
+        keySchemaElement.keyType = [jsonObject valueForKey:@"KeyType"];
     }
 
     return keySchemaElement;

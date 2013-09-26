@@ -12,7 +12,7 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">AWS SDK for iOS v1.4.4 </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">AWS SDK for iOS v1.6.1 </a></h1>
 				<a id="developerHome" href="../index.html">Amazon Web Services, Inc.</a>
 			</div>
 			
@@ -191,7 +191,7 @@ property methods to initialize this object after creating it.</p></span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/namespace">&nbsp;&nbsp;namespace</a></code>
-		<span class="tooltip"><p>The namespace of the metric.</p>
+		<span class="tooltip"><p>The namespace of the metric, with or without spaces.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -203,7 +203,7 @@ property methods to initialize this object after creating it.</p></span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/metricName">&nbsp;&nbsp;metricName</a></code>
-		<span class="tooltip"><p>The name of the metric.</p>
+		<span class="tooltip"><p>The name of the metric, with or without spaces.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -231,7 +231,9 @@ time stamp specified. <note> The specified start time is rounded down
 to the nearest value. Datapoints are returned for start times up to
 two weeks in the past. Specified start times that are more than two
 weeks in the past will not return datapoints for metrics that are
-older than two weeks. </note></p></span>
+older than two weeks. <p>Data that is timestamped 24 hours or more in
+the past may take in excess of 48 hours to become available from
+submission time using <code>GetMetricStatistics</code>. </note></p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -260,7 +262,11 @@ of 60. The default value is 60.</p>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/statistics">&nbsp;&nbsp;statistics</a></code>
-		<span class="tooltip"><p>The metric statistics to return.</p>
+		<span class="tooltip"><p>The metric statistics to return. For information about specific
+statistics returned by GetMetricStatistics, go to <a
+dex.html?CHAP_TerminologyandKeyConcepts.html#Statistic">Statistics</a>
+in the <i>Amazon CloudWatch Developer Guide</i>. <p> Valid Values:
+<code>Average | Sum | SampleCount | Maximum | Minimum</code></p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -417,7 +423,7 @@ to the time stamp specified.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The name of the metric.</p>
+		<p>The name of the metric, with or without spaces.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -438,7 +444,7 @@ to the time stamp specified.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The name of the metric.</p>
+		<p>The name of the metric, with or without spaces.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -466,7 +472,7 @@ to the time stamp specified.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The namespace of the metric.</p>
+		<p>The namespace of the metric, with or without spaces.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -488,7 +494,7 @@ to the time stamp specified.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The namespace of the metric.</p>
+		<p>The namespace of the metric, with or without spaces.</p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -576,7 +582,9 @@ time stamp specified. <note> The specified start time is rounded down
 to the nearest value. Datapoints are returned for start times up to
 two weeks in the past. Specified start times that are more than two
 weeks in the past will not return datapoints for metrics that are
-older than two weeks. </note></p>
+older than two weeks. <p>Data that is timestamped 24 hours or more in
+the past may take in excess of 48 hours to become available from
+submission time using <code>GetMetricStatistics</code>. </note></p>
 	</div>		
 	
     
@@ -599,7 +607,9 @@ time stamp specified. <note> The specified start time is rounded down
 to the nearest value. Datapoints are returned for start times up to
 two weeks in the past. Specified start times that are more than two
 weeks in the past will not return datapoints for metrics that are
-older than two weeks. </note></p>
+older than two weeks. <p>Data that is timestamped 24 hours or more in
+the past may take in excess of 48 hours to become available from
+submission time using <code>GetMetricStatistics</code>. </note></p>
 	</div>
 	
 	
@@ -623,7 +633,11 @@ older than two weeks. </note></p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The metric statistics to return.</p>
+		<p>The metric statistics to return. For information about specific
+statistics returned by GetMetricStatistics, go to <a
+dex.html?CHAP_TerminologyandKeyConcepts.html#Statistic">Statistics</a>
+in the <i>Amazon CloudWatch Developer Guide</i>. <p> Valid Values:
+<code>Average | Sum | SampleCount | Maximum | Minimum</code></p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -644,7 +658,11 @@ older than two weeks. </note></p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The metric statistics to return.</p>
+		<p>The metric statistics to return. For information about specific
+statistics returned by GetMetricStatistics, go to <a
+dex.html?CHAP_TerminologyandKeyConcepts.html#Statistic">Statistics</a>
+in the <i>Amazon CloudWatch Developer Guide</i>. <p> Valid Values:
+<code>Average | Sum | SampleCount | Maximum | Minimum</code></p>
 
 <p><p>
 <b>Constraints:</b><br/>
@@ -914,7 +932,7 @@ property methods to initialize this object after creating it.</p>
 				<div id="footer"><script src="/urchin.js" type="text/javascript"></script><script type="text/javascript">urchinTracker();</script>
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Amazon Web Services, Inc.. All rights reserved. (Last updated: 2012-11-13)</span><br />
+						<p><span class="copyright">&copy; 2013 Amazon Web Services, Inc.. All rights reserved. (Last updated: 2013-08-12)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
 						

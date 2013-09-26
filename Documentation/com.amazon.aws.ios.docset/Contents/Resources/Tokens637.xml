@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2ImportVolumeRequestMarshaller.html">
+	<File path="Classes/S3GetBucketTaggingRequest.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2ImportVolumeRequestMarshaller</TokenIdentifier>
-			<Abstract type="html">Import Volume Request Marshaller</Abstract>
-			<DeclaredIn>EC2ImportVolumeRequestMarshaller.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/S3GetBucketTaggingRequest</TokenIdentifier>
+			<Abstract type="html">Contains the parameters used for the getBucketTagging operation.</Abstract>
+			<DeclaredIn>S3GetBucketTaggingRequest.h</DeclaredIn>
 			
 			<NodeRef refid="637"/>
 		</Token>

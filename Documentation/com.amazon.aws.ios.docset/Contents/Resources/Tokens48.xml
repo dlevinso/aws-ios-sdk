@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/AutoScalingDeleteAutoScalingGroupRequestMarshaller.html">
+	<File path="Classes/AutoScalingDeletePolicyResponse.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/AutoScalingDeleteAutoScalingGroupRequestMarshaller</TokenIdentifier>
-			<Abstract type="html">Delete Auto Scaling Group Request Marshaller</Abstract>
-			<DeclaredIn>AutoScalingDeleteAutoScalingGroupRequestMarshaller.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/AutoScalingDeletePolicyResponse</TokenIdentifier>
+			<Abstract type="html">Delete Policy</Abstract>
+			<DeclaredIn>AutoScalingDeletePolicyResponse.h</DeclaredIn>
 			
 			<NodeRef refid="48"/>
 		</Token>

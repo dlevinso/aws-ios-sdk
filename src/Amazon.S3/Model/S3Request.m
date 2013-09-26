@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -18,16 +18,6 @@
 
 @implementation S3Request
 
-#pragma mark Properties
-
-@synthesize authorization;
-@synthesize contentLength;
-@synthesize contentType;
-@synthesize securityToken;
-@synthesize bucket;
-@synthesize key;
-@synthesize subResource;
-
 #pragma mark methods
 
 -(AmazonURLRequest *)configureURLRequest
@@ -38,7 +28,7 @@
     [self.urlRequest setValue:[NSString stringWithFormat:@"%lld", self.contentLength] forHTTPHeaderField:kHttpHdrContentLength];
 
     [self.urlRequest setValue:self.host forHTTPHeaderField:kHttpHdrHost];
-    [self.urlRequest setValue:[self.date requestFormat] forHTTPHeaderField:kHttpHdrDate];
+    [self.urlRequest setValue:[self.date stringWithRFC822Format] forHTTPHeaderField:kHttpHdrDate];
 
     if (nil != self.httpMethod) {
         [self.urlRequest setHTTPMethod:self.httpMethod];
@@ -57,12 +47,7 @@
 
 -(NSString *)timestamp
 {
-    NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
-
-    [dateFormatter setDateFormat:kS3DateFormat];
-    [dateFormatter setLocale:[AmazonSDKUtil timestampLocale]];
-
-    return [dateFormatter stringFromDate:[self date]];
+    return [[self date] stringWithRFC822Format];
 }
 
 #pragma mark accessors
@@ -73,39 +58,33 @@
     NSString *resQuery;
 
     if (self.bucket == nil || [S3BucketNameUtilities isDNSBucketName:self.bucket]) {
-        keyPath  = (self.key == nil ? @"" : [NSString stringWithFormat:@"/%@", [self.key stringWithURLEncoding]]);
-        resQuery = (self.subResource == nil ? @"" : [NSString stringWithFormat:@"%@?%@", self.key == nil ? @"/":@"", self.subResource]);
+        keyPath  = (self.key == nil ? @"" : [NSString stringWithFormat:@"%@", [self.key stringWithURLEncoding]]);
     }
     else {
-        keyPath  = (self.key == nil ? [NSString stringWithFormat:@"/%@/", self.bucket] : [NSString stringWithFormat:@"/%@/%@", self.bucket, [self.key stringWithURLEncoding]]);
-        resQuery = (self.subResource == nil ? @"" : [NSString stringWithFormat:@"?%@", self.subResource]);
+        keyPath  = (self.key == nil ? [NSString stringWithFormat:@"%@/", self.bucket] : [NSString stringWithFormat:@"%@/%@", self.bucket, [self.key stringWithURLEncoding]]);
     }
+    resQuery = (self.subResource == nil ? @"" : [NSString stringWithFormat:@"?%@", self.subResource]);
 
-    return [NSURL URLWithString:[NSString stringWithFormat:@"%@://%@%@%@", [self protocol], self.host, keyPath, resQuery]];
+    return [NSURL URLWithString:[NSString stringWithFormat:@"%@://%@/%@%@", self.protocol, self.host, keyPath, resQuery]];
 }
 
 -(NSString *)host
 {
     if (nil != self.bucket) {
         if ( [S3BucketNameUtilities isDNSBucketName:self.bucket]) {
-            return [NSString stringWithFormat:@"%@.%@", self.bucket, [super hostName]];
+            return [NSString stringWithFormat:@"%@.%@", self.bucket, self.hostName];
         }
     }
 
-    return [self hostName];
+    return self.hostName;
 }
 
 -(NSDate *)date
 {
-    if (date == nil) {
-        date = [NSDate date];
+    if (_date == nil) {
+        _date = [[NSDate date] retain];
     }
-    return date;
-}
-
--(void)setDate:(NSDate *)aDate
-{
-    date = aDate;
+    return _date;
 }
 
 -(NSString *)protocol
@@ -120,7 +99,7 @@
 
 -(NSString *)endpointHost
 {
-    return [super hostName];
+    return self.hostName;
 }
 
 
@@ -128,33 +107,15 @@
 
 -(void)dealloc
 {
-    delegate = nil;
-
-    [authorization release];
-    [contentType release];
-    [securityToken release];
-    [httpMethod release];
-    [subResource release];
-    [key release];
-    [bucket release];
+    [_authorization release];
+    [_contentType release];
+    [_date release];
+    [_securityToken release];
+    [_bucket release];
+    [_key release];
+    [_subResource release];
 
     [super dealloc];
-}
-
-@end
-
-#pragma mark Categories
-
-@implementation NSDate (WithS3RequestFormat)
-
--(NSString *)requestFormat
-{
-    NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
-
-    [dateFormatter setDateFormat:kS3DateFormat];
-    [dateFormatter setLocale:[AmazonSDKUtil timestampLocale]];
-
-    return [dateFormatter stringFromDate:self];
 }
 
 @end

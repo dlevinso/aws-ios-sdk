@@ -1,89 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/DynamoDBAttributeValueUpdate.html">
+	<File path="Classes/EC2CopyImageRequest.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/DynamoDBAttributeValueUpdate</TokenIdentifier>
-			<Abstract type="html">Attribute Value Update</Abstract>
-			<DeclaredIn>DynamoDBAttributeValueUpdate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/EC2CopyImageRequest</TokenIdentifier>
+			<Abstract type="html">Copy Image Request</Abstract>
+			<DeclaredIn>EC2CopyImageRequest.h</DeclaredIn>
 			
 			<NodeRef refid="255"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBAttributeValueUpdate/setValue:</TokenIdentifier>
-			<Abstract type="html">AttributeValue can be &lt;code&gt;String&lt;/code&gt;, &lt;code&gt;Number&lt;/code&gt;,
-&lt;code&gt;Binary&lt;/code&gt;, &lt;code&gt;StringSet&lt;/code&gt;, &lt;code&gt;NumberSet&lt;/code&gt;,
-&lt;code&gt;BinarySet&lt;/code&gt;.</Abstract>
-			<DeclaredIn>DynamoDBAttributeValueUpdate.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) DynamoDBAttributeValue *value</Declaration>
-			
-			
-			<Anchor>//api/name/value</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/DynamoDBAttributeValueUpdate/value</TokenIdentifier>
-			<Abstract type="html">AttributeValue can be &lt;code&gt;String&lt;/code&gt;, &lt;code&gt;Number&lt;/code&gt;,
-&lt;code&gt;Binary&lt;/code&gt;, &lt;code&gt;StringSet&lt;/code&gt;, &lt;code&gt;NumberSet&lt;/code&gt;,
-&lt;code&gt;BinarySet&lt;/code&gt;.</Abstract>
-			<DeclaredIn>DynamoDBAttributeValueUpdate.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) DynamoDBAttributeValue *value</Declaration>
-			
-			
-			<Anchor>//api/name/value</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBAttributeValueUpdate/setAction:</TokenIdentifier>
-			<Abstract type="html">The type of action for an item update operation. Only use the add
-action for numbers or sets; the specified value is added to the
-existing value. If a set of values is specified, the values are added
-to the existing set. Adds the specified attribute. If the attribute
-exists, it is replaced by the new value. If no value is specified,
-this removes the attribute and its value. If a set of values is
-specified, then the values in the specified set are removed from the
-old set.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Allowed Values: &lt;/b&gt;ADD, PUT, DELETE</Abstract>
-			<DeclaredIn>DynamoDBAttributeValueUpdate.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *action</Declaration>
-			
-			
-			<Anchor>//api/name/action</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/DynamoDBAttributeValueUpdate/action</TokenIdentifier>
-			<Abstract type="html">The type of action for an item update operation. Only use the add
-action for numbers or sets; the specified value is added to the
-existing value. If a set of values is specified, the values are added
-to the existing set. Adds the specified attribute. If the attribute
-exists, it is replaced by the new value. If no value is specified,
-this removes the attribute and its value. If a set of values is
-specified, then the values in the specified set are removed from the
-old set.
-&lt;p&gt;
-&lt;b&gt;Constraints:&lt;/b&gt;&lt;br/&gt;
-&lt;b&gt;Allowed Values: &lt;/b&gt;ADD, PUT, DELETE</Abstract>
-			<DeclaredIn>DynamoDBAttributeValueUpdate.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, retain) NSString *action</Declaration>
-			
-			
-			<Anchor>//api/name/action</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBAttributeValueUpdate/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new AttributeValueUpdate object.  Callers should use the
+			<TokenIdentifier>//apple_ref/occ/instm/EC2CopyImageRequest/init</TokenIdentifier>
+			<Abstract type="html">Default constructor for a new  object.  Callers should use the
 property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>DynamoDBAttributeValueUpdate.h</DeclaredIn>			
+			<DeclaredIn>EC2CopyImageRequest.h</DeclaredIn>			
 			
 			<Declaration>- (id)init</Declaration>
 			
@@ -92,39 +24,120 @@ property methods to initialize this object after creating it.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBAttributeValueUpdate/initWithValue:andAction:</TokenIdentifier>
-			<Abstract type="html">Constructs a new AttributeValueUpdate object.
-Callers should use properties to initialize any additional object members.</Abstract>
-			<DeclaredIn>DynamoDBAttributeValueUpdate.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/EC2CopyImageRequest/setSourceRegion:</TokenIdentifier>
+			<Abstract type="html">The value of the SourceRegion property for this object.</Abstract>
+			<DeclaredIn>EC2CopyImageRequest.h</DeclaredIn>			
 			
-			<Declaration>- (id)initWithValue:(DynamoDBAttributeValue *)theValue andAction:(NSString *)theAction</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>theValue</Name>
-					<Abstract type="html">AttributeValue can be &lt;code&gt;String&lt;/code&gt;,
-&lt;code&gt;Number&lt;/code&gt;, &lt;code&gt;Binary&lt;/code&gt;, &lt;code&gt;StringSet&lt;/code&gt;,
-&lt;code&gt;NumberSet&lt;/code&gt;, &lt;code&gt;BinarySet&lt;/code&gt;.</Abstract>
-				</Parameter><Parameter>
-					<Name>theAction</Name>
-					<Abstract type="html">The type of action for an item update operation. Only
-use the add action for numbers or sets; the specified value is added
-to the existing value. If a set of values is specified, the values are
-added to the existing set. Adds the specified attribute. If the
-attribute exists, it is replaced by the new value. If no value is
-specified, this removes the attribute and its value. If a set of
-values is specified, then the values in the specified set are removed
-from the old set.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, retain) NSString *sourceRegion</Declaration>
 			
-			<Anchor>//api/name/initWithValue:andAction:</Anchor>
+			
+			<Anchor>//api/name/sourceRegion</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DynamoDBAttributeValueUpdate/description</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2CopyImageRequest/sourceRegion</TokenIdentifier>
+			<Abstract type="html">The value of the SourceRegion property for this object.</Abstract>
+			<DeclaredIn>EC2CopyImageRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *sourceRegion</Declaration>
+			
+			
+			<Anchor>//api/name/sourceRegion</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2CopyImageRequest/setSourceImageId:</TokenIdentifier>
+			<Abstract type="html">The value of the SourceImageId property for this object.</Abstract>
+			<DeclaredIn>EC2CopyImageRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *sourceImageId</Declaration>
+			
+			
+			<Anchor>//api/name/sourceImageId</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2CopyImageRequest/sourceImageId</TokenIdentifier>
+			<Abstract type="html">The value of the SourceImageId property for this object.</Abstract>
+			<DeclaredIn>EC2CopyImageRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *sourceImageId</Declaration>
+			
+			
+			<Anchor>//api/name/sourceImageId</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2CopyImageRequest/setName:</TokenIdentifier>
+			<Abstract type="html">The value of the Name property for this object.</Abstract>
+			<DeclaredIn>EC2CopyImageRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2CopyImageRequest/name</TokenIdentifier>
+			<Abstract type="html">The value of the Name property for this object.</Abstract>
+			<DeclaredIn>EC2CopyImageRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2CopyImageRequest/setDescriptionValue:</TokenIdentifier>
+			<Abstract type="html">The value of the Description property for this object.</Abstract>
+			<DeclaredIn>EC2CopyImageRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *descriptionValue</Declaration>
+			
+			
+			<Anchor>//api/name/descriptionValue</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2CopyImageRequest/descriptionValue</TokenIdentifier>
+			<Abstract type="html">The value of the Description property for this object.</Abstract>
+			<DeclaredIn>EC2CopyImageRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *descriptionValue</Declaration>
+			
+			
+			<Anchor>//api/name/descriptionValue</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2CopyImageRequest/setClientToken:</TokenIdentifier>
+			<Abstract type="html">The value of the ClientToken property for this object.</Abstract>
+			<DeclaredIn>EC2CopyImageRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *clientToken</Declaration>
+			
+			
+			<Anchor>//api/name/clientToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/EC2CopyImageRequest/clientToken</TokenIdentifier>
+			<Abstract type="html">The value of the ClientToken property for this object.</Abstract>
+			<DeclaredIn>EC2CopyImageRequest.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, retain) NSString *clientToken</Declaration>
+			
+			
+			<Anchor>//api/name/clientToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/EC2CopyImageRequest/description</TokenIdentifier>
 			<Abstract type="html">Returns a string representation of this object; useful for testing and
 debugging.</Abstract>
-			<DeclaredIn>DynamoDBAttributeValueUpdate.h</DeclaredIn>			
+			<DeclaredIn>EC2CopyImageRequest.h</DeclaredIn>			
 			
 			<Declaration>- (NSString *)description</Declaration>
 			

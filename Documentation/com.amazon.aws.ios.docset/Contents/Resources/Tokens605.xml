@@ -1,78 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/EC2GetConsoleOutputRequest.html">
+	<File path="Classes/S3CopyObjectResult.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/EC2GetConsoleOutputRequest</TokenIdentifier>
-			<Abstract type="html">Get Console Output Request</Abstract>
-			<DeclaredIn>EC2GetConsoleOutputRequest.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/S3CopyObjectResult</TokenIdentifier>
+			<Abstract type="html">Represents the response body from a copyObject response</Abstract>
+			<DeclaredIn>S3CopyObjectResult.h</DeclaredIn>
 			
 			<NodeRef refid="605"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2GetConsoleOutputRequest/setInstanceId:</TokenIdentifier>
-			<Abstract type="html">The ID of the instance for which you want console output.</Abstract>
-			<DeclaredIn>EC2GetConsoleOutputRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/S3CopyObjectResult/setLastModified:</TokenIdentifier>
+			<Abstract type="html">Gets and sets the lastModified property</Abstract>
+			<DeclaredIn>S3CopyObjectResult.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *lastModified</Declaration>
 			
 			
-			<Anchor>//api/name/instanceId</Anchor>
+			<Anchor>//api/name/lastModified</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/EC2GetConsoleOutputRequest/instanceId</TokenIdentifier>
-			<Abstract type="html">The ID of the instance for which you want console output.</Abstract>
-			<DeclaredIn>EC2GetConsoleOutputRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/S3CopyObjectResult/lastModified</TokenIdentifier>
+			<Abstract type="html">Gets and sets the lastModified property</Abstract>
+			<DeclaredIn>S3CopyObjectResult.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, retain) NSString *instanceId</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *lastModified</Declaration>
 			
 			
-			<Anchor>//api/name/instanceId</Anchor>
+			<Anchor>//api/name/lastModified</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2GetConsoleOutputRequest/init</TokenIdentifier>
-			<Abstract type="html">Default constructor for a new GetConsoleOutputRequest object.  Callers should use the
-property methods to initialize this object after creating it.</Abstract>
-			<DeclaredIn>EC2GetConsoleOutputRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instm/S3CopyObjectResult/setEtag:</TokenIdentifier>
+			<Abstract type="html">Gets and sets the etag property</Abstract>
+			<DeclaredIn>S3CopyObjectResult.h</DeclaredIn>			
 			
-			<Declaration>- (id)init</Declaration>
+			<Declaration>@property (nonatomic, retain) NSString *etag</Declaration>
 			
 			
-			<Anchor>//api/name/init</Anchor>
+			<Anchor>//api/name/etag</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2GetConsoleOutputRequest/initWithInstanceId:</TokenIdentifier>
-			<Abstract type="html">Constructs a new GetConsoleOutputRequest object.
-Callers should use properties to initialize any additional object members.</Abstract>
-			<DeclaredIn>EC2GetConsoleOutputRequest.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/instp/S3CopyObjectResult/etag</TokenIdentifier>
+			<Abstract type="html">Gets and sets the etag property</Abstract>
+			<DeclaredIn>S3CopyObjectResult.h</DeclaredIn>			
 			
-			<Declaration>- (id)initWithInstanceId:(NSString *)theInstanceId</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>theInstanceId</Name>
-					<Abstract type="html">The ID of the instance for which you want console
-output.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, retain) NSString *etag</Declaration>
 			
-			<Anchor>//api/name/initWithInstanceId:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/EC2GetConsoleOutputRequest/description</TokenIdentifier>
-			<Abstract type="html">Returns a string representation of this object; useful for testing and
-debugging.</Abstract>
-			<DeclaredIn>EC2GetConsoleOutputRequest.h</DeclaredIn>			
 			
-			<Declaration>- (NSString *)description</Declaration>
-			
-			<ReturnValue><Abstract type="html">A string representation of this object.</Abstract></ReturnValue>
-			<Anchor>//api/name/description</Anchor>
+			<Anchor>//api/name/etag</Anchor>
 		</Token>
 		
 	</File>

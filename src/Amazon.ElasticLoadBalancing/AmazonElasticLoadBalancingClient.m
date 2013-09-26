@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -14,8 +14,54 @@
  */
 
 #import "AmazonElasticLoadBalancingClient.h"
-#import "../AmazonEndpoints.h"
-#import "../AmazonServiceRequest.h"
+#import "AmazonEndpoints.h"
+#import "AmazonServiceRequest.h"
+#import "ElasticLoadBalancingDeleteLoadBalancerListenersResponseUnmarshaller.h"
+#import "ElasticLoadBalancingDeleteLoadBalancerListenersRequestMarshaller.h"
+#import "ElasticLoadBalancingSetLoadBalancerPoliciesOfListenerResponseUnmarshaller.h"
+#import "ElasticLoadBalancingSetLoadBalancerPoliciesOfListenerRequestMarshaller.h"
+#import "ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerResponseUnmarshaller.h"
+#import "ElasticLoadBalancingEnableAvailabilityZonesForLoadBalancerRequestMarshaller.h"
+#import "ElasticLoadBalancingDeregisterInstancesFromLoadBalancerResponseUnmarshaller.h"
+#import "ElasticLoadBalancingDeregisterInstancesFromLoadBalancerRequestMarshaller.h"
+#import "ElasticLoadBalancingDescribeLoadBalancerPoliciesResponseUnmarshaller.h"
+#import "ElasticLoadBalancingDescribeLoadBalancerPoliciesRequestMarshaller.h"
+#import "ElasticLoadBalancingDescribeLoadBalancerPolicyTypesResponseUnmarshaller.h"
+#import "ElasticLoadBalancingDescribeLoadBalancerPolicyTypesRequestMarshaller.h"
+#import "ElasticLoadBalancingSetLoadBalancerListenerSSLCertificateResponseUnmarshaller.h"
+#import "ElasticLoadBalancingSetLoadBalancerListenerSSLCertificateRequestMarshaller.h"
+#import "ElasticLoadBalancingCreateLBCookieStickinessPolicyResponseUnmarshaller.h"
+#import "ElasticLoadBalancingCreateLBCookieStickinessPolicyRequestMarshaller.h"
+#import "ElasticLoadBalancingDeleteLoadBalancerPolicyResponseUnmarshaller.h"
+#import "ElasticLoadBalancingDeleteLoadBalancerPolicyRequestMarshaller.h"
+#import "ElasticLoadBalancingRegisterInstancesWithLoadBalancerResponseUnmarshaller.h"
+#import "ElasticLoadBalancingRegisterInstancesWithLoadBalancerRequestMarshaller.h"
+#import "ElasticLoadBalancingConfigureHealthCheckResponseUnmarshaller.h"
+#import "ElasticLoadBalancingConfigureHealthCheckRequestMarshaller.h"
+#import "ElasticLoadBalancingDescribeLoadBalancersResponseUnmarshaller.h"
+#import "ElasticLoadBalancingDescribeLoadBalancersRequestMarshaller.h"
+#import "ElasticLoadBalancingDescribeInstanceHealthResponseUnmarshaller.h"
+#import "ElasticLoadBalancingDescribeInstanceHealthRequestMarshaller.h"
+#import "ElasticLoadBalancingAttachLoadBalancerToSubnetsResponseUnmarshaller.h"
+#import "ElasticLoadBalancingAttachLoadBalancerToSubnetsRequestMarshaller.h"
+#import "ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerResponseUnmarshaller.h"
+#import "ElasticLoadBalancingDisableAvailabilityZonesForLoadBalancerRequestMarshaller.h"
+#import "ElasticLoadBalancingCreateLoadBalancerListenersResponseUnmarshaller.h"
+#import "ElasticLoadBalancingCreateLoadBalancerListenersRequestMarshaller.h"
+#import "ElasticLoadBalancingCreateLoadBalancerPolicyResponseUnmarshaller.h"
+#import "ElasticLoadBalancingCreateLoadBalancerPolicyRequestMarshaller.h"
+#import "ElasticLoadBalancingSetLoadBalancerPoliciesForBackendServerResponseUnmarshaller.h"
+#import "ElasticLoadBalancingSetLoadBalancerPoliciesForBackendServerRequestMarshaller.h"
+#import "ElasticLoadBalancingDetachLoadBalancerFromSubnetsResponseUnmarshaller.h"
+#import "ElasticLoadBalancingDetachLoadBalancerFromSubnetsRequestMarshaller.h"
+#import "ElasticLoadBalancingApplySecurityGroupsToLoadBalancerResponseUnmarshaller.h"
+#import "ElasticLoadBalancingApplySecurityGroupsToLoadBalancerRequestMarshaller.h"
+#import "ElasticLoadBalancingDeleteLoadBalancerResponseUnmarshaller.h"
+#import "ElasticLoadBalancingDeleteLoadBalancerRequestMarshaller.h"
+#import "ElasticLoadBalancingCreateLoadBalancerResponseUnmarshaller.h"
+#import "ElasticLoadBalancingCreateLoadBalancerRequestMarshaller.h"
+#import "ElasticLoadBalancingCreateAppCookieStickinessPolicyResponseUnmarshaller.h"
+#import "ElasticLoadBalancingCreateAppCookieStickinessPolicyRequestMarshaller.h"
 
 
 @implementation AmazonElasticLoadBalancingClient
@@ -31,6 +77,14 @@
 -(id)initWithCredentials:(AmazonCredentials *)theCredentials
 {
     if (self = [super initWithCredentials:theCredentials]) {
+        self.endpoint = AMAZON_ELB_US_EAST_1_ENDPOINT_SECURE;
+    }
+    return self;
+}
+
+-(id)initWithCredentialsProvider:(id<AmazonCredentialsProvider> )theProvider
+{
+    if (self = [super initWithCredentialsProvider:theProvider]) {
         self.endpoint = AMAZON_ELB_US_EAST_1_ENDPOINT_SECURE;
     }
     return self;

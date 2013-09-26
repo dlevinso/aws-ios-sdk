@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -19,12 +19,16 @@
 @implementation DynamoDBBatchWriteItemRequest
 
 @synthesize requestItems;
+@synthesize returnConsumedCapacity;
+@synthesize returnItemCollectionMetrics;
 
 
 -(id)init
 {
     if (self = [super init]) {
-        requestItems = [[NSMutableDictionary alloc] initWithCapacity:1];
+        requestItems                = [[NSMutableDictionary alloc] initWithCapacity:1];
+        returnConsumedCapacity      = nil;
+        returnItemCollectionMetrics = nil;
     }
 
     return self;
@@ -47,6 +51,8 @@
 
     [buffer appendString:@"{"];
     [buffer appendString:[[[NSString alloc] initWithFormat:@"RequestItems: %@,", requestItems] autorelease]];
+    [buffer appendString:[[[NSString alloc] initWithFormat:@"ReturnConsumedCapacity: %@,", returnConsumedCapacity] autorelease]];
+    [buffer appendString:[[[NSString alloc] initWithFormat:@"ReturnItemCollectionMetrics: %@,", returnItemCollectionMetrics] autorelease]];
     [buffer appendString:[super description]];
     [buffer appendString:@"}"];
 
@@ -58,6 +64,8 @@
 -(void)dealloc
 {
     [requestItems release];
+    [returnConsumedCapacity release];
+    [returnItemCollectionMetrics release];
 
     [super dealloc];
 }

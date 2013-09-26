@@ -1,5 +1,5 @@
 /*
- * Copyright 2010-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License").
  * You may not use this file except in compliance with the License.
@@ -14,8 +14,28 @@
  */
 
 #import "AmazonSimpleDBClient.h"
-#import "../AmazonEndpoints.h"
-#import "../AmazonServiceRequest.h"
+#import "AmazonEndpoints.h"
+#import "AmazonServiceRequest.h"
+#import "SimpleDBSelectResponseUnmarshaller.h"
+#import "SimpleDBSelectRequestMarshaller.h"
+#import "SimpleDBPutAttributesResponseUnmarshaller.h"
+#import "SimpleDBPutAttributesRequestMarshaller.h"
+#import "SimpleDBBatchDeleteAttributesResponseUnmarshaller.h"
+#import "SimpleDBBatchDeleteAttributesRequestMarshaller.h"
+#import "SimpleDBDeleteDomainResponseUnmarshaller.h"
+#import "SimpleDBDeleteDomainRequestMarshaller.h"
+#import "SimpleDBCreateDomainResponseUnmarshaller.h"
+#import "SimpleDBCreateDomainRequestMarshaller.h"
+#import "SimpleDBDeleteAttributesResponseUnmarshaller.h"
+#import "SimpleDBDeleteAttributesRequestMarshaller.h"
+#import "SimpleDBListDomainsResponseUnmarshaller.h"
+#import "SimpleDBListDomainsRequestMarshaller.h"
+#import "SimpleDBGetAttributesResponseUnmarshaller.h"
+#import "SimpleDBGetAttributesRequestMarshaller.h"
+#import "SimpleDBBatchPutAttributesResponseUnmarshaller.h"
+#import "SimpleDBBatchPutAttributesRequestMarshaller.h"
+#import "SimpleDBDomainMetadataResponseUnmarshaller.h"
+#import "SimpleDBDomainMetadataRequestMarshaller.h"
 
 
 @implementation AmazonSimpleDBClient
@@ -31,6 +51,14 @@
 -(id)initWithCredentials:(AmazonCredentials *)theCredentials
 {
     if (self = [super initWithCredentials:theCredentials]) {
+        self.endpoint = AMAZON_SDB_US_EAST_1_ENDPOINT_SECURE;
+    }
+    return self;
+}
+
+-(id)initWithCredentialsProvider:(id<AmazonCredentialsProvider> )theProvider
+{
+    if (self = [super initWithCredentialsProvider:theProvider]) {
         self.endpoint = AMAZON_SDB_US_EAST_1_ENDPOINT_SECURE;
     }
     return self;

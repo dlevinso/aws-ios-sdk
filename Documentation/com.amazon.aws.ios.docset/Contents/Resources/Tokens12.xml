@@ -339,7 +339,7 @@ Once deleted, there is no method to restore or undelete an object.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonS3Client/copyObject:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonS3Client/objectCopy:</TokenIdentifier>
 			<Abstract type="html">Create a copy of an object that is already stored in Amazon S3.
 When copying an object, you can preserve all metadata (default) or specify new metadata.
 However, the ACL is not preserved and is set to private for the user making the request.
@@ -352,10 +352,10 @@ To override the default ACL setting, specify a new ACL when generating a copy re
 		
 	</RelatedTokens>
 	
-			<Declaration>- (S3CopyObjectResponse *)copyObject:(S3CopyObjectRequest *)copyObjectRequest</Declaration>
+			<Declaration>- (S3CopyObjectResponse *)objectCopy:(S3CopyObjectRequest *)copyObjectRequest</Declaration>
 			
 			
-			<Anchor>//api/name/copyObject:</Anchor>
+			<Anchor>//api/name/objectCopy:</Anchor>
 		</Token>
 		
 		<Token>
@@ -1049,7 +1049,7 @@ You must initiate a multipart upload before you can upload any part.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AmazonS3Client/copyPart:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/AmazonS3Client/partCopy:</TokenIdentifier>
 			<Abstract type="html">S3CopyPartResponse</Abstract>
 			<DeclaredIn>AmazonS3Client.h</DeclaredIn>			
 			
@@ -1059,10 +1059,10 @@ You must initiate a multipart upload before you can upload any part.</Abstract>
 		
 	</RelatedTokens>
 	
-			<Declaration>- (S3CopyPartResponse *)copyPart:(S3CopyPartRequest *)copyPartRequest</Declaration>
+			<Declaration>- (S3CopyPartResponse *)partCopy:(S3CopyPartRequest *)copyPartRequest</Declaration>
 			
 			
-			<Anchor>//api/name/copyPart:</Anchor>
+			<Anchor>//api/name/partCopy:</Anchor>
 		</Token>
 		
 		<Token>
